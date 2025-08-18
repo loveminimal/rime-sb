@@ -3,6 +3,8 @@ patch:
   schema/ascii_icon: 'assets/ascii.ico'
   engine/processors/@before 0: lua_processor@*quick_symbol
   recognizer/patterns/quick_symbol: "^;.*$"
+  sbzdy/user_dict: custom_sb
+
   key_binder/+:
     bindings/+:
       - { when: always, accept: Control+comma, select: .next }
