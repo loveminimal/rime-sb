@@ -1,0 +1,35 @@
+patch:
+  schema_list:
+    - schema: sben
+    # - schema: sbyp
+    # - schema: sbpy
+    # - schema: sbjp
+    # - schema: sbjm
+    - schema: sbfd
+    # - schema: sbfm
+    # - schema: sbfy
+    # - schema: sbfx
+    # - schema: sbfj
+    # - schema: sbzr
+    # - schema: sbzz
+    # - schema: sbxh
+    # - schema: sbhz
+  switcher:
+    abbreviate_options: true
+    caption: "〔方案选单〕"
+    fold_options: true
+    option_list_separator: '／'
+    hotkeys:
+      - "Control+grave"
+      - "Control+Shift+grave"
+      - F4
+      - "Control+m"
+  ascii_composer:
+    good_old_caps_lock: true
+    switch_key:
+      Shift_L: inline_ascii
+      Shift_R: inline_ascii
+      Control_L: commit_code
+      Control_R: noop
+      Caps_Lock: clear
+      Eisu_toggle: clear

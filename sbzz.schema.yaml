@@ -1,0 +1,121 @@
+# Rime schema
+# encoding: utf-8
+
+__include: sbpy.schema.yaml:/
+
+schema:
+  schema_id: sbzz
+  name: 声笔自整
+  version: "10.0"
+  icon: "sbxlm.ico"
+  author:
+    - 戴石麟 <https://sbxlm.github.io>
+    - 蓝落萧 <https://tansongchen.com>
+  dependencies:
+    - sbpy
+
+switches:
+  - name: ascii_mode
+    reset: 0
+    states: [中文, 西文]
+  - name: ascii_punct
+    reset: 0
+    states: [。，, ．，]
+  - name: zh_trad
+    reset: 0
+    states: [简体, 繁体]
+  # 希望在同文里用下三角来隐藏键盘的可去掉下面两行的注释
+  #- options: [_key_Hide]
+  #  states: ["▼"]
+  # 为了避免拥挤，不显示下面的状态
+  - name: postpone
+    reset: 1
+  - options: [free, fixed, popping, mixed]
+    reset: 2
+  - name: is_hidden
+    reset: 1  # 1为隐藏：不提示第二页的固定字词
+  - name: auto_inline
+    reset: 1  # 首字母大写进入临时英文状态
+  - name: is_buffered
+    reset: 0  # 是否为缓冲输入模式
+  - name: back_insert # 混合模式下的补码标识
+    reset: 0
+  - name: show_es
+    reset: 1
+    
+engine:
+  __include: sbpy.schema.yaml:/engine
+  processors:
+    - lua_processor@*sbxlm.ascii_composer
+    - ascii_composer
+    - recognizer
+    - lua_processor@*sbxlm.key_binder
+    - key_binder
+    - lua_processor@*sbxlm.sp_editor
+    - lua_processor@*sbxlm.selector
+    - lua_processor@*sbxlm.popping
+    - speller
+    - punctuator
+    - selector
+    - navigator
+    - express_editor
+
+sbzz_algebra:
+  # 1. 执行双拼方案
+  - xform/(?<=[zcs])h//
+  - derive/\b([jqxy])u(?=\d)/$1v/
+  - xform/\b(?=[aoe])/V/
+  - xform/iu(?=\d)/Q/
+  - xform/[iu]a(?=\d)/W/
+  - xform/uan(?=\d)|er(?=\d)/R/
+  - xform/[uv]e(?=\d)/T/
+  - xform/ing(?=\d)|uai(?=\d)/Y/
+  - xform/uo(?=\d)/O/
+  - xform/[uv]n(?=\d)/P/
+  - xform/i?ong(?=\d)/S/
+  - xform/[iu]ang(?=\d)/D/
+  - xform/en(?=\d)/F/
+  - xform/eng(?=\d)/G/
+  - xform/ang(?=\d)/H/
+  - xform/ian(?=\d)/M/
+  - xform/an(?=\d)/J/
+  - xform/iao(?=\d)/C/
+  - xform/ao(?=\d)/K/
+  - xform/ai(?=\d)/L/
+  - xform/ei(?=\d)/Z/
+  - xform/ie(?=\d)/X/
+  - xform/ui(?=\d)/V/
+  - xform/ou(?=\d)/B/
+  - xform/in(?=\d)/N/
+  - xlit/QWRTYUIOPSDFGHMJCKLZXVBN/qwrtyuiopsdfghmjcklzxvbn/
+  # 2. 补笔画
+  - xlit/12345/eiuoa/
+  - xform/\b([a-z]{6})[aeiou]+/$1/
+
+speller:
+  __include: sbpy.schema.yaml:/speller
+  algebra:
+    __include: /sbzz_algebra
+    __append:
+      - derive/^([a-z]{2}).+$/$1/
+      - derive/^([a-z]{3}).+$/$1/
+  popping:
+    __patch:
+      - sbxlm.yaml:/basic_popping
+      - sbxlm.yaml:/zzhz_popping
+
+translator:
+  __include: sbpy.schema.yaml:/translator
+  prism: sbzz
+  fix_combination: false
+
+reverse_lookup:
+  __include: sbpy.schema.yaml:/reverse_lookup
+  comment_format:
+    __include: /sbzz_algebra
+
+key_binder:
+  bindings:
+    __patch: 
+      - sbxlm.yaml:/rime_key_bindings
+      - sbxlm.yaml:/zzhz_bindings

@@ -1,0 +1,107 @@
+# Rime schema
+# encoding: utf-8
+
+schema:
+  schema_id: sben
+  name: 声笔英文
+  author: 
+    - 发明人 Jack Liu <https://aituyaa.com>
+  description: |
+    - 知心英文，一款快速输入数字和预设字符的键盘式输入法方案
+    - https://github.com/loveminimal/rime-jk
+  icon: "assets/pr.ico"
+  ascii_icon: 'assets/ascii.ico' 
+
+engine:
+  processors:
+    - lua_processor@*quick_symbol
+    - ascii_composer
+    - chord_composer
+    - key_binder
+    - recognizer
+    - speller
+    - punctuator
+    - selector
+    - navigator
+    - express_editor
+  segmentors:
+    - matcher
+    - abc_segmentor
+    - punct_segmentor
+    - fallback_segmentor
+  translators:
+    - echo_translator
+    - punct_translator
+    - table_translator
+    - reverse_lookup_translator
+  filters:
+    - uniquifier
+
+
+speller:
+  alphabet: ·~
+  initials: zyxwvutsrqponmlkjihgfedcbaZYXWVUTSRQPONMLKJIHGFEDCBA`
+
+recognizer:
+  patterns:
+    quick_symbol: "^;.*$"
+
+translator:
+  dictionary: sben
+  enable_sentence: false  
+  enable_user_dict: false 
+  enable_word_completion: true
+  initial_quality: 1.1    
+  comment_format: {comment}      
+
+
+punctuator:
+  import_preset: default
+  half_shape: &symtable
+    ',' : { commit: ',' }
+    '.' : { commit: '.' }
+    '<' : '<'
+    '>' : '>'
+    '/' : '/'
+    '?' : { commit: '?' }
+    ';' : { commit: ';' }
+    ':' : { commit: ':' }
+    "'" : "'"
+    '"' : '"'
+    '\' : '\'
+    '|' : '|'
+    '`' : '`'
+    '~' : ['~']
+    '!' : { commit: '!' }
+    '@' : '@'
+    '#' : '#'
+    '%' : '%'
+    '$' : '$'
+    '^' : '^'
+    '&' : '&'
+    '*' : '*'
+    '(' : '('
+    ')' : ')'
+    '-' : '-'
+    '_' : '_'
+    '+' : '+'
+    '=' : '='
+    '[' : '['
+    ']' : ']'
+    '{' : '{'
+    '}' : '}'
+  full_shape: *symtable
+
+
+key_binder:
+  import_preset: default
+  bindings/+:
+    - { when: always, accept: Control+comma, select: .next }
+    - { when: composing, accept: Control+k, send: Up }                           
+    - { when: composing, accept: Control+j, send: Down }
+    - { when: composing, accept: Control+u, send: Return }
+    - { when: composing, accept: Control+i, send: Return }
+    - { when: composing, accept: Control+l, send: Return }
+    - { when: always, accept: Control+u, send: '_' }
+    - { when: always, accept: Control+i, send: '-' }
+    - { when: always, accept: Control+o, send: '=' }

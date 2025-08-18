@@ -1,0 +1,62 @@
+# Weasel default custom settings
+# encoding: utf-8
+#
+# 覆盖程序预设的配置项「 weasel.yaml 」
+
+customization:
+  distribution_code_name: Weasel
+  generator: "Weasel::UIStyleSettings"
+  modified_time: "Fri Dec  6 10:55:38 2024"
+
+patch:
+# ---- 主题汇总 -------------------------------------------------------
+#〔 制作 11 〕
+# pujk skjk prjk emjk orjk otjk sljk tkjk aqjk mljk mdjk
+#〔 魔改 11 〕
+# google_jk dark_temple_jk flypy_jk kuon_jk lost_temple_jk metroblue_jk
+# modern_warfare_jk skype_jk so_young_jk starcraft_ii_jk steam_jk
+#〔 内置 26 〕
+# android aqua azure brasil brisk cool_breeze dark_temple doraemon 
+# dota_2 espagna flypy gholabok google google_plus ink kuma_shuzboz 
+# kuon lost_temple luna macau metroblue nba ps4 psionics skype smurfs 
+# so_young starcraft starcraft_ii steam tintin wii xbox_silver youtube       
+# ---------------------------------------------------------------------
+  __include: style.yaml:sljk
+  __patch:
+    style/+:
+      color_scheme: sljk
+      font_face: LXGW WenKai GB Screen R, Segoe UI Emoji, 黑体字根
+      label_font_face: LXGW WenKai Mono, LXGW WenKai GB Screen R, Segoe UI Emoji, 黑体字根
+      comment_font_face: LXGW WenKai Mono, LXGW WenKai GB Screen R, Segoe UI Emoji, 黑体字根
+      font_point: 11 
+      label_font_point: 9
+      comment_font_point: 9
+      label_format: "%s " #"%s."
+      # mark_text: "♪"
+      # --- 候选项文字纵向排列 ----------------------------------
+      # horizontal: false 
+      # vertical_text: true
+      # vertical_text_left_to_right: true
+      # vertical_text_with_wrap: false
+      # vertical_auto_reverse: false
+      # 隐藏编码行
+      # --- 编码行操作 -------------------------------------------
+      # preedit_type          用于控制​​预编辑文本的显示方式
+      # - input、composition  嵌入​​编码
+      # - preview​​             嵌入​​首选项内容​
+      # - preview_all​         嵌入​​全部预编辑内容​ 
+      # 
+      # ​inline_preedit  单行布局 ← true  false → 双行布局
+      # ----------------------------------------------------------
+      # preedit_type: preview
+      inline_preedit: true
+      # --- 鼠标操作 ---------------------------------------------
+      # hover_type       鼠标悬浮候选 ➭ none、hilite、semi_hilite
+      # click_to_capture 点击候选创建截图
+      # ----------------------------------------------------------
+      hover_type: none
+      click_to_capture: true
+      layout:
+        __include: style.yaml:/layout_h
+        # margin_y: -1
+        # min_width: 0
