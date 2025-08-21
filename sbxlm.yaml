@@ -42,15 +42,14 @@ table_popping:
     # 其他情况，数字顶
     - match: ".*"
       accept: "[0-9]"
-    # # 条件顶屏
-    # - match: "([bpmfdtnlgkhjqxzcsrywv][a-z]){2}"
-    #   accept: "[aeiou]"
-    #   prefix: 2
-    #   strategy: conditional
     # 大写顶屏
     - match: "([bpmfdtnlgkhjqxzcsrywv][a-z]){2}"
-      accept: "[A-Z]"
+      accept: "[BPMFDTNLGKHJQXZCSRYWV]"
       prefix: 2
+    # 大写补码
+    - match: "([bpmfdtnlgkhjqxzcsrywv][a-z]){2}[aeiou]{0,2}[AEUIO]?"
+      accept: "[AEUIO]"
+      strategy: append
 
 prelude:
   menu:
@@ -118,9 +117,9 @@ prelude:
     prefix: i
     tips: "〔两分反查〕"
 
-  sbjm:
-    tag: sbjm
-    dictionary: sbjm.extended
+  sbfc:
+    tag: sbfc
+    dictionary: sbfc
     enable_user_dict: false
     enable_encoder: false
     enable_sentence: false
@@ -130,7 +129,7 @@ prelude:
     tips: "〔声笔反查〕"
 
   reverse_lookup:
-    tags: [bihua, sbyp, zhlf, sbjm]
+    tags: [bihua, sbyp, zhlf, sbfc]
     overwrite_comment: true
     dictionary: sbjm.extended
 
@@ -272,7 +271,7 @@ key_binder:
 recognizer:
   patterns:
     punct: '^\\([0-9]|10|[A-Za-z][A-Zbpmfdtnlgkhjqxzcsrywv]*)$'
-    sbjm: "^[bpmfdtnlgkhjqxzcsrywv][aeiou]{3}$"
+    sbfc: "^[bpmfdtnlgkhjqxzcsrywv][aeiou]{3}$"
     bihua: "^[aeiou]+$"
     sbyp: "^a[bpmfdtnlgkhjqxzcsrywv][a-z']*$"
     emoji: "^e[bpmfdtnlgkhjqxzcsrywv][a-z']*$"
@@ -297,9 +296,7 @@ punctuator:
     '"' : { pair: [ '“', '”' ] }
     '\' : [ '\' ]
     '|' : [ ｜, '§', '¦', '‖', '||' ]
-    # 只需要一个基本的 `
-    # '`' : [ '`', ′, ″, ‴, ‵, ‶, ‷, ⁗ ]
-    '`' : '`'
+    '`' : [ '`', ′, ″, ‴, ‵, ‶, ‷, ⁗ ]
     '~' : [ '~', ～, ˜, ≈, ≋, ≃, ≅, ≇, ∽, ⋍, ≌, ﹏, ﹋, ﹌ ]
     '!' : { commit: ！ }
     '@' : [ '@', ©, ®, ℗ ,＠]

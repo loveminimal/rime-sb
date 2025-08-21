@@ -18,8 +18,7 @@ local function translator(input, seg)
       table.insert(datetimes, os.date("%Y年%m月%d日%H时%M分%S秒"))
       table.insert(datetimes, os.date("%Y-%m-%d %H:%M:%S"))
       table.insert(datetimes, os.date("%Y%m%d%H%M%S"))
-   elseif (input == "oii") then 
-      -- 扩充常用的时间格式
+   elseif (input == "oii") then
       table.insert(datetimes, os.date("%Y-%m-%d"))
       table.insert(datetimes, os.date("%Y-%m-%d %H:%M"))
       table.insert(datetimes, os.date("`> %Y-%m-%d %H:%M`"))

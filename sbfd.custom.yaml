@@ -4,6 +4,10 @@ patch:
   engine/processors/@before 0: lua_processor@*quick_symbol
   recognizer/patterns/quick_symbol: "^;.*$"
   sbzdy/user_dict: custom_sb
+  punctuator/half_shape/+:
+    '`' : '`'
+    '\' :  、
+    '/' : '/'
 
   key_binder/+:
     bindings/+:
