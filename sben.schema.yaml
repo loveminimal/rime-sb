@@ -38,9 +38,12 @@ engine:
     - uniquifier
 
 
+# ¹ alphabet: 定义本方案输入键
+# ² initials: 定义仅作始码之键
+# ³ finals:   定义仅作末码之键
 speller:
-  alphabet: ·~
-  initials: zyxwvutsrqponmlkjihgfedcbaZYXWVUTSRQPONMLKJIHGFEDCBA`
+  alphabet: ""
+  initials: ";"
 
 recognizer:
   patterns:
@@ -51,28 +54,28 @@ translator:
   enable_sentence: false  
   enable_user_dict: false 
   enable_word_completion: true
-  initial_quality: 1.1    
+  initial_quality: 1
   comment_format: {comment}      
 
 
 punctuator:
   import_preset: default
   half_shape: &symtable
-    ',' : { commit: ',' }
-    '.' : { commit: '.' }
+    ',' : ','
+    '.' : '.'
     '<' : '<'
     '>' : '>'
     '/' : '/'
-    '?' : { commit: '?' }
-    ';' : { commit: ';' }
-    ':' : { commit: ':' }
+    '?' : '?'
+    ';' : ';'
+    ':' : ':'
     "'" : "'"
     '"' : '"'
     '\' : '\'
     '|' : '|'
     '`' : '`'
-    '~' : ['~']
-    '!' : { commit: '!' }
+    '~' : '~'
+    '!' : '!'
     '@' : '@'
     '#' : '#'
     '%' : '%'
