@@ -160,4 +160,4 @@ FileChangedCallback(filePath) {
 }
 
 ; 开始监听文件
-WatchFiles(filesToWatch, FileChangedCallback)
+; WatchFiles(filesToWatch, FileChangedCallback)
