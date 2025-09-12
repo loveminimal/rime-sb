@@ -57,6 +57,9 @@ translator:
   initial_quality: 1
   comment_format: {comment}      
 
+# 并击开启
+chord_composer:
+  __include: custom_patch.yaml:/shared_patch/chord_composer
 
 punctuator:
   import_preset: default
