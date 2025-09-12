@@ -37,12 +37,18 @@ shared_patch:
     # alphabet: "qazwsxedcrfvtgbyhnujmik,ol.p;/'7890 "
     alphabet: "qazwsxedcrfvtgbyhnujmik,ol.p;/' "
     algebra:
-      - xform/(asdf)/0/
-      - xform/(jkl;)/@/
-      - xform/(sdf)/7/
-      - xform/(jkl)/`/
-      - xform/(wer)/8/
-      - xform/(uio)/~/
+      # - xform/(asdf)/0/
+      # - xform/(jkl;)/@/
+      - xform/(asdf)/🤭/
+      - xform/(jkl;)/🤣/
+      # - xform/(sdf)/7/
+      # - xform/(jkl)/`/
+      - xform/(sdf)/'/
+      - xform/(jkl)/'/
+      # - xform/(wer)/8/
+      # - xform/(uio)/~/
+      - xform/(wer)/ /
+      - xform/(uio)/ /
       - xform/(xcv)/9/
       - xform/(nm)/m/
       - xlit|;,./|FDJG|
@@ -127,4 +133,4 @@ shared_patch:
       - xform/[ei]-/e/
       - xform/[ru]-/r/
       - xform/[ty]-/t/
-      - xform/^\S{3,}$//
+      # - xform/^\S{3,}$//
