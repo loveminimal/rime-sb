@@ -20,3 +20,6 @@ shared_patch:
       - { when: always, accept: Control+u, send: '_' }
       - { when: always, accept: Control+i, send: '-' }
       - { when: always, accept: Control+o, send: '=' }
+      # - { when: always, accept: Control+apostrophe, send: '\' }
+      - { when: paging, accept: Control+comma, send: Page_Up }
+      - { when: has_menu, accept: Control+period, send: Page_Down }
