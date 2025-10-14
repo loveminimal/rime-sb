@@ -13,10 +13,10 @@ schema:
     - 戴石麟 <https://sbxlm.github.io>
     - 蓝落萧 <https://tansongchen.com>
   dependencies:
-    - sbfc
+    # - sbfc
     - sbyp
-    - bihua
-    - zhlf
+    # - bihua
+    # - zhlf
     - sbfm2
 
 switches:
@@ -58,6 +58,7 @@ switches:
 
 engine:
   processors:
+    - lua_processor@*quick_symbol
     - lua_processor@*sbxlm.ascii_composer
     - ascii_composer
     - recognizer

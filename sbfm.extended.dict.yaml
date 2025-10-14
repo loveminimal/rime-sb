@@ -1,16 +1,22 @@
-# Rime dict
+# Rime dictionary - sbfm.extended.dict.yaml
 # encoding: utf-8
 #
 # 声笔飞码动态词库
 # 本文件中的内容用于自动码长调整，请不要改动！
-
+# ——————
+# 这里我们重置为供飞单使用的 3+ 词条库
+# 
+# 运行脚本：
+# - https://github.com/loveminimal/rime-fd/blob/master/scripts/sync_user_dict.py
+# - py scripts/sync_user_dict.py
+# 
 ---
 name: sbfm.extended
-version: "10.0"
+version: 2025.10
 sort: by_weight
-columns:
-  - text
-  - code
-  - weight
+use_preset_vocabulary: false
 ...
-江湖夜雨十年灯	jhydoo	9
+知北游	zbydue	1
+姹紫嫣红	czyhau	1
+山海八荒录	shblia	3
+江湖夜雨十年灯	jhydoo	15

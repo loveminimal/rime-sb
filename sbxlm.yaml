@@ -296,6 +296,7 @@ recognizer:
     jsq: "^=.+$"
     lua: "^o[bpmfdtnlgkhjqxzcsrywv0-9]+$"
     history: "^/$"
+    quick_symbol: "^;.*$"
 
 punctuator: 
   digit_separator_action: commit
