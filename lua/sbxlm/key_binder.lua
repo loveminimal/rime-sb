@@ -9,6 +9,7 @@ local XK_apostrophe = 0x0027
 local XK_space = 0x0020
 local XK_period = 0x002e
 local XK_Return = 0xff0d
+local XK_Shift_R = 0xffe2
 local XK_0 = 0x0030
 local XK_1 = 0x0031
 local XK_4 = 0x0034
@@ -94,6 +95,19 @@ function this.func(key_event, env)
   end
   if not segment:has_tag("abc") then
     return rime.process_results.kNoop
+  end
+
+  if not ascii_mode and not key_event:ctrl() and core.fy(schema_id) and key_event.keycode == XK_Shift_R then
+    if core.sxsx(input) then
+      env.engine:process_key(rime.KeyEvent("Tab"))
+    elseif core.sss(input) then
+      env.engine:process_key(rime.KeyEvent("Escape"))
+      env.engine:process_key(rime.KeyEvent(input:sub(1,1)))
+      env.engine:process_key(rime.KeyEvent("space"))
+      env.engine:process_key(rime.KeyEvent(input:sub(2,2)))
+      env.engine:process_key(rime.KeyEvent(input:sub(3,3)))
+      env.engine:process_key(rime.KeyEvent("Tab"))
+    end
   end
 
   -- 飞码延顶四码特殊处理

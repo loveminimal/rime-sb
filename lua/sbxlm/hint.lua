@@ -53,6 +53,7 @@ function this.func(translation, env)
 	local hint_n1 = { "2", "3", "7", "8", "9" }
 	local hint_n2 = { "1", "4", "5", "6", "0" }
 	local hint_b = { "a", "e", "u", "i", "o" }
+	local hint_p = { ";", "'", ",", ".", "/" }
 	local i = 1
 	local memory = env.memory
 	for candidate in translation:iter() do
@@ -63,7 +64,7 @@ function this.func(translation, env)
 			candidate.comment = ""
 			for code in string.gmatch(codes, "[^ ]+") do
 				if input ~= code and input:len() >= code:len() then
-					if rime.match(code, "[bpmfdtnlgkhjqxzcsrywv][a-z;']+") then
+					if rime.match(code, "[bpmfdtnlgkhjqxzcsrywv][a-z;',./]+") then
 						candidate.comment = candidate.comment .. " " .. code
 					end
 					if rime.match(code, "[bpmfdtnlgkhjqxzcsrywv][a-z]?[0-9][aeuio]?") and is_enhanced then
@@ -145,20 +146,36 @@ function this.func(translation, env)
 			elseif core.feixi(id) and is_hidden then
 				; -- 飞系在隐藏模式时不提示声声词 
 			else
-				memory:dict_lookup(candidate.preedit .. "'", false, 1)
-				local e = ''
-				for entry in memory:iter_dict()
-				do
-					e = entry.text
-					candidate:get_genuine().comment = candidate:get_genuine().comment .. ' ' .. entry.text
-					break
-				end
 				memory:dict_lookup(candidate.preedit .. ";", false, 1)
 				for entry in memory:iter_dict()
 				do
-					candidate:get_genuine().comment = ' ' .. entry.text .. ";" .. e .. "'"
+					candidate:get_genuine().comment = ' ' .. entry.text .. ";"
 					break
 				end
+				memory:dict_lookup(candidate.preedit .. "'", false, 1)
+				for entry in memory:iter_dict()
+				do
+					candidate:get_genuine().comment = candidate:get_genuine().comment .. entry.text .. "'"
+					break
+				end				
+				memory:dict_lookup(candidate.preedit .. ",", false, 1)
+				for entry in memory:iter_dict()
+				do
+					candidate:get_genuine().comment = candidate:get_genuine().comment .. entry.text .. ","
+					break
+				end				
+				memory:dict_lookup(candidate.preedit .. ".", false, 1)
+				for entry in memory:iter_dict()
+				do
+					candidate:get_genuine().comment = candidate:get_genuine().comment .. entry.text .. "."
+					break
+				end				
+				memory:dict_lookup(candidate.preedit .. "/", false, 1)
+				for entry in memory:iter_dict()
+				do
+					candidate:get_genuine().comment = candidate:get_genuine().comment .. entry.text .. "/"
+					break
+				end				
 			end
 		end
 		if core.jm(id) and (core.sxb(input) or core.sxbb(input)) and not is_hidden then
@@ -173,7 +190,7 @@ function this.func(translation, env)
 		end
 		rime.yield(candidate)
 		-- 字词型方案 s 加数字或 ; 或 ' 后用aeuio选择的自定义字词
-		if core.zici(id) and rime.match(input, "[bpmfdtnlgkhjqxzcsrywv][;'0-9]") and not is_hidden then
+		if core.zici(id) and rime.match(input, "[bpmfdtnlgkhjqxzcsrywv][;',./0-9]") and not is_hidden then
 			local forward
 			for j = 1, #hint_b do
 				memory:dict_lookup(candidate.preedit .. hint_b[j], false, 1)
