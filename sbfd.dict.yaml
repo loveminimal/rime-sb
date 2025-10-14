@@ -5304,7 +5304,9 @@ columns:
 骐	qmei	248	qmaa
 疣	ybeu	248	yboe
 缛	rjeu	247	rjaa
-铵	vjo	246	vjue
+#铵	vjo	246	vjue
+串	vjo	246
+铵	vjoo	246	vjue
 鲟	xvae	246	xvua
 芨	jcua	245	jcei
 旯	lvua	245	lvia
@@ -6655,7 +6657,9 @@ columns:
 傺	crua	15	crui
 铤	djue	15	djue
 簖	dpou	15	dpue
-锇	vju	15	vjue
+#锇	vju	15	vjue
+久	vju
+锇	vjue	15	vjue
 崞	gsoe	15	gsia
 芥	gcuo	15	gcei
 垲	ktia	15	ktei
@@ -9795,7 +9799,9 @@ columns:
 遻	wlia	1	wlia
 頞	vyoo	1	vyoo
 擜	vfei	1	vfei
-覨	vji	1	vjia
+#覨	vji	1	vjia
+支	vji	1
+覨	vjia	1	vjia
 餩	vsuo	1	vsuo
 歞	kqia	1	kqia
 歞	vqia	1	vqia
