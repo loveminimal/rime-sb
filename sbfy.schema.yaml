@@ -17,7 +17,7 @@ schema:
     - sbyp
     # - bihua
     # - zhlf
-    - sbfm2
+    - sbfm_extended
 
 switches:
   - name: ascii_mode

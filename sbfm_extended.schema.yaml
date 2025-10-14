@@ -2,7 +2,7 @@
 # encoding: utf-8
 
 schema:
-  schema_id: sbfm2
+  schema_id: sbfm_extended
 
 translator:
   dictionary: sbfm.extended
