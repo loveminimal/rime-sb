@@ -1,19 +1,9 @@
 patch:
   schema_list:
     - schema: sben
-    # - schema: sbyp
-    # - schema: sbpy
-    # - schema: sbjp
-    # - schema: sbjm
     - schema: sbfd
-    # - schema: sbfm
-    # - schema: sbfy
-    # - schema: sbfx
-    # - schema: sbfj
-    # - schema: sbzr
-    # - schema: sbzz
-    # - schema: sbxh
-    # - schema: sbhz
+    - schema: sbfm
+    - schema: sbfy
   switcher:
     abbreviate_options: true
     caption: "〔方案选单〕"
@@ -37,3 +27,11 @@ patch:
       Control_R: noop
       Caps_Lock: clear
       Eisu_toggle: clear
+  # ⚡️jk
+  key_binder/+:
+    bindings/+:
+      - { when: always, accept: Control+comma, select: .next }
+      - { when: composing, accept: Control+k, send: Up }                           
+      - { when: composing, accept: Control+j, send: Down }
+      - { when: paging, accept: Control+comma, send: Page_Up }
+      - { when: has_menu, accept: Control+period, send: Page_Down }

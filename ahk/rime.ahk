@@ -13,7 +13,7 @@ filesToWatch := [
     ; RootPath "\custom_pinyin.txt",
     RootPath "\lua\quick_symbol.lua",
     ; RootPath "\custom_tiger.txt",
-    RootPath "\custom_sb.txt",
+    RootPath "\sbzdy.txt",
 ]
 ;*³ 执行命令及快捷键绑定
 ;   详见 line 66 行上下 ⇩
@@ -68,7 +68,7 @@ weaselSetupPath := GetWeaselPath('setup')
 ;  #→Win 键  !→Alt 键  ^→Ctrl 键  +→Shift 键
 ; --------------------
 ; 重启 Rime 服务
-^p::
++!p::
 {
     Run weaselServerPath
     return
@@ -91,33 +91,33 @@ weaselSetupPath := GetWeaselPath('setup')
     Run weaselSetupPath
     return
 }
-; 添加用户词
-+!u::
-{
-    Run "notepad.exe " RootPath "\lua\user_words.lua"
-    return
-}
-; 插入定制词
-+!p::
-{
-    Run "notepad.exe " RootPath "\custom_pinyin.txt"
-    return
-}
-+!t::
-{
-    Run "notepad.exe " RootPath "\custom_tiger.txt"
-    return
-}
-+!b::
-{
-    Run "notepad.exe " RootPath "\custom_sb.txt"
-    return
-}
-+!v::
-{
-    Run "notepad.exe " RootPath "\lua\quick_symbol.lua"
-    return
-}
+; ; 添加用户词
+; +!u::
+; {
+;     Run "notepad.exe " RootPath "\lua\user_words.lua"
+;     return
+; }
+; ; 插入定制词
+; +!p::
+; {
+;     Run "notepad.exe " RootPath "\custom_pinyin.txt"
+;     return
+; }
+; +!t::
+; {
+;     Run "notepad.exe " RootPath "\custom_tiger.txt"
+;     return
+; }
+; +!b::
+; {
+;     Run "notepad.exe " RootPath "\sbzdy.txt"
+;     return
+; }
+; +!v::
+; {
+;     Run "notepad.exe " RootPath "\lua\quick_symbol.lua"
+;     return
+; }
 
 
 ; === 监听脚本 ===
