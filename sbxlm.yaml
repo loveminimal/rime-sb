@@ -192,7 +192,8 @@ rime_key_bindings:
     - { when: always, accept: Control+i, send: '-' }
     - { when: always, accept: Control+o, send: '=' }
     # - { when: always, accept: Control+apostrophe, send: '\' }
-    - { when: always, accept: Control+backslash, toggle: zh_trad }
+    - { when: always, accept: Control+bracketleft, toggle: zh_trad }
+    - { when: always, accept: Control+backslash, toggle: is_show_more }
     - { when: always, accept: Control+apostrophe, send: Shift+Tab }
     - { when: paging, accept: Control+comma, send: Page_Up }
     - { when: has_menu, accept: Control+period, send: Page_Down }

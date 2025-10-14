@@ -42,6 +42,8 @@ end
 function this.func(translation, env)
 	local ctx = env.engine.context
 	local is_enhanced = ctx:get_option("is_enhanced")
+	-- 是否显示 ,./ 标点字（隐藏后标点字仍可使用）
+	local is_show_more = ctx:get_option("is_show_more") or false
 	--[[
 		0：隐藏，为不显示，即完全隐藏
 		1：有理，为显示23789有理组
@@ -157,25 +159,28 @@ function this.func(translation, env)
 				do
 					candidate:get_genuine().comment = candidate:get_genuine().comment .. entry.text .. "'"
 					break
-				end				
-				memory:dict_lookup(candidate.preedit .. ",", false, 1)
-				for entry in memory:iter_dict()
-				do
-					candidate:get_genuine().comment = candidate:get_genuine().comment .. entry.text .. ","
-					break
-				end				
-				memory:dict_lookup(candidate.preedit .. ".", false, 1)
-				for entry in memory:iter_dict()
-				do
-					candidate:get_genuine().comment = candidate:get_genuine().comment .. entry.text .. "."
-					break
-				end				
-				memory:dict_lookup(candidate.preedit .. "/", false, 1)
-				for entry in memory:iter_dict()
-				do
-					candidate:get_genuine().comment = candidate:get_genuine().comment .. entry.text .. "/"
-					break
-				end				
+				end	
+				-- 切换 ,./ 标点字显示
+				if is_show_more then					
+					memory:dict_lookup(candidate.preedit .. ",", false, 1)
+					for entry in memory:iter_dict()
+					do
+						candidate:get_genuine().comment = candidate:get_genuine().comment .. entry.text .. ","
+						break
+					end				
+					memory:dict_lookup(candidate.preedit .. ".", false, 1)
+					for entry in memory:iter_dict()
+					do
+						candidate:get_genuine().comment = candidate:get_genuine().comment .. entry.text .. "."
+						break
+					end				
+					memory:dict_lookup(candidate.preedit .. "/", false, 1)
+					for entry in memory:iter_dict()
+					do
+						candidate:get_genuine().comment = candidate:get_genuine().comment .. entry.text .. "/"
+						break
+					end				
+				end			
 			end
 		end
 		if core.jm(id) and (core.sxb(input) or core.sxbb(input)) and not is_hidden then
