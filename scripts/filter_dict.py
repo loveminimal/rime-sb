@@ -58,11 +58,11 @@ if __name__ == '__main__':
     out_dir = proj_dir / 'out'
     file_endswith_filter = '.dict.yaml'
 
-    out_file_name = 'jk_wubi_zj.dict.yaml'
-    out_file_path = out_dir / out_file_name
+    # out_file_name = 'jk_wubi_zj.dict.yaml'
+    # out_file_path = out_dir / out_file_name
     
-    if out_file_path.exists():
-        out_file_path.unlink()
+    # if out_file_path.exists():
+    #     out_file_path.unlink()
         
     if not out_dir.exists():
         out_dir.mkdir()

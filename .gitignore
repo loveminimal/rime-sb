@@ -2,4 +2,5 @@ build
 *userdb
 user.yaml
 log.txt
+out
 __pycache__
