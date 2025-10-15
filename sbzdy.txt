@@ -16,3 +16,6 @@
 刘增玺	n
 姚秋萍	n
 刘奕遥	n
+
+JavaScript	js
+Java	j
