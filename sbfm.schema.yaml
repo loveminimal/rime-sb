@@ -61,6 +61,7 @@ switches:
 
 engine:
   processors:
+    - chord_composer
     - lua_processor@*quick_symbol
     - lua_processor@*sbxlm.ascii_composer
     - ascii_composer
@@ -108,6 +109,9 @@ engine:
     - lua_filter@*sbxlm.select_key_to_comment
     - simplifier
     - uniquifier
+
+chord_composer:
+  __include: sbxlm.yaml:/chord_composer
 
 popping:
   __append:
