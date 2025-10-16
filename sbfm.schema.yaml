@@ -16,7 +16,7 @@ schema:
     # - sbfc
     - sbyp
     # - bihua
-    # - zhlf
+    - zhlf
     - sbfm_extended
 
 switches:
