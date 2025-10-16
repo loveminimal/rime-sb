@@ -13,6 +13,32 @@ columns:
   - code
   - weight
 ...
+# 为了手感
+采	c;a
+册	c;e
+串	c;u
+超	c;o
+浏	l;e
+键	j;e
+久	j;u
+弃	q;i
+切	q;e
+擎	q;o
+甚	s;e
+搜	s;o
+态	t;e
+旨	v;u
+执	v;e
+支	v;i
+智	v;o
+序	x;u
+习	x;i
+页	y;e
+载	z;a
+增	z;e
+足	z;u
+字	z;i
+择	z;o
 # 优化手感
 争	rua
 致	vea
@@ -48,7 +74,6 @@ columns:
 扳	bfue	9999
 不过	bg'	0
 保护	bh'	0
-不好	bha	0
 贬	bi'	0
 蹦	bi;	0
 败	bia	0
@@ -58,7 +83,6 @@ columns:
 鄙	biu	0
 不仅	bj'	0
 不肯	bk'	0
-鼻孔	bka	0
 本来	bl'	0
 部门	bm'	0
 半年	bn'	0
@@ -73,7 +97,6 @@ columns:
 憋	bou	0
 不怕	bp'	0
 并且	bq'	0
-不强	bqa	0
 别人	br'	0
 表示	bs'	0
 不同	bt'	0
@@ -96,12 +119,11 @@ columns:
 不住	bz'	0
 程	c'	0
 城	c,	0
-槽	c.	0
-超	c/	0
+错	c.	0
+村	c/	0
 车	c;	0
 巢	ca'	0
 驰	ca;	0
-串	c'u
 纯	caa	0
 骢	caae	0
 弛	cae	0
@@ -202,6 +224,7 @@ columns:
 代表	db'	0
 调查	dc'	0
 得到	dd'	0
+沌	ddeo	9999
 戴	de'	0
 抵	de;	0
 顿	dea	0
@@ -218,7 +241,6 @@ columns:
 耷	deuo	0
 地方	df'	0
 大哥	dg'	0
-大纲	dga	0
 的话	dh'	0
 鼎	di'	0
 吨	di;	0
@@ -271,7 +293,7 @@ columns:
 弟子	dz'	0
 跺	dzui	9999
 父	f'	0
-符	f,	0
+负	f,	0
 防	f.	0
 福	f/	0
 峰	f;	0
@@ -293,9 +315,7 @@ columns:
 芙	feo	0
 奋	feu	0
 方法	ff'	0
-吩咐	ffi	0
 法国	fg'	0
-覆盖	fgo	0
 发挥	fh'	0
 幡	fi'	0
 蝠	fi;	0
@@ -309,9 +329,7 @@ columns:
 吩	fiu	0
 房间	fj'	0
 放开	fk'	0
-访客	fko	0
 法律	fl'	0
-分类	flo	0
 方面	fm'	0
 妇女	fn'	0
 沸	fo'	0
@@ -322,13 +340,10 @@ columns:
 汾	foo	0
 粪	fou	0
 分配	fp'	0
-废品	fpi	0
 父亲	fq'	0
-放弃	fqo	0
 夫人	fr'	0
 发生	fs'	0
 反弹	ft'	0
-附图	fti	0
 乏	fu'	0
 腹	fu;	0
 肪	fua	0
@@ -339,10 +354,7 @@ columns:
 傅	fuu	0
 反而	fv'	0
 服务	fw'	0
-房屋	fwa	0
 发现	fx'	0
-反响	fxi	0
-放心	fxo	0
 反应	fy'	0
 发展	fz'	0
 功	g'	0
@@ -415,7 +427,6 @@ columns:
 锅	guu	0
 舸	guua	0
 公安	gv'	0
-关隘	gva	0
 各位	gw'	0
 关系	gx'	0
 关于	gy'	0
@@ -480,7 +491,6 @@ columns:
 憾	hooi	0
 火	hou	0
 害怕	hp'	0
-黑屏	hpa	0
 回去	hq'	0
 忽然	hr'	0
 还是	hs'	0
@@ -502,12 +512,11 @@ columns:
 孩子	hz'	0
 及	j'	0
 机	j,	0
-检	j.	0
+建	j.	0
 简	j/	0
 己	j;	0
 级	ja'	0
 既	ja;	0
-久	j'u
 缴	jaa	0
 绞	jaae	0
 暨	jae	0
@@ -651,26 +660,23 @@ columns:
 窥	kou	0
 恐怕	kp'	0
 口气	kq'	0
-跨骑	kqa	0
 客人	kr'	0
-快如	kra	0
 开始	ks'	0
 客厅	kt'	0
 犒	ku'	0
 铠	ku;	0
 胯	kua	0
 锟	kuee	0
+龛	kuo	0
 可爱	kv'	0
 渴望	kw'	0
 科学	kx'	0
 可以	ky'	0
-考验	kya	0
 控制	kz'	0
-空中	kzi	0
 龙	l'	0
 量	l,	0
 李	l.	0
-浏	l/	0
+流	l/	0
 灵	l;	0
 骆	la'	0
 陵	la;	0
@@ -686,6 +692,7 @@ columns:
 螺	lcio	9999
 领导	ld'	0
 涝	ldeo	9999
+浏	ldoo	9999
 楼	le'	0
 露	le;	0
 辆	lea	0
@@ -779,7 +786,6 @@ columns:
 姆	mau	0
 嫫	maue	0
 明白	mb'	0
-毛病	mbo	0
 名称	mc'	0
 萌	mcio	9999
 蔓	mciu	9999
@@ -854,7 +860,6 @@ columns:
 妮	nao	0
 奶	nau	0
 那边	nb'	0
-那般	nbu	0
 农村	nc'	0
 难道	nd'	0
 辇	ne'	0
@@ -867,7 +872,6 @@ columns:
 捺	neu	0
 能否	nf'	0
 那个	ng'	0
-能够	ngu	0
 女孩	nh'	0
 啮	ni'	0
 囔	ni;	0
@@ -891,12 +895,10 @@ columns:
 溺	noo	0
 逆	nou	0
 哪怕	np'	0
-那片	npu	0
 年轻	nq'	0
 女人	nr'	0
 那时	ns'	0
 念头	nt'	0
-那天	nte	0
 镊	nu'	0
 臬	nu;	0
 馁	nua	0
@@ -904,13 +906,9 @@ columns:
 恁	nui	0
 女儿	nv'	0
 那位	nw'	0
-那晚	nwi	0
-难忘	nwo	0
 那些	nx'	0
-内心	nxo	0
 那样	ny'	0
 女子	nz'	0
-拿着	nzo	0
 拍	p'	0
 朋	p,	0
 批	p.	0
@@ -934,8 +932,6 @@ columns:
 邳	peui	0
 佩服	pf'	0
 屁股	pg'	0
-旁观	pga	0
-苹果	pgi	0
 破坏	ph'	0
 毗	pi'	0
 曝	pi;	0
@@ -948,7 +944,6 @@ columns:
 平静	pj'	0
 片刻	pk'	0
 漂亮	pl'	0
-批量	pli	0
 拼命	pm'	0
 陪你	pn'	0
 浦	po'	0
@@ -962,7 +957,6 @@ columns:
 粕	poue	0
 偏偏	pp'	0
 脾气	pq'	0
-抛弃	pqo	0
 平日	pr'	0
 平时	ps'	0
 普通	pt'	0
@@ -977,13 +971,12 @@ columns:
 平安	pv'	0
 颇为	pw'	0
 培训	px'	0
-咆哮	pxi	0
 朋友	py'	0
 批准	pz'	0
 求	q'	0
-弃	q,	0
+青	q,	0
 取	q.	0
-切	q/	0
+奇	q/	0
 亲	q;	0
 绻	qa'	0
 逡	qa;	0
@@ -1052,7 +1045,7 @@ columns:
 情形	qx'	0
 企业	qy'	0
 其中	qz'	0
-软	r'	0
+仁	r'	0
 仍	r,	0
 荣	r.	0
 融	r/	0
@@ -1060,7 +1053,6 @@ columns:
 缛	ra'	0
 妊	ra;	0
 日本	rb'	0
-入编	rba	0
 如此	rc'	0
 人大	rd'	0
 苒	re'	0
@@ -1072,9 +1064,7 @@ columns:
 辱	reu	0
 若非	rf'	0
 如果	rg'	0
-认购	rgi	0
 如何	rh'	0
-如虹	rhi	0
 蚺	ri'	0
 蚋	ri;	0
 蠕	ria	0
@@ -1082,7 +1072,6 @@ columns:
 人家	rj'	0
 人口	rk'	0
 人类	rl'	0
-容量	rli	0
 人民	rm'	0
 热闹	rn'	0
 溽	ro'	0
@@ -1090,18 +1079,10 @@ columns:
 闰	roi	0
 溶	roo	0
 人品	rp'	0
-乳品	rpi	0
-热评	rpo	0
-软盘	rpu	0
 热情	rq'	0
-容器	rqi	0
-日前	rqo	0
 仍然	rr'	0
-日日	rri	0
 认识	rs'	0
 如同	rt'	0
-让她	rta	0
-认同	rti	0
 铷	ru'	0
 穰	ru;	0
 儒	rui	0
@@ -1109,21 +1090,16 @@ columns:
 偌	ruu	0
 然而	rv'	0
 认为	rw'	0
-任务	rwu	0
 人心	rx'	0
-瑞星	rxi	0
 人员	ry'	0
-日用	ryu	0
 日子	rz'	0
-日照	rzi	0
 神	s'	0
-属	s,	0
+什	s,	0
 三	s.	0
 水	s/	0
 书	s;	0
 丝	sa'	0
 随	sa;	0
-搜索	s;o
 纱	saa	0
 骚	saae	0
 屎	sae	0
@@ -1220,7 +1196,7 @@ columns:
 讼	syua	9999
 身子	sz'	0
 谈	t'	0
-态	t,	0
+图	t,	0
 铁	t.	0
 推	t/	0
 提	t;	0
@@ -1274,9 +1250,7 @@ columns:
 涛	tou	0
 谈判	tp'	0
 提起	tq'	0
-太强	tqa	0
 突然	tr'	0
-体弱	tra	0
 同时	ts'	0
 太太	tt'	0
 贪	tu'	0
@@ -1288,9 +1262,7 @@ columns:
 透	tuu	0
 图案	tv'	0
 台湾	tw'	0
-条纹	twa	0
 天下	tx'	0
-同学	txo	0
 统一	ty'	0
 同志	tz'	0
 恶	v'	0
@@ -1314,8 +1286,6 @@ columns:
 殴	veu	0
 案犯	vf'	0
 而过	vg'	0
-二姑	vga	0
-爱国	vgi	0
 而后	vh'	0
 嗄	vi'	0
 嗳	vi;	0
@@ -1328,18 +1298,13 @@ columns:
 案件	vj'	0
 安康	vk'	0
 而来	vl'	0
-暗恋	vlo	0
 澳门	vm'	0
 儿女	vn'	0
-安宁	vno	0
 谔	vo'	0
 鏖	vo;	0
 袄	voa	0
 安排	vp'	0
-鞍辔	vpa	0
-矮胖	vpu	0
 而且	vq'	0
-安全	vqu	0
 偶然	vr'	0
 昂首	vs'	0
 儿童	vt'	0
@@ -1352,15 +1317,9 @@ columns:
 鳄	vuu	0
 偶尔	vv'	0
 安危	vw'	0
-安慰	vwa	0
-爱问	vwo	0
 恶心	vx'	0
-二线	vxa	0
-爱心	vxo	0
 而已	vy'	0
 儿子	vz'	0
-案子	vza	0
-按照	vzi	0
 万	w'	0
 务	w,	0
 物	w.	0
@@ -1408,9 +1367,6 @@ columns:
 炜	wou	0
 物品	wp'	0
 完全	wq'	0
-委屈	wqa	0
-为其	wqe	0
-无情	wqo	0
 温柔	wr'	0
 晚上	ws'	0
 问题	wt'	0
@@ -1426,17 +1382,14 @@ columns:
 微微	ww'	0
 微笑	wx'	0
 唯一	wy'	0
-无意	wyo	0
 位置	wz'	0
-乡	x'	0
+细	x'	0
 像	x,	0
 系	x.	0
 兄	x/	0
 雪	x;	0
 寻	xa'	0
 限	xa;	0
-选择	x;e
-下载	x;i
 绚	xaa	0
 骁	xaae	0
 犀	xae	0
@@ -1459,7 +1412,7 @@ columns:
 硝	xeu	0
 戌	xeue	0
 幸福	xf'	0
-习惯	xg'	0
+香港	xg'	0
 喜欢	xh'	0
 晓	xi'	0
 吸	xi;	0
@@ -1513,13 +1466,12 @@ columns:
 需要	xy'	0
 现在	xz'	0
 雨	y'	0
-页	y,	0
+业	y,	0
 云	y.	0
 员	y/	0
 应	y;	0
 勇	ya'	0
 阴	ya;	0
-钥匙	y;i
 幼	yaa	0
 驿	yaae	0
 尹	yae	0
@@ -1631,14 +1583,12 @@ columns:
 颐	yyeo	9999
 一直	yz'	0
 种	z'	0
-字	z,	0
-值	z.	0
+真	z,	0
+住	z.	0
 者	z/	0
 展	z;	0
 障	za'	0
 阻	za;	0
-载	z'a
-支	z'i
 骤	zaa	0
 纣	zaae	0
 粥	zae	0
@@ -1715,7 +1665,6 @@ columns:
 烛	zouu	0
 只怕	zp'	0
 之前	zq'	0
-增强	zqa	0
 自然	zr'	0
 只是	zs'	0
 挚	zseo	9999

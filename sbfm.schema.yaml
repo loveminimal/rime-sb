@@ -33,7 +33,7 @@ switches:
     reset: 0
     states: [常规, 增强]
   - name: is_show_more
-    reset: 0
+    reset: 1
     states: [Ⓛ, Ⓜ]
   - options: [hide, rational, irrational, both]
     reset: 1
