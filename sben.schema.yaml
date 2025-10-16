@@ -14,6 +14,7 @@ schema:
 
 engine:
   processors:
+    - chord_composer
     - lua_processor@*quick_symbol
     - ascii_composer
     - key_binder
@@ -36,6 +37,8 @@ engine:
   filters:
     - uniquifier
 
+chord_composer:
+  __include: sbxlm.yaml:/chord_composer
 
 # ¹ alphabet: 定义本方案输入键
 # ² initials: 定义仅作始码之键
