@@ -16,7 +16,7 @@ columns:
 # 为了手感
 采	c;a
 册	c;e
-串	c;u
+串	c;i
 超	c;o
 浏	l;e
 键	j;e
@@ -27,6 +27,7 @@ columns:
 甚	s;e
 搜	s;o
 态	t;e
+值	v;a
 旨	v;u
 执	v;e
 支	v;i
