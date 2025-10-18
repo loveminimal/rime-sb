@@ -13,9 +13,9 @@ schema:
     - 戴石麟 <https://sbxlm.github.io>
     - 蓝落萧 <https://tansongchen.com>
   dependencies:
-    # - sbfc
+    - sbfc
     - sbyp
-    # - bihua
+    - bihua
     - zhlf
     - sbfm_extended
 
