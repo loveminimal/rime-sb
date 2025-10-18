@@ -14,33 +14,33 @@ columns:
   - weight
 ...
 # 为了手感
-采	c;a
-册	c;e
-串	c;i
-超	c;o
-浏	l;e
-键	j;e
-久	j;u
-弃	q;i
-切	q;e
-擎	q;o
-甚	s;e
-搜	s;o
-态	t;e
-值	v;a
-旨	v;u
-执	v;e
-支	v;i
-智	v;o
-序	x;u
-习	x;i
-延	y;a
-页	y;e
-载	z;a
-增	z;e
-足	z;u
-字	z;i
-择	z;o
+# 采	c;a
+# 册	c;e
+# 串	c;i
+# 超	c;o
+# 浏	l;e
+# 键	j;e
+# 久	j;u
+# 弃	q;i
+# 切	q;e
+# 擎	q;o
+# 甚	s;e
+# 搜	s;o
+# 态	t;e
+# 值	v;a
+# 旨	v;u
+# 执	v;e
+# 支	v;i
+# 智	v;o
+# 序	x;u
+# 习	x;i
+# 延	y;a
+# 页	y;e
+# 载	z;a
+# 增	z;e
+# 足	z;u
+# 字	z;i
+# 择	z;o
 # 优化手感
 争	rua
 致	vea
@@ -1385,7 +1385,7 @@ columns:
 微笑	wx'	0
 唯一	wy'	0
 位置	wz'	0
-细	x'	0
+乡	x'	0
 像	x,	0
 系	x.	0
 兄	x/	0

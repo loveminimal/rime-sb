@@ -14,8 +14,8 @@ schema:
     - 蓝落萧 <https://tansongchen.com>
   dependencies:
     - sbyp
-    # - bihua
-    # - zhlf
+    - bihua
+    - zhlf
 
 switches:
   - name: ascii_mode
