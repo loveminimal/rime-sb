@@ -6,9 +6,8 @@ __include: sbfm.schema.yaml:/
 schema:
   schema_id: sbfd
   name: "声笔飞单"
-  version: "10.0"
-  icon: "assets/fly.ico"
-  ascii_icon: 'assets/ascii.ico'
+  version: "11.0"
+  icon: "sbxlm.ico"
   author:
     - 戴石麟 <https://sbxlm.github.io>
     - 蓝落萧 <https://tansongchen.com>
@@ -26,9 +25,6 @@ switches:
   - name: is_enhanced
     reset: 0
     states: [常规, 增强]
-  - name: is_show_more
-    reset: 1
-    states: [Ⓛ, Ⓜ]
   - options: [hide, rational, irrational, both]
     reset: 1
     states: [隐藏, 有理, 无理, 两者]

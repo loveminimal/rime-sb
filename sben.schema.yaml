@@ -38,7 +38,7 @@ engine:
     - uniquifier
 
 chord_composer:
-  __include: sbxlm.yaml:/chord_composer
+  __include: patch.yaml:/shared_patch/chord_composer
 
 # ¹ alphabet: 定义本方案输入键
 # ² initials: 定义仅作始码之键

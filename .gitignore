@@ -1,6 +1,7 @@
-build
-*userdb
-user.yaml
-log.txt
-out
 __pycache__
+user.yaml
+*.userdb
+log.txt
+build
+sync
+out

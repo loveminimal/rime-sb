@@ -1,0 +1,6 @@
+patch:
+  __include: patch.yaml:/shared_patch
+  schema/icon: "assets/fly.ico"
+  # 用以禁用重复的 chord_composer lua_processor@*quick_symbol
+  engine/processors/@0: 
+  engine/processors/@1: 

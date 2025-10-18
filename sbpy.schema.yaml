@@ -6,9 +6,8 @@ __include: sbxlm.yaml:/prelude
 schema:
   schema_id: sbpy
   name: 声笔拼音
-  version: "10.0"
-  icon: "assets/fly_m.ico"
-  ascii_icon: 'assets/ascii.ico'
+  version: "11.0"
+  icon: "sbxlm.ico"
   author:
     - 戴石麟 <https://sbxlm.github.io>
     - 蓝落萧 <https://tansongchen.com>
@@ -197,10 +196,10 @@ speller:
 
 translator:
   dictionary: sbpy
-  # packs:
-  #   - sbpy.base
-  #   - sbpy.ext
-  #   - sbpy.tencent
+  packs:
+    - sbpy.base
+    - sbpy.ext
+    - sbpy.tencent
   fix_combination: true
 
 punctuator:
