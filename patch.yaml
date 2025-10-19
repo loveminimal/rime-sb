@@ -15,7 +15,7 @@ shared_patch:
     - name: is_show_more
       reset: 1
       states: [Ⓛ, Ⓜ]
-
+  # speller/alphabet: "bpmfdtnlgkhjqxzcsrywvaeiou0123456789;'BPMFDTNLGKHJQXZCSRYWVAEUIO"
   # 方案内按键绑定
   key_binder/+:
     bindings/+:

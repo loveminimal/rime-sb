@@ -9,13 +9,17 @@
 俺宝	v
 宝子	b
 哈哈哈	h
+
 声笔飞单，摆脱空格和词库的烦恼	s
 !声笔飞单	sb
 声笔飞单	sb
+
 将喜欢的一切留在身边，这便是努力的意义	x
+
 刘增玺	n
 姚秋萍	n
 刘奕遥	n
 
+TypeScript	ts
 JavaScript	js
-Java	j
+Java	ja

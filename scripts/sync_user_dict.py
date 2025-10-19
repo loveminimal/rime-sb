@@ -31,7 +31,7 @@ def get_header_sync(file_name):
 # 这里我们重置为供飞单使用的 3+ 词条库
 # 
 # 运行脚本：
-# - https://github.com/loveminimal/rime-fd/blob/master/scripts/sync_user_dict.py
+# - https://github.com/loveminimal/rime-sb/blob/master/scripts/sync_user_dict.py
 # - py scripts/sync_user_dict.py
 # 
 ---
@@ -189,7 +189,7 @@ if __name__ == '__main__':
     # 权重放大亿点点
     is_keep_user_dict_first = False
 
-    src_dir = Path('C:\\Users\\jack\\Nutstore\\1\\我的坚果云\\RimeSync\\fd-rime')
+    src_dir = Path('C:\\Users\\jack\\Nutstore\\1\\我的坚果云\\RimeSync\\sb-rime')
     out_dir = Path('C:\\Users\\jack\\AppData\\Roaming\\Rime')
 
 
