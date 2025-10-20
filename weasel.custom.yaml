@@ -21,14 +21,14 @@ patch:
 # kuon lost_temple luna macau metroblue nba ps4 psionics skype smurfs 
 # so_young starcraft starcraft_ii steam tintin wii xbox_silver youtube       
 # ---------------------------------------------------------------------
-  __include: style.yaml:skjk
+  __include: style.yaml:so_young_jk
   __patch:
     style/+:
-      color_scheme: skjk
-      font_face: LXGW WenKai GB Screen R, Segoe UI Emoji, 黑体字根
-      label_font_face: LXGW WenKai Mono, LXGW WenKai GB Screen R, Segoe UI Emoji, 黑体字根
-      comment_font_face: LXGW WenKai Mono, LXGW WenKai GB Screen R, Segoe UI Emoji, 黑体字根
-      font_point: 11 
+      color_scheme: so_young_jk
+      font_face: 中华薪火体, LXGW WenKai GB Screen R, Segoe UI Emoji, 黑体字根
+      label_font_face: 中华薪火体, LXGW WenKai Mono, LXGW WenKai GB Screen R, Segoe UI Emoji, 黑体字根
+      comment_font_face: 中华薪火体, LXGW WenKai Mono, LXGW WenKai GB Screen R, Segoe UI Emoji, 黑体字根
+      font_point: 12 
       label_font_point: 9
       comment_font_point: 9
       label_format: "%s " #"%s."
