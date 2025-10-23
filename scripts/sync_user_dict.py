@@ -135,7 +135,8 @@ def combine(out_dir, out_file):
 
     # 加载所有词典文件
     for file_path in out_dir.iterdir():
-        if file_path.is_file() and file_path.name.startswith(f'{out_file.split('.')[0] + '.'}'):
+        # if file_path.is_file() and file_path.name.startswith(f'{out_file.split('.')[0] + '.'}'):
+        if file_path.is_file() and file_path.name.startswith(out_file):
             with open(file_path, 'r', encoding='utf-8') as f:
                 lines_total.extend(f.readlines())
 
