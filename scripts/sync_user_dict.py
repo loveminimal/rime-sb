@@ -129,6 +129,7 @@ def convert(src_dir, out_dir, src_file, out_file):
 
 @timer
 def combine(out_dir, out_file):
+    print(f'\n🔜  === 开始增量合并「 声笔 」用户词库文件 ===')
     res_dict = {}
     res_dict_weight = defaultdict(set)
     lines_total = []
@@ -137,6 +138,7 @@ def combine(out_dir, out_file):
     for file_path in out_dir.iterdir():
         # if file_path.is_file() and file_path.name.startswith(f'{out_file.split('.')[0] + '.'}'):
         if file_path.is_file() and file_path.name.startswith(out_file):
+            print('☑️  已加载用户词库文件 » %s' % file_path)
             with open(file_path, 'r', encoding='utf-8') as f:
                 lines_total.extend(f.readlines())
 
