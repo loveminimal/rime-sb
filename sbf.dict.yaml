@@ -13,12 +13,6 @@ columns:
   - code
   - weight
 ...
-# 标点单字 —— S[;',./]B
-# asdfg; hjkl' qwrt, ypnm. zxcvb/
-甚	s;e
-久	j'u
-至	v/e
-载	z/e
 # 增加条目
 # 庄严	zoe;
 # 奖励	joe;
@@ -127,7 +121,7 @@ columns:
 翠	cao	0
 婵	cau	0
 出版	cb'	0
-常常	cc'	0
+存储	cc'	0	# 常常
 程度	cd'	0
 淬	cdoi	9999
 摧	ce'	0
@@ -520,8 +514,8 @@ columns:
 还有	hy'	0
 孩子	hz'	0
 及	j'	0
-机	j,	0
-建	j.	0
+检	j,	0	# 机
+键	j.	0	# 建
 简	j/	0
 己	j;	0
 级	ja'	0
@@ -1001,7 +995,7 @@ columns:
 朋友	py'	0
 批准	pz'	0
 求	q'	0
-青	q,	0
+弃	q,	0	# 青
 取	q.	0
 奇	q/	0
 亲	q;	0
@@ -1313,8 +1307,8 @@ columns:
 统一	ty'	0
 同志	tz'	0
 恶	v'	0
-岸	v,	0
-傲	v.	0
+执	v,	0	# 岸
+值	v.	0	# 傲
 支	v/	0	# 哦
 恩	v;	0
 媕	va'	0
@@ -1476,7 +1470,7 @@ columns:
 硝	xeu	0
 戌	xeue	0
 幸福	xf'	0
-香港	xg'	0
+习惯	xg'	0	# 香港
 喜欢	xh'	0
 晓	xi'	0
 吸	xi;	0
@@ -1530,7 +1524,7 @@ columns:
 需要	xy'	0
 现在	xz'	0
 雨	y'	0
-业	y,	0
+验	y,	0	# 业
 云	y.	0
 员	y/	0
 应	y;	0
