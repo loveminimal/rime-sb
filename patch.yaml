@@ -39,7 +39,7 @@ shared_patch:
   chord_composer:
     # 进入并击的按键，按照键盘从左到右的顺序排序
     # alphabet: "qazwsxedcrfvtgbyhnujmik,ol.p;/'7890 "
-    # alphabet: "qazwsxedcrfvtgbyhnujmik,ol.p;/' "
+    alphabet: "qazwsxedcrfvtgbyhnujmik,ol.p;/' "
     finish_chord_on_first_key_release: true
     # 并击过程中套用的式样
     prompt_format:
@@ -50,94 +50,211 @@ shared_patch:
       - "xform/^(.*)=$/$1/"
       - "xform/^(.*)=(.*)=$/$1$2/"
     algebra:
-      - xform/(asdf)/0/
-      - xform/(jkl;)/@/
-      - xform/(sdf)/7/
-      - xform/(jkl)/`/
-      - xform/(wer)/8/
-      - xform/(uio)/~/
-      - xform/(xcv)/9/
-      - xform/(nm)/m/
-      - xlit|;,./|FDJG|
-      - xform/^([qwertasdfgzxcvb]+)$/$1=/
-      - xform/^([yuiophjklFnmDJG])/=$1/
-      - xform|([A-Za-z])|$1-|
-      - xform/^([7890]+)$/$1=/
-      - xform/(78)/`/
-      - xform/(89)/~/
-      - xform/(79)/@/
-      - xform/(70)/*/
-      - xform/(90)/_/
-      - xform/(w-g-|h-o-)/W/
-      - xform/(r-g-|h-u-)/*/
-      - xform/(q-g-|h-p-)/Q/
-      - xform/(e-g-|h-i-)/E/
-      - xform/(w-e-f-|j-i-o-)/I/
-      - xform/(s-e-r-|u-i-l-)/U/
-      - xform/(s-e-f-|j-i-l-)/Q/
-      - xform/(w-d-f-|j-k-o-)/_/
-      - xform/(s-d-v-|m-k-l-)/C/
-      - xform/(j-o-|w-f-)/h/
-      - xform/(d-f-|j-k-)/j/
-      - xform/(s-d-|k-l-)/k/
-      - xform/(s-f-|j-l-)/l/
-      - xform/(s-f-|h-l-)/F/
-      - xform/(a-f-|j-F-)/;/
-      - xform/(a-s-|l-F-)/:/
-      - xform/(s-c-|m-l-)/n/
-      - xform/(D-l-)/n/
-      - xform/(c-v-|m-D-)/m/
-      - xform/(x-c-|D-J-)/,/
-      - xform/(a-t-|y-F-)/</
-      - xform/(x-v-|m-J-)/./
-      - xform/(a-g-|h-F-)/!/
-      - xform=(z-v-|m-G-)=/=
-      - xform/(z-x-|J-G-)/?/
-      - xform/(e-f-|j-i-)/y/
-      - xform/(e-r-|u-i-)/u/
-      - xform/(w-e-|i-o-)/i/
-      - xform/(w-r-|u-o-)/o/
-      - xform/(q-r-|u-p-)/p/
-      - xform/(q-v-|m-p-)/Q/
-      - xform/(w-v-|m-o-)/W/
-      - xform/(w-v-|n-o-)/W/
-      - xform/(e-v-|m-i-)/E/
-      - xform/(e-v-|n-i-)/E/
-      - xform/(e-t-|y-i-)/R/
-      - xform/(q-t-|y-p-)/T/
-      - xform/(a-v-|m-F-)/A/
-      - xform/(s-v-|n-l-)/S/
-      - xform/(d-v-|m-k-)/D/
-      - xform/(s-g-|h-l-)/F/
-      - xform/(d-g-|h-k-)/G/
-      - xform/(q-w-|o-p-)/B/
-      - xform/(z-f-|j-G-)/Z/
-      - xform/(x-d-|k-J-)/X/
-      - xform/(a-c-|D-F-)/C/
-      - xform/(c-f-|j-D-)/C/
-      - xform/(z-s-|l-G-)/V/
-      - xform/(w-t-|y-o-)/Y/
-      - xform/(q-f-|j-p-)/P/
-      - xform/(a-w-|o-F-)/O/
-      - xform/(a-r-|u-F-)/H/
-      - xform/(s-r-|u-l-)/L/
-      - xform/(d-r-|u-k-)/K/
-      - xform/(x-f-|j-J-)/J/
-      - xform/(s-e-|i-l-)/N/
-      - xform/(w-d-|k-o-)/M/
-      - xform/[aF]-/a/
-      - xform/[sl]-/s/
-      - xform/[dk]-/d/
-      - xform/[fj]-/f/
-      - xform/[gh]-/g/
-      - xform/[zG]-/z/
-      - xform/[xJ]-/x/
-      - xform/[cD]-/c/
-      - xform/[vm]-/v/
-      - xform/[bn]-/b/
-      - xform/[qp]-/q/
-      - xform/[wo]-/w/
-      - xform/[ei]-/e/
-      - xform/[ru]-/r/
-      - xform/[ty]-/t/
-      - xform/^\S{3,}$//
+      __include: /algebra_seven
+
+algebra_seven:
+  # - xform/(asdf)/0/
+  # - xform/(jkl;)/@/
+  # - xform/(sdf)/7/
+  # - xform/(jkl)/`/
+  # - xform/(wer)/8/
+  # - xform/(uio)/~/
+  # - xform/(xcv)/9/
+  # - xform/(nm)/m/
+  - xlit|;,./|FDJG|
+  - xform/^([qwertasdfgzxcvb]+)$/$1=/
+  - xform/^([yuiophjklFnmDJG])/=$1/
+  - xform|([A-Za-z])|$1-|
+  # - xform/^([7890]+)$/$1=/
+  # - xform/(78)/`/
+  # - xform/(89)/~/
+  # - xform/(79)/@/
+  # - xform/(70)/*/
+  # - xform/(90)/_/
+  - xform/(w-g-|h-o-)/W/
+  # - xform/(r-g-|h-u-)/*/
+  - xform/(q-g-|h-p-)/Q/
+  - xform/(e-g-|h-i-)/E/
+  - xform/(w-e-f-|j-i-o-)/I/
+  - xform/(s-e-r-|u-i-l-)/U/
+  - xform/(s-e-f-|j-i-l-)/Q/
+  # - xform/(w-d-f-|j-k-o-)/_/
+  - xform/(s-d-v-|m-k-l-)/C/
+  # - xform/(j-o-|w-f-)/h/
+  # - xform/(d-f-|j-k-)/j/
+  # - xform/(s-d-|k-l-)/k/
+  # - xform/(s-f-|j-l-)/l/
+  - xform/(s-g-|h-l-)/F/
+  # - xform/(a-f-|j-F-)/;/
+  # - xform/(a-s-|l-F-)/:/
+  # - xform/(s-c-|m-l-)/n/
+  # - xform/(D-l-)/n/
+  # - xform/(c-v-|m-D-)/m/
+  # - xform/(x-c-|D-J-)/,/
+  # - xform/(a-t-|y-F-)/</
+  # - xform/(x-v-|m-J-)/./
+  # - xform/(a-g-|h-F-)/!/
+  # - xform=(z-v-|m-G-)=/=
+  # - xform/(z-x-|J-G-)/?/
+  # - xform/(e-f-|j-i-)/y/
+  # - xform/(e-r-|u-i-)/u/
+  - xform/(w-e-)/q/
+  - xform/(i-o-)/p/
+  - xform/(s-d-)/a/
+  - xform/(k-l-)/;/
+  - xform/(j-l-)/'/
+  - xform/(x-c-)/z/
+  # - xform/(w-r-|u-o-)/o/
+  # - xform/(q-r-|u-p-)/p/
+  - xform/(q-v-|m-p-)/Q/
+  - xform/(w-v-|m-o-)/W/
+  - xform/(w-v-|n-o-)/W/
+  - xform/(e-v-|m-i-)/E/
+  - xform/(e-v-|n-i-)/E/
+  - xform/(e-t-|y-i-)/R/
+  - xform/(q-t-|y-p-)/T/
+  - xform/(a-v-|m-F-)/A/
+  - xform/(s-v-|n-l-)/S/
+  - xform/(d-v-|m-k-)/D/
+  - xform/(s-g-|h-l-)/F/
+  - xform/(d-g-|h-k-)/G/
+  - xform/(q-w-|o-p-)/B/
+  - xform/(z-f-|j-G-)/Z/
+  - xform/(x-d-|k-J-)/X/
+  - xform/(a-c-|D-F-)/C/
+  - xform/(c-f-|j-D-)/C/
+  - xform/(z-s-|l-G-)/V/
+  - xform/(w-t-|y-o-)/Y/
+  - xform/(q-f-|j-p-)/P/
+  - xform/(a-w-|o-F-)/O/
+  - xform/(a-r-|u-F-)/H/
+  - xform/(s-r-|u-l-)/L/
+  - xform/(d-r-|u-k-)/K/
+  - xform/(x-f-|j-J-)/J/
+  - xform/(s-e-|i-l-)/N/
+  - xform/(w-d-|k-o-)/M/
+  - xform/(s-f-)/ /
+  - xform/[a]-/a/
+  - xform/[s]-/s/
+  - xform/[d]-/d/
+  - xform/[f]-/f/
+  - xform/[g]-/g/
+  - xform/[z]-/z/
+  - xform/[x]-/x/
+  - xform/[c]-/c/
+  - xform/[v]-/v/
+  - xform/[b]-/b/
+  - xform/[q]-/q/
+  - xform/[w]-/w/
+  - xform/[e]-/e/
+  - xform/[r]-/r/
+  - xform/[t]-/t/
+  - xform/[y]-/y/
+  - xform/[u]-/u/
+  - xform/[i]-/i/
+  - xform/[o]-/o/
+  - xform/[p]-/p/
+  - xform/[h]-/h/
+  - xform/[j]-/j/
+  - xform/[k]-/k/
+  - xform/[l]-/l/
+  - xform/[F]-/;/
+  - xform/[n]-/n/
+  - xform/[m]-/m/
+  - xform/[D]-/,/
+  - xform/[J]-/./
+  - xform|[G]-|/|
+  - xform/^\S{3,}$//
+
+algebra_mirror:
+  - xform/(asdf)/0/
+  - xform/(jkl;)/@/
+  - xform/(sdf)/7/
+  - xform/(jkl)/`/
+  - xform/(wer)/8/
+  - xform/(uio)/~/
+  - xform/(xcv)/9/
+  - xform/(nm)/m/
+  - xlit|;,./|FDJG|
+  - xform/^([qwertasdfgzxcvb]+)$/$1=/
+  - xform/^([yuiophjklFnmDJG])/=$1/
+  - xform|([A-Za-z])|$1-|
+  - xform/^([7890]+)$/$1=/
+  - xform/(78)/`/
+  - xform/(89)/~/
+  - xform/(79)/@/
+  - xform/(70)/*/
+  - xform/(90)/_/
+  - xform/(w-g-|h-o-)/W/
+  - xform/(r-g-|h-u-)/*/
+  - xform/(q-g-|h-p-)/Q/
+  - xform/(e-g-|h-i-)/E/
+  - xform/(w-e-f-|j-i-o-)/I/
+  - xform/(s-e-r-|u-i-l-)/U/
+  - xform/(s-e-f-|j-i-l-)/Q/
+  - xform/(w-d-f-|j-k-o-)/_/
+  - xform/(s-d-v-|m-k-l-)/C/
+  - xform/(j-o-|w-f-)/h/
+  - xform/(d-f-|j-k-)/j/
+  - xform/(s-d-|k-l-)/k/
+  - xform/(s-f-|j-l-)/l/
+  - xform/(s-f-|h-l-)/F/
+  - xform/(a-f-|j-F-)/;/
+  - xform/(a-s-|l-F-)/:/
+  - xform/(s-c-|m-l-)/n/
+  - xform/(D-l-)/n/
+  - xform/(c-v-|m-D-)/m/
+  - xform/(x-c-|D-J-)/,/
+  - xform/(a-t-|y-F-)/</
+  - xform/(x-v-|m-J-)/./
+  - xform/(a-g-|h-F-)/!/
+  - xform=(z-v-|m-G-)=/=
+  - xform/(z-x-|J-G-)/?/
+  - xform/(e-f-|j-i-)/y/
+  - xform/(e-r-|u-i-)/u/
+  - xform/(w-e-|i-o-)/i/
+  - xform/(w-r-|u-o-)/o/
+  - xform/(q-r-|u-p-)/p/
+  - xform/(q-v-|m-p-)/Q/
+  - xform/(w-v-|m-o-)/W/
+  - xform/(w-v-|n-o-)/W/
+  - xform/(e-v-|m-i-)/E/
+  - xform/(e-v-|n-i-)/E/
+  - xform/(e-t-|y-i-)/R/
+  - xform/(q-t-|y-p-)/T/
+  - xform/(a-v-|m-F-)/A/
+  - xform/(s-v-|n-l-)/S/
+  - xform/(d-v-|m-k-)/D/
+  - xform/(s-g-|h-l-)/F/
+  - xform/(d-g-|h-k-)/G/
+  - xform/(q-w-|o-p-)/B/
+  - xform/(z-f-|j-G-)/Z/
+  - xform/(x-d-|k-J-)/X/
+  - xform/(a-c-|D-F-)/C/
+  - xform/(c-f-|j-D-)/C/
+  - xform/(z-s-|l-G-)/V/
+  - xform/(w-t-|y-o-)/Y/
+  - xform/(q-f-|j-p-)/P/
+  - xform/(a-w-|o-F-)/O/
+  - xform/(a-r-|u-F-)/H/
+  - xform/(s-r-|u-l-)/L/
+  - xform/(d-r-|u-k-)/K/
+  - xform/(x-f-|j-J-)/J/
+  - xform/(s-e-|i-l-)/N/
+  - xform/(w-d-|k-o-)/M/
+  - xform/[aF]-/a/
+  - xform/[sl]-/s/
+  - xform/[dk]-/d/
+  - xform/[fj]-/f/
+  - xform/[gh]-/g/
+  - xform/[zG]-/z/
+  - xform/[xJ]-/x/
+  - xform/[cD]-/c/
+  - xform/[vm]-/v/
+  - xform/[bn]-/b/
+  - xform/[qp]-/q/
+  - xform/[wo]-/w/
+  - xform/[ei]-/e/
+  - xform/[ru]-/r/
+  - xform/[ty]-/t/
+  - xform/^\S{3,}$//
