@@ -285,7 +285,7 @@ columns:
 跺	dzui	9999
 父	f'	0
 负	f,	0
-防	f.	0
+符	f.	0	# 防
 福	f/	0
 峰	f;	0
 绂	fa'	0
@@ -775,7 +775,7 @@ columns:
 徕	luui	0
 两岸	lv'	0
 另外	lw'	0
-冷笑	lx'	0
+练习	lx'	0	# 冷笑
 利用	ly'	0
 来自	lz'	0
 么	m'	0
@@ -1213,7 +1213,7 @@ columns:
 臊	suae	0
 鳝	suai	0
 飕	suau	0
-簌	sue	0
+算	sue	0	# 簌
 黍	suei	0
 筮	sueo	0
 叟	sui	0

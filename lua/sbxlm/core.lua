@@ -98,7 +98,7 @@ end
 
 ---@param id string
 function core.feixi(id)
-  return id == "sbfd" or id == "sbfm" or id == "sbfx" or id == 'sbfj' or id == "sbfy"
+  return id == "sbfd" or id == "sbfd_m" or id == "sbfm" or id == "sbfx" or id == 'sbfj' or id == "sbfy"	-- ⚡️jk
 end
 
 ---@param id string
@@ -133,7 +133,7 @@ end
 
 ---@param id string
 function core.fd(id)
-  return id == "sbfd"
+  return id == "sbfd" or id == "sbfd_m"	-- ⚡️jk
 end
 
 ---@param id string
@@ -230,7 +230,7 @@ end
 
 function core.reverse(id)
   --相当于三目运算符a ? b : c
-  local dict_name = (id == "sbfd" or id == "sbfy") and "sbfm" or id
+  local dict_name = (id == "sbfd" or id == "sbfd_m" or id == "sbfy") and "sbfm" or id	-- ⚡️jk
   --如果不是飞系方案，单字构词码在扩展词库里
   if not core.feixi(id) then
     dict_name = dict_name .. ".extended"
