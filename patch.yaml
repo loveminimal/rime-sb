@@ -11,6 +11,8 @@ shared_patch:
     '`' : '`'
     # '\' :  、
     # '/' : '/'
+    ';' : [；]
+    # '^' : [……]
   switches/+:
     - name: is_show_more
       reset: 1
@@ -50,9 +52,9 @@ shared_patch:
       - "xform/^(.*)=$/$1/"
       - "xform/^(.*)=(.*)=$/$1$2/"
     algebra:
-      __include: /algebra_seven
+      __include: /algebra_magic
 
-algebra_seven:
+algebra_magic:
   # - xform/(asdf)/0/
   # - xform/(jkl;)/@/
   # - xform/(sdf)/7/
@@ -102,8 +104,21 @@ algebra_seven:
   - xform/(i-o-)/p/
   - xform/(s-d-)/a/
   - xform/(k-l-)/;/
-  - xform/(j-l-)/'/
   - xform/(x-c-)/z/
+  - xform|D-J-|/|
+  - xform/(s-f-|j-l-)/'/
+  - xform/(d-f-|j-k-)/ /
+  - xform/(f-g-|h-j-)/	/
+  - xform/(e-r-)/!/
+  - xform/(u-i-)/?/
+  - xform/(w-r-)/:/
+  - xform/(u-o-)/"/
+  - xform/(x-v-)/^/
+  - xform/(m-J-)/-/
+  - xform/(r-t-)/(/
+  - xform/(y-u-)/)/
+  - xform/(c-v-)/「 /
+  - xform/(m-D-)/ 」/
   # - xform/(w-r-|u-o-)/o/
   # - xform/(q-r-|u-p-)/p/
   - xform/(q-v-|m-p-)/Q/
@@ -133,7 +148,6 @@ algebra_seven:
   - xform/(x-f-|j-J-)/J/
   - xform/(s-e-|i-l-)/N/
   - xform/(w-d-|k-o-)/M/
-  - xform/(s-f-)/ /
   - xform/[a]-/a/
   - xform/[s]-/s/
   - xform/[d]-/d/
