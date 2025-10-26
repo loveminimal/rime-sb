@@ -20,9 +20,8 @@
 - 并击组合直接输出大写字母「 空明码指法 」
 - 小写字母提供并击组合：
   - we → q  sd → a  xc → z  io → p  
-  - kl → ;  er → ！ ui → ？ cv → 「  m, →  」
+  - kl → ;  er → ！ ui → ？ cv → （  m, → ）
   - sf | jl → '
-  
   - df | jk → 空格
   - fg | hj → 缩进
   - xv → ……  m. → ——

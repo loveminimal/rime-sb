@@ -115,10 +115,10 @@ algebra_magic:
   - xform/(u-o-)/"/
   - xform/(x-v-)/^/
   - xform/(m-J-)/-/
-  - xform/(r-t-)/(/
-  - xform/(y-u-)/)/
-  - xform/(c-v-)/「 /
-  - xform/(m-D-)/ 」/
+  - xform/(r-t-)/「 /
+  - xform/(y-u-)/ 」/
+  - xform/(c-v-)/(/
+  - xform/(m-D-)/)/
   # - xform/(w-r-|u-o-)/o/
   # - xform/(q-r-|u-p-)/p/
   - xform/(q-v-|m-p-)/Q/

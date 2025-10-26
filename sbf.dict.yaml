@@ -13,6 +13,8 @@ columns:
   - code
   - weight
 ...
+# 新增词语
+钥匙	y'i
 # 增加条目
 # 庄严	zoe;
 # 奖励	joe;
@@ -516,7 +518,7 @@ columns:
 及	j'	0
 检	j,	0	# 机
 键	j.	0	# 建
-简	j/	0
+久	j/	0	# 简
 己	j;	0
 级	ja'	0
 既	ja;	0
@@ -1204,7 +1206,7 @@ columns:
 水平	sp'	0
 事情	sq'	0
 虽然	sr'	0
-身上	ss'	0
+搜索	ss'	0	# 身上
 身体	st'	0
 释	su'	0
 舍	su;	0
@@ -1228,10 +1230,10 @@ columns:
 晒	svee	9999
 曙	sviu	9999
 所谓	sw'	0
-实现	sx'	0
+熟悉	sx'	0	# 实现
 所以	sy'	0
 讼	syua	9999
-身子	sz'	0
+甚至	sz'	0	# 身子
 谈	t'	0
 图	t,	0
 铁	t.	0
@@ -1728,7 +1730,7 @@ columns:
 只是	zs'	0
 挚	zseo	9999
 崽	zsii	9999
-总统	zt'	0
+折腾	zt'	0	# 总统
 追	zu'	0
 造	zu;	0
 脏	zua	0
