@@ -13,7 +13,8 @@ columns:
   - code
   - weight
 ...
-# 新增词语
+# 新增字词
+仅	vji
 钥匙	y'i
 # 增加条目
 # 庄严	zoe;
@@ -73,7 +74,7 @@ columns:
 鄙	biu	0
 不仅	bj'	0
 不肯	bk'	0
-鼻孔	bka	0
+包括	bka	0	# 鼻孔
 本来	bl'	0
 部门	bm'	0
 半年	bn'	0
@@ -193,7 +194,7 @@ columns:
 舱	cuu	0
 从而	cv'	0
 翅	cveo	9999
-成为	cw'	0
+错误	cw'	0	# 成为
 出现	cx'	0
 产业	cy'	0
 醇	cyoi	9999
@@ -248,7 +249,7 @@ columns:
 镀	djoi	9999
 打开	dk'	0
 带来	dl'	0
-多么	dm'	0
+代码	dm'	0	# 多么
 盹	dmeo	9999
 多年	dn'	0
 懂	do'	0
@@ -553,6 +554,7 @@ columns:
 拣	jfee	9999
 攫	jfio	9999
 结果	jg'	0
+结构	jga	0	# 
 戟	jgeo	9999
 几乎	jh'	0
 棘	jhio	9999
@@ -619,7 +621,7 @@ columns:
 极为	jw'	0
 进行	jx'	0
 教育	jy'	0
-记者	jz'	0
+机制	jz'	0	# 记者
 块	k'	0
 恐	k,	0
 康	k.	0
@@ -909,7 +911,7 @@ columns:
 哪怕	np'	0
 那片	npu	0
 年轻	nq'	0
-女人	nr'	0
+内容	nr'	0	# 女人
 那时	ns'	0
 念头	nt'	0
 那天	nte	0
@@ -1527,7 +1529,7 @@ columns:
 现在	xz'	0
 雨	y'	0
 验	y,	0	# 业
-云	y.	0
+译	y.	0	# 云
 员	y/	0
 应	y;	0
 勇	ya'	0
