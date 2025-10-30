@@ -16,26 +16,33 @@ version: 2025.10
 sort: by_weight
 use_preset_vocabulary: false
 ...
-垃圾	ltjtei	1
+翻译	fvyyuo	3
+垃圾	ltjtei	3
 搜索	sfssei	8
 钥匙	yjsvue	5
-浏览器	llqkoo	11
+服务器	fwqkua	1
+计算机	jsjmoa	2
+浏览器	llqkoo	20
+时间戳	sjcgia	3
 字符串	zfckoo	11
 姹紫嫣红	czyhau	3
 朗朗上口	llskoa	2
-一路顺风	ylsfee	1
-众口难调	zkntuo	1
-凡人修仙传	frxzua	7
-山海八荒录	shblia	10
+行云流水	xylsuu	1
+一路顺风	ylsfee	2
+游刃有余	yryyoo	1
+众口难调	zkntuo	2
+凡人修仙传	frxzua	8
+山海八荒录	shblia	11
 早上好朋友们	zshmia	2
 船到桥头自然直	cdqzuu	1
 车到山前必有路	cdslea	2
-曾经沧海难为水	cjcsou	1
-除却巫山不是云	cqwyai	1
+曾经沧海难为水	cjcsou	2
+除却巫山不是云	cqwyai	2
 江湖夜雨十年灯	jhydoo	8
 柳暗花明又一村	lvhcei	4
 山重水复疑无路	scslia	5
 身无彩凤双飞翼	swcyui	2
 桃李春风一杯酒	tlcjei	3
 心有灵犀一点通	xyltoa	3
+自有大儒为我辩经	zydjui	1
 实践是检验真理的唯一标准	sjszoo	2
