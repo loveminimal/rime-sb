@@ -1,8 +1,8 @@
 patch:
   schema_list:
     - schema: sben
-    # - schema: sbfd
-    - schema: sbfm
+    - schema: sbfd
+    # - schema: sbfm
     # - schema: sbfy
   switcher:
     abbreviate_options: true

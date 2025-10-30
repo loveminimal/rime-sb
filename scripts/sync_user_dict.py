@@ -108,8 +108,8 @@ def convert(src_dir, out_dir, src_file, out_file):
                     weight = line_list[2]
 
 
-                # 删除权重为负数的字词（废词）
-                if int(weight) <= 0:
+                # 删除权重为负数的字词（废词）或声笔中编码小于 6 的标点字词
+                if int(weight) <= 0 or len(code) < 6:
                     continue
 
                 # 处理特殊编码
