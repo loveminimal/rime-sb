@@ -20,6 +20,7 @@ columns:
 霑	zvoo	1	zveo
 囧	jkuo	1	jkia
 〇	lloo	1	lloo
+磺	hsee	1	hseu
 # 以下为 8105 范围内单字
 的	d	18680622	dbui
 一	y	9613770	yhee
@@ -5287,7 +5288,7 @@ columns:
 骐	qmei	248	qmaa
 疣	ybeu	248	yboe
 缛	rjeu	247	rjaa
-铵	vjoo	246	vjue	# vjo
+铵	vjo	246	vjue
 鲟	xvae	246	xvua
 芨	jcua	245	jcei
 旯	lvua	245	lvia
@@ -5830,7 +5831,7 @@ columns:
 筲	spio	95	spue
 浠	xduo	95	xdoo
 趑	zzoe	95	zzei
-鏊	vjee	94	vjee	# vje
+鏊	vje	94	vjee
 柽	cmao	94	cmei
 缧	ljia	94	ljaa
 筇	qpei	94	qpue
@@ -6595,7 +6596,7 @@ columns:
 傺	crua	15	crui
 铤	djue	15	djue
 簖	dpou	15	dpue
-锇	vjue	15	vjue	# vju
+锇	vju	15	vjue
 崞	gsoe	15	gsia
 芥	gcuo	15	gcei
 垲	ktia	15	ktei

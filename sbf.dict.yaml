@@ -14,12 +14,20 @@ columns:
   - weight
 ...
 # 新增字词
-增	vju
-角	vje
-久	vjo
-仅	vji
-刘	vlo
-钥匙	y'i
+超	c'o
+捷	j'e
+久	j'u
+仅	j'i
+角	j'o
+刘	l'o
+室	s'e
+匙	s'i
+争	v'e
+智	v'i
+婴	y'i
+钥	y'o
+总	z'o
+增	z'e
 # 增加条目
 # 庄严	zoe;
 # 奖励	joe;
@@ -363,7 +371,7 @@ columns:
 癸	gao	0
 艮	gau	0
 根本	gb'	0
-工程	gc'	0
+过程	gc'	0	# 工程
 感到	gd'	0
 柜	ge'	0
 贡	ge;	0
@@ -607,7 +615,7 @@ columns:
 骄傲	jv'	0
 极为	jw'	0
 进行	jx'	0
-教育	jy'	0
+记忆	jy'	0	# 教育
 机制	jz'	0	# 记者
 块	k'	0
 恐	k,	0
@@ -904,7 +912,7 @@ columns:
 那样	ny'	0
 女子	nz'	0
 拍	p'	0
-朋	p,	0
+频	p,	0	# 朋
 批	p.	0
 评	p/	0
 盘	p;	0
@@ -1660,7 +1668,7 @@ columns:
 只怕	zp'	0
 之前	zq'	0
 自然	zr'	0
-只是	zs'	0
+总是	zs'	0	# 只是
 挚	zseo	9999
 崽	zsii	9999
 折腾	zt'	0	# 总统

@@ -12,7 +12,7 @@
 # 
 ---
 name: sbfm.extended
-version: 2025.10
+version: 2025.11
 sort: by_weight
 use_preset_vocabulary: false
 ...
@@ -21,22 +21,45 @@ use_preset_vocabulary: false
 搜索	sfssei	8
 引入	ygrpae	3
 钥匙	yjsvue	5
+蜘蛛	zczcia	1
+差不多	cbdxou	8
 服务器	fwqkua	1
 辅助码	fzmsea	1
+红楼梦	hlmxaa	2
 计算机	jsjmoa	2
 快捷键	kjjjoo	2
 浏览器	llqkoo	20
+水浒传	shzria	2
 时间戳	sjcgia	3
 为什么	wsmsou	3
+西游记	xyjyei	1
 字符串	zfckoo	11
+蜘蛛侠	zzxria	1
+卑躬屈膝	bgqxui	2
+从从容容	ccrruo	1
 姹紫嫣红	czyhau	3
+落花流水	lhlsei	1
 朗朗上口	llskoa	2
+罗纳尔多	lnvdia	3
+曲终人散	qzrsia	1
+声笔飞单	sbfdei	1
+声笔飞码	sbfmei	1
+三国演义	sgyyee	1
+死皮癞脸	splleu	1
+实事求是	ssqsoo	1
+神印王座	sywzoa	2
+吞噬星空	tsxkee	2
+唯唯诺诺	wwnnia	1
 行云流水	xylsuu	1
 一路顺风	ylsfee	2
-游刃有余	yryyoo	1
+游刃有余	yryyoo	2
+与时俱进	ysjjea	2
+一无所知	ywszee	1
+主单辅词	zdfcoe	1
 众口难调	zkntuo	2
 凡人修仙传	frxzua	8
 山海八荒录	shblia	12
+毕其功于一役	bqgyea	2
 早上好朋友们	zshmia	2
 船到桥头自然直	cdqzuu	1
 车到山前必有路	cdslea	2
@@ -44,9 +67,10 @@ use_preset_vocabulary: false
 除却巫山不是云	cqwyai	2
 江湖夜雨十年灯	jhydoo	9
 柳暗花明又一村	lvhcei	4
+磨刀不误砍柴功	mdbgoe	2
 山重水复疑无路	scslia	5
 身无彩凤双飞翼	swcyui	2
-桃李春风一杯酒	tlcjei	3
+桃李春风一杯酒	tlcjei	4
 心有灵犀一点通	xyltoa	3
 自有大儒为我辩经	zydjui	1
 实践是检验真理的唯一标准	sjszoo	3

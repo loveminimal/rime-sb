@@ -53,6 +53,7 @@ shared_patch:
       - "xform/^(.*)=(.*)=$/$1$2/"
     algebra:
       __include: /algebra_magic
+      # __include: /algebra_mirror
 
 algebra_magic:
   # - xform/(asdf)/0/
@@ -107,7 +108,7 @@ algebra_magic:
   - xform/(x-c-)/z/
   - xform|D-J-|/|
   - xform/(s-f-|j-l-)/'/
-  - xform/(d-f-|j-k-)/ /
+  - xform/(d-f-|j-k-)/;/
   - xform/(f-g-|h-j-)/	/
   - xform/(e-r-)/!/
   - xform/(u-i-)/?/
