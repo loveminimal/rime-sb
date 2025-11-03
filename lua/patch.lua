@@ -10,6 +10,7 @@ function D.func(input, seg)
       table.insert(datetimes, os.date("%Y-%m-%d"))
       table.insert(datetimes, os.date("%Y-%m-%d %H:%M"))
       table.insert(datetimes, os.date("`> %Y-%m-%d %H:%M`"))
+      table.insert(datetimes, os.date("%H:%M"))
    end
    for _, entry in ipairs(datetimes) do
       ---@cast entry string

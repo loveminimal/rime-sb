@@ -794,4 +794,20 @@ steam_jk:
     # ---〔翻页选项〕---
     nextpage_color: 0x31425999
     prevpage_color: 0x31425999
-  
+
+ink_jk:
+  preset_color_schemes/ink_jk:
+    # 参考常用背景色、Monokai 色调、佛振的墨池色
+    color_format: rgba
+    name: 宣墨／Ink
+    text_color: 0x222827
+    back_color: 0xf6f2f1
+    border_color: 0x222827
+    shadow_color: 0x22282766
+    # hilited_text_color: 0x222827
+    hilited_back_color: 0xdddddd
+    hilited_candidate_text_color: 0xf6f2f1
+    hilited_candidate_back_color: 0x222827  
+    # ---〔翻页选项〕---
+    nextpage_color: 0x22282799
+    prevpage_color: 0x22282799

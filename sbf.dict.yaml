@@ -14,20 +14,25 @@ columns:
   - weight
 ...
 # 新增字词
+倡	c'a
 超	c'o
+价	j'a
 捷	j'e
 久	j'u
 仅	j'i
 角	j'o
 刘	l'o
+渺	m'o
 室	s'e
 匙	s'i
 争	v'e
 智	v'i
+源	y'u
 婴	y'i
 钥	y'o
-总	z'o
 增	z'e
+滋	z'i
+总	z'o
 # 增加条目
 # 庄严	zoe;
 # 奖励	joe;
@@ -242,7 +247,7 @@ columns:
 砥	deui	0
 耷	deuo	0
 地方	df'	0
-大哥	dg'	0
+大概	dg'	0	# 大哥
 的话	dh'	0
 鼎	di'	0
 吨	di;	0
@@ -551,7 +556,7 @@ columns:
 攫	jfio	9999
 结果	jg'	0
 戟	jgeo	9999
-几乎	jh'	0
+计划	jh'	0	# 几乎
 棘	jhio	9999
 距	ji'	0
 旧	ji;	0
@@ -566,7 +571,7 @@ columns:
 钾	jjii	9999
 觊	jjiu	9999
 绢	jjiu	9999
-加快	jk'	0
+健康	jk'	0	# 加快
 叽	jkuu	9999
 建立	jl'	0
 剂	jloa	9999
@@ -692,7 +697,7 @@ columns:
 老板	lb'	0
 露出	lc'	0
 螺	lcio	9999
-领导	ld'	0
+劳动	ld'	0	# 领导
 涝	ldeo	9999
 浏	ldoo	9999
 楼	le'	0
@@ -1488,7 +1493,7 @@ columns:
 一般	yb'	0
 因此	yc'	0
 苑	ycuu	9999
-一定	yd'	0
+运动	yd'	0	# 一定
 涯	ydea	9999
 淹	ydee	9999
 溢	ydoi	9999
