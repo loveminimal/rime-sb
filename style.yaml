@@ -808,6 +808,7 @@ ink_jk:
     hilited_back_color: 0xdddddd
     hilited_candidate_text_color: 0xf6f2f1
     hilited_candidate_back_color: 0x222827  
+    hilited_comment_text_color: 0xf6f2f199
     # ---〔翻页选项〕---
     nextpage_color: 0x22282799
     prevpage_color: 0x22282799

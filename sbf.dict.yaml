@@ -21,12 +21,15 @@ columns:
 久	j'u
 仅	j'i
 角	j'o
+嘞	l'e
 刘	l'o
 渺	m'o
 室	s'e
+熟	s'u
 匙	s'i
 争	v'e
 智	v'i
+悉	x'i
 源	y'u
 婴	y'i
 钥	y'o
@@ -261,7 +264,7 @@ columns:
 大家	dj'	0
 镀	djoi	9999
 打开	dk'	0
-带来	dl'	0
+道理	dl'	0	# 带来
 代码	dm'	0	# 多么
 盹	dmeo	9999
 多年	dn'	0
@@ -796,7 +799,7 @@ columns:
 名称	mc'	0
 萌	mcio	9999
 蔓	mciu	9999
-目的	md'	0
+矛盾	md'	0	# 目的
 渺	mdie	9999
 棉	me'	0
 茫	me;	0
@@ -857,7 +860,7 @@ columns:
 名字	mz'	0
 哪	n'	0
 您	n,	0
-尼	n.	0
+嗯	n.	0	# 尼
 乃	n/	0
 怒	n;	0
 孥	na'	0
