@@ -36,6 +36,7 @@ columns:
 婴	y'i
 钥	y'o
 增	z'a
+足	z'u
 择	z'e
 滋	z'i
 总	z'o
@@ -1105,7 +1106,7 @@ columns:
 然而	rv'	0
 认为	rw'	0
 人心	rx'	0
-人员	ry'	0
+容易	ry'	0	# 人员
 日子	rz'	0
 神	s'	0
 什	s,	0
@@ -1568,7 +1569,7 @@ columns:
 一旁	yp'	0
 一切	yq'	0
 依然	yr'	0
-也是	ys'	0
+意思	ys'	0	# 也是
 摇头	yt'	0
 伊	yu'	0
 余	yu;	0
