@@ -188,7 +188,7 @@ pujk:
     border_color: 0xEEEEFF                      # 边框
     back_color: 0xEEEEFF                        # 背景
 
-    shadow_color: 0x000000b4                    # 阴影
+    shadow_color: 0x666666b4                    # 阴影
     # ---〔内选区域·顶部〕---
     text_color: 0x48466d                        # 文字
     # hilited_text_color: 0xFFFFFF                # 编码
@@ -224,7 +224,7 @@ skjk:
     border_color: 0xD6EAF8                      # 边框
     back_color: 0xD6EAF8                        # 背景
     
-    shadow_color: 0x000000b4                    # 阴影
+    shadow_color: 0x666666b4                    # 阴影
     # ---〔内选区域·顶部〕---
     text_color: 0x1B4F72                        # 文字
     # hilited_text_color: 0xFFFFFF                # 编码
@@ -260,7 +260,7 @@ prjk:
     border_color: 0xcfe2ff                      # 边框
     back_color: 0xcfe2ff                        # 背景
 
-    shadow_color: 0x000000b4                    # 阴影
+    shadow_color: 0x666666b4                    # 阴影
     # ---〔内选区域·顶部〕---
     text_color: 0x0a58ca                        # 文字
     # hilited_text_color: 0xFFFFFF                # 编码
@@ -296,7 +296,7 @@ emjk:
     border_color: 0xD0ECE7                      # 边框
     back_color: 0xD0ECE7                        # 背景
 
-    shadow_color: 0x000000b4                    # 阴影
+    shadow_color: 0x666666b4                    # 阴影
     # ---〔内选区域·顶部〕---
     text_color: 0x0B5345                        # 文字
     # hilited_text_color: 0xFFFFFF                # 编码
@@ -332,7 +332,7 @@ orjk:
     border_color: 0xFFF8F3                      # 边框
     back_color: 0xFFF8F3                        # 背景
 
-    shadow_color: 0x000000b4                    # 阴影
+    shadow_color: 0x666666b4                    # 阴影
     # ---〔内选区域·顶部〕---
     text_color: 0x555250                        # 文字
     # hilited_text_color: 0xFFFFFF                # 编码
@@ -368,7 +368,7 @@ otjk:
     border_color: 0xFFF8F3                      # 边框
     back_color: 0xFFF8F3                        # 背景
 
-    shadow_color: 0x000000b4                    # 阴影
+    shadow_color: 0x666666b4                    # 阴影
     # ---〔内选区域·顶部〕---
     text_color: 0x663300                        # 文字
     # hilited_text_color: 0xFFFFFF                # 编码
@@ -404,7 +404,7 @@ sljk:
     border_color: 0xe2e8f0                      # 边框
     back_color: 0xe2e8f0                        # 背景
 
-    shadow_color: 0x000000b4                    # 阴影
+    shadow_color: 0x666666b4                    # 阴影
     # ---〔内选区域·顶部〕---
     text_color: 0x334155                        # 文字
     # hilited_text_color: 0xFFFFFF                # 编码
@@ -440,7 +440,7 @@ tkjk:
     border_color: 0xe8f3f5                      # 边框
     back_color: 0xe8f3f5                        # 背景
 
-    shadow_color: 0x000000b4                    # 阴影
+    shadow_color: 0x666666b4                    # 阴影
     # ---〔内选区域·顶部〕---
     text_color: 0x1150af                        # 文字
     # hilited_text_color: 0xFFFFFF                # 编码
@@ -476,7 +476,7 @@ aqjk:
     border_color: 0xECEFF4                      # 边框
     back_color: 0xECEFF4                        # 背景
 
-    shadow_color: 0x000000b4                    # 阴影
+    shadow_color: 0x666666b4                    # 阴影
     # ---〔内选区域·顶部〕---
     text_color: 0x2E3440                        # 文字
     # hilited_text_color: 0xFFFFFF                # 编码
@@ -515,7 +515,7 @@ mljk:
     border_color: 0xE8E8E8                      # 边框
     back_color: 0xF9F9F9                        # 背景
 
-    shadow_color: 0x000000b4                    # 阴影
+    shadow_color: 0x666666b4                    # 阴影
     # ---〔内选区域·顶部〕---
     text_color: 0x1A1A1A                        # 文字
     # hilited_text_color: 0x191919                # 编码
@@ -551,7 +551,7 @@ mdjk:
     border_color: 0x2c2c2c99                    # 边框
     back_color: 0x2c2c2c                        # 背景
 
-    shadow_color: 0x000000b4                    # 阴影
+    shadow_color: 0x666666b4                    # 阴影
     # ---〔内选区域·顶部〕---
     text_color: 0xffffff                        # 文字
     # hilited_text_color: 0xffffff                # 编码
