@@ -138,6 +138,47 @@ layout_h:
   shadow_offset_x: 1
   shadow_offset_y: 1
 
+# 主要用于优化以下属性设置为 false 时的观感
+# style/inline_preedit: true
+layout_hp:
+  # ---〔基础〕---
+  # 排列
+  # type: vertical
+  type: horizontal
+  # 字号
+  linespacing: 0
+  baseline: 0
+  # 对齐
+  align_type: bottom
+  # 边框
+  border_width: 0
+  # 边距
+  margin_x: 16
+  margin_y: 8
+  # 编码区域和候选区域的间距
+  spacing: 10
+  # ---〔候选框〕---
+  # 候选框宽高
+  max_width: 0
+  min_width: 0
+  min_height: 0
+  max_height: 0
+  # 候选项间距
+  candidate_spacing: 5
+  # 圆角
+  corner_radius: 4
+  round_corner: 4 # i.e. hilited_corner_radius
+  # ---〔高亮候选〕---
+  # line_spacing: 4
+  hilite_spacing: 4
+  hilite_padding: 4
+  hilite_padding_x: 12
+  # hilite_padding_y: 8
+  # --- 〔阴影区域〕---
+  shadow_radius: 2
+  shadow_offset_x: 1
+  shadow_offset_y: 1
+
 layout_v:
   # ---〔基础〕---
   # 排列
@@ -798,6 +839,7 @@ steam_jk:
 ink_jk:
   preset_color_schemes/ink_jk:
     # 参考常用背景色、Monokai 色调、佛振的墨池色
+    # 0x222827  0x3E3D32
     color_format: rgba
     name: 宣墨／Ink
     text_color: 0x222827
@@ -805,7 +847,7 @@ ink_jk:
     border_color: 0x222827
     shadow_color: 0x22282766
     # hilited_text_color: 0x222827
-    hilited_back_color: 0xdddddd
+    # hilited_back_color: 0xdddddd
     hilited_candidate_text_color: 0xf6f2f1
     hilited_candidate_back_color: 0x222827  
     hilited_comment_text_color: 0xf6f2f199

@@ -16,6 +16,7 @@ columns:
 # 新增字词
 倡	c'a
 超	c'o
+惰	d'o
 价	j'a
 捷	j'e
 久	j'u
@@ -29,6 +30,7 @@ columns:
 室	s'e
 熟	s'u
 匙	s'i
+骚	s'o
 争	v'e
 智	v'i
 悉	x'i
@@ -42,19 +44,6 @@ columns:
 滋	z'i
 总	z'o
 机	rue
-# 增加条目
-# 庄严	zoe;
-# 奖励	joe;
-# 懒惰	loo;
-# 淋浴	loo'
-# 劳动	lei'
-# 筑造	zue;
-# 制造	zue'
-# 追逐	zui;
-# 职业	zei;
-# 铸造	zueu
-# 皮靴	pae
-# 皮具	pai
 # 优化手感
 争	rua
 致	vea

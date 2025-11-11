@@ -43,7 +43,7 @@ shared_patch:
     # alphabet: "qazwsxedcrfvtgbyhnujmik,ol.p;/'7890 "
     alphabet: "qazwsxedcrfvtgbyhnujmik,ol.p;/' "
     # alphabet: "azfv"
-    finish_chord_on_first_key_release: true
+    # finish_chord_on_first_key_release: true
     # 并击过程中套用的式样
     prompt_format:
       # - "xform/^(.*)$/[$1]/" 
@@ -131,6 +131,10 @@ algebra_magic:
   - xform/(m-D-)/)/
   - xform/(v-b-)/ 🤭/
   - xform/(n-m-)/ 🤣/
+  - xform/(a-f-)/{/
+  - xform/(j-F-)/}/
+  - xform/(a-g-)/[/
+  - xform/(h-F-)/]/
   # - xform/(w-r-|u-o-)/o/
   # - xform/(q-r-|u-p-)/p/
   - xform/(q-v-|m-p-)/Q/
