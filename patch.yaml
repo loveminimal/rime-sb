@@ -41,7 +41,7 @@ shared_patch:
   chord_composer:
     # 进入并击的按键，按照键盘从左到右的顺序排序
     # alphabet: "qazwsxedcrfvtgbyhnujmik,ol.p;/'7890 "
-    alphabet: "qazwsxedcrfvtgbyhnujmik,ol.p;/' "
+    # alphabet: "qazwsxedcrfvtgbyhnujmik,ol.p;/' "
     # alphabet: "azfv"
     # finish_chord_on_first_key_release: true
     # 并击过程中套用的式样
