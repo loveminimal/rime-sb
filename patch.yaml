@@ -9,10 +9,7 @@ shared_patch:
   sbzdy/user_dict: patch
   punctuator/half_shape/+:
     '`' : '`'
-    # '\' :  、
-    # '/' : '/'
     ';' : [；]
-    # '^' : [……]
   switches/+:
     - name: is_show_more
       reset: 1
@@ -24,6 +21,7 @@ shared_patch:
   #   dictionary: sbfm
   #   prism: sbfm
   #   packs:
+  # 使用 e 引导飞码长词，聊胜于无~
   engine/segmentors/@after 2: affix_segmentor@sbfm_ext
   engine/translators/@after 1: table_translator@sbfm_ext
   recognizer/patterns/emoji: ""
@@ -62,7 +60,7 @@ shared_patch:
   chord_composer:
     # 进入并击的按键，按照键盘从左到右的顺序排序
     # alphabet: "qazwsxedcrfvtgbyhnujmik,ol.p;/'7890 "
-    # alphabet: "qazwsxedcrfvtgbyhnujmik,ol.p;/' "
+    alphabet: "qazwsxedcrfvtgbyhnujmik,ol.p;/' "
     # alphabet: "azfv"
     # finish_chord_on_first_key_release: true
     # 并击过程中套用的式样

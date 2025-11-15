@@ -14,11 +14,13 @@ columns:
   - weight
 ...
 # 新增字词
+备	b'e
 倡	c'a
 超	c'o
 惰	d'o
 价	j'a
 捷	j'e
+剧	j;u
 久	j'u
 机	j;i
 仅	j'i
@@ -33,22 +35,28 @@ columns:
 室	s;i
 匙	s'i
 骚	s'o
-争	v'e
+找	v'a
+政	v;e
+者	v'e
+折	v,e
 致	v;i
 智	v'i
+至	v,i
 悉	x'i
 婴	y'a
 豫	y;u
 源	y'u
-奕	y;i
-咦	y'i
+咦	y;i
+奕	y'i
+永	y;o
 钥	y'o
 足	z'u
 增	z;e
 择	z'e
 滋	z'i
+宗	z;o
 总	z'o
-# 机	rue
+机	rue
 # 优化手感
 争	rua
 致	vea
@@ -1479,7 +1487,7 @@ columns:
 验	y,	0	# 业
 译	y.	0	# 云
 页	y/	0	# 员
-应	y;	0
+样	y;	0	# 应
 勇	ya'	0
 阴	ya;	0
 幼	yaa	0
