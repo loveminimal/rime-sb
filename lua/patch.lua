@@ -1,9 +1,19 @@
--- 这里追加一些 Lua 工具脚本
+--[[ 
+这里追加一些 Lua 工具脚本
+-- by Jack Liu <https://aituyaa.com>
+
+其中：
+- p_ 前缀表示 processors  → lua_processor@*p_func
+- s_ 前缀表示 segmentors  → affix_segmentor
+- t_ 前缀表示 translators → lua_translator@*t_func
+- f_ 前缀表示 filters     → lua_filter@*f_func
+--]] 
+
 local rime = require "lib"
 
 -- 输入特定的日期时间缩写，输出对应的日期时间字符串
-local D = {}
-function D.func(input, seg)
+local t_date = {}
+function t_date.func(input, seg)
    ---@type (string | osdate)[]
    local datetimes = {}
    if (input == "oii") then
@@ -19,5 +29,5 @@ function D.func(input, seg)
 end
 
 return {
-   D = D
+   t_date = t_date
 }
