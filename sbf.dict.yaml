@@ -18,6 +18,7 @@ columns:
 倡	c'a
 超	c'o
 惰	d'o
+俭	j;a
 价	j'a
 捷	j'e
 剧	j;u
@@ -43,6 +44,8 @@ columns:
 智	v'i
 至	v,i
 悉	x'i
+嚣	x'o
+涯	y;a
 婴	y'a
 豫	y;u
 源	y'u
@@ -1228,7 +1231,7 @@ columns:
 迢	tau	0
 特别	tb'	0
 提出	tc'	0
-听到	td'	0
+态度	td'	0	# 听到
 挑	te'	0
 投	te;	0
 推	tea	0

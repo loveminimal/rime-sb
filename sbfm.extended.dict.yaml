@@ -62,6 +62,7 @@ use_preset_vocabulary: false
 白驹过隙	bjgxui	1
 不可思议	bksyeu	1
 波罗的海	bldhoo	1
+别有用心	byyxia	1
 百折不回	bzbheu	3
 百折不挠	bzbneu	2
 从从容容	ccrruo	2
@@ -116,6 +117,7 @@ use_preset_vocabulary: false
 麻木不仁	mmbroe	1
 满腔热忱	mqrcoo	1
 逆流而上	nlvsou	2
+拈轻怕重	nqpzei	2
 南辕北辙	nybzei	1
 朋比为奸	pbwjua	1
 穷兵黩武	qbdwoo	2
@@ -123,7 +125,9 @@ use_preset_vocabulary: false
 前赴后继	qfhjou	1
 欺师灭祖	qsmzei	2
 全心全意	qxqyuo	4
+求之不得	qzbdei	1
 曲终人散	qzrsia	1
+人情事故	rqsguo	1
 日新月异	rxyyia	1
 如鱼得水	rydsau	2
 仁至义尽	rzyjui	1
@@ -175,6 +179,7 @@ use_preset_vocabulary: false
 源源不断	yybdoo	2
 永远的神	yydsoa	2
 遥遥领先	yylxuo	3
+一针见血	yzjxee	1
 知错能改	zcngue	2
 主单辅词	zdfcoe	1
 栉风沐雨	zfmyei	2
@@ -183,16 +188,20 @@ use_preset_vocabulary: false
 自力更生	zlgsui	9
 贼眉鼠眼	zmsyia	2
 志同道合	ztdhei	1
+正儿八经	zvbjei	1
+自怨自艾	zyzyui	1
 不怕没柴烧	bpmseu	1
 大唐双龙传	dtszeu	2
 独照峨眉峰	dzvfua	6
 凡人修仙传	frxzua	8
 会当凌绝顶	hdlduo	2
+海上生明月	hssyoo	1
 留得青山在	ldqzua	1
 马克思主义	mksyaa	6
 毛泽东思想	mzdxue	1
 毛主席语录	mzxlue	6
 山海八荒录	shblia	12
+天涯共此时	tygsee	1
 文化大革命	whdmoe	2
 为人民服务	wrmwou	4
 物以稀为贵	wyxgue	1
@@ -207,7 +216,7 @@ use_preset_vocabulary: false
 烂泥扶不上墙	lnfqou	1
 谦虚使人进步	qxsboa	1
 爱涂鸦的蜗牛	vtynuo	3
-虚心使人进步	xxsbie	1
+虚心使人进步	xxsbie	2
 早上好朋友们	zshmia	2
 中央人民政府	zyrfia	1
 船到桥头自然直	cdqzuu	1
