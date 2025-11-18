@@ -33,7 +33,7 @@ use_preset_vocabulary: false
 差不多	cbdxou	11
 反动派	fdpduu	4
 服务器	fwqkua	2
-辅助码	fzmsea	3
+辅助码	fzmsea	4
 共产党	gcdvei	2
 关键字	gjzgou	4
 红楼梦	hlmxaa	2
@@ -67,6 +67,7 @@ use_preset_vocabulary: false
 别有用心	byyxia	1
 百折不回	bzbheu	3
 百折不挠	bzbneu	2
+惨不忍睹	cbrdoo	1
 从从容容	ccrruo	2
 承上启下	csqxai	1
 操作系统	czxtei	1
@@ -92,6 +93,7 @@ use_preset_vocabulary: false
 共产党员	gcdyei	3
 干干净净	ggjjee	2
 古灵精怪	gljgei	3
+苟且偷生	gqtsei	1
 工人阶级	grjjei	1
 根深蒂固	gsdgei	1
 古色古香	gsgxei	1
@@ -101,6 +103,7 @@ use_preset_vocabulary: false
 海枯石烂	hksloo	2
 恍然大悟	hrdwoo	2
 骄兵悍将	jbhjaa	1
+见风使舵	jfsdia	3
 借花献佛	jhxfui	5
 阶级斗争	jjdzai	1
 艰苦奋斗	jkfdao	4
@@ -186,6 +189,7 @@ use_preset_vocabulary: false
 雍容华贵	yrhgoe	4
 一如既往	yrjwee	1
 游刃有余	yryyoo	2
+一丝不苟	ysbgee	1
 与时俱进	ysjjea	2
 一无所知	ywszee	1
 一星半点	yxbdee	1
@@ -219,6 +223,7 @@ use_preset_vocabulary: false
 人民的名义	rmdyuo	2
 山海八荒录	shblia	12
 天涯共此时	tygsee	1
+无风不起浪	wfblee	2
 文化大革命	whdmoe	2
 为人民服务	wrmwou	4
 物以稀为贵	wyxgue	1
@@ -238,11 +243,14 @@ use_preset_vocabulary: false
 虚心使人进步	xxsbie	2
 早上好朋友们	zshmia	2
 中央人民政府	zyrfia	1
+奔流到海不复回	bldheu	3
 船到桥头自然直	cdqzuu	1
 车到山前必有路	cdslea	2
 曾经沧海难为水	cjcsou	2
 除却巫山不是云	cqwyai	2
+朝如青丝暮成雪	crqxei	1
 飞流直下三千尺	flzcau	2
+苟利国家生死以	glgyei	1
 花开堪折直须折	hkkzei	1
 江湖夜雨十年灯	jhydoo	9
 今朝有酒今朝醉	jzyzuo	2
@@ -253,12 +261,17 @@ use_preset_vocabulary: false
 马克思列宁主义	mksyaa	3
 明日愁来明日愁	mrccia	1
 冒天下之大不韪	mtxwia	1
+千金散尽还复来	qjslue	1
+岂因祸福避趋之	qyhzia	1
 山重水复疑无路	scslia	5
 身无彩凤双飞翼	swcyui	2
 桃李春风一杯酒	tlcjei	4
+天生我材必有用	tswyee	1
 爱江山更爱美人	vjsruo	5
 心有灵犀一点通	xyltoa	3
 疑是银河落九天	ysytua	2
 中华人民共和国	zhrgia	4
 自有大儒为我辩经	zydjui	1
+君不见高堂明镜悲白发	jbjfae	1
+君不见黄河之水天上来	jbjlae	2
 实践是检验真理的唯一标准	sjszoo	3
