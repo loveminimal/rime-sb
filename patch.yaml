@@ -61,7 +61,7 @@ shared_patch:
   chord_composer:
     # 进入并击的按键，按照键盘从左到右的顺序排序
     # alphabet: "qazwsxedcrfvtgbyhnujmik,ol.p;/'7890 "
-    # alphabet: "qazwsxedcrfvtgbyhnujmik,ol.p;/' "
+    alphabet: "qazwsxedcrfvtgbyhnujmik,ol.p;/' "
     # alphabet: "azfv"
     # finish_chord_on_first_key_release: true
     # 并击过程中套用的式样
@@ -74,8 +74,8 @@ shared_patch:
       - "xform/^(.*)=(.*)=$/$1$2/"
     algebra:
       # __include: /algebra_map
-      __include: /algebra_magic
-      # __include: /algebra_mirror
+      # __include: /algebra_magic
+      __include: /algebra_mirror
 
 algebra_map:
   - xform|([azfv])|$1-|
@@ -217,13 +217,20 @@ algebra_magic:
   - xform/^\S{3,}$//
 
 algebra_mirror:
-  - xform/(asdf)/0/
-  - xform/(jkl;)/@/
-  - xform/(sdf)/7/
-  - xform/(jkl)/`/
-  - xform/(wer)/8/
-  - xform/(uio)/~/
-  - xform/(xcv)/9/
+  # - xform/(asdf)/0/
+  # - xform/(jkl;)/@/
+  - xform/(asdf)/ 🤭/
+  - xform/(jkl;)/ 🤣/
+  # - xform/(sdf)/7/
+  # - xform/(jkl)/`/
+  - xform/(sdf)/'/
+  - xform/(jkl)/'/
+  # - xform/(wer)/8/
+  # - xform/(uio)/~/
+  - xform/(wer)/:/
+  - xform/(uio)/"/
+  # - xform/(xcv)/9/
+  - xform/(xcv)/^/
   - xform/(nm)/m/
   - xlit|;,./|FDJG|
   - xform/^([qwertasdfgzxcvb]+)$/$1=/
@@ -235,6 +242,10 @@ algebra_mirror:
   - xform/(79)/@/
   - xform/(70)/*/
   - xform/(90)/_/
+  - xform/(r-t-)/[/ # 新增
+  - xform/(y-u-)/]/ # 新增
+  - xform/(f-g-)/(/ # 新增
+  - xform/(h-j-)/)/ # 新增
   - xform/(w-g-|h-o-)/W/
   - xform/(r-g-|h-u-)/*/
   - xform/(q-g-|h-p-)/Q/
@@ -250,7 +261,7 @@ algebra_mirror:
   - xform/(s-f-|j-l-)/l/
   - xform/(s-f-|h-l-)/F/
   - xform/(a-f-|j-F-)/;/
-  - xform/(a-s-|l-F-)/:/
+  - xform/(a-s-|l-F-)/?/
   - xform/(s-c-|m-l-)/n/
   - xform/(D-l-)/n/
   - xform/(c-v-|m-D-)/m/
@@ -259,7 +270,9 @@ algebra_mirror:
   - xform/(x-v-|m-J-)/./
   - xform/(a-g-|h-F-)/!/
   - xform=(z-v-|m-G-)=/=
-  - xform/(z-x-|J-G-)/?/
+  # - xform/(z-x-|J-G-)/?/
+  - xform/(z-x-)/{/
+  - xform/(J-G-)/}/
   - xform/(e-f-|j-i-)/y/
   - xform/(e-r-|u-i-)/u/
   - xform/(w-e-|i-o-)/i/
@@ -307,4 +320,4 @@ algebra_mirror:
   - xform/[ei]-/e/
   - xform/[ru]-/r/
   - xform/[ty]-/t/
-  - xform/^\S{3,}$//
+  # - xform/^\S{3,}$//
