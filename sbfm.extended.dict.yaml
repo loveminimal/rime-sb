@@ -33,10 +33,11 @@ use_preset_vocabulary: false
 差不多	cbdxou	11
 反动派	fdpduu	4
 服务器	fwqkua	2
-辅助码	fzmsea	4
+辅助码	fzmsea	14
 共产党	gcdvei	2
 关键字	gjzgou	4
 红楼梦	hlmxaa	2
+候选框	hxkmui	2
 计算机	jsjmoa	2
 快捷键	kjjjoo	2
 浏览器	llqkoo	20
@@ -70,23 +71,28 @@ use_preset_vocabulary: false
 惨不忍睹	cbrdoo	1
 从从容容	ccrruo	2
 承上启下	csqxai	1
+此消彼长	cxbzie	1
 操作系统	czxtei	1
 姹紫嫣红	czyhau	3
+得不偿失	dbcsuu	1
 道法自然	dfzrou	2
 独孤求败	dgqbua	1
 帝国主义	dgzyoe	3
 大海无量	dhwleu	3
+鼎力相助	dlxzia	1
 大巧不工	dqbgeu	2
 大巧若拙	dqrzeu	1
 党同伐异	dtfyio	2
 大同小异	dtxyeu	2
 大象无形	dxwxeu	1
 大音希声	dyxseu	1
+大展鸿图	dzhteu	1
 大智若愚	dzryeu	1
 浮光掠影	fglyoo	1
 非礼勿视	flwsie	2
 非礼勿听	flwtie	2
 风起天南	fqtnua	1
+反求诸己	fqzjuu	1
 浮于表面	fybmoo	1
 翻云覆雨	fyfyuo	2
 纷至沓来	fztlaa	1
@@ -97,6 +103,7 @@ use_preset_vocabulary: false
 工人阶级	grjjei	1
 根深蒂固	gsdgei	1
 古色古香	gsgxei	1
+格物致知	gwzzei	1
 厚此薄彼	hcbbeu	1
 厚德载物	hdzweu	6
 厚积薄发	hjbfeu	5
@@ -106,6 +113,7 @@ use_preset_vocabulary: false
 见风使舵	jfsdia	3
 借花献佛	jhxfui	5
 阶级斗争	jjdzai	1
+绞尽脑汁	jjnzaa	1
 艰苦奋斗	jkfdao	4
 艰难曲折	jnqzao	10
 骄奢淫逸	jsyyaa	2
@@ -128,6 +136,7 @@ use_preset_vocabulary: false
 满腔热忱	mqrcoo	1
 冥思苦索	msksoa	1
 冥思苦想	mskxoa	1
+梦想成真	mxczei	1
 逆流而上	nlvsou	2
 拈轻怕重	nqpzei	2
 南辕北辙	nybzei	1
@@ -146,6 +155,7 @@ use_preset_vocabulary: false
 仁至义尽	rzyjui	1
 声笔飞单	sbfdei	6
 声笔飞码	sbfmei	2
+深藏不露	scbloo	1
 山重水复	scsfia	1
 神采奕奕	scyyoa	3
 三国演义	sgyyee	1
@@ -169,6 +179,7 @@ use_preset_vocabulary: false
 天下无双	txwsee	2
 哀鸿遍野	vhbyoe	1
 爱屋及乌	vwjwuo	1
+无产阶级	wcjjee	1
 温和大方	whdfoo	2
 闻所未闻	wswwoi	2
 唯唯诺诺	wwnnia	1
@@ -177,6 +188,7 @@ use_preset_vocabulary: false
 毋庸置疑	wyzyaa	1
 相得益彰	xdyzei	1
 徐徐道来	xxdluu	1
+行有不得	xybduu	1
 行云流水	xylsuu	1
 相由心生	xyxsei	2
 一蹴而就	ycvjee	1
@@ -191,6 +203,7 @@ use_preset_vocabulary: false
 游刃有余	yryyoo	2
 一丝不苟	ysbgee	1
 与时俱进	ysjjea	2
+有生之年	yszneu	1
 一无所知	ywszee	1
 一星半点	yxbdee	1
 一心一意	yxyyee	2
@@ -203,6 +216,7 @@ use_preset_vocabulary: false
 主单辅词	zdfcoe	1
 栉风沐雨	zfmyei	2
 重剑无锋	zjwfue	1
+再接再厉	zjzlei	1
 众口难调	zkntuo	2
 自力更生	zlgsui	9
 走马观花	zmghei	1
@@ -220,8 +234,12 @@ use_preset_vocabulary: false
 马克思主义	mksyaa	6
 毛泽东思想	mzdxue	1
 毛主席语录	mzxlue	6
-人民的名义	rmdyuo	2
+千里不留行	qlbxue	1
+人民的名义	rmdyuo	4
+十步杀一人	sbsrei	1
 山海八荒录	shblia	12
+十年磨一剑	snmjei	2
+霜刃未曾试	srwseo	1
 天涯共此时	tygsee	1
 无风不起浪	wfblee	2
 文化大革命	whdmoe	2
@@ -256,6 +274,8 @@ use_preset_vocabulary: false
 今朝有酒今朝醉	jzyzuo	2
 开弓没有回头箭	kgmjee	1
 柳暗花明又一村	lvhcei	4
+两岸猿声啼不住	lvyzei	2
+满船清梦压星河	mcqhoo	4
 磨刀不误砍柴功	mdbgoe	4
 莫待无花堪折枝	mdwzei	1
 马克思列宁主义	mksyaa	3
@@ -263,6 +283,7 @@ use_preset_vocabulary: false
 冒天下之大不韪	mtxwia	1
 千金散尽还复来	qjslue	1
 岂因祸福避趋之	qyhzia	1
+轻舟已过万重山	qzysea	2
 山重水复疑无路	scslia	5
 身无彩凤双飞翼	swcyui	2
 桃李春风一杯酒	tlcjei	4
@@ -270,6 +291,7 @@ use_preset_vocabulary: false
 爱江山更爱美人	vjsruo	5
 心有灵犀一点通	xyltoa	3
 疑是银河落九天	ysytua	2
+醉后不知天在水	zhbsei	4
 中华人民共和国	zhrgia	4
 自有大儒为我辩经	zydjui	1
 君不见高堂明镜悲白发	jbjfae	1
