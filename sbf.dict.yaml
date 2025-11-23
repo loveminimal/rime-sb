@@ -24,6 +24,7 @@ columns:
 讥	j'i
 角	j'o
 嘞	l'e
+莽	m'a
 渺	m'o
 切	q'e
 慎	s'e
@@ -39,10 +40,47 @@ columns:
 永	y'o
 择	z'e
 滋	z'i
-机	rue
 # 优化手感
+#	gai
+#	kaa
+#	kau
+#	kai
+#	kao
+#	kue
+#	kuu
+#	kui
+#	mae
+#	naa
+#	nuu
+#	nuo
+#	pae
+#	pai
+#	qai
+#	raa
+#	rae
+#	rau
+#	rai
+#	rao
+#	rea
+机	rue
+#	rie
+#	riu
+#	rii
+#	rio
+#	roa
+#	roe
+#	rou
+#	vaa
+#	vae
+怯	voe
+#	vou
+健	voi
+忠	voo
+#	wae
+#	wai
 争	rua
 致	vea
+注	vdo
 # 内置条目
 笔	b'	0
 保	b,	0
@@ -121,7 +159,7 @@ columns:
 程	c'	0
 城	c,	0
 串	c.	0	# 错
-村	c/	0
+材	c/	0	# 村
 车	c;	0
 巢	ca'	0
 驰	ca;	0
@@ -728,7 +766,7 @@ columns:
 唠	lkeo	9999
 理论	ll'	0
 麓	llea	9999
-里面	lm'	0
+老妈	lm'	0	# 里面
 理念	ln'	0
 六	lo'	0
 刘	lo;	0
@@ -1289,14 +1327,14 @@ columns:
 而过	vg'	0
 而后	vh'	0
 嗄	vi'	0
-嗳	vi;	0
+智	vi;	0	# 嗳
 呆	via	0
 哎	viae	0
 呕	vie	0
 峨	vii	0
 噢	vio	0
 喔	viu	0
-案件	vj'	0
+直接	vj'	0	# 案件
 安康	vk'	0
 而来	vl'	0
 澳门	vm'	0
@@ -1308,7 +1346,7 @@ columns:
 而且	vq'	0
 偶然	vr'	0
 昂首	vs'	0
-儿童	vt'	0
+状态	vt'	0	# 儿童
 腌	vu'	0
 胺	vu;	0
 饵	vua	0

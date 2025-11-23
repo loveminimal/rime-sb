@@ -33,7 +33,7 @@ use_preset_vocabulary: false
 差不多	cbdxou	11
 反动派	fdpduu	4
 服务器	fwqkua	2
-辅助码	fzmsea	14
+辅助码	fzmsea	15
 共产党	gcdvei	2
 关键字	gjzgou	4
 红楼梦	hlmxaa	2
@@ -74,7 +74,7 @@ use_preset_vocabulary: false
 此消彼长	cxbzie	1
 操作系统	czxtei	1
 姹紫嫣红	czyhau	3
-得不偿失	dbcsuu	1
+得不偿失	dbcsuu	2
 道法自然	dfzrou	2
 独孤求败	dgqbua	1
 帝国主义	dgzyoe	3
@@ -234,6 +234,7 @@ use_preset_vocabulary: false
 马克思主义	mksyaa	6
 毛泽东思想	mzdxue	1
 毛主席语录	mzxlue	6
+毛主席万岁	mzxsue	1
 千里不留行	qlbxue	1
 人民的名义	rmdyuo	4
 十步杀一人	sbsrei	1
