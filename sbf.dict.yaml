@@ -17,6 +17,7 @@ columns:
 倡	c;a
 超	c;o
 惰	d;o
+蝴	h;u
 鸿	h;o
 俭	j;a
 捷	j;e
@@ -33,6 +34,7 @@ columns:
 骚	s;o
 者	v;e
 致	v;i
+州	v;o
 嚣	x;o
 涯	y;a
 岩	y;e
@@ -81,7 +83,8 @@ columns:
 #	wai
 争	rua
 致	vea
-注	vdo
+注	vdi
+洲	vdo
 # 内置条目
 笔	b'	0
 保	b,	0
@@ -1338,10 +1341,10 @@ columns:
 直接	vj'	0	# 案件
 安康	vk'	0
 而来	vl'	0
-澳门	vm'	0
+这么	vm'	0	# 澳门
 儿女	vn'	0
 谔	vo'	0
-鏖	vo;	0
+找	vo;	0	# 鏖
 袄	voa	0
 安排	vp'	0
 而且	vq'	0
