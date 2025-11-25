@@ -59,10 +59,12 @@ use_preset_vocabulary: false
 输入法	srfdea	5
 汤普森	tpsmoo	1
 天之道	tzdoee	2
+俄罗斯	vlsqui	1
 文件夹	wjjhoe	4
 为什么	wsmsou	3
 小狼毫	xlhwiu	2
 叙利亚	xlyyuo	1
+希特勒	xtlguo	1
 西游记	xyjyei	1
 愚人节	yrjcia	1
 字符串	zfckoo	11
@@ -76,6 +78,7 @@ use_preset_vocabulary: false
 波罗的海	bldhoo	1
 不求甚解	bqsjeu	1
 不事声张	bsszeu	1
+不依不绕	bybreu	1
 报应不爽	bybsei	1
 别有用心	byyxia	1
 百折不回	bzbheu	3
@@ -84,6 +87,7 @@ use_preset_vocabulary: false
 从长计议	ccjyuo	1
 从从容容	ccrruo	2
 趁火打劫	chdjei	1
+沉默是金	cmsjoo	1
 臭名远扬	cmyyui	2
 车水马龙	csmlea	1
 承上启下	csqxai	1
@@ -95,6 +99,7 @@ use_preset_vocabulary: false
 道法自然	dfzrou	2
 独孤求败	dgqbua	1
 帝国主义	dgzyoe	3
+大汉天威	dhtweu	1
 大海无量	dhwleu	3
 鼎力相助	dlxzia	1
 大巧不工	dqbgeu	2
@@ -103,8 +108,9 @@ use_preset_vocabulary: false
 大同小异	dtxyeu	2
 大象无形	dxwxeu	1
 大音希声	dyxseu	1
-大展鸿图	dzhteu	1
+大展鸿图	dzhteu	2
 大智若愚	dzryeu	1
+服服帖帖	ffttua	1
 浮光掠影	fglyoo	1
 非礼勿视	flwsie	2
 非礼勿听	flwtie	2
@@ -133,7 +139,9 @@ use_preset_vocabulary: false
 魂牵梦绕	hqmree	1
 恍然大悟	hrdwoo	2
 浑水摸鱼	hsmyoo	1
+横扫千军	hsqjei	2
 骄兵悍将	jbhjaa	1
+精彩纷呈	jcfcou	1
 见风使舵	jfsdia	3
 借花献佛	jhxfui	5
 阶级斗争	jjdzai	1
@@ -187,7 +195,10 @@ use_preset_vocabulary: false
 求之不得	qzbdei	1
 罄竹难书	qznsei	1
 曲终人散	qzrsia	1
+人不如故	rbrguo	1
+人不如旧	rbrjuo	2
 人潮如织	rcrzuo	1
+人民史观	rmsguo	1
 人情事故	rqsguo	1
 冉冉升起	rrsqia	1
 日新月异	rxyyia	1
@@ -220,16 +231,19 @@ use_preset_vocabulary: false
 始于足下	syzxau	1
 退避三舍	tbssae	1
 推波助澜	tbzlei	1
+土地革命	tdgmei	1
 天赋异禀	tfybee	4
 头昏脑胀	thnzoo	4
 条件反射	tjfsua	4
 吞噬星空	tsxkee	3
 天下无双	txwsee	2
+天佑中华	tyzhee	1
 哀鸿遍野	vhbyoe	1
 爱屋及乌	vwjwuo	1
 无产阶级	wcjjee	1
 物归其主	wgqzue	1
 温和大方	whdfoo	2
+乌合之众	whzzua	1
 无济于事	wjysee	1
 文思泉涌	wsqyoe	1
 闻所未闻	wswwoi	2
@@ -238,6 +252,7 @@ use_preset_vocabulary: false
 未雨绸缪	wycmee	1
 吾有何患	wyhhei	1
 毋庸置疑	wyzyaa	1
+武装斗争	wzdzee	1
 无中生有	wzsyee	1
 相得益彰	xdyzei	1
 徐徐道来	xxdluu	1
@@ -246,6 +261,7 @@ use_preset_vocabulary: false
 行云流水	xylsuu	1
 相由心生	xyxsei	2
 夜不闭户	ybbhoe	1
+衣不如新	ybrxoe	1
 一蹴而就	ycvjee	1
 一帆风顺	yffsee	5
 因果循环	ygxhia	1
@@ -278,6 +294,8 @@ use_preset_vocabulary: false
 主单辅词	zdfcoe	1
 栉风沐雨	zfmyei	2
 中国大陆	zgdlia	1
+周公摄政	zgszua	1
+贞观之治	zgzzie	1
 作奸犯科	zjfkui	1
 重剑无锋	zjwfue	1
 再接再厉	zjzlei	1
