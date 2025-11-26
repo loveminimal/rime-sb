@@ -72,6 +72,7 @@ use_preset_vocabulary: false
 障碍物	zvwnai	1
 周总理	zzlwua	1
 蜘蛛侠	zzxria	2
+抱残守缺	bcsqei	1
 卑躬屈膝	bgqxui	3
 白驹过隙	bjgxui	1
 不可思议	bksyeu	1
@@ -80,6 +81,7 @@ use_preset_vocabulary: false
 不事声张	bsszeu	1
 不依不绕	bybreu	1
 报应不爽	bybsei	1
+抱元守一	bysyei	1
 别有用心	byyxia	1
 百折不回	bzbheu	3
 百折不挠	bzbneu	2
@@ -87,8 +89,10 @@ use_preset_vocabulary: false
 从长计议	ccjyuo	1
 从从容容	ccrruo	2
 趁火打劫	chdjei	1
+吃里扒外	clbwia	1
 沉默是金	cmsjoo	1
 臭名远扬	cmyyui	2
+承前启后	cqqhai	1
 车水马龙	csmlea	1
 承上启下	csqxai	1
 此消彼长	cxbzie	1
@@ -101,6 +105,7 @@ use_preset_vocabulary: false
 帝国主义	dgzyoe	3
 大汉天威	dhtweu	1
 大海无量	dhwleu	3
+砥砺前行	dlqxeu	2
 鼎力相助	dlxzia	1
 大巧不工	dqbgeu	2
 大巧若拙	dqrzeu	1
@@ -134,6 +139,7 @@ use_preset_vocabulary: false
 厚此薄彼	hcbbeu	1
 厚德载物	hdzweu	6
 缓缓落下	hhlxaa	1
+花好月圆	hhyyei	1
 厚积薄发	hjbfeu	5
 海枯石烂	hksloo	2
 魂牵梦绕	hqmree	1
@@ -154,6 +160,8 @@ use_preset_vocabulary: false
 及吾无身	jwwsua	1
 剑啸江湖	jxjhuo	5
 捷足先登	jzxdei	2
+抗拒从严	kjcyei	1
+开箱即用	kxjyee	1
 刻舟求剑	kzqjoe	1
 路不拾遗	lbsyia	1
 乐此不彼	lcbbua	1
@@ -206,7 +214,7 @@ use_preset_vocabulary: false
 仁至义尽	rzyjui	1
 声笔飞单	sbfdei	6
 声笔飞码	sbfmei	4
-声笔猛码	sbmmei	2
+声笔猛码	sbmmei	4
 神不守舍	sbssoa	1
 身不由己	sbyjui	1
 深藏不露	scbloo	1
@@ -217,6 +225,7 @@ use_preset_vocabulary: false
 顺流而下	slvxui	2
 色令智昏	slzhua	3
 善莫大焉	smdyou	2
+手忙脚乱	smjlue	2
 熟能生巧	snsqoe	1
 死皮癞脸	splleu	1
 实事求是	ssqsoo	1
@@ -229,6 +238,7 @@ use_preset_vocabulary: false
 十月怀胎	syhtei	1
 神印王座	sywzoa	2
 始于足下	syzxau	1
+坦白从宽	tbckei	1
 退避三舍	tbssae	1
 推波助澜	tbzlei	1
 土地革命	tdgmei	1
@@ -256,6 +266,7 @@ use_preset_vocabulary: false
 无中生有	wzsyee	1
 相得益彰	xdyzei	1
 徐徐道来	xxdluu	1
+心血来潮	xxlcoa	2
 徐徐升起	xxsquu	1
 行有不得	xybduu	1
 行云流水	xylsuu	1
@@ -373,6 +384,7 @@ use_preset_vocabulary: false
 烂泥扶不上墙	lnfqou	1
 前途是光明的	qtsdou	1
 谦虚使人进步	qxsboa	1
+爱潜水的乌贼	vqszuo	1
 爱涂鸦的蜗牛	vtynuo	3
 虚心使人进步	xxsbie	2
 早上好朋友们	zshmia	2
@@ -404,11 +416,13 @@ use_preset_vocabulary: false
 回首向来萧瑟处	hsxcia	1
 皇天不负有心人	htbrui	1
 江湖夜雨十年灯	jhydoo	9
+金鳞岂是池中物	jlqwuo	2
 今朝有酒今朝醉	jzyzuo	2
 开弓没有回头箭	kgmjee	1
 留取丹心照汗青	lqdqua	1
 柳暗花明又一村	lvhcei	4
 两岸猿声啼不住	lvyzei	2
+浪子回头金不换	lzhhoo	1
 满船清梦压星河	mcqhoo	4
 莫愁前路无知己	mcqjei	2
 磨刀不误砍柴功	mdbgoe	4

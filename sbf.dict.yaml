@@ -112,6 +112,7 @@ columns:
 涯	y;a
 岩	y;e
 豫	y;u
+蕴	y'u
 奕	y;i
 永	y;o
 #	z;a
@@ -904,7 +905,7 @@ columns:
 牟	mao	0
 姆	mau	0
 嫫	maue	0
-明白	mb'	0
+目标	mb'	0	# 明白
 名称	mc'	0
 萌	mcio	9999
 蔓	mciu	9999
@@ -1208,7 +1209,7 @@ columns:
 仞	ruo	0
 偌	ruu	0
 然而	rv'	0
-认为	rw'	0
+任务	rw'	0	# 认为
 人心	rx'	0
 容易	ry'	0	# 人员
 日子	rz'	0
@@ -1588,7 +1589,7 @@ columns:
 验	y,	0	# 业
 译	y.	0	# 云
 页	y/	0	# 员
-样	y;	0	# 应
+应	y;	0
 勇	ya'	0
 阴	ya;	0
 幼	yaa	0

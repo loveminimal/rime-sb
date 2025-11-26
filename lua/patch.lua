@@ -8,26 +8,39 @@
 - t_ 前缀表示 translators → lua_translator@*t_func
 - f_ 前缀表示 filters     → lua_filter@*f_func
 --]] 
-
 local rime = require "lib"
+-- local logger = require "logger"
+-- local code_table = require "code_table"
 
 -- 输入特定的日期时间缩写，输出对应的日期时间字符串
 local t_date = {}
 function t_date.func(input, seg)
-   ---@type (string | osdate)[]
-   local datetimes = {}
-   if (input == "oii") then
-      table.insert(datetimes, os.date("%Y-%m-%d"))
-      table.insert(datetimes, os.date("%Y-%m-%d %H:%M"))
-      table.insert(datetimes, os.date("`> %Y-%m-%d %H:%M`"))
-      table.insert(datetimes, os.date("%H:%M"))
-   end
-   for _, entry in ipairs(datetimes) do
-      ---@cast entry string
-      rime.yield(rime.Candidate("datetime", seg.start, seg._end, entry, ""))
-   end
+    ---@type (string | osdate)[]
+    local datetimes = {}
+    if (input == "oii") then
+        table.insert(datetimes, os.date("%Y-%m-%d"))
+        table.insert(datetimes, os.date("%Y-%m-%d %H:%M"))
+        table.insert(datetimes, os.date("`> %Y-%m-%d %H:%M`"))
+        table.insert(datetimes, os.date("%H:%M"))
+    end
+    for _, entry in ipairs(datetimes) do
+        ---@cast entry string
+        rime.yield(rime.Candidate("datetime", seg.start, seg._end, entry, ""))
+    end
+end
+
+
+-- 注释那些事儿
+local function f_comment(input)
+    for cand in input:iter() do
+        if cand.type == 'user_table' and cand.comment:find('☯') then
+            cand:get_genuine().comment = '🦄' -- 
+        end
+        yield(cand)
+    end
 end
 
 return {
-   t_date = t_date
+    t_date = t_date,
+    f_comment = f_comment
 }
