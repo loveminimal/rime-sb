@@ -93,8 +93,10 @@ use_preset_vocabulary: false
 沉默是金	cmsjoo	1
 臭名远扬	cmyyui	2
 承前启后	cqqhai	1
+怅然若失	crrsoo	1
 车水马龙	csmlea	1
 承上启下	csqxai	1
+出神入化	csrhai	1
 此消彼长	cxbzie	1
 操作系统	czxtei	1
 姹紫嫣红	czyhau	3
@@ -174,6 +176,7 @@ use_preset_vocabulary: false
 罗纳尔多	lnvdia	3
 乱七八糟	lqbzue	1
 烈士暮年	lsmneu	2
+乱世枭雄	lsxxue	1
 聊胜于无	lsywei	2
 柳暗花明	lvhmei	1
 漠不关心	mbgxoo	1
@@ -222,6 +225,7 @@ use_preset_vocabulary: false
 神采奕奕	scyyoa	3
 三国演义	sgyyee	1
 社会主义	shzyoa	5
+数据结构	sjjgou	1
 顺流而下	slvxui	2
 色令智昏	slzhua	3
 善莫大焉	smdyou	2
@@ -246,9 +250,11 @@ use_preset_vocabulary: false
 头昏脑胀	thnzoo	4
 条件反射	tjfsua	4
 吞噬星空	tsxkee	3
+痛心疾首	txjsoe	1
 天下无双	txwsee	2
 天佑中华	tyzhee	1
 哀鸿遍野	vhbyoe	1
+黯然神伤	vrssia	1
 爱屋及乌	vwjwuo	1
 无产阶级	wcjjee	1
 物归其主	wgqzue	1
@@ -420,6 +426,7 @@ use_preset_vocabulary: false
 今朝有酒今朝醉	jzyzuo	2
 开弓没有回头箭	kgmjee	1
 留取丹心照汗青	lqdqua	1
+来而不往非礼也	lvbyeo	1
 柳暗花明又一村	lvhcei	4
 两岸猿声啼不住	lvyzei	2
 浪子回头金不换	lzhhoo	1
