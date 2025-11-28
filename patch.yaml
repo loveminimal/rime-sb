@@ -40,6 +40,9 @@ shared_patch:
 
   # 拼写规则
   # speller/alphabet: "bpmfdtnlgkhjqxzcsrywvaeiou0123456789;'BPMFDTNLGKHJQXZCSRYWVAEUIO"
+  speller/max_code_length: 4
+  speller/auto_clear: max_length # manual | auto | max_length | none
+
 
   # 方案内按键绑定
   key_binder/+:

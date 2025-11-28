@@ -1,3 +1,4 @@
 patch:
   __include: patch.yaml:/shared_patch
   schema/icon: "assets/fly_m.ico"
+  speller/max_code_length: 96
