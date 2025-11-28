@@ -10,7 +10,7 @@
 --]] --
 local rime = require "lib"
 -- local logger = require "logger"
--- local code_table = require "code_table"
+local code_table = require "code_table"
 
 -- logger.info('➭ patch.lua loaded...')
 
@@ -43,16 +43,16 @@ local function f_comment(input, env)
             cand:get_genuine().comment = '🦄' -- 
         end
         
-        -- local mark = ''
+        local mark = ''
         -- 标识非 8105 通规字
         -- mark = code_table.index[cand.text] and '⁸' or ''
         -- cand:get_genuine().comment = mark .. cand.comment
         -- 标识声笔字
-        -- mark = (#input_code == 2 and code_table.sb[cand.text]) and 'ᵇ ' or ''
-        -- cand:get_genuine().comment = mark .. cand.comment
+        mark = (#input_code == 2 and code_table.sb[cand.text]) and 'ᵇ ' or ''
+        cand:get_genuine().comment = mark .. cand.comment
         -- 标识声偏字
-        -- mark = (#input_code == 2 and code_table.sp[cand.text]) and 'ᵖ ' or ''
-        -- cand:get_genuine().comment = mark .. cand.comment
+        mark = (#input_code == 2 and code_table.sp[cand.text]) and 'ᵖ ' or ''
+        cand:get_genuine().comment = mark .. cand.comment
 
 
 
