@@ -35,12 +35,14 @@ use_preset_vocabulary: false
 丹尼斯	dnsqua	3
 反动派	fdpduu	4
 服务器	fwqkua	2
+翻译器	fyqkuo	2
 辅助码	fzmsea	17
 共产党	gcdvei	2
 关键字	gjzgou	4
 红楼梦	hlmxaa	2
 候选框	hxkmui	2
 计算机	jsjmoa	2
+巨无霸	jwbvea	1
 快捷键	kjjjoo	2
 刘德华	ldhsoe	2
 浏览器	llqkoo	20
@@ -130,6 +132,7 @@ use_preset_vocabulary: false
 非礼勿视	flwsie	2
 非礼勿听	flwtie	2
 风起天南	fqtnua	1
+风轻云淡	fqydua	1
 反求诸己	fqzjuu	1
 风声鹤唳	fshlua	1
 浮于表面	fybmoo	1
@@ -169,6 +172,7 @@ use_preset_vocabulary: false
 艰难曲折	jnqzao	10
 军事行动	jsxdoa	1
 骄奢淫逸	jsyyaa	2
+惊涛拍岸	jtpvoo	1
 饥饿营销	jvyxua	1
 及吾无身	jwwsua	1
 剑啸江湖	jxjhuo	5
@@ -185,8 +189,10 @@ use_preset_vocabulary: false
 流浪地球	lldqoo	1
 冷冷清清	llqqoe	1
 朗朗上口	llskoa	2
+老谋深算	lmssei	2
 罗纳尔多	lnvdia	3
 乱七八糟	lqbzue	1
+乱石穿空	lsckue	1
 烈士暮年	lsmneu	2
 来势汹汹	lsxxeo	1
 乱世枭雄	lsxxue	3
@@ -214,6 +220,7 @@ use_preset_vocabulary: false
 浅尝辄止	qczzoo	3
 拳打脚踢	qdjtou	1
 前赴后继	qfhjou	1
+奇技淫巧	qjyqeu	3
 千里之行	qlzxue	1
 七七八八	qqbbea	1
 欺师灭祖	qsmzei	2
@@ -221,7 +228,7 @@ use_preset_vocabulary: false
 蜻蜓点水	qtdsia	1
 全心全意	qxqyuo	4
 求之不得	qzbdei	1
-罄竹难书	qznsei	1
+罄竹难书	qznsei	2
 曲终人散	qzrsia	1
 人不如故	rbrguo	1
 人不如旧	rbrjuo	2
@@ -284,6 +291,7 @@ use_preset_vocabulary: false
 无济于事	wjysee	1
 文思泉涌	wsqyoe	1
 闻所未闻	wswwoi	2
+吾爱破解	wvpjei	1
 唯唯诺诺	wwnnia	1
 温文尔雅	wwvyoo	1
 卧薪尝胆	wxcdei	1
@@ -293,6 +301,7 @@ use_preset_vocabulary: false
 武装斗争	wzdzee	1
 无中生有	wzsyee	1
 相得益彰	xdyzei	1
+小鹤音形	xhyxiu	1
 徐徐道来	xxdluu	1
 心血来潮	xxlcoa	2
 徐徐升起	xxsquu	1
@@ -356,7 +365,7 @@ use_preset_vocabulary: false
 仗势欺人	zsqrui	1
 纸上谈兵	zstbaa	1
 志同道合	ztdhei	1
-正儿八经	zvbjei	1
+正儿八经	zvbjei	2
 壮心不已	zxbyoe	2
 自怨自艾	zyzyui	1
 知足常乐	zzclue	1
@@ -373,6 +382,7 @@ use_preset_vocabulary: false
 汗滴禾下土	hdhtoo	1
 会当凌绝顶	hdlduo	2
 海上生明月	hssyoo	1
+卷起千堆雪	jqqxou	1
 及时当勉励	jsdlua	1
 将相本无种	jxbzoe	1
 留得青山在	ldqzua	1
@@ -387,6 +397,7 @@ use_preset_vocabulary: false
 南京大屠杀	njdsei	1
 男儿当自强	nvdqia	1
 菩提本无树	ptbsei	1
+片叶不沾身	pybsui	1
 千里不留行	qlbxue	1
 人民的名义	rmdyuo	5
 入我相思门	rwxmuo	1
@@ -395,11 +406,12 @@ use_preset_vocabulary: false
 盛年不重来	snbleu	1
 十年磨一剑	snmjei	2
 霜刃未曾试	srwseo	1
-世上无难事	sswsei	1
+世上无难事	sswsei	2
 岁月不待人	sybria	1
 谁知盘中餐	szpcoa	1
 天涯共此时	tygsee	1
 无风不起浪	wfblee	2
+万花丛中过	whcgea	4
 文化大革命	whdmoe	2
 为人民服务	wrmwou	4
 为霞尚满天	wxstou	1
@@ -412,7 +424,7 @@ use_preset_vocabulary: false
 中国共产党	zggdia	8
 真空生妙有	zksyei	1
 知我相思苦	zwxkue	1
-只要肯登攀	zykpia	1
+只要肯登攀	zykpia	2
 睁眼说瞎话	zyshia	2
 毕其功于一役	bqgyea	2
 定不负相思意	dbfyoo	1
@@ -487,12 +499,12 @@ use_preset_vocabulary: false
 天长地久有时尽	tcdjee	1
 桃李春风一杯酒	tlcjei	4
 天若有情天亦老	trylee	2
-天生我材必有用	tswyee	1
+天生我材必有用	tswyee	2
 天下谁人不识君	txsjee	1
 而今迈步从头越	vjmyeu	1
 爱江山更爱美人	vjsruo	5
 我本将心向明月	wbjyue	2
-我劝天公重抖擞	wqtsue	1
+我劝天公重抖擞	wqtsue	2
 为伊消得人憔悴	wyxcou	1
 雄关漫道真如铁	xgmteu	1
 心有灵犀一点通	xyltoa	3
