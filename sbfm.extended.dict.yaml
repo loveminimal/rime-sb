@@ -18,6 +18,7 @@ use_preset_vocabulary: false
 ...
 剥削	blxlae	2
 翻译	fvyyuo	3
+尴尬	gygyeu	1
 谨慎	jysloa	3
 懒惰	lldloo	3
 垃圾	ltjtei	3
@@ -34,7 +35,7 @@ use_preset_vocabulary: false
 处女座	cnzgua	1
 丹尼斯	dnsqua	3
 反动派	fdpduu	4
-服务器	fwqkua	2
+服务器	fwqkua	5
 翻译器	fyqkuo	2
 辅助码	fzmsea	17
 共产党	gcdvei	2
@@ -53,6 +54,7 @@ use_preset_vocabulary: false
 毛泽东	mzdhue	2
 满招损	mzsfoo	1
 毛主席	mzxgue	3
+破解版	pjbpeu	1
 乔布斯	qbsque	5
 谦受益	qsyboa	1
 祁同伟	qtwroa	1
@@ -75,6 +77,7 @@ use_preset_vocabulary: false
 障碍物	zvwnai	1
 周总理	zzlwua	1
 蜘蛛侠	zzxria	2
+逼不得已	bbdyei	1
 抱残守缺	bcsqei	1
 卑躬屈膝	bgqxui	3
 杯弓蛇影	bgsyei	1
@@ -83,6 +86,7 @@ use_preset_vocabulary: false
 波罗的海	bldhoo	1
 拔苗助长	bmzzei	1
 不求甚解	bqsjeu	1
+不仁不义	brbyeu	1
 不事声张	bsszeu	1
 背水一战	bsyzie	1
 不依不绕	bybreu	1
@@ -144,6 +148,7 @@ use_preset_vocabulary: false
 干干净净	ggjjee	2
 感激涕零	gjtleu	1
 古灵精怪	gljgei	3
+过目不忘	gmbwei	1
 故弄玄虚	gnxxei	1
 苟且偷生	gqtsei	1
 工人阶级	grjjei	1
@@ -154,6 +159,7 @@ use_preset_vocabulary: false
 厚此薄彼	hcbbeu	1
 厚德载物	hdzweu	6
 缓缓落下	hhlxaa	1
+浑浑噩噩	hhvvoo	1
 花好月圆	hhyyei	1
 厚积薄发	hjbfeu	5
 海枯石烂	hksloo	2
@@ -162,6 +168,7 @@ use_preset_vocabulary: false
 恍然大悟	hrdwoo	2
 浑水摸鱼	hsmyoo	1
 横扫千军	hsqjei	2
+毫无缘由	hwyyoe	1
 骄兵悍将	jbhjaa	1
 精彩纷呈	jcfcou	1
 见风使舵	jfsdia	3
@@ -176,6 +183,7 @@ use_preset_vocabulary: false
 饥饿营销	jvyxua	1
 及吾无身	jwwsua	1
 剑啸江湖	jxjhuo	5
+咎由自取	jyzqua	1
 捷足先登	jzxdei	2
 抗拒从严	kjcyei	1
 口蜜腹剑	kmfjia	1
@@ -192,6 +200,7 @@ use_preset_vocabulary: false
 老谋深算	lmssei	2
 罗纳尔多	lnvdia	3
 乱七八糟	lqbzue	1
+两情相悦	lqxyei	1
 乱石穿空	lsckue	1
 烈士暮年	lsmneu	2
 来势汹汹	lsxxeo	1
@@ -206,9 +215,11 @@ use_preset_vocabulary: false
 梅开二度	mkvdei	6
 每况愈下	mkyxue	2
 麻木不仁	mmbroe	1
+莫名其妙	mmqmei	3
 满腔热忱	mqrcoo	1
 冥思苦索	msksoa	1
 冥思苦想	mskxoa	1
+勉为其难	mwqnua	1
 梦想成真	mxczei	1
 难得糊涂	ndhtao	1
 逆流而上	nlvsou	2
@@ -220,9 +231,10 @@ use_preset_vocabulary: false
 浅尝辄止	qczzoo	3
 拳打脚踢	qdjtou	1
 前赴后继	qfhjou	1
-奇技淫巧	qjyqeu	3
+奇技淫巧	qjyqeu	4
 千里之行	qlzxue	1
 七七八八	qqbbea	1
+杞人忧天	qrytei	1
 欺师灭祖	qsmzei	2
 全身而退	qsvtuo	2
 蜻蜓点水	qtdsia	1
@@ -242,7 +254,7 @@ use_preset_vocabulary: false
 仁至义尽	rzyjui	1
 声笔飞单	sbfdei	6
 声笔飞码	sbfmei	4
-声笔猛码	sbmmei	4
+声笔猛码	sbmmei	10
 神不守舍	sbssoa	1
 身不由己	sbyjui	1
 深藏不露	scbloo	1
@@ -342,6 +354,7 @@ use_preset_vocabulary: false
 源源不断	yybdoo	2
 永远的神	yydsoa	2
 遥遥领先	yylxuo	3
+一言难尽	yynjee	1
 一叶障目	yyzmee	1
 一朝分娩	yzfmee	1
 一针见血	yzjxee	1
@@ -357,6 +370,7 @@ use_preset_vocabulary: false
 再接再厉	zjzlei	1
 众口难调	zkntuo	2
 自力更生	zlgsui	9
+自立门户	zlmhui	1
 指鹿为马	zlwmei	1
 走马观花	zmghei	1
 贼眉鼠眼	zmsyia	2
@@ -386,7 +400,9 @@ use_preset_vocabulary: false
 及时当勉励	jsdlua	1
 将相本无种	jxbzoe	1
 留得青山在	ldqzua	1
+论迹不论心	ljbxoa	1
 粒粒皆辛苦	lljkou	1
+论心无完人	lxwroa	1
 莫道君行早	mdjzei	2
 莫道桑榆晚	mdswei	1
 明镜亦非台	mjytia	1

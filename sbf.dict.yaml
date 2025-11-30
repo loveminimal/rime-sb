@@ -710,7 +710,7 @@ columns:
 兼	jou	0
 金牌	jp'	0
 加强	jq'	0
-进入	jr'	0
+竟然	jr'	0	# 进入
 建设	js'	0
 今天	jt'	0
 九	ju'	0
@@ -1567,7 +1567,7 @@ columns:
 新品	xp'	0
 想起	xq'	0
 显然	xr'	0
-先生	xs'	0
+吸收	xs'	0	# 先生
 系统	xt'	0
 侠	xu'	0
 胸	xu;	0
