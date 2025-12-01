@@ -86,7 +86,7 @@ columns:
 #	r;o
 #	s;a
 慎	s;e
-#	s;u
+蔬	s;u
 室	s;i
 骚	s;o
 #	t;a
@@ -202,7 +202,7 @@ columns:
 崩	bio	0
 鄙	biu	0
 不仅	bj'	0
-不肯	bk'	0
+包括	bk'	0	# 不肯
 本来	bl'	0
 部门	bm'	0
 半年	bn'	0
@@ -1429,7 +1429,7 @@ columns:
 昂首	vs'	0
 状态	vt'	0	# 儿童
 腌	vu'	0
-胺	vu;	0
+住	vu;	0	# 胺
 饵	vua	0
 迩	vue	0
 俺	vui	0
@@ -1589,7 +1589,7 @@ columns:
 验	y,	0	# 业
 译	y.	0	# 云
 页	y/	0	# 员
-应	y;	0
+样	y;	0	# 应
 勇	ya'	0
 阴	ya;	0
 幼	yaa	0

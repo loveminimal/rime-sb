@@ -12,7 +12,7 @@
 # 
 ---
 name: sbfm.extended
-version: 2025.11
+version: 2025.12
 sort: by_weight
 use_preset_vocabulary: false
 ...
@@ -126,6 +126,8 @@ use_preset_vocabulary: false
 党同伐异	dtfyio	2
 大同小异	dtxyeu	2
 大象无形	dxwxeu	1
+大雨磅礴	dypbeu	1
+大雨滂沱	dypteu	1
 大音希声	dyxseu	1
 大展鸿图	dzhteu	2
 大智若愚	dzryeu	1
@@ -227,6 +229,7 @@ use_preset_vocabulary: false
 南辕北辙	nybzei	1
 朋比为奸	pbwjua	1
 破釜沉舟	pfczeu	1
+滂沱大雨	ptdyoo	1
 穷兵黩武	qbdwoo	2
 浅尝辄止	qczzoo	3
 拳打脚踢	qdjtou	1
@@ -270,6 +273,7 @@ use_preset_vocabulary: false
 手忙脚乱	smjlue	2
 熟能生巧	snsqoe	1
 死皮癞脸	splleu	1
+十全十美	sqsmei	1
 实事求是	ssqsoo	1
 深思熟虑	sssloo	1
 十恶不赦	svbsei	2
