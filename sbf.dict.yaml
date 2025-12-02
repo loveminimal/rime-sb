@@ -20,7 +20,7 @@ columns:
 #	b;i
 #	b;o
 倡	c;a
-#	c;e
+槽	c;e
 #	c;u
 #	c;i
 超	c;o
@@ -94,11 +94,11 @@ columns:
 #	t;u
 #	t;i
 #	t;o
-#	v;a
+渣	v;a
 者	v;e
 注	v;u
-#	v;i
-州	v;o
+肢	v;i
+#	v;o
 #	w;a
 #	w;e
 #	w;u
@@ -111,9 +111,11 @@ columns:
 嚣	x;o
 涯	y;a
 岩	y;e
+越	y'e
 豫	y;u
 蕴	y'u
 奕	y;i
+咦	y'i
 永	y;o
 #	z;a
 择	z;e
@@ -153,10 +155,10 @@ columns:
 #	rou
 #	vaa
 #	vae
-#	voe
-#	vou
-#	voi
-#	voo
+致	voe
+州	vou
+至	voi
+洲	voo
 #	wae
 #	wai
 致	vea	#
@@ -1706,7 +1708,7 @@ columns:
 真	z,	0
 字	z.	0	# 住
 载	z/	0	# 者
-展	z;	0
+直	z;	0	# 展
 障	za'	0
 阻	za;	0
 骤	zaa	0
@@ -1723,7 +1725,7 @@ columns:
 斟	zdeo	9999
 浊	zdio	9999
 转	ze'	0
-直	ze;	0
+展	ze;	0	# 直
 暂	zea	0
 辄	zeai	0
 郅	zeao	0
