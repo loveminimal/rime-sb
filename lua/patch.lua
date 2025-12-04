@@ -38,6 +38,13 @@ local function f_comment(input, env)
     local input_code = context.input
 
     for cand in input:iter() do
+        -- logger.info(cand.type)
+        -- 移除临时飞码长词编码补全中的 ~ 符号
+        -- if input_code:sub(0,1) == 'e' and cand.comment:find('~') then
+        if cand.type == 'completion' and cand.comment:find('~') then
+            cand:get_genuine().comment = cand.comment:sub(2)
+        end
+
         -- 修改自造用户词提示图标
         if cand.type == 'user_table' and cand.comment:find('☯') then
             cand:get_genuine().comment = '🦄' -- 
