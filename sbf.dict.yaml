@@ -14,7 +14,7 @@ columns:
   - weight
 ...
 # 新增字词
-#	b;a
+飙	b;a
 #	b;e
 #	b;u
 #	b;i
@@ -1264,7 +1264,7 @@ columns:
 帅	siu	0
 时间	sj'	0
 绅	sjie	9999
-时刻	sk'	0
+思考	sk'	0	# 时刻
 吮	skau	9999
 嗜	skeo	9999
 嗽	skeu	9999

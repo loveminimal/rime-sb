@@ -55,7 +55,7 @@ use_preset_vocabulary: false
 马克思	mkstaa	1
 毛泽东	mzdhue	2
 满招损	mzsfoo	1
-毛主席	mzxgue	4
+毛主席	mzxgue	6
 破解版	pjbpeu	1
 乔布斯	qbsque	5
 谦受益	qsyboa	1
@@ -659,6 +659,7 @@ use_preset_vocabulary: false
 积习难改	jxngue	1
 见贤思齐	jxsqia	1
 集腋成裘	jycqui	1
+江洋大盗	jyddoo	1
 举一反三	jyfsoo	1
 家喻户晓	jyhxoo	1
 金玉良言	jylyuo	1
@@ -980,7 +981,7 @@ use_preset_vocabulary: false
 仁至义尽	rzyjui	1
 如坐针毡	rzzzau	1
 声笔飞单	sbfdei	6
-声笔飞码	sbfmei	9
+声笔飞码	sbfmei	11
 事半功倍	sbgbei	1
 事必躬亲	sbgqei	1
 势不可挡	sbkdei	1
@@ -1494,6 +1495,7 @@ use_preset_vocabulary: false
 欲速不达	ysbduo	1
 一丝不苟	ysbgee	1
 仰事俯畜	ysfcui	1
+严丝合缝	yshfei	2
 与时俱进	ysjjea	2
 一损俱损	ysjsee	1
 因势利导	ysldia	1
@@ -1603,7 +1605,7 @@ use_preset_vocabulary: false
 在劫难逃	zjnteu	1
 重剑无锋	zjwfue	1
 作茧自缚	zjzfui	1
-再接再厉	zjzlei	1
+再接再厉	zjzlei	2
 缄口不言	zkbyaa	1
 众口难调	zkntuo	2
 众口一词	zkycuo	1
@@ -1658,6 +1660,7 @@ use_preset_vocabulary: false
 缀玉联珠	zylzaa	1
 只言片语	zypyia	1
 自以为是	zywsui	1
+罪有应得	zyydia	1
 自怨自艾	zyzyui	1
 孜孜不倦	zzbjai	1
 置之不理	zzblia	1
@@ -1699,6 +1702,8 @@ use_preset_vocabulary: false
 莫道桑榆晚	mdswei	1
 明镜亦非台	mjytia	1
 马克思主义	mksyaa	6
+明日复明日	mrfria	1
+明日何其多	mrhdia	1
 毛泽东思想	mzdxue	1
 毛主席语录	mzxlue	6
 毛主席万岁	mzxsue	1
@@ -1717,7 +1722,7 @@ use_preset_vocabulary: false
 世上无难事	sswsei	2
 岁月不待人	sybria	1
 谁知盘中餐	szpcoa	1
-碳水化合物	tshweu	4
+碳水化合物	tshweu	5
 天涯共此时	tygsee	1
 无风不起浪	wfblee	2
 万花丛中过	whcgea	4
@@ -1737,6 +1742,7 @@ use_preset_vocabulary: false
 只要肯登攀	zykpia	2
 睁眼说瞎话	zyshia	2
 毕其功于一役	bqgyea	2
+百思不得其解	bsbjeu	1
 定不负相思意	dbfyoo	1
 道路是曲折的	dlsdou	1
 风景这边独好	fjzhua	1
