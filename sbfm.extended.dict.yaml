@@ -33,6 +33,7 @@ use_preset_vocabulary: false
 标准版	bzbpei	2
 差不多	cbdxou	11
 处女座	cnzgua	1
+初始化	cshroa	1
 丹尼斯	dnsqua	3
 反动派	fdpduu	4
 服务器	fwqkua	5
@@ -55,7 +56,7 @@ use_preset_vocabulary: false
 马克思	mkstaa	1
 毛泽东	mzdhue	2
 满招损	mzsfoo	1
-毛主席	mzxgue	6
+毛主席	mzxgue	7
 破解版	pjbpeu	1
 乔布斯	qbsque	5
 谦受益	qsyboa	1
@@ -71,6 +72,7 @@ use_preset_vocabulary: false
 为什么	wsmsou	3
 小狼毫	xlhwiu	2
 叙利亚	xlyyuo	1
+虚拟机	xnjmie	3
 希特勒	xtlguo	1
 西游记	xyjyei	1
 愚人节	yrjcia	1
@@ -294,6 +296,7 @@ use_preset_vocabulary: false
 登峰造极	dfzjao	1
 道法自然	dfzrou	2
 电光火石	dghsia	1
+独孤九剑	dgjjua	1
 独孤求败	dgqbua	1
 登高一呼	dgyhao	1
 帝国主义	dgzyoe	3
@@ -1381,6 +1384,7 @@ use_preset_vocabulary: false
 小心翼翼	xxyyiu	1
 行有不得	xybduu	1
 相映成趣	xycqei	1
+胸有成竹	xyczua	3
 宵衣旰食	xygsoo	1
 行云流水	xylsuu	1
 习以为常	xywcao	1
@@ -1784,6 +1788,7 @@ use_preset_vocabulary: false
 皇天不负有心人	htbrui	1
 江湖夜雨十年灯	jhydoo	9
 金鳞岂是池中物	jlqwuo	2
+剑气纵横三万里	jqzluo	1
 今朝有酒今朝醉	jzyzuo	2
 开弓没有回头箭	kgmjee	1
 留取丹心照汗青	lqdqua	1
@@ -1825,6 +1830,7 @@ use_preset_vocabulary: false
 雄关漫道真如铁	xgmteu	1
 心有灵犀一点通	xyltoa	3
 衣带渐宽终不悔	ydjhoe	1
+一剑光寒十九州	yjgzee	1
 一日看尽长安花	yrkhee	1
 疑是银河落九天	ysytua	2
 也无风雨也无晴	ywfqai	1
