@@ -51,17 +51,19 @@ local function f_comment(input, env)
         end
         
         -- local mark = ''
-        -- 标识非 8105 通规字
+        -- ¹标识非 8105 通规字
         -- mark = code_table.index[cand.text] and '⁸' or ''
         -- cand:get_genuine().comment = mark .. cand.comment
-        -- 标识声笔字
+        -- ²标识声笔字
         -- mark = (#input_code == 2 and code_table.sb[cand.text]) and 'ᵇ ' or ''
         -- cand:get_genuine().comment = mark .. cand.comment
-        -- 标识声偏字
+        -- ³标识声偏字
         -- mark = (#input_code == 2 and code_table.sp[cand.text]) and 'ᵖ ' or ''
         -- cand:get_genuine().comment = mark .. cand.comment
-
-
+        -- ⁴标识多音字
+        -- local m_pinyin = code_table.multi[cand.text] and (' ' ..  code_table.multi[cand.text]) or ''
+        -- mark = (code_table.multi[cand.text]) and 'ᵐ ' or ''
+        -- cand:get_genuine().comment = mark .. cand.comment .. m_pinyin
 
         yield(cand)
     end

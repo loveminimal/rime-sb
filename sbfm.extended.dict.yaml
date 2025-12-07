@@ -227,6 +227,7 @@ use_preset_vocabulary: false
 曾经沧海	cjchou	1
 曾几何时	cjhsou	1
 从谏如流	cjrluo	1
+出简让全	cjrqai	2
 重见天日	cjtrue	1
 出类拔萃	clbcai	1
 吃里扒外	clbwia	1
@@ -296,7 +297,7 @@ use_preset_vocabulary: false
 登峰造极	dfzjao	1
 道法自然	dfzrou	2
 电光火石	dghsia	1
-独孤九剑	dgjjua	1
+独孤九剑	dgjjua	2
 独孤求败	dgqbua	1
 登高一呼	dgyhao	1
 帝国主义	dgzyoe	3
@@ -354,6 +355,7 @@ use_preset_vocabulary: false
 大义凛然	dylreu	1
 大雨磅礴	dypbeu	1
 大雨滂沱	dypteu	1
+德艺双馨	dysxuu	1
 独一无二	dywvua	1
 大音希声	dyxseu	1
 多姿多彩	dzdcua	1
@@ -849,6 +851,7 @@ use_preset_vocabulary: false
 蓬荜生辉	pbshei	1
 朋比为奸	pbwjua	1
 蓬荜增辉	pbzhei	1
+破财消灾	pcxzeu	2
 平淡无奇	pdwqeo	1
 破釜沉舟	pfczeu	1
 平分秋色	pfqseo	1
@@ -1052,6 +1055,7 @@ use_preset_vocabulary: false
 深入浅出	srqcoo	1
 深入人心	srrxoo	1
 耸人听闻	srtwuo	1
+索然无味	srwwei	2
 拾人牙慧	sryhei	1
 视若珍宝	srzboa	1
 生生不息	ssbxue	1
@@ -1357,6 +1361,7 @@ use_preset_vocabulary: false
 相提并论	xtblei	1
 夕惕若厉	xtrlua	1
 学而不厌	xvbyoo	1
+笑傲江湖	xvjhue	4
 显而易见	xvyjia	1
 胸无城府	xwcfua	1
 喜闻乐见	xwljei	1
@@ -1552,6 +1557,7 @@ use_preset_vocabulary: false
 一衣带水	yydsee	1
 永远的神	yydsoa	2
 因噎废食	yyfsia	1
+郁郁寡欢	yygheu	1
 一意孤行	yygxee	1
 一以贯之	yygzee	1
 一言九鼎	yyjdee	1
@@ -1623,6 +1629,7 @@ use_preset_vocabulary: false
 指鹿为马	zlwmei	1
 朝令夕改	zlxgei	1
 钟灵毓秀	zlyxue	1
+执迷不悟	zmbwei	1
 钟鸣鼎食	zmdsue	1
 走马观花	zmghei	1
 彰明较著	zmjzoe	1
