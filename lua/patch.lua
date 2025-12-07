@@ -14,6 +14,18 @@ local rime = require "lib"
 
 -- logger.info('➭ patch.lua loaded...')
 
+-- 用于声笔飞虎中首字母大写转小写（纯习惯）
+local function p_lower_first_char(key_event, env)
+    local context = env.engine.context
+    local input_text = context.input
+    if input_text:match('^%u') then
+        local lower_input = input_text:sub(1,1):lower() .. input_text:sub(2)
+        context.input = lower_input
+    end
+    return 2
+end
+
+
 -- 输入特定的日期时间缩写，输出对应的日期时间字符串
 local t_date = {}
 function t_date.func(input, seg)
@@ -70,6 +82,7 @@ local function f_comment(input, env)
 end
 
 return {
+    p_lower_first_char = p_lower_first_char,
     t_date = t_date,
     f_comment = f_comment
 }

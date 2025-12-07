@@ -1,0 +1,16 @@
+patch:
+  __include: style.yaml:orjk
+  __patch:
+    style/+:
+      # label_format: "%s " #"%s."
+      color_scheme: orjk
+      # preedit_type: preview
+      # inline_preedit: false
+      # vertical_auto_reverse: true
+      # layout:
+      #   __include: style.yaml:/layout_v
+      #   margin_y: -1
+  # --- 候选项数 --- 
+  menu/page_size: 4
+  # menu/alternative_select_labels: [ 〡, 〢, 〣, 〤, 〥, 〦, 〧, 〨, 〩 ]
+  # menu/alternative_select_labels: [ '_', ';', "'", "/" ]
