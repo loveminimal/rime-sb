@@ -34,6 +34,7 @@ use_preset_vocabulary: false
 差不多	cbdxou	11
 处女座	cnzgua	1
 初始化	cshroa	1
+导火索	dhssae	1
 丹尼斯	dnsqua	3
 反动派	fdpduu	4
 服务器	fwqkua	5
@@ -102,6 +103,7 @@ use_preset_vocabulary: false
 不浮众望	bfzweu	1
 不负众望	bfzweu	1
 不分畛域	bfzyeu	1
+波光粼粼	bglloo	1
 卑躬屈膝	bgqxui	3
 杯弓蛇影	bgsyei	1
 波诡云谲	bgyjoo	1
@@ -147,6 +149,7 @@ use_preset_vocabulary: false
 闭门造车	bmzcoi	1
 拔苗助长	bmzzei	1
 鞭辟入里	bprlei	1
+不清不白	bqbbeu	1
 不求甚解	bqsjeu	1
 不期而遇	bqvyeu	1
 不期而至	bqvzeu	1
@@ -157,6 +160,7 @@ use_preset_vocabulary: false
 不容置疑	brzyeu	1
 不塞不流	bsbleu	1
 杯水车薪	bscxei	1
+不胜酒力	bsjleu	2
 避实就虚	bsjxae	1
 不甚了了	bslleu	1
 不胜枚举	bsmjeu	1
@@ -170,6 +174,7 @@ use_preset_vocabulary: false
 别无长物	bwcwia	1
 不忘初心	bwcxeu	1
 不为已甚	bwjseu	1
+薄雾流荡	bwldei	1
 并行不悖	bxbbou	1
 抱薪救火	bxjhei	1
 标新立异	bxlyei	1
@@ -227,9 +232,11 @@ use_preset_vocabulary: false
 除旧布新	cjbxai	1
 曾经沧海	cjchou	1
 曾几何时	cjhsou	1
+超级玛丽	cjmlei	1
 从谏如流	cjrluo	1
 出简让全	cjrqai	2
 重见天日	cjtrue	1
+擦肩而过	cjvgei	1
 出类拔萃	clbcai	1
 吃里扒外	clbwia	1
 川流不息	clbxui	1
@@ -265,6 +272,7 @@ use_preset_vocabulary: false
 出神入化	csrhai	1
 出神入化	csrhia	1
 从善如流	csrluo	1
+丑态百出	ctbcai	1
 垂头丧气	ctsque	1
 串通一气	ctyqia	1
 充耳不闻	cvbwoe	1
@@ -274,6 +282,7 @@ use_preset_vocabulary: false
 处心积虑	cxjlua	1
 城下之盟	cxzmei	1
 穿云裂石	cylsoo	1
+愁云密布	cymbue	1
 车载斗量	czdlea	1
 粗枝大叶	czdyou	1
 穿凿附会	czfhoo	1
@@ -288,6 +297,8 @@ use_preset_vocabulary: false
 得不偿失	dbcsuu	2
 对簿公堂	dbgtao	1
 大材小用	dcxyeu	1
+当断不断	ddbdio	1
+胆大包天	ddbtua	1
 动荡不安	ddbvee	1
 大动干戈	ddggeu	1
 跌宕起伏	ddqfia	1
@@ -321,6 +332,7 @@ use_preset_vocabulary: false
 颠沛流离	dpllei	1
 独辟蹊径	dpxjuu	1
 大巧不工	dqbgeu	2
+大权独揽	dqdleu	1
 大巧若拙	dqrzeu	1
 大器晚成	dqwceu	1
 当仁不让	drbrio	1
@@ -343,6 +355,7 @@ use_preset_vocabulary: false
 刀头舔蜜	dttmau	1
 道听途说	dttsou	1
 大同小异	dtxyeu	2
+当头一棒	dtybio	1
 大而化之	dvhzeu	1
 大而无当	dvwdeu	1
 当务之急	dwzjio	1
@@ -354,6 +367,7 @@ use_preset_vocabulary: false
 大言不惭	dybceu	1
 大有可为	dykweu	1
 大义凛然	dylreu	1
+得意门生	dymsuu	1
 大雨磅礴	dypbeu	1
 大雨滂沱	dypteu	1
 德艺双馨	dysxuu	1
@@ -369,6 +383,7 @@ use_preset_vocabulary: false
 斗志昂扬	dzvyoo	1
 对症下药	dzxyao	1
 斗转星移	dzxyoo	1
+奋笔疾书	fbjseu	1
 分崩离析	fblxuo	1
 风驰电掣	fcdcua	1
 风餐露宿	fclsua	1
@@ -381,6 +396,7 @@ use_preset_vocabulary: false
 服服帖帖	ffttua	1
 纷繁芜杂	ffwzaa	1
 沸反盈天	ffytoo	1
+风风雨雨	ffyyua	1
 焚膏继晷	fgjgei	1
 浮光掠影	fglyoo	1
 反戈一击	fgyjuu	1
@@ -401,6 +417,7 @@ use_preset_vocabulary: false
 肥马轻裘	fmqqua	1
 风靡一时	fmysua	1
 返璞归真	fpgzuu	1
+风平浪静	fpljua	1
 粉墙黛瓦	fqdwou	1
 风清气正	fqqzua	1
 风起天南	fqtnua	1
@@ -415,6 +432,7 @@ use_preset_vocabulary: false
 俯拾皆是	fsjsui	1
 愤世嫉俗	fsjsuo	1
 乏善可陈	fskcuo	1
+反受其乱	fsqluu	1
 风生水起	fssqua	1
 翻天覆地	ftfduo	1
 分庭抗礼	ftkluo	1
@@ -434,6 +452,7 @@ use_preset_vocabulary: false
 风雨同舟	fytzua	1
 蜂拥而至	fyvzia	1
 丰衣足食	fyzsee	1
+风姿绰约	fzcyua	1
 纷至沓来	fztlaa	1
 故步自封	gbzfei	1
 固步自封	gbzfia	1
@@ -451,8 +470,12 @@ use_preset_vocabulary: false
 亘古长青	ggcqei	1
 革故鼎新	ggdxei	1
 干干净净	ggjjee	2
+改革开放	ggkfae	1
+刮骨疗毒	ggldue	1
 光怪陆离	ggllio	1
 高歌猛进	ggmjoe	1
+勾肩搭背	gjdbua	1
+官居高位	gjgwoo	1
 纲举目张	gjmzaa	1
 感激涕零	gjtleu	1
 过江之鲫	gjzjei	1
@@ -468,9 +491,12 @@ use_preset_vocabulary: false
 广袤无垠	gmwyoe	1
 刮目相看	gmxkue	1
 故弄玄虚	gnxxei	1
+狗皮膏药	gpggua	1
+顾盼生辉	gpsheu	1
 苟且偷生	gqtsei	1
 工人阶级	grjjei	1
 固若金汤	grjtia	1
+隔三岔五	gscwai	1
 根深蒂固	gsdgei	1
 瓜熟蒂落	gsdluu	1
 公事公办	gsgbuo	1
@@ -493,6 +519,7 @@ use_preset_vocabulary: false
 隔靴搔痒	gxsyai	1
 改弦易辙	gxyzae	1
 过犹不及	gybjei	1
+诡异奇谲	gyqjoa	1
 各有千秋	gyqqua	1
 过眼云烟	gyyyei	1
 固执己见	gzjjia	1
@@ -537,6 +564,7 @@ use_preset_vocabulary: false
 讳莫如深	hmrsoa	1
 海纳百川	hnbcoo	1
 汗牛充栋	hncdoo	1
+花鸟虫鱼	hncyei	1
 魂牵梦绕	hqmree	1
 祸起萧墙	hqxqoa	1
 害群之马	hqzmoo	1
@@ -554,6 +582,7 @@ use_preset_vocabulary: false
 横扫千军	hsqjei	2
 皓首穷经	hsqjui	1
 海市蜃楼	hssloo	1
+宏图大业	htdyoo	1
 回天乏术	htfsia	1
 回天无力	htwlia	1
 撼天震地	htzdei	1
@@ -565,8 +594,11 @@ use_preset_vocabulary: false
 互为因果	hwygea	1
 毫无缘由	hwyyoe	1
 互相标榜	hxbbea	1
+欢欣鼓舞	hxgwao	1
 混淆是非	hxsfoo	1
+呼啸山庄	hxszia	1
 沆瀣一气	hxyqoo	1
+皓月当空	hydkui	1
 海晏河清	hyhqoo	1
 毁于一旦	hyydui	1
 和衷共济	hzgjue	1
@@ -580,6 +612,7 @@ use_preset_vocabulary: false
 举步维艰	jbwjoo	1
 降本增效	jbzxai	1
 精彩纷呈	jcfcou	1
+金蝉脱壳	jctquo	1
 接踵而至	jcvzei	1
 坚定不移	jdbyii	1
 江郎才尽	jdcjoo	1
@@ -590,6 +623,7 @@ use_preset_vocabulary: false
 今非昔比	jfxbuo	1
 见怪不怪	jgbgia	1
 急功近利	jgjlua	1
+居高临下	jglxae	1
 吉光片羽	jgpyei	1
 江河日下	jhrxoo	1
 镜花水月	jhsyue	1
@@ -599,6 +633,7 @@ use_preset_vocabulary: false
 经久不息	jjbxaa	1
 阶级斗争	jjdzai	1
 聚精会神	jjhsei	1
+经济纠纷	jjjfaa	1
 岌岌可危	jjkwia	1
 津津乐道	jjldoo	1
 绞尽脑汁	jjnzaa	1
@@ -610,6 +645,7 @@ use_preset_vocabulary: false
 激流勇进	jlyjoo	1
 鸡鸣狗盗	jmgdao	1
 精妙绝伦	jmjlou	1
+鸡毛蒜皮	jmspao	1
 举目无亲	jmwqoo	1
 艰难曲折	jnqzao	10
 九牛一毛	jnymua	1
@@ -692,6 +728,7 @@ use_preset_vocabulary: false
 抗拒从严	kjcyei	1
 克己奉公	kjfgei	1
 开卷有益	kjyyee	1
+慷慨激昂	kkjvoo	1
 苦口婆心	kkpxei	1
 夸夸其谈	kkqteu	1
 侃侃而谈	kkvtui	1
@@ -710,6 +747,7 @@ use_preset_vocabulary: false
 力不从心	lbcxua	1
 厉兵秣马	lbmmeu	1
 路不拾遗	lbsyia	1
+狼狈逃窜	lbtcua	1
 乐此不彼	lcbbua	1
 鳞次栉比	lczbua	2
 老调重弹	ldctei	1
@@ -812,6 +850,7 @@ use_preset_vocabulary: false
 面目全非	mmqfeu	1
 莫名其妙	mmqmei	3
 默默无闻	mmwwia	1
+面面相觑	mmxqeu	1
 密密匝匝	mmzzoo	1
 摩拳擦掌	mqczoe	1
 妙趣横生	mqhsau	1
@@ -819,6 +858,7 @@ use_preset_vocabulary: false
 茫然不解	mrbjei	1
 靡然成风	mrcfoe	1
 明日黄花	mrhhia	1
+蓦然回首	mrhsei	1
 盲人摸象	mrmxoe	1
 名实不符	msbfua	1
 墨守成规	mscgia	1
@@ -853,11 +893,13 @@ use_preset_vocabulary: false
 难以割舍	nygsao	1
 难以企及	nyqjao	1
 难以为继	nywjao	1
+跑不了庙	pblmia	1
 平步青云	pbqyeo	1
 蓬荜生辉	pbshei	1
 朋比为奸	pbwjua	1
 蓬荜增辉	pbzhei	1
 破财消灾	pcxzeu	2
+跑不了庙	pdlmia	1
 平淡无奇	pdwqeo	1
 破釜沉舟	pfczeu	1
 平分秋色	pfqseo	1
@@ -868,6 +910,7 @@ use_preset_vocabulary: false
 披荆斩棘	pjzjei	1
 波澜不惊	plbjoo	1
 皮里阳秋	plyqau	1
+拼命三郎	pmslei	1
 旁若无人	prwroe	1
 判若云泥	prynou	1
 披沙拣金	psljei	1
@@ -896,8 +939,10 @@ use_preset_vocabulary: false
 前功尽弃	qgjqou	1
 青黄不接	qhbjee	1
 骑虎难下	qhnxaa	1
+气急败坏	qjbhue	1
 穷经皓首	qjhsoo	1
 曲径通幽	qjtyia	1
+迄今为止	qjwzue	1
 奇技淫巧	qjyqeu	4
 潜精研思	qjysoo	1
 亲历亲为	qlqwoe	1
@@ -908,6 +953,7 @@ use_preset_vocabulary: false
 千篇一律	qpylue	1
 七七八八	qqbbea	1
 牵强附会	qqfheu	1
+巧取豪夺	qqhdei	1
 期期艾艾	qqvvei	1
 迥然不同	qrbtia	1
 全然隔绝	qrgjuo	1
@@ -925,6 +971,7 @@ use_preset_vocabulary: false
 蜻蜓点水	qtdsia	1
 曲突徙薪	qtxxia	1
 锲而不舍	qvbsue	1
+千恩万谢	qvwxue	1
 轻而易举	qvyjea	1
 去芜存菁	qwcjei	1
 去伪存真	qwczei	1
@@ -934,6 +981,7 @@ use_preset_vocabulary: false
 曲意逢迎	qyfyia	1
 巧言令色	qylsei	1
 潜移默化	qymhoo	1
+清雅秀丽	qyxloo	1
 青眼有加	qyyjee	1
 求之不得	qzbdei	1
 千姿百态	qzbtue	1
@@ -988,6 +1036,7 @@ use_preset_vocabulary: false
 如影随形	rysxau	1
 日异月殊	ryysia	1
 人云亦云	ryyyuo	1
+软中带硬	rzdyea	1
 任重道远	rzdyui	1
 日臻完善	rzwsia	1
 仁至义尽	rzyjui	1
@@ -1010,6 +1059,7 @@ use_preset_vocabulary: false
 石沉大海	scdheu	1
 水草丰茂	scfmia	1
 随处可见	sckjai	1
+身材苗条	scmtui	1
 山重水复	scsfia	1
 神采奕奕	scyyoa	3
 水到渠成	sdqcia	1
@@ -1019,6 +1069,7 @@ use_preset_vocabulary: false
 双峰并峙	sfbzao	1
 删繁就简	sfjjua	1
 煞费苦心	sfkxua	1
+顺风顺水	sfssui	1
 食古不化	sgbhuo	1
 时过境迁	sgjqia	1
 硕果累累	sglleu	1
@@ -1032,18 +1083,22 @@ use_preset_vocabulary: false
 势均力敌	sjldei	1
 杀鸡取卵	sjqluo	1
 拾级而上	sjvsei	1
+神经兮兮	sjxxoa	1
+矢口否认	skfrue	1
 司空见惯	skjgae	1
 顺理成章	slczui	1
 色厉内荏	slnrua	1
 身临其境	slqjui	1
 生灵涂炭	slttue	1
 顺流而下	slvxui	2
+思来想去	slxqia	1
 色令智昏	slzhua	3
 善莫大焉	smdyou	2
 手忙脚乱	smjlue	2
 神秘莫测	smmcoa	1
 声名鹊起	smqqei	1
 四面受敌	smsdia	1
+熟门熟路	smsloe	1
 神秘兮兮	smxxoa	1
 深谋远虑	smyloo	1
 熟能生巧	snsqoe	1
@@ -1070,6 +1125,7 @@ use_preset_vocabulary: false
 审时度势	ssdsoo	1
 声势浩大	sshdei	1
 首鼠两端	ssldou	1
+神神秘秘	ssmmoa	1
 闪烁其辞	ssqcoi	1
 实事求是	ssqsoo	2
 视死如归	ssrgoa	1
@@ -1133,11 +1189,13 @@ use_preset_vocabulary: false
 土地革命	tdgmei	1
 贪大求快	tdqkuo	1
 痛定思痛	tdstoe	1
+通风报信	tfbxao	2
 天翻地覆	tfdfee	1
 条分缕析	tflxua	1
 突飞猛进	tfmjoo	1
 突发奇想	tfqxoo	1
 天赋异禀	tfybee	4
+天方夜谭	tfytee	1
 天高地阔	tgdkee	1
 同甘共苦	tggkia	1
 吐故纳新	tgnxia	1
@@ -1177,12 +1235,14 @@ use_preset_vocabulary: false
 叹为观止	twgzia	1
 天网恢恢	twhhee	1
 体无完肤	twwfui	1
+通宵达旦	txddao	1
 啼笑皆非	txjfia	1
 痛心疾首	txjsoe	1
 同心同德	txtdia	1
 天下无双	txwsee	2
 推心置腹	txzfei	1
 投闲置散	txzsei	1
+吞云吐雾	tytwee	1
 脱颖而出	tyvcua	1
 天佑中华	tyzhee	1
 天造地设	tzdsee	1
@@ -1206,6 +1266,7 @@ use_preset_vocabulary: false
 额手称庆	vscqoo	1
 昂首阔步	vskbia	1
 耳熟能详	vsnxei	1
+唉声叹气	vstqia	1
 额手相庆	vsxqoo	1
 耳提面命	vtmmei	1
 按图索骥	vtsjei	1
@@ -1216,6 +1277,8 @@ use_preset_vocabulary: false
 呕心沥血	vxlxia	1
 阿谀奉承	vyfcai	1
 安营扎寨	vyzzoo	1
+暗中观察	vzgcia	1
+暗自祈求	vzqqia	1
 安之若素	vzrsoo	1
 岸芷汀兰	vztlia	1
 文不加点	wbjdoe	1
@@ -1223,14 +1286,18 @@ use_preset_vocabulary: false
 微不足道	wbzduu	1
 五彩缤纷	wcbfei	1
 五彩斑斓	wcblei	1
+无处不在	wcbzee	1
 文采斐然	wcfroe	1
 无产阶级	wcjjee	1
 望尘莫及	wcmjoe	1
 为丛驱雀	wcqqou	1
 无出其右	wcqyee	1
 尾大不掉	wdbdae	1
+无底深渊	wdsyee	1
 无独有偶	wdyvee	1
 无动于衷	wdyzee	1
+威风凛凛	wflleu	1
+微风轻拂	wfqfuu	1
 五风十雨	wfsyei	1
 枉费心机	wfxjei	1
 五谷丰登	wgfdei	1
@@ -1272,6 +1339,8 @@ use_preset_vocabulary: false
 无所不在	wsbzee	1
 无所不知	wsbzee	1
 无伤大雅	wsdyee	1
+无事可做	wskzee	2
+无所适从	wskzee	4
 文思泉涌	wsqyoe	1
 物是人非	wsrfue	1
 无所适从	wsscee	1
@@ -1336,6 +1405,7 @@ use_preset_vocabulary: false
 循规蹈矩	xgdjuu	1
 循规拘礼	xgjluu	1
 虚怀若谷	xhrgie	1
+心狠手辣	xhsloa	1
 薪火相传	xhxcei	1
 烜赫一时	xhysou	1
 煊赫一时	xhysou	1
@@ -1395,19 +1465,24 @@ use_preset_vocabulary: false
 息息相通	xxxtui	1
 小心翼翼	xxyyiu	1
 行有不得	xybduu	1
+形影不离	xyblee	1
 心悦诚服	xycfoa	1
 相映成趣	xycqei	1
 胸有成竹	xyczua	3
 宵衣旰食	xygsoo	1
+悬崖勒马	xylmia	1
 行云流水	xylsuu	1
 习以为常	xywcao	1
 虚与委蛇	xywyie	1
 相依相伴	xyxbei	1
 相由心生	xyxsei	2
+夕阳西下	xyxxua	1
 闲言细语	xyxyoi	1
 享誉中外	xyzwoe	1
 细枝末节	xzmjaa	1
+心中窃喜	xzqxoa	1
 削足适履	xzslio	1
+虚张声势	xzssie	1
 雪中送炭	xzsteo	1
 行之有效	xzyxuu	1
 夜不闭户	ybbhoe	1
@@ -1420,6 +1495,7 @@ use_preset_vocabulary: false
 衣钵相传	ybxcoe	1
 亦步亦趋	ybyqoe	1
 一板一眼	ybyyee	1
+一本正经	ybzjee	1
 一步之遥	ybzyee	1
 一成不变	ycbbee	1
 扬长避短	ycbdei	1
@@ -1443,6 +1519,7 @@ use_preset_vocabulary: false
 一傅众咻	yfzxee	1
 以管窥天	ygktao	1
 欲盖弥彰	ygmzuo	1
+月光水色	ygssua	1
 一概而论	ygvlee	1
 因果循环	ygxhia	1
 一鼓作气	ygzqee	1
@@ -1463,6 +1540,7 @@ use_preset_vocabulary: false
 一技之长	yjzcee	1
 远见卓识	yjzsee	1
 异口同声	yktsae	1
+欲哭无泪	ykwluo	1
 一孔之见	ykzjee	1
 一鳞半爪	ylbzee	1
 鱼龙混杂	ylhzua	1
@@ -1511,6 +1589,7 @@ use_preset_vocabulary: false
 迎刃而解	yrvjua	1
 因人而异	yrvyia	1
 游刃有余	yryyoo	2
+悠然自得	yrzdui	1
 欲速不达	ysbduo	1
 一丝不苟	ysbgee	1
 仰事俯畜	ysfcui	1
@@ -1531,6 +1610,7 @@ use_preset_vocabulary: false
 怨天尤人	ytyrua	1
 渊渟岳峙	ytyzoo	1
 扬汤止沸	ytzfei	1
+怨而不怒	yvbnua	1
 以讹传讹	yvcvao	1
 掩耳盗铃	yvdlei	2
 以耳代目	yvdmao	1
@@ -1543,6 +1623,7 @@ use_preset_vocabulary: false
 一无所有	ywsyee	1
 一无所知	ywszee	1
 一往无前	ywwqee	1
+仰望星空	ywxkui	1
 遗文逸事	ywysia	1
 逸闻轶事	ywysua	1
 勇往直前	ywzqao	1
@@ -1557,6 +1638,7 @@ use_preset_vocabulary: false
 烟消云散	yxysou	1
 一心一意	yxyyee	2
 源源不断	yybdoo	2
+一言不发	yybfee	1
 犹豫不决	yybjua	1
 语焉不详	yybxoa	1
 一语成谶	yyccee	1
@@ -1567,10 +1649,12 @@ use_preset_vocabulary: false
 洋洋大观	yydgoo	1
 一衣带水	yydsee	1
 永远的神	yydsoa	2
+扬扬得意	yydyei	4
 因噎废食	yyfsia	1
 郁郁寡欢	yygheu	1
 一意孤行	yygxee	1
 一以贯之	yygzee	1
+摇摇晃晃	yyhhei	1
 一言九鼎	yyjdee	1
 夜以继日	yyjroe	1
 应有尽有	yyjyoe	1
@@ -1584,7 +1668,9 @@ use_preset_vocabulary: false
 洋洋洒洒	yyssoo	1
 应运而生	yyvsoe	1
 意犹未尽	yywjoe	1
+一夜无眠	yywmee	1
 奄奄一息	yyyxeu	1
+犹犹豫豫	yyyyua	1
 一语中的	yyzdee	1
 一叶障目	yyzmee	1
 一叶知秋	yyzqee	1
@@ -1609,6 +1695,7 @@ use_preset_vocabulary: false
 自成一体	zcytui	1
 主单辅词	zdfcoe	1
 抓大放小	zdfxei	1
+斩钉截铁	zdjtea	1
 掷地有声	zdysei	1
 遮风挡雨	zfdyoe	1
 栉风沐雨	zfmyei	2
@@ -1646,10 +1733,12 @@ use_preset_vocabulary: false
 钟鸣鼎食	zmdsue	1
 走马观花	zmghei	1
 彰明较著	zmjzoe	1
+众目睽睽	zmkkuo	1
 贼眉鼠眼	zmsyia	2
 知难而上	znvsue	1
 紫气东来	zqdlie	1
 瞻前顾后	zqghia	1
+争强好胜	zqhsua	1
 朝气蓬勃	zqpbei	1
 自欺欺人	zqqrui	1
 朝乾夕惕	zqxtei	1
@@ -1657,6 +1746,7 @@ use_preset_vocabulary: false
 自然而然	zrvrui	1
 置若罔闻	zrwwia	1
 终身不辱	zsbraa	1
+壮士断腕	zsdwoe	1
 众说纷纭	zsfyuo	1
 转瞬即逝	zsjsea	1
 炙手可热	zskrua	1
@@ -1669,10 +1759,13 @@ use_preset_vocabulary: false
 坐收渔利	zsyluo	1
 志同道合	ztdhei	1
 豕突狼奔	ztlbeu	1
+自投罗网	ztlwui	1
 正儿八经	zvbjei	2
 坐而论道	zvlduo	1
+至爱亲朋	zvqpea	1
 震耳欲聋	zvyleo	1
 责无旁贷	zwpdee	1
+自我批评	zwppui	1
 众望所归	zwsguo	1
 壮心不已	zxbyoe	2
 知行合一	zxhyue	1
@@ -1680,6 +1773,7 @@ use_preset_vocabulary: false
 坐享其成	zxqcuo	1
 子虚乌有	zxwyai	1
 专心致志	zxzzee	1
+左右互搏	zyhbeu	1
 臻于佳境	zyjjea	1
 缀玉联珠	zylzaa	1
 只言片语	zypyia	1
@@ -1691,6 +1785,7 @@ use_preset_vocabulary: false
 置之不理	zzblia	1
 众志成城	zzccuo	1
 知足常乐	zzclue	1
+辗转反侧	zzfcea	1
 战战兢兢	zzjjie	1
 字斟句酌	zzjzoo	1
 孜孜矻矻	zzkkai	1
@@ -1707,6 +1802,7 @@ use_preset_vocabulary: false
 本来无一物	blwwei	1
 不怕没柴烧	bpmseu	1
 锄禾日当午	chrwue	1
+超级马里奥	cjmvei	1
 大唐双龙传	dtszeu	2
 独照峨眉峰	dzvfua	6
 凡人修仙传	frxzua	8
@@ -1734,6 +1830,7 @@ use_preset_vocabulary: false
 毛主席万岁	mzxsue	1
 南京大屠杀	njdsei	1
 男儿当自强	nvdqia	1
+跑得了和尚	pdlsia	1
 菩提本无树	ptbsei	1
 片叶不沾身	pybsui	1
 千里不留行	qlbxue	1
@@ -1745,6 +1842,7 @@ use_preset_vocabulary: false
 十年磨一剑	snmjei	2
 霜刃未曾试	srwseo	1
 世上无难事	sswsei	2
+速效救心丸	sxjwei	1
 岁月不待人	sybria	1
 谁知盘中餐	szpcoa	1
 碳水化合物	tshweu	5
@@ -1757,6 +1855,7 @@ use_preset_vocabulary: false
 物以稀为贵	wyxgue	1
 沃兹尼亚克	wznkoo	5
 雪山千古冷	xsqleo	4
+阴沟里翻船	yglcai	2
 一览众山小	ylzxee	2
 欲穷千里目	yqqmuo	1
 一日难再晨	yrncee	1
@@ -1863,6 +1962,7 @@ use_preset_vocabulary: false
 直挂云帆济沧海	zgyhei	1
 醉后不知天在水	zhbsei	4
 中华人民共和国	zhrgia	4
+煮熟的鸭子飞了	zsdlei	1
 最是人间留不住	zsrzia	2
 在天愿作比翼鸟	ztyneu	1
 朱颜辞镜花辞树	zycsue	2
@@ -1870,9 +1970,11 @@ use_preset_vocabulary: false
 只缘身在最高层	zyscia	1
 家家有本难念的经	jjyjoo	1
 料青山见我应如是	lqssou	1
+跳进黄河也洗不清	tjhqia	2
 中国特色社会主义	zgtyia	1
 自有大儒为我辩经	zydjui	1
 寂寞梧桐深院锁清秋	jmwqoo	1
+跑得了和尚跑不了庙	pdlmia	3
 君不见高堂明镜悲白发	jbjfae	1
 君不见黄河之水天上来	jbjlae	2
 实践是检验真理的唯一标准	sjszoo	3
