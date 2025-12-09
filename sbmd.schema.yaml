@@ -1,0 +1,11 @@
+# Rime schema
+# encoding: utf-8
+
+__include: sbfd.schema.yaml:/
+
+schema:
+  schema_id: sbmd
+  name: "声笔魔单"
+  icon: "assets/fly_o.ico"
+  description: |
+    —— 隐藏了候选框的飞单, 强制盲打_ᵢₙg...
