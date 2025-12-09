@@ -75,6 +75,7 @@ use_preset_vocabulary: false
 虚拟机	xnjmie	3
 希特勒	xtlguo	1
 西游记	xyjyei	1
+月如钩	yrgjua	1
 愚人节	yrjcia	1
 字符串	zfckoo	11
 周恩来	zvleua	1
@@ -463,6 +464,7 @@ use_preset_vocabulary: false
 瑰丽壮观	glzgee	1
 过目不忘	gmbwei	1
 沽名钓誉	gmdyoo	1
+冠冕堂皇	gmthoa	1
 广袤无垠	gmwyoe	1
 刮目相看	gmxkue	1
 故弄玄虚	gnxxei	1
@@ -471,6 +473,7 @@ use_preset_vocabulary: false
 固若金汤	grjtia	1
 根深蒂固	gsdgei	1
 瓜熟蒂落	gsdluu	1
+公事公办	gsgbuo	1
 古色古香	gsgxei	1
 高山流水	gslsoe	1
 高山仰止	gsyzoe	1
@@ -515,6 +518,7 @@ use_preset_vocabulary: false
 浩浩荡荡	hhddoo	1
 轰轰烈烈	hhllea	1
 缓缓落下	hhlxaa	1
+虎虎生风	hhsfie	1
 恒河沙数	hhssuo	1
 囫囵吞枣	hhtzia	1
 浑浑噩噩	hhvvoo	1
@@ -730,6 +734,7 @@ use_preset_vocabulary: false
 寥寥数语	llsyoo	1
 量力而行	llvxia	1
 寥寥无几	llwjoo	1
+陆陆续续	llxxai	2
 林林总总	llzzei	1
 连绵不绝	lmbjoa	1
 劳民伤财	lmscei	1
@@ -797,6 +802,7 @@ use_preset_vocabulary: false
 门可罗雀	mklqoi	1
 梅开二度	mkvdei	6
 每况愈下	mkyxue	2
+绵里藏针	mlczaa	1
 模棱两可	mllkei	1
 美轮美奂	mlmhou	1
 麻木不仁	mmbroe	1
@@ -1018,6 +1024,7 @@ use_preset_vocabulary: false
 硕果累累	sglleu	1
 双管齐下	sgqxao	1
 山高水长	sgscia	1
+水过无痕	sgwhia	1
 三国演义	sgyyee	1
 死灰复燃	shfreu	1
 社会主义	shzyoa	5
@@ -1388,6 +1395,7 @@ use_preset_vocabulary: false
 息息相通	xxxtui	1
 小心翼翼	xxyyiu	1
 行有不得	xybduu	1
+心悦诚服	xycfoa	1
 相映成趣	xycqei	1
 胸有成竹	xyczua	3
 宵衣旰食	xygsoo	1
@@ -1451,6 +1459,7 @@ use_preset_vocabulary: false
 一见如故	yjrgee	1
 异军突起	yjtxae	1
 弃旧图新	yjtxoe	1
+英俊潇洒	yjxsei	1
 一技之长	yjzcee	1
 远见卓识	yjzsee	1
 异口同声	yktsae	1
@@ -1466,6 +1475,7 @@ use_preset_vocabulary: false
 有理有据	ylyjeu	1
 一劳永逸	ylyyee	1
 夜郎自大	ylzdoe	1
+言论自由	ylzyoe	1
 一马当先	ymdxee	1
 有目共睹	ymgdeu	1
 鱼目混珠	ymhzua	1
@@ -1528,6 +1538,7 @@ use_preset_vocabulary: false
 义无反顾	ywfgou	1
 义无返顾	ywfgou	1
 一无是处	ywscee	1
+意味深长	ywscoe	2
 一无所获	ywshee	1
 一无所有	ywsyee	1
 一无所知	ywszee	1
@@ -1589,6 +1600,7 @@ use_preset_vocabulary: false
 饮鸩止渴	yzzkua	1
 朝不保夕	zbbxei	1
 振臂高呼	zbghei	1
+抓捕归案	zbgvei	1
 正本清源	zbqyei	1
 罪不容诛	zbrzia	1
 作壁上观	zbsgui	1
@@ -1612,6 +1624,7 @@ use_preset_vocabulary: false
 作奸犯科	zjfkui	1
 坐井观天	zjgtuo	1
 捉襟见肘	zjjzei	1
+直截了当	zjldei	1
 在劫难逃	zjnteu	1
 重剑无锋	zjwfue	1
 作茧自缚	zjzfui	1
@@ -1673,6 +1686,7 @@ use_preset_vocabulary: false
 自以为是	zywsui	1
 罪有应得	zyydia	1
 自怨自艾	zyzyui	1
+自言自语	zyzyui	2
 孜孜不倦	zzbjai	1
 置之不理	zzblia	1
 众志成城	zzccuo	1
@@ -1752,6 +1766,7 @@ use_preset_vocabulary: false
 知我相思苦	zwxkue	1
 只要肯登攀	zykpia	2
 睁眼说瞎话	zyshia	2
+知子莫若父	zzmfue	2
 毕其功于一役	bqgyea	2
 百思不得其解	bsbjeu	1
 定不负相思意	dbfyoo	1
@@ -1764,6 +1779,7 @@ use_preset_vocabulary: false
 谦虚使人进步	qxsboa	1
 爱潜水的乌贼	vqszuo	1
 爱涂鸦的蜗牛	vtynuo	3
+无言独上西楼	wydlee	1
 虚心使人进步	xxsbie	2
 早上好朋友们	zshmia	2
 中央人民政府	zyrfia	1
@@ -1832,6 +1848,7 @@ use_preset_vocabulary: false
 而今迈步从头越	vjmyeu	1
 爱江山更爱美人	vjsruo	5
 我本将心向明月	wbjyue	2
+我见青山多妩媚	wjqmue	1
 我劝天公重抖擞	wqtsue	2
 为伊消得人憔悴	wyxcou	1
 雄关漫道真如铁	xgmteu	1
@@ -1852,8 +1869,10 @@ use_preset_vocabulary: false
 只愿君心似我心	zyjxia	1
 只缘身在最高层	zyscia	1
 家家有本难念的经	jjyjoo	1
+料青山见我应如是	lqssou	1
 中国特色社会主义	zgtyia	1
 自有大儒为我辩经	zydjui	1
+寂寞梧桐深院锁清秋	jmwqoo	1
 君不见高堂明镜悲白发	jbjfae	1
 君不见黄河之水天上来	jbjlae	2
 实践是检验真理的唯一标准	sjszoo	3

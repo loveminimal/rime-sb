@@ -23,6 +23,8 @@ patch:
 # ---------------------------------------------------------------------
   __include: style.yaml:skjk
   __patch:
+    # 方案、状态切换时的提示跟随 
+    show_notifications: false
     style/+:
       color_scheme: skjk
       font_face: LXGW WenKai GB Screen R, LXGW WenKai, Segoe UI Emoji, 黑体字根

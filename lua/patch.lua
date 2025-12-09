@@ -59,7 +59,8 @@ local function f_comment(input, env)
 
         -- 修改自造用户词提示图标
         if cand.type == 'user_table' and cand.comment:find('☯') then
-            cand:get_genuine().comment = '🦄' -- 
+            -- cand:get_genuine().comment = '🦄' -- 
+            cand:get_genuine().comment = cand.comment:gsub('☯', '🦄')
         end
         
         -- local mark = ''
