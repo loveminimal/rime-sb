@@ -24,7 +24,7 @@ columns:
 #	c;u
 #	c;i
 超	c;o
-#	d;a
+颠	d;a
 #	d;e
 #	d;u
 #	d;i
@@ -35,11 +35,11 @@ columns:
 #	f;i
 #	f;o
 #	g;a
-#	g;e
+梗	g;e
 #	g;u
 #	g;i
 #	g;o
-#	h;a
+哄	h;a
 #	h;e
 蝴	h;u
 #	h;i
@@ -58,7 +58,7 @@ columns:
 唠	l;a
 嘞	l;e
 #	l;u
-#	l;i
+漓	l;i
 #	l;o
 莽	m;a
 萌	m;e
@@ -99,13 +99,13 @@ columns:
 者	v;e
 注	v;u
 肢	v;i
-#	v;o
+浊	v;o
 #	w;a
 #	w;e
 #	w;u
 #	w;i
 #	w;o
-#	x;a
+暇	x;a
 #	x;e
 #	x;u
 #	x;i
@@ -122,7 +122,7 @@ columns:
 择	z;e
 #	z;u
 滋	z;i
-#	z;o
+栽	z;o
 # 优化手感
 #	gai
 #	kaa
@@ -711,7 +711,7 @@ columns:
 浇	jooe	0
 憬	jooi	0
 兼	jou	0
-金牌	jp'	0
+键盘	jp'	0	# 金牌
 加强	jq'	0
 竟然	jr'	0	# 进入
 建设	js'	0
