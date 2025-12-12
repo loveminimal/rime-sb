@@ -1,9 +1,9 @@
 patch:
   schema_list:
-    # - schema: sben
+    - schema: sben
     - schema: sbfd
     # - schema: sbmd
-    - schema: sbbd
+    # - schema: sbbd
     # - schema: sbfm
     # - schema: sbfy
   switcher:
