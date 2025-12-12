@@ -1,0 +1,23 @@
+# Rime schema
+# encoding: utf-8
+
+__include: sbfd.schema.yaml:/
+
+schema:
+  schema_id: sbbd
+  name: "声笔并单"
+  icon: "assets/fly_m.ico"
+  description: |
+    —— 使用并击指法的飞单, 效率翻倍_ᵢₙg...
+
+chord_composer/+:
+  # 进入并击的按键，按照键盘从左到右的顺序排序
+  # alphabet: "qazwsxedcrfvtgbyhnujmik,ol.p;/'7890 "
+  alphabet: "qazwsxedcrfvtgbyhnujmik,ol.p;/' "
+  # alphabet: "azfv"
+  # alphabet: "m,.;/' "
+  algebra:
+    # __include: /algebra_map
+    # __include: /algebra_punc
+    # __include: patch.yaml:/algebra_magic
+    __include: patch.yaml:/algebra_mirror
