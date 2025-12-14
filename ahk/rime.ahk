@@ -64,6 +64,14 @@ weaselServerPath := GetWeaselPath('server')
 weaselDeployerPath := GetWeaselPath('deployer')
 weaselSetupPath := GetWeaselPath('setup')
 
+
+; 开启速录宝
++!b::
+{
+    Run RootPath "\slb\slb.exe"
+    return
+}
+
 ;* ⇨ 执行命令及快捷键绑定
 ;  #→Win 键  !→Alt 键  ^→Ctrl 键  +→Shift 键
 ; --------------------
