@@ -12,4 +12,4 @@ patch:
     - name: is_show_more
       reset: 1
       states: [Ⓛ, Ⓜ]
-  translator/filter_strength: 5
+  translator/filter_strength: 3
