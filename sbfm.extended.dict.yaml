@@ -14,6 +14,8 @@
 name: sbfm.extended
 version: 2025.12
 sort: by_weight
+import_tables:
+  - patch
 use_preset_vocabulary: false
 ...
 剥削	blxlae	2
@@ -39,6 +41,7 @@ use_preset_vocabulary: false
 初始化	cshroa	1
 导火索	dhssae	1
 丹尼斯	dnsqua	3
+狄仁杰	drjmua	1
 多少事	dsseua	1
 反动派	fdpduu	4
 服务器	fwqkua	5
@@ -703,6 +706,7 @@ use_preset_vocabulary: false
 横空出世	hkcsei	1
 海枯石烂	hksloo	2
 海阔天空	hktkoo	1
+忽略不计	hlbjua	1
 画龙点睛	hldjei	2
 互利共赢	hlgyea	1
 糊里糊涂	hlhtou	1
@@ -826,6 +830,7 @@ use_preset_vocabulary: false
 举棋不定	jqbdoo	1
 酒气冲天	jqctoo	1
 驾轻就熟	jqjsua	1
+敬请期待	jqqdei	1
 佶屈聱牙	jqvyui	1
 坚忍不拔	jrbbii	1
 坚韧不拔	jrbbii	1
@@ -1390,6 +1395,7 @@ use_preset_vocabulary: false
 善莫大焉	smdyou	2
 手忙脚乱	smjlue	2
 神秘莫测	smmcoa	1
+素昧平生	smpsee	1
 声名鹊起	smqqei	1
 四面受敌	smsdia	1
 熟门熟路	smsloe	1
@@ -1922,6 +1928,7 @@ use_preset_vocabulary: false
 引经据典	yjjdae	1
 由己及人	yjjria	1
 一见如故	yjrgee	1
+一己私欲	yjsyee	1
 异军突起	yjtxae	1
 弃旧图新	yjtxoe	1
 英俊潇洒	yjxsei	1
@@ -2034,6 +2041,7 @@ use_preset_vocabulary: false
 遗文逸事	ywysia	1
 逸闻轶事	ywysua	1
 贻误战机	ywzjia	1
+阅文作家	ywzjoi	1
 勇往直前	ywzqao	1
 一星半点	yxbdee	1
 于心不忍	yxbree	1
@@ -2047,6 +2055,7 @@ use_preset_vocabulary: false
 异想天开	yxtkae	1
 烟消云散	yxysou	1
 一心一意	yxyyee	2
+游戏中心	yxzxoo	1
 源源不断	yybdoo	2
 一言不发	yybfee	1
 犹豫不决	yybjua	1
@@ -2092,6 +2101,7 @@ use_preset_vocabulary: false
 一叶障目	yyzmee	1
 一叶知秋	yyzqee	1
 跃然纸上	yyzsia	1
+应用中心	yyzxoe	1
 义正词严	yzcyou	1
 养尊处优	yzcyou	1
 越俎代庖	yzdpei	1

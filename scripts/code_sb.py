@@ -4,88 +4,112 @@ from is_chinese_char import is_chinese_char
 from meta_sb import meta_sb
 
 
-def get_sb_code(word, ext=''):
-    ext = ext or f'\t1'
-    code = ''
+def get_sb_code(word, ext='，。'):
+    code = []
     
-    # 此处追加一些可携带元素
-    meta_sb['，'] = ''
+    # 此处追加一些可携带元素，如 '，。'
+    for e in ext:
+        meta_sb[e] = ''
+    
     # 忽略包含非 meta_sb 中的词条
     if any(w not in meta_sb for w in word):
-        # return f'xxxxxx{ext}\n'
         return False
     
     if len(word) == 1:
         f = word[0]
         for fc in meta_sb[f]:
-            code += f'{word}\t{fc[0]}{ext}\n'
+            code.append(f'{fc[0]}')
     elif len(word) == 2:
         f, s = word[0], word[1]
         for fc in meta_sb[f]:
             for sc in meta_sb[s]:
-                code += f'{word}\t{fc[2][:2]}{sc[2][:2]}{fc[2][2:]}{ext}\n'
+                code.append(f'{fc[2][:2]}{sc[2][:2]}{fc[2][2:]}')
+                
     elif len(word) == 3:
         f, s, t = word[0], word[1], word[2]
         for fc in meta_sb[f]:
             for sc in meta_sb[s]:
                 for tc in meta_sb[t]:
-                    code += f'{word}\t{fc[2][0]}{sc[2][0]}{tc[2][:2]}{fc[2][2:]}{ext}\n'
+                    code.append(f'{fc[2][0]}{sc[2][0]}{tc[2][:2]}{fc[2][2:]}')
     elif len(word) >= 4:
         f, s, t, l = word[0], word[1], word[2], word[len(word) - 1]
         for fc in meta_sb[f]:
             for sc in meta_sb[s]:
                 for tc in meta_sb[t]:
                     for lc in meta_sb[l]:
-                        code += f'{word}\t{fc[2][0]}{sc[2][0]}{tc[2][0]}{lc[2][0]}{fc[2][2:]}{ext}\n'         
+                        code.append(f'{fc[2][0]}{sc[2][0]}{tc[2][0]}{lc[2][0]}{fc[2][2:]}')       
     return code
 
 
 def code_sb(proj_dir):
-    print(proj_dir)
-    
+    # print(proj_dir)
+    # 加载源编码数据
     meta_path = proj_dir / 'scripts' / 'meta.yaml'
     meta_dict = {}
-    lines_total = []
-    with open(meta_path, 'r', encoding='utf-8') as f:
-        lines_total = f.readlines()
-        
-    for line in lines_total:
-        line = line.strip()
-        if not line or not is_chinese_char(line[0]):
-            continue
-        
-        parts = line.split('\t')
-        word, code, weight, stem = parts[0], parts[1], parts[2], parts[3]
-        
-        if word not in meta_dict:
-            meta_dict[word] = []
-        meta_dict[word].append([code, weight, stem])
-
-
-    chengyu_path = proj_dir / 'scripts' / 'chengyu.txt'
-    # chengyu_path = proj_dir / 'scripts' / 'pinyin.dict.yaml'
-    lines_total1 = []
-    with open(chengyu_path, 'r', encoding='utf-8') as c:
-        for line in c.readlines():
+    with open(meta_path, 'r', encoding='utf-8') as f:     
+        print(f'☑️  已加载声笔源编码数据 » {meta_path}\n')   
+        for line in f.readlines():
             line = line.strip()
-            
             if not line or not is_chinese_char(line[0]):
                 continue
-
-            lines_total1.append(line)
             
+            parts = line.split('\t')
+            word, code, weight, stem = parts[0], parts[1], parts[2], parts[3]
+            
+            if word not in meta_dict:
+                meta_dict[word] = []
+            meta_dict[word].append([code, weight, stem])
 
-    out_path = proj_dir / 'scripts' / 'out.txt'
+
+    # 待转换的源数据
+    # src_dir = proj_dir / 'patches'
+    src_dir = Path('C:\\Users\\jack\\Nutstore\\1\\我的坚果云\\patches')
+    lines_total = []
+    # 使用 glob模式匹配 src_dir目录下的所有文件，序号从1开始（默认为0）
+    for i, file_path in enumerate(src_dir.glob(f'*'), 1):
+        lines = []
+        with open(file_path, 'r', encoding='utf-8') as c:
+            print(f'☑️  已加载第 {i} 份码表 » {file_path}')
+            for line in c.readlines():
+                line = line.strip()
+                
+                if not line or not is_chinese_char(line[0]):
+                    continue
+                
+                word = line.split('\t')[0]
+                if len(word) > 1:
+                    lines.append(word)
+            lines_total.extend(lines)
+
+    # 转换后的数据
+    out_path = proj_dir / 'patch.dict.yaml'
     with open(out_path, 'w', encoding='utf-8') as o:
-        for line in lines_total1:
+        # 添加表头信息
+        o.write(f'''# Rime dictionary - patch.dict.yaml
+# encoding: utf-8
+---
+name: patch
+version: 2025.12
+sort: by_weight
+use_preset_vocabulary: false
+...
+''')
+        # for line in set(lines_total):
+        for line in list(dict.fromkeys(lines_total)):
             parts = line.split('\t')
             word = parts[0]
 
+            code_list = get_sb_code(word)
             # 忽略包含非法的编码词条 
-            if not get_sb_code(word):
+            if not code_list:
                 continue
+
             
-            o.write(f'{get_sb_code(word)}')
+            for code in code_list:
+                o.write(f'{word}\t{code}\t1\n')
+            
+            # o.write(f'{word}\t{code_list[0]}\t1\n')
+            
 
     
     return
