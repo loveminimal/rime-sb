@@ -60,6 +60,7 @@ use_preset_vocabulary: false
 快捷键	kjjjoo	2
 空明码	kmmsoo	1
 客套话	kthooo	1
+连城诀	lcjyea	1
 刘德华	ldhsoe	2
 李达康	ldkgei	1
 浏览器	llqkoo	20
@@ -517,6 +518,7 @@ use_preset_vocabulary: false
 肥马轻裘	fmqqua	1
 风靡一时	fmysua	1
 返璞归真	fpgzuu	1
+扶贫济困	fpjkei	1
 风平浪静	fpljua	1
 粉墙黛瓦	fqdwou	1
 风清气正	fqqzua	1
@@ -566,6 +568,7 @@ use_preset_vocabulary: false
 负债累累	fzllua	1
 纷至沓来	fztlaa	1
 功败垂成	gbccei	1
+寡不敌众	gbdzoo	1
 功不可没	gbkmei	1
 故步自封	gbzfei	1
 固步自封	gbzfia	1
@@ -957,6 +960,7 @@ use_preset_vocabulary: false
 流光溢彩	lgycoo	2
 炉火纯青	lhcqou	1
 连哄带劝	lhdqea	1
+灵魂拷问	lhkwae	1
 落花流水	lhlsei	1
 良好习惯	lhxgoa	1
 屡见不鲜	ljbxae	1
@@ -1235,6 +1239,7 @@ use_preset_vocabulary: false
 齐心协力	qxxloe	1
 岂有此理	qyclia	1
 曲意逢迎	qyfyia	1
+前因后果	qyhgou	1
 巧言令色	qylsei	1
 潜移默化	qymhoo	1
 轻盈袅娜	qynnea	1
@@ -1334,6 +1339,7 @@ use_preset_vocabulary: false
 身材苗条	scmtui	1
 山重水复	scsfia	1
 神采奕奕	scyyoa	3
+势大力沉	sdlcei	1
 水到渠成	sdqcia	1
 首当其冲	sdqcou	1
 适得其反	sdqfue	1
@@ -1592,6 +1598,7 @@ use_preset_vocabulary: false
 耳濡目染	vrmrei	1
 黯然神伤	vrssia	1
 安然无恙	vrwyoo	1
+黯然销魂	vrxhia	1
 愕然一惊	vryjoo	1
 额手称庆	vscqoo	1
 昂首阔步	vskbia	1
@@ -1626,6 +1633,7 @@ use_preset_vocabulary: false
 为丛驱雀	wcqqou	1
 无出其右	wcqyee	1
 尾大不掉	wdbdae	1
+伟大复兴	wdfxui	1
 无底深渊	wdsyee	1
 无独有偶	wdyvee	1
 无动于衷	wdyzee	1
@@ -1636,6 +1644,7 @@ use_preset_vocabulary: false
 枉费心机	wfxjei	1
 五谷丰登	wgfdei	1
 无关紧要	wgjyee	1
+歪瓜裂枣	wglzeu	4
 物归其主	wgqzue	1
 位高权重	wgqzui	1
 文过饰非	wgsfoe	1
@@ -1924,6 +1933,7 @@ use_preset_vocabulary: false
 一孔之见	ykzjee	1
 一鳞半爪	ylbzee	1
 优良传统	ylctui	1
+永乐大典	ylddoa	1
 鱼龙混杂	ylhzua	1
 有利可图	ylkteu	1
 一脸迷惘	ylmwee	1
@@ -2128,7 +2138,7 @@ use_preset_vocabulary: false
 贞观之治	zgzzie	1
 纵横捭阖	zhbhaa	1
 醉话连篇	zhlpei	1
-中华民族	zhmzia	1
+中华民族	zhmzia	2
 直呼其名	zhqmei	1
 作奸犯科	zjfkui	1
 坐井观天	zjgtuo	1
@@ -2450,6 +2460,7 @@ use_preset_vocabulary: false
 朱颜辞镜花辞树	zycsue	2
 只愿君心似我心	zyjxia	1
 只缘身在最高层	zyscia	1
+百年未有之大变局	bnwjeu	1
 苍蝇不叮无缝的蛋	cybdei	1
 家家有本难念的经	jjyjoo	1
 料青山见我应如是	lqssou	1
@@ -2458,6 +2469,7 @@ use_preset_vocabulary: false
 自有大儒为我辩经	zydjui	1
 寂寞梧桐深院锁清秋	jmwqoo	1
 跑得了和尚跑不了庙	pdlmia	3
+中华民族的伟大复兴	zhmxia	1
 丈二和尚摸不着头脑	zvhneu	1
 君不见高堂明镜悲白发	jbjfae	1
 君不见黄河之水天上来	jbjlae	2
