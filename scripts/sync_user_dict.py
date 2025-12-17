@@ -1,5 +1,5 @@
 # 基于官方自动同步的用户词典合并排序生成用户词典
-# - https://github.com/loveminimal/rime-jk
+# - https://github.com/loveminimal/rime-sb
 # - Jack Liu <https://aituyaa.com>
 # 
 import hashlib

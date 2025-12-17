@@ -1,3 +1,7 @@
+# 转换生成用以临时调用的飞码补丁词库
+# - https://github.com/loveminimal/rime-sb
+# - Jack Liu <https://aituyaa.com>
+# 
 import json
 from pathlib import Path
 from is_chinese_char import is_chinese_char
@@ -6,11 +10,9 @@ from meta_sb import meta_sb
 
 def get_sb_code(word, ext='，。'):
     code = []
-    
     # 此处追加一些可携带元素，如 '，。'
     for e in ext:
         meta_sb[e] = ''
-    
     # 忽略包含非 meta_sb 中的词条
     if any(w not in meta_sb for w in word):
         return False
@@ -24,7 +26,6 @@ def get_sb_code(word, ext='，。'):
         for fc in meta_sb[f]:
             for sc in meta_sb[s]:
                 code.append(f'{fc[2][:2]}{sc[2][:2]}{fc[2][2:]}')
-                
     elif len(word) == 3:
         f, s, t = word[0], word[1], word[2]
         for fc in meta_sb[f]:
