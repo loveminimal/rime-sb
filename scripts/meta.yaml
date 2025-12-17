@@ -1137,7 +1137,6 @@ columns:
 促	cri	79756	crui
 遭	zle	79276	zlei
 郎	lvoa	79242	lvoa
-郎	lvoa	79242	lvoa
 诸	zyei	79001	zyoa
 尤	yyo	78841	yyeu
 挑	tfuo	78809	tfei
@@ -1431,7 +1430,6 @@ columns:
 猜	cq	52169	cqua
 授	sfu	52010	sfei
 插	cfu	51983	cfei
-凉	ldoe	51972	ldoe
 凉	ldoe	51972	ldoe
 泛	fdu	51829	fdoo
 穷	qx	51793	qxoo
@@ -10814,8 +10812,6 @@ columns:
 瓓	lwia	1	lwee
 爤	lhei	1	lhou
 糷	lmei	1	lmou
-郎	lvoa	1	lvoa
-郎	lvoa	1	lvoa
 勆	lloa	1	lloa
 郞	lvoa	1	lvoa
 欴	lqoa	1	lqoa
@@ -11001,7 +10997,6 @@ columns:
 豊	fdia	1	fdia
 豊	ldia	1	ldia
 裏	lwia	1	lwoe
-裏	lwia	1	lwoe
 粴	lmia	1	lmou
 蟸	lsia	1	lseu
 欐	lmei	1	lmei
@@ -11133,8 +11128,6 @@ columns:
 纞	ljoe	1	ljaa
 簗	lpoo	1	lpue
 俍	lroa	1	lrui
-凉	ldoe	1	ldoe
-凉	ldoe	1	ldoe
 辌	lcoe	1	lcea
 蜋	lcoa	1	lcia
 墚	ltoo	1	ltei
@@ -23294,8 +23287,6 @@ columns:
 鸝	lnei	0	lnei
 鱺	lvei	0	lvua
 裡	lnia	0	lnoa
-裏	lwia	0	lwoe
-裏	lwia	0	lwoe
 鋰	ljia	0	ljuo
 禮	lnia	0	lnoa
 鯉	lvia	0	lvua

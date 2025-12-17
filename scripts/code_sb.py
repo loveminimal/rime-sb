@@ -61,7 +61,17 @@ def code_sb(proj_dir):
                 meta_dict[word] = []
             meta_dict[word].append([code, weight, stem])
 
+    # 更新编码元数据
+    need_update_meta_sb = False
+    # need_update_meta_sb = True
+    if need_update_meta_sb:
+        meta_sb_path = proj_dir / 'scripts' / 'meta_sb.py'
+        with open(meta_sb_path, 'w', encoding='utf-8') as m:
+            print(f'☑️  已更新声笔飞单元字典 » {meta_sb_path}\n')   
+            m.write("meta_sb = ")
+            json.dump(meta_dict, m, ensure_ascii=False, indent=4)
 
+    # return
     # ② 待转换的源数据
     # src_dir = proj_dir / 'patches'
     src_dir = Path('C:\\Users\\jack\\Nutstore\\1\\我的坚果云\\patches')
@@ -109,12 +119,6 @@ use_preset_vocabulary: false
 
     print(f'\n✅ » 已排序生成用户补丁词典 {out_path}')
 
-    return
-    # ④ 更新编码元数据
-    meta_sb_path = proj_dir / 'scripts' / 'meta_sb.py'
-    with open(meta_sb_path, 'w', encoding='utf-8') as m:
-        m.write("meta_sb = ")
-        json.dump(meta_dict, m, ensure_ascii=False, indent=4)
 
 if __name__ == '__main__':
     proj_dir = Path(__file__).resolve().parent.parent
