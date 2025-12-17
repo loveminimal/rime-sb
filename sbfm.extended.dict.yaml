@@ -38,7 +38,7 @@ use_preset_vocabulary: false
 从来急	cljxuo	100000000
 楚留香	clxhei	100000000
 处女座	cnzgua	100000000
-初始化	cshroa	100000000
+初始化	cshroa	200000000
 导火索	dhssae	100000000
 丹尼斯	dnsqua	300000000
 狄仁杰	drjmua	100000000
@@ -50,6 +50,7 @@ use_preset_vocabulary: false
 共产党	gcdvei	200000000
 滚刀肉	gdrkoo	100000000
 关键字	gjzgou	400000000
+格式化	gshrei	200000000
 高尔夫	gvfeoe	100000000
 高育良	gylgoe	100000000
 光阴迫	gyplio	100000000
@@ -57,6 +58,7 @@ use_preset_vocabulary: false
 红烧肉	hsrkaa	100000000
 护卫舰	hwjzei	100000000
 候选框	hxkmui	200000000
+候选项	hxxgui	200000000
 计算机	jsjmoa	200000000
 惊天地	jtdtoo	100000000
 巨无霸	jwbvea	100000000
@@ -94,8 +96,10 @@ use_preset_vocabulary: false
 俄罗斯	vlsqui	100000000
 耳旁风	vpfpei	100000000
 文件夹	wjjhoe	400000000
+伪命题	wmtyui	100000000
 为什么	wsmsou	300000000
 笑呵呵	xhhkue	100000000
+序列化	xlhroe	400000000
 小狼毫	xlhwiu	200000000
 叙利亚	xlyyuo	100000000
 虚拟机	xnjmie	300000000
@@ -104,6 +108,7 @@ use_preset_vocabulary: false
 月如钩	yrgjua	100000000
 愚人节	yrjcia	100000000
 字符串	zfckoo	1100000000
+自然码	zrmsui	200000000
 周恩来	zvleua	100000000
 障碍物	zvwnai	100000000
 忠义堂	zyttia	100000000
@@ -117,6 +122,7 @@ use_preset_vocabulary: false
 抱残守缺	bcsqei	100000000
 别出心裁	bcxcia	100000000
 不耻下问	bcxweu	100000000
+编程语言	bcyyaa	100000000
 博采众长	bczcei	100000000
 百读不厌	bdbyeu	100000000
 博大精深	bdjsei	100000000
@@ -360,7 +366,7 @@ use_preset_vocabulary: false
 错综复杂	czfzue	100000000
 初战告捷	czgjoa	100000000
 粗制滥造	czlzou	100000000
-操作系统	czxtei	100000000
+操作系统	czxtei	1200000000
 嗤之以鼻	czybia	100000000
 姹紫嫣红	czyhau	300000000
 持之以恒	czyhei	100000000
@@ -613,6 +619,7 @@ use_preset_vocabulary: false
 瑰丽壮观	glzgee	100000000
 过目不忘	gmbwei	100000000
 沽名钓誉	gmdyoo	100000000
+顾名思义	gmsyeu	100000000
 冠冕堂皇	gmthoa	100000000
 广袤无垠	gmwyoe	100000000
 刮目相看	gmxkue	100000000
@@ -670,6 +677,7 @@ use_preset_vocabulary: false
 高瞻远瞩	gzyzoe	100000000
 画饼充饥	hbcjei	100000000
 毫不讳言	hbhyoe	100000000
+毫不留情	hblqoe	100000000
 互剥痛疮	hbtcea	100000000
 毫不知情	hbzqoe	100000000
 厚此薄彼	hcbbeu	100000000
@@ -694,6 +702,7 @@ use_preset_vocabulary: false
 缓缓落下	hhlxaa	100000000
 含糊其词	hhqcuo	100000000
 虎虎生风	hhsfie	100000000
+花花世界	hhsjei	100000000
 恒河沙数	hhssuo	100000000
 囫囵吞枣	hhtzia	100000000
 浑浑噩噩	hhvvoo	100000000
@@ -718,6 +727,7 @@ use_preset_vocabulary: false
 海纳百川	hnbcoo	100000000
 汗牛充栋	hncdoo	100000000
 花鸟虫鱼	hncyei	100000000
+猴年马月	hnmyua	200000000
 活泼开朗	hpkloo	100000000
 魂牵梦绕	hqmree	100000000
 祸起萧墙	hqxqoa	100000000
@@ -744,6 +754,7 @@ use_preset_vocabulary: false
 宏图大业	htdyoo	100000000
 回天乏术	htfsia	100000000
 憨态可掬	htkjae	100000000
+合同平台	htptuo	200000000
 回天无力	htwlia	100000000
 撼天震地	htzdei	100000000
 和而不唱	hvbcue	100000000
@@ -1258,6 +1269,7 @@ use_preset_vocabulary: false
 罄竹难书	qznsei	200000000
 曲终人散	qzrsia	100000000
 趋之若鹜	qzrwei	100000000
+签章系统	qzxtue	100000000
 恰中要害	qzyhuo	100000000
 情真意切	qzyqoo	100000000
 人不如故	rbrguo	100000000
@@ -1622,6 +1634,7 @@ use_preset_vocabulary: false
 暗箱操作	vxczia	100000000
 呕心沥血	vxlxia	100000000
 阿谀奉承	vyfcai	100000000
+安印科技	vykjoo	100000000
 安营扎寨	vyzzoo	100000000
 暗自诧异	vzcyia	100000000
 暗中观察	vzgcia	100000000
@@ -2274,6 +2287,7 @@ use_preset_vocabulary: false
 只争朝夕	zzzxia	200000000
 政治资源	zzzyei	100000000
 自作主张	zzzzui	100000000
+冰凌输入法	blsfoe	100000000
 本来无一物	blwwei	100000000
 不怕没柴烧	bpmseu	100000000
 处处闻啼鸟	ccwnua	100000000
@@ -2329,10 +2343,12 @@ use_preset_vocabulary: false
 霜刃未曾试	srwseo	100000000
 世上无难事	sswsei	200000000
 速效救心丸	sxjwei	100000000
+上下五千年	sxwnie	200000000
 岁月不待人	sybria	100000000
 上阵父子兵	szfbie	100000000
 谁知盘中餐	szpcoa	100000000
 听风就是雨	tfjyia	100000000
+桃李春成径	tlcjei	100000000
 桃李满天下	tlmxei	100000000
 特洛伊木马	tlymue	100000000
 碳水化合物	tshweu	500000000
@@ -2355,6 +2371,7 @@ use_preset_vocabulary: false
 一万年太久	ywnjee	100000000
 煮豆燃豆箕	zdrjei	100000000
 中国共产党	zggdia	800000000
+中华文明史	zhwsia	100000000
 针尖对麦芒	zjdmue	100000000
 真空生妙有	zksyei	100000000
 知我相思苦	zwxkue	100000000
@@ -2366,6 +2383,7 @@ use_preset_vocabulary: false
 长痛不如短痛	ctbtue	100000000
 定不负相思意	dbfyoo	100000000
 道路是曲折的	dlsdou	100000000
+电子合同平台	dzhtia	100000000
 风景这边独好	fjzhua	100000000
 滑天下之大稽	htxjoo	100000000
 骄傲使人落后	jvshaa	100000000
@@ -2432,6 +2450,7 @@ use_preset_vocabulary: false
 奈何明月照沟渠	nhmqeu	100000000
 羌笛何须怨杨柳	qdhlou	100000000
 千金散尽还复来	qjslue	100000000
+牵一发而动全身	qyfseu	100000000
 岂因祸福避趋之	qyhzia	100000000
 轻舟已过万重山	qzysea	200000000
 人间正道是沧桑	rjzsuo	200000000
