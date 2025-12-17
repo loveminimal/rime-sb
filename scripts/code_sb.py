@@ -43,7 +43,7 @@ def get_sb_code(word, ext='，。'):
 
 def code_sb(proj_dir):
     # print(proj_dir)
-    # 加载源编码数据
+    # ① 加载编码元数据
     meta_path = proj_dir / 'scripts' / 'meta.yaml'
     meta_dict = {}
     with open(meta_path, 'r', encoding='utf-8') as f:     
@@ -61,13 +61,13 @@ def code_sb(proj_dir):
             meta_dict[word].append([code, weight, stem])
 
 
-    # 待转换的源数据
+    # ② 待转换的源数据
     # src_dir = proj_dir / 'patches'
     src_dir = Path('C:\\Users\\jack\\Nutstore\\1\\我的坚果云\\patches')
-    lines_total = []
+    words_total = []
     # 使用 glob模式匹配 src_dir目录下的所有文件，序号从1开始（默认为0）
     for i, file_path in enumerate(src_dir.glob(f'*'), 1):
-        lines = []
+        words = []
         with open(file_path, 'r', encoding='utf-8') as c:
             print(f'☑️  已加载第 {i} 份码表 » {file_path}')
             for line in c.readlines():
@@ -78,14 +78,16 @@ def code_sb(proj_dir):
                 
                 word = line.split('\t')[0]
                 if len(word) > 1:
-                    lines.append(word)
-            lines_total.extend(lines)
+                    words.append(word)
+            words_total.extend(words)
 
-    # 转换后的数据
+
+    # ③ 转换后的数据
     out_path = proj_dir / 'patch.dict.yaml'
     with open(out_path, 'w', encoding='utf-8') as o:
+        print(f'☑️  已排序处理生成码表中 ……')
         # 添加表头信息
-        o.write(f'''# Rime dictionary - patch.dict.yaml
+        o.write(f'''# Rime dictionary - {out_path.name}
 # encoding: utf-8
 ---
 name: patch
@@ -94,25 +96,20 @@ sort: by_weight
 use_preset_vocabulary: false
 ...
 ''')
-        # for line in set(lines_total):
-        for line in list(dict.fromkeys(lines_total)):
-            parts = line.split('\t')
-            word = parts[0]
-
+        for word in list(dict.fromkeys(words_total)):
             code_list = get_sb_code(word)
             # 忽略包含非法的编码词条 
             if not code_list:
                 continue
-
             
             for code in code_list:
                 o.write(f'{word}\t{code}\t1\n')
-            
             # o.write(f'{word}\t{code_list[0]}\t1\n')
-            
 
-    
+    print(f'\n✅ » 已排序生成用户补丁词典 {out_path}')
+
     return
+    # ④ 更新编码元数据
     meta_sb_path = proj_dir / 'scripts' / 'meta_sb.py'
     with open(meta_sb_path, 'w', encoding='utf-8') as m:
         m.write("meta_sb = ")
