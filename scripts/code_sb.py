@@ -8,7 +8,7 @@ from is_chinese_char import is_chinese_char
 from meta_sb import meta_sb
 
 
-def get_sb_code(word, ext='，。'):
+def get_sb_code(word, ext='，。？'):
     code = []
     # 此处追加一些可携带元素，如 '，。'
     for e in ext:
@@ -74,7 +74,7 @@ def code_sb(proj_dir):
     # return
     # ② 待转换的源数据
     # src_dir = proj_dir / 'patches'
-    src_dir = Path(proj_dir / 'patches')
+    src_dir = Path('C:\\Users\\jack\\Nutstore\\1\\我的坚果云\\patches')
     if not src_dir.exists():
         print(f'☑️  不存在转换数据目录 » {src_dir}')   
         print(f'❎ ➭ 结束转换')
@@ -82,8 +82,20 @@ def code_sb(proj_dir):
         return
         
     words_total = []
+    # 只处理常见的文本文件扩展名
+    # valid_extensions = {'.txt', '.yaml', '.yml', '.dict', '.dict.yaml'}
+
     # 使用 glob模式匹配 src_dir目录下的所有文件，序号从1开始（默认为0）
-    for i, file_path in enumerate(src_dir.glob(f'*'), 1):
+    for i, file_path in enumerate(src_dir.rglob(f'*'), 1):
+        # 跳过目录和其他非文件对象
+        if not file_path.is_file():
+            print(f'☑️  已加载第 {i} 个目录 » {file_path}')
+            continue  
+        
+        # 检查文件扩展名，跳过不支持的文件类型
+        # if file_path.suffix.lower() not in valid_extensions:
+        #     continue
+        
         words = []
         with open(file_path, 'r', encoding='utf-8') as c:
             print(f'☑️  已加载第 {i} 份码表 » {file_path}')
@@ -93,7 +105,7 @@ def code_sb(proj_dir):
                 if not line or not is_chinese_char(line[0]):
                     continue
                 
-                word = line.split('\t')[0]
+                word = line.split('\t')[0].strip()
                 if len(word) > 2:
                     words.append(word)
             words_total.extend(words)
@@ -113,7 +125,8 @@ sort: by_weight
 use_preset_vocabulary: false
 ...
 ''')
-        for word in list(dict.fromkeys(words_total)):
+        # for word in list(dict.fromkeys(words_total)):
+        for word in list(dict.fromkeys(sorted(words_total))):
             code_list = get_sb_code(word)
             # 忽略包含非法的编码词条 
             if not code_list:

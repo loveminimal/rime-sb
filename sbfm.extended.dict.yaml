@@ -29,7 +29,7 @@ use_preset_vocabulary: false
 𰻞𰻞面	bbmeoa	200000000
 表达式	bdsgee	200000000
 编辑器	bjqkaa	600000000
-编译器	byqkaa	200000000
+编译器	byqkaa	600000000
 标准版	bzbpei	200000000
 差不多	cbdxou	1100000000
 挫败感	cbgxei	100000000
@@ -726,6 +726,7 @@ use_preset_vocabulary: false
 花好月圆	hhyyei	100000000
 赫赫战功	hhzgei	100000000
 厚积薄发	hjbfeu	500000000
+环境变量	hjblee	100000000
 好聚好散	hjhsau	100000000
 讳疾忌医	hjjyoa	100000000
 后继无人	hjwruu	100000000
@@ -1015,6 +1016,7 @@ use_preset_vocabulary: false
 琳琅满目	llmmei	100000000
 冷冷清清	llqqoe	100000000
 朗朗上口	llskoa	200000000
+老老实实	llssei	100000000
 流离失所	llssoo	100000000
 寥寥数语	llsyoo	100000000
 量力而行	llvxia	100000000
@@ -1148,6 +1150,7 @@ use_preset_vocabulary: false
 勉为其难	mwqnua	100000000
 梦想成真	mxczei	100000000
 面向对象	mxdxeu	100000000
+面向过程	mxgceu	200000000
 命悬一线	mxyxuo	100000000
 妙语连珠	mylzau	100000000
 妙言要道	myydau	100000000
@@ -1201,6 +1204,7 @@ use_preset_vocabulary: false
 判若云泥	prynou	100000000
 披沙拣金	psljei	100000000
 扑朔迷离	psmlei	100000000
+朴实无华	pswhei	100000000
 萍水相逢	psxfei	100000000
 滂沱大雨	ptdyoo	100000000
 铺天盖地	ptgdue	100000000
@@ -1325,6 +1329,7 @@ use_preset_vocabulary: false
 入木三分	rmsfuo	100000000
 人民史观	rmsguo	100000000
 人满为患	rmwhuo	100000000
+人民英雄	rmyxuo	200000000
 如芒在背	rmzbau	100000000
 燃眉之急	rmzjou	100000000
 热闹非凡	rnffei	100000000
@@ -1747,6 +1752,7 @@ use_preset_vocabulary: false
 物是人非	wsrfue	100000000
 无所适从	wsscee	100000000
 无所事事	wsssee	100000000
+无所畏惧	wswjee	100000000
 无私无畏	wswwee	100000000
 畏首畏尾	wswwia	100000000
 闻所未闻	wswwoi	200000000
@@ -1931,6 +1937,7 @@ use_preset_vocabulary: false
 扬长避短	ycbdei	100000000
 一唱百和	ycbhee	100000000
 阳春白雪	ycbxai	100000000
+永垂不朽	ycbxoa	100000000
 一查到底	ycddee	200000000
 异彩纷呈	ycfcae	100000000
 夜长梦多	ycmdoe	100000000
@@ -2353,6 +2360,7 @@ use_preset_vocabulary: false
 会当凌绝顶	hdlduo	200000000
 海上生明月	hssyoo	100000000
 恨铁不成钢	htbgoo	100000000
+花有重开日	hycrei	100000000
 卷起千堆雪	jqqxou	100000000
 及时当勉励	jsdlua	100000000
 举贤不避亲	jxbqoo	100000000
@@ -2381,6 +2389,7 @@ use_preset_vocabulary: false
 人民的利益	rmdyuo	100000000
 人民的名义	rmdyuo	500000000
 入我相思门	rwxmuo	100000000
+人无再少年	rwznuo	100000000
 若想人不知	rxrzei	100000000
 声笔输入法	sbsfei	200000000
 十步杀一人	sbsrei	100000000
@@ -2480,6 +2489,7 @@ use_preset_vocabulary: false
 江湖夜雨十年灯	jhydoo	900000000
 金鳞岂是池中物	jlqwuo	200000000
 剑气纵横三万里	jqzluo	100000000
+接天莲叶无穷碧	jtlbei	100000000
 举着骨头当火把	jzgboo	100000000
 今朝有酒今朝醉	jzyzuo	200000000
 开弓没有回头箭	kgmjee	100000000
@@ -2557,5 +2567,6 @@ use_preset_vocabulary: false
 君不见高堂明镜悲白发	jbjfae	100000000
 君不见黄河之水天上来	jbjlae	200000000
 没有调查就没有发言权	mydqoo	100000000
+生存是文明的第一要义	scsyue	100000000
 以小人之心度君子之腹	yxrfao	100000000
 实践是检验真理的唯一标准	sjszoo	300000000
