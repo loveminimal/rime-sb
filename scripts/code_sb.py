@@ -74,7 +74,13 @@ def code_sb(proj_dir):
     # return
     # ② 待转换的源数据
     # src_dir = proj_dir / 'patches'
-    src_dir = Path('C:\\Users\\jack\\Nutstore\\1\\我的坚果云\\patches')
+    src_dir = Path(proj_dir / 'patches')
+    if not src_dir.exists():
+        print(f'☑️  不存在转换数据目录 » {src_dir}')   
+        print(f'❎ ➭ 结束转换')
+        
+        return
+        
     words_total = []
     # 使用 glob模式匹配 src_dir目录下的所有文件，序号从1开始（默认为0）
     for i, file_path in enumerate(src_dir.glob(f'*'), 1):
@@ -88,7 +94,7 @@ def code_sb(proj_dir):
                     continue
                 
                 word = line.split('\t')[0]
-                if len(word) > 1:
+                if len(word) > 2:
                     words.append(word)
             words_total.extend(words)
 
@@ -117,7 +123,7 @@ use_preset_vocabulary: false
                 o.write(f'{word}\t{code}\t1\n')
             # o.write(f'{word}\t{code_list[0]}\t1\n')
 
-    print(f'\n✅ » 已排序生成用户补丁词典 {out_path}')
+    print(f'\n✅ ➭ 已排序生成用户补丁词典 {out_path}')
 
 
 if __name__ == '__main__':

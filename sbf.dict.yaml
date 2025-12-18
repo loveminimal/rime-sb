@@ -45,7 +45,6 @@ columns:
 #	h;i
 鸿	h;o
 俭	j;a
-健	j'a
 捷	j;e
 久	j;u
 讥	j;i
@@ -112,11 +111,8 @@ columns:
 嚣	x;o
 涯	y;a
 岩	y;e
-越	y'e
 豫	y;u
-蕴	y'u
 奕	y;i
-咦	y'i
 永	y;o
 崽	z;a
 择	z;e
@@ -147,9 +143,9 @@ columns:
 #	rea
 争	rua	#
 机	rue
-#	rie
-#	riu
-#	rii
+健	rie
+蕴	riu
+咦	rii
 #	rio
 #	roa
 #	roe
@@ -771,7 +767,7 @@ columns:
 叩	kiu	0
 看见	kj'	0
 看看	kk'	0
-看来	kl'	0
+考虑	kl'	0	# 看来
 开门	km'	0
 可能	kn'	0
 邝	ko'	0
@@ -983,7 +979,7 @@ columns:
 妮	nao	0
 奶	nau	0
 那边	nb'	0
-农村	nc'	0
+内存	nc'	0	# 农村
 难道	nd'	0
 辇	ne'	0
 撵	ne;	0
@@ -1217,7 +1213,7 @@ columns:
 容易	ry'	0	# 人员
 日子	rz'	0
 神	s'	0
-什	s,	0
+甚	s,	0	# 什
 三	s.	0
 水	s/	0
 书	s;	0

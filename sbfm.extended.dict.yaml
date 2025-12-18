@@ -24,14 +24,12 @@ use_preset_vocabulary: false
 谨慎	jysloa	300000000
 懒惰	lldloo	300000000
 垃圾	ltjtei	300000000
-搜索	sfssei	800000000
-下载	xbzcei	200000000
-引入	ygrpae	300000000
 钥匙	yjsvue	500000000
 蜘蛛	zczcia	100000000
 𰻞𰻞面	bbmeoa	200000000
+表达式	bdsgee	200000000
 编辑器	bjqkaa	600000000
-编译器	byqkaa	100000000
+编译器	byqkaa	200000000
 标准版	bzbpei	200000000
 差不多	cbdxou	1100000000
 挫败感	cbgxei	100000000
@@ -39,11 +37,15 @@ use_preset_vocabulary: false
 楚留香	clxhei	100000000
 处女座	cnzgua	100000000
 初始化	cshroa	200000000
+初始值	cszroa	100000000
 导火索	dhssae	100000000
 丹尼斯	dnsqua	300000000
 狄仁杰	drjmua	100000000
 多少事	dsseua	100000000
+单引号	dyhkou	100000000
 反动派	fdpduu	400000000
+浮点数	fdswoo	700000000
+浮点型	fdxtoo	200000000
 服务器	fwqkua	500000000
 翻译器	fyqkuo	200000000
 辅助码	fzmsea	1700000000
@@ -90,28 +92,35 @@ use_preset_vocabulary: false
 时间戳	sjcgia	300000000
 速录宝	slbgei	100000000
 输入法	srfdea	500000000
+双引号	syhkao	100000000
 天地转	tdzcee	100000000
 汤普森	tpsmoo	100000000
 天之道	tzdoee	200000000
+二进制	vjzlee	200000000
 俄罗斯	vlsqui	100000000
 耳旁风	vpfpei	100000000
 文件夹	wjjhoe	400000000
 伪命题	wmtyui	100000000
 为什么	wsmsou	300000000
+位运算	wyspui	200000000
 笑呵呵	xhhkue	100000000
 序列化	xlhroe	400000000
 小狼毫	xlhwiu	200000000
 叙利亚	xlyyuo	100000000
 虚拟机	xnjmie	300000000
+修饰符	xsfpui	100000000
 希特勒	xtlguo	100000000
 西游记	xyjyei	100000000
+玉不琢	ybzwee	100000000
 月如钩	yrgjua	100000000
 愚人节	yrjcia	100000000
+优先级	yxjjui	100000000
 字符串	zfckoo	1100000000
 自然码	zrmsui	200000000
 周恩来	zvleua	100000000
 障碍物	zvwnai	100000000
 忠义堂	zyttia	100000000
+作用域	zyytui	100000000
 周总理	zzlwua	100000000
 蜘蛛侠	zzxria	200000000
 不卑不亢	bbbkeu	100000000
@@ -219,6 +228,8 @@ use_preset_vocabulary: false
 不同凡响	btfxeu	100000000
 暴跳如雷	btrlia	100000000
 波涛汹涌	btxyoo	100000000
+布尔类型	bvlxeu	400000000
+布尔运算	bvyseu	200000000
 宝安中心	bvzxoo	100000000
 不闻不问	bwbweu	100000000
 别无长物	bwcwia	100000000
@@ -268,6 +279,7 @@ use_preset_vocabulary: false
 层出不穷	ccbqae	100000000
 参差不齐	ccbqao	100000000
 楚楚动人	ccdrei	100000000
+存储单元	ccdyeu	200000000
 沉渣泛起	ccfqoo	100000000
 吃吃喝喝	cchhia	100000000
 从长计议	ccjyuo	100000000
@@ -278,11 +290,13 @@ use_preset_vocabulary: false
 陈陈相因	ccxyai	100000000
 唇齿相依	ccxyeu	100000000
 绰绰有余	ccyyaa	100000000
+从低到高	cddguo	100000000
 重蹈覆辙	cdfzue	100000000
 才短思涩	cdssei	100000000
 成风化人	cfhreu	100000000
 春风化雨	cfhyee	100000000
 心烦意乱	cfyloa	100000000
+从高到低	cgdduo	100000000
 诚惶诚恐	chckoa	100000000
 趁火打劫	chdjei	100000000
 才华横溢	chhyei	100000000
@@ -353,6 +367,7 @@ use_preset_vocabulary: false
 充耳不闻	cvbwoe	100000000
 尘埃落定	cvldiu	100000000
 杳无音讯	cwyxei	100000000
+重新部署	cxbsue	300000000
 此消彼长	cxbzie	100000000
 处心积虑	cxjlua	100000000
 心存侥幸	cxjxoa	100000000
@@ -416,6 +431,7 @@ use_preset_vocabulary: false
 独立王国	dlwgua	100000000
 得陇望蜀	dlwsuu	100000000
 鼎力相助	dlxzia	100000000
+短路运算	dlysue	100000000
 得力助手	dlzsuu	100000000
 大名鼎鼎	dmddeu	100000000
 独木难支	dmnzua	100000000
@@ -662,6 +678,7 @@ use_preset_vocabulary: false
 隔靴搔痒	gxsyai	100000000
 关系暧昧	gxvmou	100000000
 高薪养廉	gxyloe	100000000
+关系运算	gxysou	100000000
 改弦易辙	gxyzae	100000000
 过犹不及	gybjei	100000000
 高雅谦和	gyqhoe	100000000
@@ -780,7 +797,9 @@ use_preset_vocabulary: false
 好自为之	hzwzau	100000000
 会展中心	hzzxuo	100000000
 骄兵悍将	jbhjaa	100000000
+基本结构	jbjgei	300000000
 坚不可摧	jbkcii	100000000
+基本类型	jblxei	100000000
 剑拔弩张	jbnzuo	100000000
 间不容发	jbrfoi	100000000
 今不如昔	jbrxuo	100000000
@@ -812,6 +831,7 @@ use_preset_vocabulary: false
 借花献佛	jhxfui	500000000
 经久不衰	jjbsaa	100000000
 经久不息	jjbxaa	100000000
+加减乘除	jjccau	100000000
 紧急处置	jjczii	100000000
 阶级斗争	jjdzai	100000000
 久居高位	jjgwua	100000000
@@ -857,6 +877,7 @@ use_preset_vocabulary: false
 见死不救	jsbjia	100000000
 积少成多	jscdue	100000000
 集思广益	jsgyui	100000000
+计算结果	jsjgoa	100000000
 尽善尽美	jsjmae	100000000
 就事论事	jslsoe	200000000
 近水楼台	jsltuu	100000000
@@ -869,6 +890,7 @@ use_preset_vocabulary: false
 举世瞩目	jszmoo	100000000
 卷土重来	jtclou	100000000
 惊天动地	jtdduo	100000000
+静态方法	jtffee	200000000
 交通工具	jtgjoe	100000000
 交头接耳	jtjvoe	100000000
 进退两难	jtlnee	100000000
@@ -1125,6 +1147,7 @@ use_preset_vocabulary: false
 目无全牛	mwqnia	100000000
 勉为其难	mwqnua	100000000
 梦想成真	mxczei	100000000
+面向对象	mxdxeu	100000000
 命悬一线	mxyxuo	100000000
 妙语连珠	mylzau	100000000
 妙言要道	myydau	100000000
@@ -1134,6 +1157,8 @@ use_preset_vocabulary: false
 莽撞行事	mzxsei	100000000
 莫衷一是	mzysei	100000000
 名噪一时	mzysua	100000000
+内存单元	ncdyia	200000000
+内存地址	ncdzia	200000000
 难得糊涂	ndhtao	100000000
 怒火中烧	nhzsau	100000000
 逆流而上	nlvsou	200000000
@@ -1272,6 +1297,7 @@ use_preset_vocabulary: false
 签章系统	qzxtue	100000000
 恰中要害	qzyhuo	100000000
 情真意切	qzyqoo	100000000
+强制转型	qzzxae	400000000
 人不如故	rbrguo	100000000
 人不如旧	rbrjuo	200000000
 如痴如醉	rcrzau	100000000
@@ -1288,6 +1314,7 @@ use_preset_vocabulary: false
 人迹罕至	rjhzuo	100000000
 人尽皆知	rjjzuo	100000000
 日渐式微	rjswia	100000000
+入口程序	rkcxuo	100000000
 如履薄冰	rlbbau	100000000
 如雷贯耳	rlgvau	100000000
 任劳任怨	rlryui	100000000
@@ -1390,6 +1417,7 @@ use_preset_vocabulary: false
 时机成熟	sjcsia	100000000
 数据结构	sjjgou	100000000
 势均力敌	sjldei	100000000
+数据类型	sjlxou	300000000
 手脚麻利	sjmlue	100000000
 杀鸡取卵	sjqluo	100000000
 拾级而上	sjvsei	100000000
@@ -1447,6 +1475,7 @@ use_preset_vocabulary: false
 神神秘秘	ssmmoa	100000000
 闪烁其辞	ssqcoi	100000000
 实事求是	ssqsoo	200000000
+顺手牵羊	ssqyui	100000000
 视死如归	ssrgoa	100000000
 深邃锐利	ssrloo	100000000
 顺水人情	ssrqui	100000000
@@ -1509,6 +1538,7 @@ use_preset_vocabulary: false
 守株待兔	szdtoo	100000000
 失之东隅	szdyue	100000000
 束之高阁	szggei	100000000
+数值计算	szjsou	100000000
 稍纵即逝	szjsue	100000000
 水中捞月	szlyia	100000000
 三缄其口	szqkee	100000000
@@ -1517,6 +1547,7 @@ use_preset_vocabulary: false
 收之桑榆	szsyai	100000000
 手足无措	szwcue	100000000
 绳之以法	szyfaa	100000000
+四则运算	szysia	200000000
 始作俑者	szyzau	100000000
 坦白从宽	tbckei	100000000
 投笔从戎	tbcrei	100000000
@@ -1704,6 +1735,7 @@ use_preset_vocabulary: false
 蔚然成风	wrcfei	100000000
 万人空巷	wrkxeu	100000000
 危如累卵	wrllua	100000000
+微软五笔	wrwbuu	100000000
 无人问津	wrwjee	100000000
 危若朝露	wrzlua	100000000
 无所不在	wsbzee	100000000
@@ -1922,6 +1954,7 @@ use_preset_vocabulary: false
 一帆风顺	yffsee	500000000
 一傅众咻	yfzxee	100000000
 一概不用	ygbyee	100000000
+一官半职	ygbzee	100000000
 以管窥天	ygktao	100000000
 欲盖弥彰	ygmzuo	100000000
 月光如水	ygrsua	100000000
@@ -1948,6 +1981,7 @@ use_preset_vocabulary: false
 弃旧图新	yjtxoe	100000000
 英俊潇洒	yjxsei	100000000
 一技之长	yjzcee	100000000
+一己之力	yjzlee	100000000
 远见卓识	yjzsee	100000000
 忆苦思甜	ykstuo	100000000
 异口同声	yktsae	100000000
@@ -2055,6 +2089,7 @@ use_preset_vocabulary: false
 仰望星空	ywxkui	100000000
 遗文逸事	ywysia	100000000
 逸闻轶事	ywysua	100000000
+移位运算	ywysue	100000000
 贻误战机	ywzjia	100000000
 阅文作家	ywzjoi	100000000
 勇往直前	ywzqao	100000000
@@ -2097,6 +2132,7 @@ use_preset_vocabulary: false
 余勇可贾	yykjuo	100000000
 源远流长	yylcoo	100000000
 严于律己	yyljei	100000000
+引用类型	yylxae	300000000
 遥遥领先	yylxuo	300000000
 一言难尽	yynjee	100000000
 勇毅前行	yyqxao	100000000
@@ -2128,7 +2164,6 @@ use_preset_vocabulary: false
 一字千金	yzqjee	100000000
 颐指气使	yzqsei	100000000
 原汁原味	yzyweu	100000000
-饮鸠止渴	yzzkua	100000000
 饮鸩止渴	yzzkua	100000000
 朝不保夕	zbbxei	100000000
 振臂高呼	zbghei	100000000
@@ -2142,10 +2177,12 @@ use_preset_vocabulary: false
 自成一体	zcytui	100000000
 斟词酌句	zczjei	100000000
 主单辅词	zdfcoe	100000000
+最大范围	zdfwia	200000000
 抓大放小	zdfxei	100000000
 斩钉截铁	zdjtea	100000000
 整顿吏治	zdlzei	100000000
 照单全收	zdqsia	100000000
+自动提升	zdtsui	100000000
 掷地有声	zdysei	100000000
 指点一二	zdyvei	100000000
 争分夺秒	zfdmua	100000000
@@ -2159,6 +2196,7 @@ use_preset_vocabulary: false
 张冠李戴	zgldae	100000000
 周公摄政	zgszua	100000000
 中国特色	zgtsia	100000000
+自古以来	zgylui	100000000
 至关重要	zgzyea	100000000
 贞观之治	zgzzie	100000000
 纵横捭阖	zhbhaa	100000000
@@ -2228,6 +2266,7 @@ use_preset_vocabulary: false
 置身事外	zsswia	100000000
 纸上谈兵	zstbaa	100000000
 坐收渔利	zsyluo	100000000
+整数运算	zsysei	100000000
 众所周知	zszzuo	100000000
 志同道合	ztdhei	100000000
 豕突狼奔	ztlbeu	100000000
@@ -2242,6 +2281,8 @@ use_preset_vocabulary: false
 自我批评	zwppui	100000000
 众望所归	zwsguo	100000000
 壮心不已	zxbyoe	200000000
+执行代码	zxdmei	200000000
+最小范围	zxfwia	100000000
 知行合一	zxhyue	100000000
 争先恐后	zxkhua	100000000
 抓心挠肺	zxnfei	100000000
@@ -2257,6 +2298,7 @@ use_preset_vocabulary: false
 忠于人民	zyrmia	100000000
 自以为是	zywsui	100000000
 罪有应得	zyydia	100000000
+转义字符	zyzfea	200000000
 自怨自艾	zyzyui	100000000
 自言自语	zyzyui	200000000
 孜孜不倦	zzbjai	100000000
@@ -2290,6 +2332,8 @@ use_preset_vocabulary: false
 冰凌输入法	blsfoe	100000000
 本来无一物	blwwei	100000000
 不怕没柴烧	bpmseu	100000000
+布尔表达式	bvbseu	100000000
+本自不期人	bzbrei	200000000
 处处闻啼鸟	ccwnua	100000000
 除非己莫为	cfjwai	100000000
 锄禾日当午	chrwue	100000000
@@ -2299,8 +2343,10 @@ use_preset_vocabulary: false
 打虎亲兄弟	dhqdei	100000000
 大唐双龙传	dtszeu	200000000
 独照峨眉峰	dzvfua	600000000
+浮点数运算	fdssoo	100000000
 凡人修仙传	frxzua	800000000
 更上一层楼	gsylei	100000000
+关系运算符	gxyfou	100000000
 更有早行人	gyzrei	100000000
 何处惹尘埃	hcrvui	100000000
 汗滴禾下土	hdhtoo	100000000
@@ -2311,6 +2357,7 @@ use_preset_vocabulary: false
 及时当勉励	jsdlua	100000000
 举贤不避亲	jxbqoo	100000000
 将相本无种	jxbzoe	100000000
+科学计数法	kxjfue	100000000
 留得青山在	ldqzua	100000000
 论迹不论心	ljbxoa	100000000
 粒粒皆辛苦	lljkou	100000000
@@ -2345,6 +2392,7 @@ use_preset_vocabulary: false
 速效救心丸	sxjwei	100000000
 上下五千年	sxwnie	200000000
 岁月不待人	sybria	100000000
+三元运算符	syyfee	100000000
 上阵父子兵	szfbie	100000000
 谁知盘中餐	szpcoa	100000000
 听风就是雨	tfjyia	100000000
@@ -2375,6 +2423,7 @@ use_preset_vocabulary: false
 针尖对麦芒	zjdmue	100000000
 真空生妙有	zksyei	100000000
 知我相思苦	zwxkue	100000000
+最小化原则	zxhzia	100000000
 只要肯登攀	zykpia	200000000
 睁眼说瞎话	zyshia	200000000
 知子莫若父	zzmfue	200000000
@@ -2386,6 +2435,7 @@ use_preset_vocabulary: false
 电子合同平台	dzhtia	100000000
 风景这边独好	fjzhua	100000000
 滑天下之大稽	htxjoo	100000000
+基本数据类型	jbsxei	100000000
 骄傲使人落后	jvshaa	100000000
 烂泥扶不上墙	lnfqou	100000000
 前途是光明的	qtsdou	100000000
@@ -2448,7 +2498,6 @@ use_preset_vocabulary: false
 明日愁来明日愁	mrccia	100000000
 冒天下之大不韪	mtxwia	100000000
 奈何明月照沟渠	nhmqeu	100000000
-羌笛何须怨杨柳	qdhlou	100000000
 千金散尽还复来	qjslue	100000000
 牵一发而动全身	qyfseu	100000000
 岂因祸福避趋之	qyhzia	100000000
@@ -2457,6 +2506,7 @@ use_preset_vocabulary: false
 让人欢喜让人愁	rrhcoa	100000000
 人生若只如初见	rsrjuo	100000000
 人生自古谁无死	rszsuo	100000000
+日照香炉生紫烟	rzxyia	200000000
 损不足以奉有余	sbzyei	200000000
 山重水复疑无路	scslia	500000000
 身无彩凤双飞翼	swcyui	200000000
@@ -2477,6 +2527,8 @@ use_preset_vocabulary: false
 心有灵犀一点通	xyltoa	300000000
 衣带渐宽终不悔	ydjhoe	100000000
 一剑光寒十九州	yjgzee	100000000
+遥看瀑布挂前川	ykpcuo	100000000
+映日荷花别样红	yrhhia	100000000
 一日看尽长安花	yrkhee	100000000
 疑是银河落九天	ysytua	200000000
 也无风雨也无晴	ywfqai	100000000
