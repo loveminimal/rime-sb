@@ -56,7 +56,7 @@ use_preset_vocabulary: false
 高尔夫	gvfeoe	100000000
 高育良	gylgoe	100000000
 光阴迫	gyplio	100000000
-红楼梦	hlmxaa	200000000
+红楼梦	hlmxaa	500000000
 红烧肉	hsrkaa	100000000
 护卫舰	hwjzei	100000000
 候选框	hxkmui	200000000
@@ -161,12 +161,14 @@ use_preset_vocabulary: false
 不即不离	bjbleu	100000000
 白驹过隙	bjgxui	100000000
 保驾护航	bjhhui	100000000
+别具匠心	bjjxia	100000000
 背井离乡	bjlxie	100000000
 百家齐放	bjqfeu	100000000
 并驾齐驱	bjqqou	100000000
 不计其数	bjqseu	100000000
 不绝如缕	bjrleu	100000000
 不胫而走	bjvzeu	100000000
+不拘小节	bjxjeu	100000000
 不拘一格	bjygeu	100000000
 别具一格	bjygia	100000000
 百家争鸣	bjzmeu	100000000
@@ -408,6 +410,7 @@ use_preset_vocabulary: false
 东方欲晓	dfyxea	100000000
 登峰造极	dfzjao	100000000
 道法自然	dfzrou	200000000
+大功告成	dggceu	100000000
 电光火石	dghsia	100000000
 独孤九剑	dgjjua	200000000
 独孤求败	dgqbua	100000000
@@ -736,6 +739,7 @@ use_preset_vocabulary: false
 忽略不计	hlbjua	100000000
 画龙点睛	hldjei	200000000
 互利共赢	hlgyea	100000000
+花里胡哨	hlhsei	100000000
 糊里糊涂	hlhtou	100000000
 活灵活现	hlhxoo	100000000
 鹤立鸡群	hljqoa	100000000
@@ -859,6 +863,7 @@ use_preset_vocabulary: false
 九牛一毛	jnymua	100000000
 积贫积弱	jpjrue	100000000
 筋疲力尽	jpljue	100000000
+筋疲力竭	jpljue	100000000
 举棋不定	jqbdoo	100000000
 酒气冲天	jqctoo	100000000
 驾轻就熟	jqjsua	100000000
@@ -998,7 +1003,7 @@ use_preset_vocabulary: false
 凉风有信	lfyxoe	100000000
 立竿见影	lgjyoe	100000000
 流光溢彩	lgycoo	200000000
-炉火纯青	lhcqou	100000000
+炉火纯青	lhcqou	200000000
 连哄带劝	lhdqea	100000000
 灵魂拷问	lhkwae	100000000
 落花流水	lhlsei	100000000
@@ -1055,6 +1060,7 @@ use_preset_vocabulary: false
 聊胜于无	lsywei	200000000
 烂熟于心	lsyxou	100000000
 历史渊源	lsyyeu	100000000
+蓝天白云	ltbyei	100000000
 量体裁衣	ltcyia	100000000
 老态龙钟	ltlzei	100000000
 力透纸背	ltzbau	100000000
@@ -1359,6 +1365,7 @@ use_preset_vocabulary: false
 如影随形	rysxau	100000000
 日异月殊	ryysia	100000000
 人云亦云	ryyyuo	100000000
+日益严重	ryyzia	100000000
 柔中带刚	rzdgao	100000000
 软中带硬	rzdyea	100000000
 任重道远	rzdyui	100000000
@@ -2056,6 +2063,7 @@ use_preset_vocabulary: false
 一丝不苟	ysbgee	100000000
 仰事俯畜	ysfcui	100000000
 严丝合缝	yshfei	200000000
+游手好闲	yshxoo	100000000
 与时俱进	ysjjea	200000000
 一损俱损	ysjsee	100000000
 因势利导	ysldia	100000000
@@ -2152,6 +2160,7 @@ use_preset_vocabulary: false
 应运而生	yyvsoe	100000000
 意犹未尽	yywjoe	100000000
 一夜无眠	yywmee	100000000
+欲扬先抑	yyxyuo	100000000
 奄奄一息	yyyxeu	100000000
 隐隐约约	yyyyai	100000000
 犹犹豫豫	yyyyua	100000000
@@ -2160,6 +2169,7 @@ use_preset_vocabulary: false
 一叶知秋	yyzqee	100000000
 跃然纸上	yyzsia	100000000
 应用中心	yyzxoe	100000000
+与众不同	yzbtea	100000000
 义正词严	yzcyou	100000000
 养尊处优	yzcyou	100000000
 越俎代庖	yzdpei	100000000
@@ -2349,6 +2359,7 @@ use_preset_vocabulary: false
 城乡结合部	cxjbei	100000000
 打虎亲兄弟	dhqdei	100000000
 大唐双龙传	dtszeu	200000000
+都云作者痴	dyzcei	100000000
 独照峨眉峰	dzvfua	600000000
 浮点数运算	fdssoo	100000000
 凡人修仙传	frxzua	800000000
@@ -2366,6 +2377,7 @@ use_preset_vocabulary: false
 举贤不避亲	jxbqoo	100000000
 将相本无种	jxbzoe	100000000
 科学计数法	kxjfue	100000000
+可遇不可求	kybqei	100000000
 留得青山在	ldqzua	100000000
 论迹不论心	ljbxoa	100000000
 粒粒皆辛苦	lljkou	100000000
@@ -2377,6 +2389,7 @@ use_preset_vocabulary: false
 明日复明日	mrfria	100000000
 明日何其多	mrhdia	100000000
 毛泽东思想	mzdxue	100000000
+满纸荒唐言	mzhyoo	100000000
 毛主席语录	mzxlue	600000000
 毛主席万岁	mzxsue	100000000
 南京大屠杀	njdsei	100000000
@@ -2394,6 +2407,7 @@ use_preset_vocabulary: false
 声笔输入法	sbsfei	200000000
 十步杀一人	sbsrei	100000000
 山海八荒录	shblia	1200000000
+谁解其中味	sjqwoa	100000000
 盛年不重来	snbleu	100000000
 十年磨一剑	snmjei	200000000
 霜刃未曾试	srwseo	100000000
@@ -2420,6 +2434,7 @@ use_preset_vocabulary: false
 物以稀为贵	wyxgue	100000000
 沃兹尼亚克	wznkoo	500000000
 雪山千古冷	xsqleo	400000000
+一把辛酸泪	ybxlee	100000000
 阴沟里翻船	yglcai	200000000
 一览众山小	ylzxee	200000000
 欲穷千里目	yqqmuo	100000000
@@ -2532,6 +2547,7 @@ use_preset_vocabulary: false
 我本将心向明月	wbjyue	200000000
 我见青山多妩媚	wjqmue	100000000
 我劝天公重抖擞	wqtsue	200000000
+无缘对面手难牵	wydqee	200000000
 为伊消得人憔悴	wyxcou	100000000
 雄关漫道真如铁	xgmteu	100000000
 心有灵犀一点通	xyltoa	300000000
@@ -2542,6 +2558,7 @@ use_preset_vocabulary: false
 一日看尽长安花	yrkhee	100000000
 疑是银河落九天	ysytua	200000000
 也无风雨也无晴	ywfqai	100000000
+有缘千里来相会	yyqheu	200000000
 在地愿为连理枝	zdyzeu	100000000
 自古公公好威名	zggmui	100000000
 直挂云帆济沧海	zgyhei	100000000
