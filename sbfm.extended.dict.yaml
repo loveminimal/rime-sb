@@ -99,7 +99,7 @@ use_preset_vocabulary: false
 二进制	vjzlee	200000000
 俄罗斯	vlsqui	100000000
 耳旁风	vpfpei	100000000
-文件夹	wjjhoe	400000000
+文件夹	wjjhoe	600000000
 伪命题	wmtyui	100000000
 为什么	wsmsou	300000000
 位运算	wyspui	200000000
@@ -144,6 +144,7 @@ use_preset_vocabulary: false
 不孚众望	bfzweu	100000000
 不浮众望	bfzweu	100000000
 不负众望	bfzweu	100000000
+捕风捉影	bfzyei	100000000
 不分畛域	bfzyeu	100000000
 不管不顾	bgbgeu	100000000
 波光粼粼	bglloo	100000000
@@ -1335,7 +1336,7 @@ use_preset_vocabulary: false
 入木三分	rmsfuo	100000000
 人民史观	rmsguo	100000000
 人满为患	rmwhuo	100000000
-人民英雄	rmyxuo	200000000
+人民英雄	rmyxuo	400000000
 如芒在背	rmzbau	100000000
 燃眉之急	rmzjou	100000000
 热闹非凡	rnffei	100000000
@@ -1740,6 +1741,7 @@ use_preset_vocabulary: false
 武力清场	wlqcee	100000000
 惟妙惟肖	wmwxuo	100000000
 闻名遐迩	wmxvoi	100000000
+万念俱灰	wnjhea	100000000
 无能为力	wnwlee	100000000
 为期不远	wqbyou	100000000
 委曲求全	wqqque	100000000
@@ -1944,7 +1946,7 @@ use_preset_vocabulary: false
 扬长避短	ycbdei	100000000
 一唱百和	ycbhee	100000000
 阳春白雪	ycbxai	100000000
-永垂不朽	ycbxoa	100000000
+永垂不朽	ycbxoa	200000000
 一查到底	ycddee	200000000
 异彩纷呈	ycfcae	100000000
 夜长梦多	ycmdoe	100000000
