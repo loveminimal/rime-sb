@@ -141,5 +141,7 @@ use_preset_vocabulary: false
 
 if __name__ == '__main__':
     proj_dir = Path(__file__).resolve().parent.parent
+    
+    print(len(meta_sb))
 
     code_sb(proj_dir)

@@ -1,4 +1,4 @@
-meta_sb = {
+origin_meta_sb = {
     "鿎": [
         [
             "tseu",
@@ -159131,3 +159131,17 @@ meta_sb = {
         ]
     ]
 }
+
+meta_sb = {}
+for key, value in origin_meta_sb.items():
+    if len(value) == 1:
+        meta_sb[key] = value
+        continue
+    
+    _value = [v for v in value if int(v[1]) <= 1]
+    if len(_value) == len(value):
+        # 多音字条目且权重都为 0 或 1，仅收录第一个元素
+        meta_sb[key] = [value[0]]
+    else: 
+        # 这里我们过滤掉多音字中权重小于等于 1 的音
+        meta_sb[key] = [v for v in value if int(v[1]) > 1]
