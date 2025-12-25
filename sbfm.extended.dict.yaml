@@ -184,6 +184,7 @@ use_preset_vocabulary: false
 不堪重负	bkzfeu	100000000
 不刊之论	bkzleu	100000000
 不理不睬	blbceu	100000000
+不离不弃	blbqeu	200000000
 不稂不莠	blbyeu	100000000
 步履沉重	blczie	100000000
 波罗的海	bldhoo	100000000
@@ -767,6 +768,7 @@ use_preset_vocabulary: false
 恍如昨日	hrzruo	100000000
 胡说八道	hsbdei	100000000
 绘声绘色	hshsaa	100000000
+胡思乱想	hslxei	200000000
 浑水摸鱼	hsmyoo	100000000
 横扫千军	hsqjei	200000000
 皓首穷经	hsqjui	100000000
@@ -863,7 +865,7 @@ use_preset_vocabulary: false
 艰难曲折	jnqzao	1000000000
 九牛一毛	jnymua	100000000
 积贫积弱	jpjrue	100000000
-筋疲力尽	jpljue	100000000
+筋疲力尽	jpljue	200000000
 筋疲力竭	jpljue	100000000
 举棋不定	jqbdoo	100000000
 酒气冲天	jqctoo	100000000
@@ -1228,6 +1230,7 @@ use_preset_vocabulary: false
 群策群力	qcqlae	100000000
 轻车熟路	qcslea	100000000
 千差万别	qcwbue	100000000
+气喘吁吁	qcxxue	200000000
 前车之鉴	qczjou	100000000
 浅尝辄止	qczzoo	300000000
 拳打脚踢	qdjtou	100000000
@@ -1384,6 +1387,8 @@ use_preset_vocabulary: false
 手不释卷	sbsjue	100000000
 神不守舍	sbssoa	100000000
 数不胜数	sbssou	100000000
+声笔象码	sbxmei	600000000
+实不相瞒	sbxmoo	100000000
 素不相识	sbxsee	100000000
 事不宜迟	sbycei	100000000
 身不由己	sbyjui	100000000
@@ -1724,6 +1729,7 @@ use_preset_vocabulary: false
 为虎作伥	whzcou	100000000
 乌合之众	whzzua	100000000
 闻鸡起舞	wjqwoi	100000000
+物尽其用	wjqyue	100000000
 危机四伏	wjsfua	100000000
 无拘无束	wjwsee	100000000
 无济于事	wjysee	100000000
@@ -2073,6 +2079,7 @@ use_preset_vocabulary: false
 夜色朦胧	ysmloe	100000000
 永生难忘	ysnwoi	100000000
 饮水思源	yssyua	100000000
+一视同仁	ystree	100000000
 于事无补	yswbee	100000000
 鱼死网破	yswpua	100000000
 有声有色	ysyeeu	100000000
@@ -2135,7 +2142,7 @@ use_preset_vocabulary: false
 抑扬顿挫	yydcei	100000000
 洋洋大观	yydgoo	100000000
 一衣带水	yydsee	100000000
-永远的神	yydsoa	200000000
+永远的神	yydsoa	300000000
 扬扬得意	yydyei	400000000
 因噎废食	yyfsia	100000000
 郁郁寡欢	yygheu	100000000
@@ -2379,7 +2386,7 @@ use_preset_vocabulary: false
 举贤不避亲	jxbqoo	100000000
 将相本无种	jxbzoe	100000000
 科学计数法	kxjfue	100000000
-可遇不可求	kybqei	100000000
+可遇不可求	kybqei	200000000
 留得青山在	ldqzua	100000000
 论迹不论心	ljbxoa	100000000
 粒粒皆辛苦	lljkou	100000000
