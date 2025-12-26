@@ -20,7 +20,7 @@ def get_sb_code(word, ext='，。？'):
     if len(word) == 1:
         f = word[0]
         for fc in meta_sb[f]:
-            code.append(f'{fc[0]}')
+            code.append(f'{fc[0]}{fc[2][2:]}')
     elif len(word) == 2:
         f, s = word[0], word[1]
         for fc in meta_sb[f]:
