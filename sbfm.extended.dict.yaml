@@ -866,7 +866,7 @@ use_preset_vocabulary: false
 九牛一毛	jnymua	100000000
 积贫积弱	jpjrue	100000000
 筋疲力尽	jpljue	200000000
-筋疲力竭	jpljue	100000000
+筋疲力竭	jpljue	300000000
 举棋不定	jqbdoo	100000000
 酒气冲天	jqctoo	100000000
 驾轻就熟	jqjsua	100000000
@@ -1230,7 +1230,7 @@ use_preset_vocabulary: false
 群策群力	qcqlae	100000000
 轻车熟路	qcslea	100000000
 千差万别	qcwbue	100000000
-气喘吁吁	qcxxue	200000000
+气喘吁吁	qcxxue	300000000
 前车之鉴	qczjou	100000000
 浅尝辄止	qczzoo	300000000
 拳打脚踢	qdjtou	100000000
@@ -1387,7 +1387,7 @@ use_preset_vocabulary: false
 手不释卷	sbsjue	100000000
 神不守舍	sbssoa	100000000
 数不胜数	sbssou	100000000
-声笔象码	sbxmei	600000000
+声笔象码	sbxmei	700000000
 实不相瞒	sbxmoo	100000000
 素不相识	sbxsee	100000000
 事不宜迟	sbycei	100000000
@@ -1693,7 +1693,7 @@ use_preset_vocabulary: false
 无不动容	wbdree	100000000
 文不加点	wbjdoe	100000000
 未卜先知	wbxzee	100000000
-微不足道	wbzduu	100000000
+微不足道	wbzduu	200000000
 五彩缤纷	wcbfei	100000000
 五彩斑斓	wcblei	100000000
 无处不在	wcbzee	100000000
@@ -2500,6 +2500,7 @@ use_preset_vocabulary: false
 长相思兮长相忆	cxsyue	100000000
 沉舟侧畔千帆过	czcgoo	100000000
 当官不为民做主	dgbzio	100000000
+多情剑客无情剑	dqjjua	200000000
 短相思兮无穷极	dxsjue	100000000
 飞流直下三千尺	flzcau	200000000
 俯首甘为孺子牛	fsgnui	100000000
