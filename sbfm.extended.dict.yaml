@@ -14,8 +14,6 @@
 name: sbfm.extended
 version: 2025.12
 sort: by_weight
-import_tables:
-  - patch
 use_preset_vocabulary: false
 ...
 剥削	blxlae	200000000
@@ -115,6 +113,7 @@ use_preset_vocabulary: false
 月如钩	yrgjua	100000000
 愚人节	yrjcia	100000000
 优先级	yxjjui	100000000
+重定义	zdydue	100000000
 字符串	zfckoo	1100000000
 自然码	zrmsui	200000000
 周恩来	zvleua	100000000
@@ -1209,6 +1208,7 @@ use_preset_vocabulary: false
 皮里阳秋	plyqau	100000000
 披麻戴孝	pmdxei	100000000
 拼命三郎	pmslei	100000000
+翩翩起舞	ppqwoa	900000000
 旁若无人	prwroe	100000000
 判若云泥	prynou	100000000
 披沙拣金	psljei	100000000
@@ -2229,6 +2229,7 @@ use_preset_vocabulary: false
 醉话连篇	zhlpei	100000000
 中华民族	zhmzia	200000000
 直呼其名	zhqmei	100000000
+自己动手	zjdsui	100000000
 作奸犯科	zjfkui	100000000
 坐井观天	zjgtuo	100000000
 捉襟见肘	zjjzei	100000000
@@ -2504,6 +2505,7 @@ use_preset_vocabulary: false
 短相思兮无穷极	dxsjue	100000000
 飞流直下三千尺	flzcau	200000000
 俯首甘为孺子牛	fsgnui	100000000
+胳膊拧不过大腿	gbntua	100000000
 勾栏从来扮高雅	glcyua	100000000
 苟利国家生死以	glgyei	100000000
 花开堪折直须折	hkkzei	100000000
