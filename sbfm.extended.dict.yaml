@@ -31,6 +31,7 @@ use_preset_vocabulary: false
 标准版	bzbpei	200000000
 差不多	cbdxou	1100000000
 挫败感	cbgxei	100000000
+重定义	cdydue	100000000
 从来急	cljxuo	100000000
 楚留香	clxhei	100000000
 处女座	cnzgua	100000000
@@ -113,7 +114,7 @@ use_preset_vocabulary: false
 月如钩	yrgjua	100000000
 愚人节	yrjcia	100000000
 优先级	yxjjui	100000000
-重定义	zdydue	100000000
+自定义	zdydui	100000000
 字符串	zfckoo	1100000000
 自然码	zrmsui	200000000
 周恩来	zvleua	100000000
@@ -689,6 +690,7 @@ use_preset_vocabulary: false
 诡异奇谲	gyqjoa	100000000
 各有千秋	gyqqua	100000000
 过眼云烟	gyyyei	100000000
+各种各样	gzgyua	100000000
 固执己见	gzjjia	100000000
 管中窥豹	gzkbue	100000000
 高枕无忧	gzwyoe	100000000
@@ -832,6 +834,7 @@ use_preset_vocabulary: false
 吉光片羽	jgpyei	100000000
 家国情怀	jgqhoo	100000000
 急火攻心	jhgxua	200000000
+江湖豪杰	jhhjoo	100000000
 江河日下	jhrxoo	100000000
 镜花水月	jhsyue	100000000
 酒酣耳热	jhvroo	100000000
@@ -920,6 +923,7 @@ use_preset_vocabulary: false
 及吾无身	jwwsua	100000000
 见微知著	jwzzia	100000000
 江心补漏	jxbloo	100000000
+惊喜不已	jxbyoo	100000000
 惊心动魄	jxdpuo	100000000
 匠心独运	jxdyeu	100000000
 交相辉映	jxhyoe	100000000
@@ -2429,7 +2433,7 @@ use_preset_vocabulary: false
 上阵父子兵	szfbie	100000000
 谁知盘中餐	szpcoa	100000000
 听风就是雨	tfjyia	100000000
-桃李春成径	tlcjei	100000000
+桃李春成径	tlcjei	200000000
 桃李满天下	tlmxei	100000000
 特洛伊木马	tlymue	100000000
 碳水化合物	tshweu	500000000
@@ -2564,6 +2568,7 @@ use_preset_vocabulary: false
 雄关漫道真如铁	xgmteu	100000000
 心有灵犀一点通	xyltoa	300000000
 衣带渐宽终不悔	ydjhoe	100000000
+有花堪折直须折	yhkzeu	100000000
 一剑光寒十九州	yjgzee	100000000
 遥看瀑布挂前川	ykpcuo	100000000
 映日荷花别样红	yrhhia	100000000
