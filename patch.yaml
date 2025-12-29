@@ -5,7 +5,8 @@ shared_patch:
   engine/processors/@before 0: chord_composer
   engine/processors/@before 1: lua_processor@*quick_symbol
   engine/translators/@after last: lua_translator@*patch*t_date
-  engine/filters/@after last: lua_filter@*patch*f_comment
+  engine/filters/@before 6: lua_filter@*patch*f_auto_select
+  engine/filters/@before 7: lua_filter@*patch*f_comment
   recognizer/patterns/quick_symbol: "^;.*$"
   sbzdy/user_dict: patch
   punctuator/half_shape/+:
