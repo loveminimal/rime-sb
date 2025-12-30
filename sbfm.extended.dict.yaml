@@ -17,6 +17,7 @@ sort: by_weight
 use_preset_vocabulary: false
 ...
 剥削	blxlae	200000000
+憧憬	cljloo	100000000
 翻译	fvyyuo	300000000
 尴尬	gygyeu	100000000
 谨慎	jysloa	300000000
@@ -690,7 +691,7 @@ use_preset_vocabulary: false
 诡异奇谲	gyqjoa	100000000
 各有千秋	gyqqua	100000000
 过眼云烟	gyyyei	100000000
-各种各样	gzgyua	100000000
+各种各样	gzgyua	600000000
 固执己见	gzjjia	100000000
 管中窥豹	gzkbue	100000000
 高枕无忧	gzwyoe	100000000
@@ -800,6 +801,7 @@ use_preset_vocabulary: false
 海晏河清	hyhqoo	100000000
 胡言乱语	hylyei	200000000
 毁于一旦	hyydui	100000000
+挥之不去	hzbqei	100000000
 和衷共济	hzgjue	100000000
 货真价实	hzjsui	100000000
 哗众取宠	hzqcia	100000000
@@ -817,7 +819,7 @@ use_preset_vocabulary: false
 举步维艰	jbwjoo	100000000
 降本增效	jbzxai	100000000
 局促不安	jcbvae	100000000
-坚持不懈	jcbxii	100000000
+坚持不懈	jcbxii	600000000
 精彩纷呈	jcfcou	100000000
 金蝉脱壳	jctquo	100000000
 接踵而至	jcvzei	100000000
@@ -923,7 +925,7 @@ use_preset_vocabulary: false
 及吾无身	jwwsua	100000000
 见微知著	jwzzia	100000000
 江心补漏	jxbloo	100000000
-惊喜不已	jxbyoo	100000000
+惊喜不已	jxbyoo	600000000
 惊心动魄	jxdpuo	100000000
 匠心独运	jxdyeu	100000000
 交相辉映	jxhyoe	100000000
@@ -1122,6 +1124,7 @@ use_preset_vocabulary: false
 梅开二度	mkvdei	600000000
 每况愈下	mkyxue	200000000
 绵里藏针	mlczaa	100000000
+美丽动人	mldrou	300000000
 模棱两可	mllkei	100000000
 美轮美奂	mlmhou	100000000
 麻木不仁	mmbroe	100000000
@@ -2120,7 +2123,7 @@ use_preset_vocabulary: false
 移位运算	ywysue	100000000
 贻误战机	ywzjia	100000000
 阅文作家	ywzjoi	100000000
-勇往直前	ywzqao	100000000
+勇往直前	ywzqao	500000000
 一星半点	yxbdee	100000000
 于心不忍	yxbree	100000000
 贻笑大方	yxdfia	100000000

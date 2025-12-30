@@ -9,10 +9,8 @@
 - f_ 前缀表示 filters     → lua_filter@*f_func
 --]] --
 local rime = require "lib"
-local logger = require "logger"
+-- local logger = require "logger"	-- 💡注意开发测试完毕后要关闭，否则配置在移动端会出问题
 -- local code_table = require "code_table"
-
-logger.info('➭ patch.lua loaded...')
 
 -- 用于声笔飞虎中首字母大写转小写（纯习惯）
 -- local function p_lower_first_char(key_event, env)
@@ -46,45 +44,32 @@ end
 local function f_auto_select(input, env)
     local context = env.engine.context
     local input_code = context.input
-    -- local t_b = {
-    --     ['a'] = true,
-    --     ['e'] = true,
-    --     ['u'] = true,
-    --     ['i'] = true,
-    --     ['o'] = true
-    -- }
+    local first_char = input_code:sub(1, 1)
 
-    local candidates = {}
-    local cand_count = 0
-
-    -- 统计候选数量
-    for cand in input:iter() do
-        cand_count = cand_count + 1
-        candidates[cand_count] = cand
-    end
-    env.candidate_count = cand_count
-
-    for i = 1, cand_count do
-        local cand = candidates[i]
-
-        if input_code:sub(0, 1) == 'e' or input_code:sub(0, 1) == 'u' then
-            local len_ic = #input_code
-            -- logger.info('→ ' .. len_ic)
-            -- logger.info('➭ ' .. env.candidate_count)
-            -- 候选唯一时直接上屏
-            if len_ic > 1 and env.candidate_count == 1 then
-                env.engine:commit_text(cand.text)
-                context:clear()
-            end
-            -- local fi_ic = input_code:sub(6, 6)
-            -- local si_ic = input_code:sub(7, 7)
-            -- if len_ic == 5 and i == 1 then
-            --     logger.info(i)
-            --     logger.info(cand.text)
-            --     env.cand_text = cand.text
-            -- end
+    -- 仅处理 e/u 开头的编码
+    if first_char == 'e' or first_char == 'u' then
+        local candidates = {}
+        local count = 0
+        -- 收集候选并计数
+        for cand in input:iter() do
+            count = count + 1
+            candidates[count] = cand
         end
+        -- 自动上屏条件：唯一候选 + 编码长度>1
+        if count == 1 and #input_code > 1 then
+            env.engine:commit_text(candidates[1].text)
+            context:clear()
+            return
+        end
+        -- 正常输出候选
+        for _, cand in ipairs(candidates) do
+            yield(cand)
+        end
+        return
+    end
 
+    -- 非 e/u 开头，默认输出所有候选
+    for cand in input:iter() do
         yield(cand)
     end
 end
@@ -93,7 +78,6 @@ end
 local function f_comment(input, env)
     local context = env.engine.context
     local input_code = context.input
-    -- logger.info(input_code)
 
     for cand in input:iter() do
         -- 移除临时飞码长词编码补全中的 ~ 符号
