@@ -17,12 +17,14 @@ sort: by_weight
 use_preset_vocabulary: false
 ...
 剥削	blxlae	200000000
+挫折	cfzfei	100000000
 憧憬	cljloo	100000000
 翻译	fvyyuo	300000000
 尴尬	gygyeu	100000000
 谨慎	jysloa	300000000
 懒惰	lldloo	300000000
 垃圾	ltjtei	300000000
+磨砺	mslsoe	100000000
 钥匙	yjsvue	500000000
 蜘蛛	zczcia	100000000
 𰻞𰻞面	bbmeoa	200000000
@@ -233,6 +235,7 @@ use_preset_vocabulary: false
 不同凡响	btfxeu	100000000
 暴跳如雷	btrlia	100000000
 波涛汹涌	btxyoo	100000000
+悲痛欲绝	btyjie	100000000
 布尔类型	bvlxeu	400000000
 布尔运算	bvyseu	200000000
 宝安中心	bvzxoo	100000000
@@ -427,6 +430,7 @@ use_preset_vocabulary: false
 党纪国法	djgfio	100000000
 殚精竭虑	djjleu	100000000
 独具匠心	djqxua	100000000
+大苦大难	dkdneu	100000000
 豆蔻年华	dknhei	100000000
 大快人心	dkrxeu	100000000
 斗量车载	dlczoo	100000000
@@ -1283,6 +1287,7 @@ use_preset_vocabulary: false
 气势磅礴	qspbue	100000000
 巧舌如簧	qsrhei	100000000
 全身而退	qsvtuo	200000000
+千山万水	qswsue	100000000
 前所未有	qswyou	100000000
 奇石异草	qsyceu	100000000
 翘首以盼	qsypea	100000000
@@ -1369,6 +1374,7 @@ use_preset_vocabulary: false
 润物无声	rwwsoo	100000000
 人心涣散	rxhsuo	100000000
 人心所向	rxsxuo	100000000
+人心向背	rxxbuo	100000000
 日新月异	rxyyia	100000000
 如鱼得水	rydsau	200000000
 若有所失	ryssei	100000000
@@ -1811,6 +1817,7 @@ use_preset_vocabulary: false
 为渊驱鱼	wyqyou	100000000
 危言耸听	wystua	100000000
 无依无靠	wywkee	100000000
+无忧无虑	wywlee	100000000
 危言危行	wywxua	100000000
 无影无踪	wywzee	100000000
 望洋兴叹	wyxtoe	100000000
@@ -2108,7 +2115,7 @@ use_preset_vocabulary: false
 以耳代目	yvdmao	100000000
 言而有信	yvyxoe	100000000
 一文不名	ywbmee	100000000
-义无反顾	ywfgou	100000000
+义无反顾	ywfgou	200000000
 义无返顾	ywfgou	100000000
 业务繁忙	ywfmii	100000000
 一无是处	ywscee	100000000
