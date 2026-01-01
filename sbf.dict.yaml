@@ -129,8 +129,8 @@ columns:
 #	kuu
 #	kui
 #	mae
-#	naa
-#	nuu
+越	naa
+壮	nuu	# m
 #	nuo
 #	pae
 #	pai
@@ -679,7 +679,7 @@ columns:
 坚	jii	0
 睛	jio	0
 尖	jiu	0
-经济	jj'	0
+渐渐	jj'	0	# 经济
 钾	jjii	9999
 觊	jjiu	9999
 绢	jjiu	9999

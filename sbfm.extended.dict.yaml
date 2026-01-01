@@ -12,8 +12,10 @@
 # 
 ---
 name: sbfm.extended
-version: 2025.12
+version: 2026.01
 sort: by_weight
+import_tables:
+  - patch
 use_preset_vocabulary: false
 ...
 剥削	blxlae	200000000
@@ -405,6 +407,7 @@ use_preset_vocabulary: false
 当断不断	ddbdio	100000000
 胆大包天	ddbtua	100000000
 动荡不安	ddbvee	100000000
+点点滴滴	ddddie	100000000
 大动干戈	ddggeu	100000000
 跌宕起伏	ddqfia	100000000
 点到为止	ddwzie	100000000
@@ -599,6 +602,7 @@ use_preset_vocabulary: false
 蜂拥而至	fyvzia	100000000
 丰衣足食	fyzsee	100000000
 风姿绰约	fzcyua	100000000
+风中残烛	fzczua	100000000
 法治建设	fzjsoo	100000000
 负债累累	fzllua	100000000
 纷至沓来	fztlaa	100000000
@@ -608,6 +612,7 @@ use_preset_vocabulary: false
 故步自封	gbzfei	100000000
 固步自封	gbzfia	100000000
 刚愎自用	gbzyia	100000000
+光彩夺目	gcdmio	100000000
 共产党员	gcdyei	300000000
 改朝换代	gchdae	100000000
 各持己见	gcjjua	100000000
@@ -732,6 +737,7 @@ use_preset_vocabulary: false
 虎虎生风	hhsfie	100000000
 花花世界	hhsjei	100000000
 恒河沙数	hhssuo	100000000
+护花使者	hhszei	100000000
 囫囵吞枣	hhtzia	100000000
 浑浑噩噩	hhvvoo	100000000
 花好月圆	hhyyei	100000000
@@ -1386,6 +1392,7 @@ use_preset_vocabulary: false
 柔中带刚	rzdgao	100000000
 软中带硬	rzdyea	100000000
 任重道远	rzdyui	100000000
+仁者见仁	rzjrui	100000000
 日臻完善	rzwsia	100000000
 仁至义尽	rzyjui	100000000
 如坐针毡	rzzzau	100000000
@@ -1745,6 +1752,7 @@ use_preset_vocabulary: false
 物尽其用	wjqyue	100000000
 危机四伏	wjsfua	100000000
 无拘无束	wjwsee	100000000
+我见犹怜	wjylue	100000000
 无济于事	wjysee	100000000
 无稽之谈	wjztee	100000000
 无可比拟	wkbnee	100000000
@@ -1988,6 +1996,7 @@ use_preset_vocabulary: false
 原封不动	yfbdeu	100000000
 依法办事	yfbsui	100000000
 一帆风顺	yffsee	500000000
+阳奉阴违	yfywai	100000000
 一傅众咻	yfzxee	100000000
 一概不用	ygbyee	100000000
 一官半职	ygbzee	100000000
@@ -2155,6 +2164,7 @@ use_preset_vocabulary: false
 以一持万	yycwao	100000000
 抑扬顿挫	yydcei	100000000
 洋洋大观	yydgoo	100000000
+耀眼夺目	yydmio	100000000
 一衣带水	yydsee	100000000
 永远的神	yydsoa	300000000
 扬扬得意	yydyei	400000000
@@ -2187,6 +2197,7 @@ use_preset_vocabulary: false
 奄奄一息	yyyxeu	100000000
 隐隐约约	yyyyai	100000000
 犹犹豫豫	yyyyua	100000000
+欲言又止	yyyzuo	100000000
 一语中的	yyzdee	100000000
 一叶障目	yyzmee	100000000
 一叶知秋	yyzqee	100000000
@@ -2351,6 +2362,7 @@ use_preset_vocabulary: false
 辗转反侧	zzfcea	100000000
 战战兢兢	zzjjie	100000000
 字斟句酌	zzjzoo	100000000
+智者见智	zzjzue	100000000
 孜孜矻矻	zzkkai	100000000
 自找麻烦	zzmfui	100000000
 志在千里	zzqlei	200000000

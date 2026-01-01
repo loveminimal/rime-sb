@@ -38,6 +38,8 @@ def get_header_sync(file_name):
 name: {'.'.join(file_name.split('.')[:-2])}
 version: {datetime.now().date().strftime("%Y.%m")}
 sort: by_weight
+import_tables:
+  - patch
 use_preset_vocabulary: false
 ...
 '''

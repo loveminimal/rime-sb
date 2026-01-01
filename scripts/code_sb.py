@@ -5,10 +5,11 @@
 import json
 from pathlib import Path
 from is_chinese_char import is_chinese_char
-from meta_sb import meta_sb
+# from code_table import code_table
+# from meta_sb import meta_sb
 
 
-def get_sb_code(word, ext='，。？'):
+def get_sb_code(word, meta_sb, ext='，。？'):
     code = []
     # 此处追加一些可携带元素，如 '，。'
     for e in ext:
@@ -42,10 +43,9 @@ def get_sb_code(word, ext='，。？'):
     return code
 
 
-def code_sb(proj_dir):
-    # print(proj_dir)
-    # ① 加载编码元数据
-    meta_path = proj_dir / 'scripts' / 'meta.yaml'
+def get_meta_sb(proj_dir):
+    # meta_path = proj_dir / 'scripts' / 'meta.yaml'
+    meta_path = proj_dir / 'sbfd.dict.yaml'
     meta_dict = {}
     with open(meta_path, 'r', encoding='utf-8') as f:     
         print(f'☑️  已加载声笔源编码数据 » {meta_path}\n')   
@@ -57,22 +57,72 @@ def code_sb(proj_dir):
             parts = line.split('\t')
             word, code, weight, stem = parts[0], parts[1], parts[2], parts[3]
             
+            # 过滤非 8105 的字
+            # if word not in code_table:
+            #     continue
+            
             if word not in meta_dict:
                 meta_dict[word] = []
             meta_dict[word].append([code, weight, stem])
 
-    # 更新编码元数据
-    need_update_meta_sb = False
-    # need_update_meta_sb = True
-    if need_update_meta_sb:
-        meta_sb_path = proj_dir / 'scripts' / 'meta_sb.py'
-        with open(meta_sb_path, 'w', encoding='utf-8') as m:
-            print(f'☑️  已更新声笔飞单元字典 » {meta_sb_path}\n')   
-            m.write("meta_sb = ")
-            json.dump(meta_dict, m, ensure_ascii=False, indent=4)
+        # 对生僻的多音字做一些特殊处理
+        meta_sb = {}
+        for key, value in meta_dict.items():
+            if len(value) == 1:
+                meta_sb[key] = value
+                continue
+            
+            filter_weight = 250
+            _value = [v for v in value if int(v[1]) <= filter_weight]
+            if len(_value) == len(value):
+                # 多音字条目且权重都小于 filter_weight，仅收录第一个元素
+                meta_sb[key] = [value[0]]
+            else: 
+                # 这里我们过滤掉多音字中权重小于等于 filter_weight 的音
+                meta_sb[key] = [v for v in value if int(v[1]) > filter_weight]  
+
+        # 是否更新编码元数据
+        need_update_meta_sb = False
+        # need_update_meta_sb = True
+        if need_update_meta_sb:
+            meta_sb_path = proj_dir / 'scripts' / 'meta_sb.py'
+            with open(meta_sb_path, 'w', encoding='utf-8') as m:
+                print(f'☑️  已更新声笔飞单元字典 » {meta_sb_path}\n')   
+                m.write("meta_sb = ")
+                json.dump(meta_dict, m, ensure_ascii=False, indent=4)
+    return meta_sb
+    
+
+def get_patch_dict(proj_dir):
+    patch_path = proj_dir / 'patch.dict.yaml'
+    patch_dict = {}
+    with open(patch_path, 'r', encoding='utf-8') as f:     
+        print(f'☑️  已加载既有PATCH数据 » {patch_path}\n')   
+        for line in f.readlines():
+            line = line.strip()
+            if not line or not is_chinese_char(line[0]):
+                continue
+            
+            parts = line.split('\t')
+            word, code, weight = parts[0], parts[1], parts[2]
+            
+            # 过滤非 8105 的字
+            # if word not in code_table:
+            #     continue
+            
+            if word not in patch_dict:
+                patch_dict[word] = []
+            patch_dict[word].append([code, weight])
+    return patch_dict
+
+
+def code_sb(proj_dir):
+    # print(proj_dir)
+    # 加载编码元数据
+    meta_sb = get_meta_sb(proj_dir)
 
     # return
-    # ② 待转换的源数据
+    # 待转换的源数据
     # src_dir = proj_dir / 'patches'
     src_dir = Path('C:\\Users\\jack\\Nutstore\\1\\我的坚果云\\patches')
     if not src_dir.exists():
@@ -111,12 +161,15 @@ def code_sb(proj_dir):
             words_total.extend(words)
 
 
-    # ③ 转换后的数据
+    # 转换后的数据
     out_path = proj_dir / 'patch.dict.yaml'
-    with open(out_path, 'w', encoding='utf-8') as o:
-        print(f'☑️  已排序处理生成码表中 ……')
-        # 添加表头信息
-        o.write(f'''# Rime dictionary - {out_path.name}
+    with open(out_path, 'a+', encoding='utf-8') as o:        
+        # 读取第一行，判断是否已有表头
+        o.seek(0)  # 将指针从末尾移动到文件开头
+        first_line = o.readline().strip()
+        if not first_line:
+            # 添加表头信息
+            o.write(f'''# Rime dictionary - {out_path.name}
 # encoding: utf-8
 ---
 name: patch
@@ -125,9 +178,17 @@ sort: by_weight
 use_preset_vocabulary: false
 ...
 ''')
-        # for word in list(dict.fromkeys(words_total)):
-        for word in list(dict.fromkeys(sorted(words_total))):
-            code_list = get_sb_code(word)
+        # 读取原有 patch 数据
+        patch_dict = get_patch_dict(proj_dir)
+        
+        print(f'☑️  已排序处理生成码表中 ……')
+        for word in list(dict.fromkeys(words_total)):
+        # for word in list(dict.fromkeys(sorted(words_total))):
+            # 已经存在的不再重复编码
+            if word in patch_dict:
+                continue
+
+            code_list = get_sb_code(word, meta_sb)
             # 忽略包含非法的编码词条 
             if not code_list:
                 continue
@@ -142,6 +203,6 @@ use_preset_vocabulary: false
 if __name__ == '__main__':
     proj_dir = Path(__file__).resolve().parent.parent
     
-    print(len(meta_sb))
+    # print(len(meta_sb))
 
     code_sb(proj_dir)

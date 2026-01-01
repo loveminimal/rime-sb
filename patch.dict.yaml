@@ -1,0 +1,14 @@
+# Rime dictionary - patch.dict.yaml
+# encoding: utf-8
+---
+name: patch
+version: 2025.12
+sort: by_weight
+use_preset_vocabulary: false
+...
+百感交集	bgjjeu	1
+无枝可依	wzkyee	1
+鹰击长空	yjckoe	1
+鱼翔浅底	yxqdua	1
+万类霜天竞自由	wlsyea	1
+大吉大利	djdleu	1

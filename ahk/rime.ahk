@@ -5,6 +5,7 @@
 ; --------------------------------------------------------
 ; ¹ 项目根目录
 RootPath := A_ScriptDir "\.."
+Nutstore := "C:\Users\jack\Nutstore\1\我的坚果云"
 ;*² 监听文件列表
 filesToWatch := [
     ; A_AppData "\Rime\lua\user_words.lua",
@@ -69,6 +70,12 @@ weaselSetupPath := GetWeaselPath('setup')
 +!b::
 {
     Run RootPath "\slb\slb.exe"
+    return
+}
+; 自定义添加词汇
++!t::
+{
+    Run "notepad.exe " Nutstore "\patches\patch.txt"
     return
 }
 
