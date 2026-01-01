@@ -1,5 +1,4 @@
 -- 顶功处理器
--- 通用（不包含声笔系列码的特殊逻辑）
 -- 本处理器能够支持所有的规则顶功模式
 -- 根据当前编码和新输入的按键来决定是否将当前编码或其一部分的首选顶上屏
 
@@ -145,6 +144,32 @@ function this.func(key_event, env)
     env.engine:process_key(rime.KeyEvent(stroke))
     return rime.process_results.kAccepted
   end
+
+  if core.mm(schema_id) and rime.match(input, "[a-z]{3}") and (rime.match(incoming, "[0-9]") 
+  or rime.match(incoming, "[a-z]") and not context:get_option("is_enhanced")) then
+    local part1 = input:sub(1, 2)
+    local part2 = input:sub(3, 3)
+    context:clear()
+    context:push_input(part1)
+    env.engine:process_key(rime.KeyEvent("space"))
+    context:clear()
+    context:push_input(part2)
+    env.engine:process_key(rime.KeyEvent(incoming))
+    return rime.process_results.kAccepted
+  end  
+
+  if core.mm(schema_id) and rime.match(input, "[a-z]{4}") 
+  and rime.match(incoming, "[a-z;',./]") and context:get_option("is_enhanced") then
+    local part1 = input:sub(1, 2)
+    local part2 = input:sub(3, 4)
+    context:clear()
+    context:push_input(part1)
+    env.engine:process_key(rime.KeyEvent("space"))
+    context:clear()
+    context:push_input(part2)
+    env.engine:process_key(rime.KeyEvent(incoming))
+    return rime.process_results.kAccepted
+  end 
 
   for _, rule in ipairs(env.popping) do
     local when = rule.when

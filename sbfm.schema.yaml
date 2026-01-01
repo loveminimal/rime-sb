@@ -46,9 +46,9 @@ switches:
     reset: 0
   - options: [pro_word, pro_char, delayed_pop]
     reset: 0
+  # states: [词组, 单字, 延顶]
   - name: show_es
     reset: 1
-  # states: [词组, 单字, 延顶]
   # 不要改变下面的状态，以免穿帮
   - name: third_pop
     reset: 0
@@ -254,7 +254,7 @@ sbfm_extra_bindings:
     - match: "[bpmfdtnlgkhjqxzcsrywv]{3}"
       accept: Tab
       send_sequence: "{Home}{Right}{Right}{apostrophe}{space}{space}"
-    - match: "[bpmfdtnlgkhjqxzcsrywv]{2}[a-z]"
+    - match: "[bpmfdtnlgkhjqxzcsrywv]{2}[bpmfdtnlgkhjqxzcsrywv]"
       accept: "'"
       send_sequence: "{Home}{Right}{space}{apostrophe}{space}"    
     - match: "[bpmfdtnlgkhjqxzcsrywv][a-z0-9][bpmfdtnlgkhjqxzcsrywv][a-z]"

@@ -38,6 +38,7 @@ local kUnitySymbol   = " \xe2\x98\xaf "
 ---@field is_enhanced boolean
 ---@field enhanced_char boolean
 ---@field char_lens { string : number }
+---@field xm_lens { string : number }
 
 ---判断输入的编码是否为静态编码
 ---@param input string
@@ -101,8 +102,8 @@ local function dfs_encode(phrase, position, code, env)
   -- 对所有可能的构词码，逐个入栈，然后递归调用，从而实现各字的构词码之间的排列组合
   for stem in string.gmatch(translations, "[^ ]+") do
     -- 如果之前调用的是 reverse:lookup，那么除了单字全码之外，也可能查询到简码
-    -- 这里要把它们过滤掉
-    if stem:len() < 4 then
+    -- 这里要把它们过滤掉，猛码除外
+    if not core.mm(env.engine.schema.schema_id) and stem:len() < 4 then
       goto continue
     end
     table.insert(code, stem)
@@ -231,6 +232,19 @@ function this.init(env)
     env.char_lens[char] = tonumber(len)
   end
   file:close()
+
+  env.xm_lens = {}
+  path = rime.api.get_user_data_dir() .. "/lua/sbxlm/xm_lens.txt"
+  file = io.open(path, "r")
+  if not file then
+    return
+  end
+  for line in file:lines() do
+    ---@type string, string
+    local char, len = line:match("([^\t]+)\t([^\t]+)")
+    env.xm_lens[char] = tonumber(len)
+  end
+  file:close()
 end
 
 ---涉及到自动码长翻译时，指定对特定类型的输入应该用何种策略翻译
@@ -280,6 +294,22 @@ local function dynamic(input, env)
     end
   elseif core.fm(schema_id) or core.fy(schema_id) or core.fd(schema_id) or core.sp(schema_id) then
     return input:len() - 3
+  elseif core.mm(schema_id) then
+    if input:len() == 5 then
+      return dtypes.full
+    else
+      return dtypes.invalid
+    end
+  elseif core.xm(schema_id) then
+    if input:len() == 5 then
+      return dtypes.base
+    elseif input:len() == 6 then
+      return dtypes.select
+    elseif input:len() == 7 then
+      return dtypes.full
+    else
+      return dtypes.invalid
+    end
   end 
   -- 对于飞讯来说，一般情况下基本编码的长度是 5，扩展编码是 7，在 6 码时选重。
   -- 因此，将编码的长度减去 4 就分别对应了上述的 short, base, select, full 四种情况。
@@ -347,7 +377,10 @@ local function validate_phrase(entry, segment, type, input, env)
   if entry.comment == "" then
     goto valid
   end
-  if (core.fm(schema_id) or core.fy(schema_id) or core.fd(schema_id)) and input:len() < 4 then
+  if (core.fm(schema_id) or core.fy(schema_id) or core.fd(schema_id) or core.mm(schema_id)) and input:len() < 4 then
+    return nil
+  end
+  if core.xm(schema_id) and input:len() < 5 then
     return nil
   end
   -- 处理一些特殊的过滤条件
@@ -368,14 +401,17 @@ local function validate_phrase(entry, segment, type, input, env)
         return nil
       end
     end
-    if ((core.fm(schema_id) or core.fy(schema_id)) and (env.delayed_pop or env.pro_char) or core.fd(schema_id) or core.fx(schema_id))
+    if ((core.fm(schema_id) or core.fy(schema_id)) and (env.delayed_pop or env.pro_char)
+    or core.fd(schema_id) or core.fx(schema_id) or core.mm(schema_id) or core.xm(schema_id))
     and (utf8.len(entry.text) == 2 or utf8.len(entry.text) == 3) then
+      local lens = env.char_lens
+      if core.xm(schema_id) then lens = env.xm_lens end
       if (utf8.len(entry.text) == 2) then
         local offset = utf8.offset(entry.text, 2)
         local char1 = entry.text:sub(1, offset - 1)
         local char2 = entry.text:sub(offset)
-        local char1_len = env.char_lens[char1]
-        local char2_len = env.char_lens[char2]
+        local char1_len = lens[char1]
+        local char2_len = lens[char2]
         if char1 and char2 and char1_len and char2_len then
           if char1_len + char2_len <= env.filter_strength then
             return nil
@@ -387,9 +423,9 @@ local function validate_phrase(entry, segment, type, input, env)
           local char1 = entry.text:sub(1, offset - 1)
           local char2 = entry.text:sub(offset, offset2 - 1)
           local char3 = entry.text:sub(offset2)
-          local char1_len = env.char_lens[char1]
-          local char2_len = env.char_lens[char2]
-          local char3_len = env.char_lens[char3]
+          local char1_len = lens[char1]
+          local char2_len = lens[char2]
+          local char3_len = lens[char3]
           if char1 and char2 and char3 and char1_len and char2_len and char3_len then
             if char1_len + char2_len + char3_len <= env.filter_strength then
               return nil
@@ -561,7 +597,10 @@ function this.func(input, segment, env)
     -- 1. 编码为 sxs 格式时，只要不是简码的三顶模式，就要拆分成二简字 + 一简字翻译
     -- 2. 飞系方案，编码为 sbsb 格式时，拆分成声笔字 + 声笔字翻译
     -- 3. 飞讯，编码为 sxsb 格式时，拆分成二简字 + 声笔字翻译
-    if (core.sxs(input) and not env.third_pop)
+    if core.mm(schema_id) and (core.xxx(input) or core.xxxx(input)) 
+    or core.xm(schema_id) and core.sxsx(input) then
+      translate_by_split(input, segment, env)
+    elseif (core.sxs(input) and not env.third_pop)
         or (core.feixi(schema_id) and core.sbsb(input))
         or (core.fx(schema_id) and core.sxsb(input)) 
         or rime.match(input, "([bpmfdtnlgkhjqxzcsrywv][a-z]){2}[aeiou]{0,2}[AEUIO][aeiouAEUIO]?") then
@@ -782,6 +821,9 @@ function this.func(input, segment, env)
           and rime.match(input, "[bpmfdtnlgkhjqxzcsrywv][a-z][bpmfdtnlgkhjqxzcsrywvBPMFDTNLGKHJQXZCSRYWV][aeuio23789][aeuio]+")) then
           break
         elseif (input:len() < 6) then
+          break
+        end
+        if input:len() < 7 and core.xm(schema_id) then
           break
         end
       end
