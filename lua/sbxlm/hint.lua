@@ -365,7 +365,7 @@ function this.func(translation, env)
 				memory:dict_lookup(candidate.preedit .. hint_p[j], false, 1)
 				for entry in memory:iter_dict()
 				do
-					candidate:get_genuine().comment = candidate:get_genuine().comment .. entry.text .. hint_p[j]
+					candidate:get_genuine().comment = candidate:get_genuine().comment .. ' ' .. entry.text .. hint_p[j]
 					break
 				end	
 			end
