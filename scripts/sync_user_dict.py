@@ -192,7 +192,7 @@ if __name__ == '__main__':
     
     # --- 是否让用户词库排在最前 ---
     # 权重放大亿点点
-    is_keep_user_dict_first = True
+    is_keep_user_dict_first = False
 
     src_dir = Path('C:\\Users\\jack\\Nutstore\\1\\我的坚果云\\RimeSync\\sb-rime')
     out_dir = Path('C:\\Users\\jack\\AppData\\Roaming\\Rime')

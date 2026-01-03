@@ -94,11 +94,21 @@ def get_meta_sb(proj_dir):
     
 
 def get_patch_dict(proj_dir):
-    patch_path = proj_dir / 'patch.dict.yaml'
+    lines_total = []
     patch_dict = {}
-    with open(patch_path, 'r', encoding='utf-8') as f:     
+
+    # 读取飞码扩展词库中的词语
+    sbfm_extended_path = proj_dir / 'sbfm.extended.dict.yaml'
+    with open(sbfm_extended_path, 'r', encoding='utf-8') as s:
+        print(f'☑️  已加载飞码扩展数据 » {sbfm_extended_path}')   
+        lines_total = s.readlines()
+
+    # 读取飞码补丁词库中的词语
+    patch_path = proj_dir / 'patch.dict.yaml'
+    with open(patch_path, 'r', encoding='utf-8') as p:     
         print(f'☑️  已加载既有PATCH数据 » {patch_path}\n')   
-        for line in f.readlines():
+        lines_total.extend(p.readlines())
+        for line in lines_total:
             line = line.strip()
             if not line or not is_chinese_char(line[0]):
                 continue
@@ -156,7 +166,7 @@ def code_sb(proj_dir):
                     continue
                 
                 word = line.split('\t')[0].strip()
-                if len(word) > 2:
+                if len(word) > 1:
                     words.append(word)
             words_total.extend(words)
 
