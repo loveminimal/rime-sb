@@ -130,7 +130,7 @@ def convert(src_dir, out_dir, src_file, out_file):
             o.write(res)
 
 @timer
-def combine(out_dir, out_file):
+def combine(out_dir, out_file, is_keep_user_dict_first=False):
     print(f'\n🔜  === 开始增量合并「 声笔 」用户词库文件 ===')
     res_dict = {}
     res_dict_weight = defaultdict(set)
@@ -210,7 +210,7 @@ if __name__ == '__main__':
 
     convert(src_dir, out_dir, src_file, out_file)
     # 合并至用户文件
-    combine(out_dir, out_file)
+    combine(out_dir, out_file, is_keep_user_dict_first)
     # 清理掉临时文件 *.temp
     if current_out_file_temp.exists():
         current_out_file_temp.unlink()
