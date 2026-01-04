@@ -48,7 +48,7 @@ function this.func(key_event, env)
   end
   if segment:has_tag("sbyp") or segment:has_tag("bihua")
       or segment:has_tag("zhlf") or segment:has_tag("sbzdy")
-      or segment:has_tag("lua") then
+      or segment:has_tag("lua") or segment:has_tag("sbfm_ext") then
     local pat = "[_23789]"
     local str = "_23789"
     if segment:has_tag("lua") then
