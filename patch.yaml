@@ -19,25 +19,25 @@ shared_patch:
   # 废弃 emoji 啦 ➭ 使用临时「 飞码长词 」替换
   # emoji 表情 —— sbyp ➭ sbfm
   # ——————
-  # emoji/+:
-  #   dictionary: sbfm
-  #   prism: sbfm
-  #   packs:
+  emoji/+:
+    dictionary: sbfm
+    prism: sbfm
+    packs:
   # 使用 e 引导飞码长词，聊胜于无~
-  engine/segmentors/@after 2: affix_segmentor@sbfm_ext
-  engine/translators/@after 1: table_translator@sbfm_ext
-  recognizer/patterns/emoji: ""
-  recognizer/patterns/sbfm_ext: "^e[bpmfdtnlgkhjqxzcsrywv][a-z']*$"
-  sbfm_ext:
-    tag: sbfm_ext
-    prefix: e
-    tips: "〔飞码长词〕"
-    dictionary: sbfm.extended
-    enable_completion: true
-    enable_user_dict: false
-    comment_format:
-      # 默认显示 4 码，大于 4 码时才显示首字前两笔
-      - xform/([a-z]{1,3})[a-z][a-z]/$1/
+  # engine/segmentors/@after 2: affix_segmentor@sbfm_ext
+  # engine/translators/@after 1: table_translator@sbfm_ext
+  # recognizer/patterns/emoji: ""
+  # recognizer/patterns/sbfm_ext: "^e[bpmfdtnlgkhjqxzcsrywv][a-z']*$"
+  # sbfm_ext:
+  #   tag: sbfm_ext
+  #   prefix: e
+  #   tips: "〔飞码长词〕"
+  #   dictionary: sbfm.extended
+  #   enable_completion: true
+  #   enable_user_dict: false
+  #   comment_format:
+  #     # 默认显示 4 码，大于 4 码时才显示首字前两笔
+  #     - xform/([a-z]{1,3})[a-z][a-z]/$1/
 
   # 拼写规则
   # speller/alphabet: "bpmfdtnlgkhjqxzcsrywvaeiou0123456789;'BPMFDTNLGKHJQXZCSRYWVAEUIO"

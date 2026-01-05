@@ -13,3 +13,5 @@ patch:
       reset: 1
       states: [Ⓛ, Ⓜ]
   translator/filter_strength: 3
+  translator/enable_user_dict: false
+  extended/enable_user_dict: false

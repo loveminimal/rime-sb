@@ -47,7 +47,8 @@ local function f_auto_select(input, env)
     local first_char = input_code:sub(1, 1)
 
     -- 仅处理 e/u 开头的编码
-    if first_char == 'e' or first_char == 'u' then
+    -- if first_char == 'e' or first_char == 'u' then
+    if first_char == 'u' then
         local candidates = {}
         local count = 0
         -- 收集候选并计数

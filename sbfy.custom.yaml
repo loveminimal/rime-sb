@@ -1,3 +1,0 @@
-patch:
-  __include: patch.yaml:/shared_patch
-  schema/icon: "assets/fly_y.ico"
