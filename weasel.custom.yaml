@@ -21,12 +21,12 @@ patch:
 # kuon lost_temple luna macau metroblue nba ps4 psionics skype smurfs 
 # so_young starcraft starcraft_ii steam tintin wii xbox_silver youtube       
 # ---------------------------------------------------------------------
-  __include: style.yaml:skjk
+  __include: style.yaml:styles
   __patch:
     # 方案、状态切换时的提示跟随 
     show_notifications: false
     style/+:
-      color_scheme: skjk
+      color_scheme: orjk  # 👈 永久性修改默认主题
       font_face: LXGW WenKai GB Screen R, LXGW WenKai, Segoe UI Emoji, 黑体字根
       label_font_face: LXGW WenKai Mono, LXGW WenKai GB Screen R, LXGW WenKai, Segoe UI Emoji, 黑体字根
       comment_font_face: LXGW WenKai Mono, LXGW WenKai GB Screen R, LXGW WenKai, Segoe UI Emoji, 黑体字根
