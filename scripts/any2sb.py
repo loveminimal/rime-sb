@@ -1,4 +1,5 @@
-# 转换生成用以临时调用的飞码补丁词库
+# 转换任意词典词条为声笔飞系可用词库
+# 词条格式 ➭ `词条	[编码]	[权重]` ，后两者可选，使用 TAB 间隔
 # - https://github.com/loveminimal/rime-sb
 # - Jack Liu <https://aituyaa.com>
 # 
@@ -135,7 +136,7 @@ def any2sb(proj_dir):
     # 待转换的源数据
     # src_dir = proj_dir / 'patches'
     # src_dir = Path('C:\\Users\\jack\\Nutstore\\1\\我的坚果云\\patches')
-    src_dir = proj_dir / '..' / 'patches'
+    src_dir = (proj_dir / '..' / 'patches').resolve()
     if not src_dir.exists():
         print(f'☑️  不存在转换数据目录 » {src_dir}')   
         print(f'❎ ➭ 结束转换')
