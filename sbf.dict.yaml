@@ -146,10 +146,10 @@ columns:
 健	rie
 蕴	riu
 咦	rii
-宗	rio
-谆	roa
-专	roe
-挚	rou
+#	rio
+#	roa
+#	roe
+#	rou
 #	vaa
 #	vae
 致	voe
@@ -161,8 +161,15 @@ columns:
 致	vea	#
 #	vdi
 #	vdo
+挚	vgi
+宗	vgo
+专	vhe
+谆	vya
+砖	vso
 帜	vji
 # 重码分配
+阂	hmoa
+麾	hmue
 麒	qleo
 懵	mleo
 嵩	ssoa
@@ -275,7 +282,7 @@ columns:
 炊	chaa
 葬	zceo
 庶	sgeo
-豁	hgeo
+豁	hgoo
 旭	xvai
 降	xvoi
 嘹	lkea
