@@ -118,11 +118,11 @@ weaselSetupPath := GetWeaselPath('setup')
 ;     Run "notepad.exe " RootPath "\custom_pinyin.txt"
 ;     return
 ; }
-; +!t::
-; {
-;     Run "notepad.exe " RootPath "\custom_tiger.txt"
-;     return
-; }
++!o::
+{
+    Run "notepad.exe " RootPath "\sbf.dict.yaml"
+    return
+}
 ; +!b::
 ; {
 ;     Run "notepad.exe " RootPath "\sbzdy.txt"
