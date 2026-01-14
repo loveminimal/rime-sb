@@ -15,7 +15,7 @@
 
 将喜欢的一切留在身边，这便是努力的意义。	x
 
- TypeScript 	ts
- JavaScript 	js
- Java 	java
- Python 	py
+TypeScript 	ts
+JavaScript 	js
+Java 	java
+Python 	py

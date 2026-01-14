@@ -152,7 +152,7 @@ columns:
 绑	bau	0
 并不	bb'	0
 不错	bc'	0
-不得	bd'	0
+不断	bd'	0	# 不得
 杯	be'	0
 抱	be;	0
 毕	bea	0
@@ -177,8 +177,8 @@ columns:
 #	bka	
 本来	bl'	0
 #	bli	
-部门	bm'	0
-#	bmi	
+爸妈	bm'	0	# 部门
+爸爸妈妈	bmi	
 半年	bn'	0
 禀	bo'	0
 怖	bo;	0
@@ -4746,7 +4746,7 @@ columns:
 #	gfao	
 #	gfau	
 #	gfe'	
-#	gfea	
+擀	gfea	
 缸	gfeo	##
 扛	gfeu	##
 #	gfi'	
@@ -6093,7 +6093,7 @@ columns:
 橘	jmai	##
 #	jme'	
 #	jmi'	
-#	jmio	
+椒	jmio	
 #	jmiu	
 #	jmo'	
 #	jmoa	
@@ -14146,7 +14146,7 @@ columns:
 轧	ycio	##
 #	yciu	
 #	yco'	
-#	ycoa	
+徉	ycoa	
 蛇	ycoi	##
 #	ycu'	
 苑	ycuu	9999
