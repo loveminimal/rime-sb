@@ -55,7 +55,7 @@ local mapping = {
     wn = "🐌", djs = "🦄", nt = "🐮",
     fq = "🍅", syc = "🍀",
     tm = "™️" , ri = "☀️",
-    yf = "♪",
+    yf = "♪",  ig = "⏭️",
     
     -- 编辑常用符号
     ms = "> :: ", lo = "loveminimal", si = "https://aituyaa.com", ai = "aituyaa",

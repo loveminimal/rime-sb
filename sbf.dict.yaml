@@ -164,7 +164,7 @@ columns:
 不过	bg'	0
 #	bgi	
 保护	bh'	0
-#	bha	
+巴	bha	
 贬	bi'	0
 蹦	bi;	0
 败	bia	0
@@ -178,7 +178,7 @@ columns:
 本来	bl'	0
 #	bli	
 爸妈	bm'	0	# 部门
-爸爸妈妈	bmi	
+#	bmi	
 半年	bn'	0
 禀	bo'	0
 怖	bo;	0
@@ -1123,7 +1123,7 @@ columns:
 能否	nf'	0
 那个	ng'	0
 #	nge	
-#	ngi	
+影	ngi	
 #	ngu	
 女孩	nh'	0
 #	nha	
@@ -1164,7 +1164,7 @@ columns:
 内容	nr'	0	# 女人
 #	nri	
 那时	ns'	0
-#	nso	
+状	nso	
 念头	nt'	0
 #	nte	
 #	nti	
@@ -1210,7 +1210,7 @@ columns:
 #	p/o	
 #	p/u	
 #	p;a	
-迫	p;e	
+#	p;e	
 #	p;i	
 #	p;o	
 #	p;u	
@@ -1459,7 +1459,7 @@ columns:
 溽	ro'	0
 襦	ro;	0
 #	roa	
-#	roe	
+迫	roe	
 闰	roi	0
 溶	roo	0
 #	rou	
@@ -1744,14 +1744,14 @@ columns:
 殴	veu	0
 案犯	vf'	0
 #	vfo	
-#	vfu	
-而过	vg'	0
+足	vfu	
+这个	vg'	0	# 而过
 #	vga	
 挚	vgi	##
 宗	vgo	##
 #	vgu	
 而后	vh'	0
-#	vha	
+症	vha	
 专	vhe	##
 嗄	vi'	0
 智	vi;	0	# 嗳
@@ -1805,10 +1805,10 @@ columns:
 #	vwa	
 #	vwi	
 #	vwo	
-恶心	vx'	0
+这些	vx'	0	# 恶心
 #	vxa	
-#	vxo	
-#	vxu	
+右	vxo	
+左	vxu	
 而已	vy'	0
 谆	vya	##
 儿子	vz'	0
@@ -7521,7 +7521,7 @@ columns:
 #	lvoi	
 #	lvoo	
 #	lvu'	
-#	lvue	
+翎	lvue	
 #	lvui	
 聆	lvuu	##
 #	lwa'	
