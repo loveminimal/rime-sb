@@ -1451,7 +1451,7 @@ columns:
 #	rli	
 #	rlo	
 #	rlu	
-人民	rm'	0
+人们	rm'	0	# 人民
 #	rmu	
 热闹	rn'	0
 #	rna	
@@ -6070,7 +6070,7 @@ columns:
 #	jkoe	
 #	jkoi	
 #	jkoo	
-#	jku'	
+囧	jku'	
 叽	jkuu	9999
 #	jla'	
 竣	jlai	##
@@ -14130,9 +14130,9 @@ columns:
 #	ybio	
 #	ybiu	
 #	ybo'	
-#	yboa	
-#	yboi	
-#	yboo	
+瘀	yboa	
+癔	yboi	
+赟	yboo	
 #	ybu'	
 #	ybue	
 #	ybuo	
