@@ -291,7 +291,7 @@ columns:
 催	cui	0
 豺	cuo	0
 舱	cuu	0
-从而	cv'	0
+挫折	cv'	0	# 从而
 错误	cw'	0	# 成为
 出现	cx'	0
 #	cxa	
@@ -1124,7 +1124,7 @@ columns:
 那个	ng'	0
 #	nge	
 影	ngi	
-#	ngu	
+珍	ngu	
 女孩	nh'	0
 #	nha	
 #	nhi	
@@ -1726,7 +1726,7 @@ columns:
 隘	vai	0
 嫒	vao	0
 媪	vau	0
-耳边	vb'	0
+这边	vb'	0	# 耳边
 #	vba	
 #	vbo	
 #	vbu	
@@ -1750,7 +1750,7 @@ columns:
 挚	vgi	##
 宗	vgo	##
 #	vgu	
-而后	vh'	0
+这会	vh'	0	# 而后
 症	vha	
 专	vhe	##
 嗄	vi'	0
@@ -1763,7 +1763,7 @@ columns:
 直接	vj'	0	# 案件
 帜	vji	##
 安康	vk'	0
-而来	vl'	0
+这里	vl'	0 # 而来
 #	vla	
 #	vlo	
 这么	vm'	0	# 澳门
@@ -1801,7 +1801,7 @@ columns:
 翱	vuo	0
 鳄	vuu	0
 偶尔	vv'	0
-安危	vw'	0
+折磨	vw'	0	# 安危
 #	vwa	
 #	vwi	
 #	vwo	
@@ -1809,7 +1809,7 @@ columns:
 #	vxa	
 右	vxo	
 左	vxu	
-而已	vy'	0
+这样	vy'	0	# 而来
 谆	vya	##
 儿子	vz'	0
 #	vza	
@@ -4677,7 +4677,7 @@ columns:
 #	gce'	
 #	gcea	
 #	gceo	
-#	gceu	
+轱	gceu	
 #	gci'	
 #	gcie	
 #	gcii	

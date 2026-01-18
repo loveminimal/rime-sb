@@ -88,11 +88,12 @@ shared_patch:
       # __include: /algebra_mirror
 
 algebra_map:
-  - xform|([azfv])|$1-|
-  - xform/[a]-/f/
-  - xform/[f]-/a/
-  - xform/[z]-/v/
-  - xform/[v]-/z/
+  - xform|([azfv])|$1|
+  # - xform/[a]-/f/
+  # - xform/[f]-/a/
+  - xform/z/ⓩ/
+  - xform/v/z/
+  - xform/ⓩ/v/
 
 algebra_punc:
   - xlit|,.;/'|DJFGY|
