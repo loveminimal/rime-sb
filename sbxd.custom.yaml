@@ -1,0 +1,10 @@
+patch:
+  __include: patch.yaml:/shared_patch
+  schema/icon: "assets/ele_d.ico"
+  # style/+:
+  #     preedit_type: composition
+  #     inline_preedit: false
+  #     layout:
+  #       __include: style.yaml:/layout_v
+  translator/enable_user_dict: false
+  extended/enable_user_dict: false

@@ -42,6 +42,19 @@ function this.init(env)
 	  env.xm_chars[code] = char
 	end
 	file:close()
+
+	env.xd_chars = {}
+	local path = rime.api.get_user_data_dir() .. "/lua/sbxlm/xd_chars.txt"
+	local file = io.open(path, "r")
+	if not file then
+	  return
+	end
+	for line in file:lines() do
+	  ---@type string, string
+	  local char, code = line:match("([^\t]+)\t([^\t]+)")
+	  env.xd_chars[code] = char
+	end
+	file:close()
 end
 
 ---@param segment Segment
@@ -65,13 +78,14 @@ function this.func(translation, env)
 	]]
 	local id = env.engine.schema.schema_id
 	local is_hidden = ctx:get_option("hide")
-	if core.xm(id) then is_hidden = ctx:get_option("is_hidden") end
+	if core.xm(id) or core.xd(id) then is_hidden = ctx:get_option("is_hidden") end
 	local hint_n1 = { "2", "3", "7", "8", "9" }
 	local hint_n2 = { "1", "4", "5", "6", "0" }
 	local hint_n3 = { "1", "2", "3", "4", "5" }
 	local hint_b = { "a", "e", "u", "i", "o" }
 	local hint_p = { ";", "'", ",", ".", "/" }
 	local i = 1
+	local j = 1
 	local memory = env.memory
 	for candidate in translation:iter() do
 		-- 猛码提示
@@ -87,6 +101,16 @@ function this.func(translation, env)
 		end		
 		-- 象码单字在全码时提示简码
 		if core.xm(id) and rime.match(input, "[bpmfdtnlgkhjqxzcsrywv][a-z]{2}[aeuio12345]") then
+			local codes = env.reverse:lookup(candidate.text)
+			candidate.comment = ""
+			for code in string.gmatch(codes, "[^ ]+") do
+				if input ~= code and input:len() >= code:len() then
+					candidate.comment = candidate.comment .. " " .. code
+				end
+			end
+		end
+		-- 象单单字在全码时提示简码
+		if core.xd(id) and rime.match(input, "[bpmfdtnlgkhjqxzcsrywv][a-z]{2}[aeuio;',./]") then
 			local codes = env.reverse:lookup(candidate.text)
 			candidate.comment = ""
 			for code in string.gmatch(codes, "[^ ]+") do
@@ -188,7 +212,7 @@ function this.func(translation, env)
 			rime.yield(candidate)
 			goto continue
 		end
-		if core.xm(id) and (core.s(input) or core.sxs(input)) and not is_hidden then
+		if (core.xm(id) or core.xd(id)) and (core.s(input) or core.sxs(input)) and not is_hidden then
 			candidate:get_genuine().comment = ''
 			local x = input:len()
 			for j = 1, 5 do
@@ -199,7 +223,9 @@ function this.func(translation, env)
 					break
 				end	
 			end
-			for code, char in pairs(env.xm_chars) do
+			local chars = env.xm_chars
+			if core.xd(id) then chars = env.xd_chars end
+			for code, char in pairs(chars) do
 				if code and code:sub(1,1) == input:sub(x,x) and code:len() == 2 then
 					candidate:get_genuine().comment = candidate:get_genuine().comment .. char .. code:sub(2,2)
 				end
@@ -211,7 +237,8 @@ function this.func(translation, env)
 				; -- 简码只在非隐藏模式且兼容飞系时提示
 			elseif core.feixi(id) and is_hidden then
 				; -- 飞系在隐藏模式时不提示声声词 
-			else
+			elseif not ((core.feixi(id) or core.xm(id) or core.xd(id)) and core.s(input)) then
+				candidate:get_genuine().comment = ''
 				memory:dict_lookup(candidate.preedit .. ";", false, 1)
 				for entry in memory:iter_dict()
 				do
@@ -219,8 +246,20 @@ function this.func(translation, env)
 					break
 				end
 				memory:dict_lookup(candidate.preedit .. "'", false, 1)
+				for entry in memory:iter_dict()	do
+					candidate:get_genuine().comment = candidate:get_genuine().comment .. entry.text .. "'"
+					break
+				end	
+			else
+				candidate:get_genuine().comment = ''
+				memory:dict_lookup(candidate.preedit .. ";", false, 1)
 				for entry in memory:iter_dict()
 				do
+					candidate:get_genuine().comment = ' ' .. entry.text .. ";"
+					break
+				end
+				memory:dict_lookup(candidate.preedit .. "'", false, 1)
+				for entry in memory:iter_dict()	do
 					candidate:get_genuine().comment = candidate:get_genuine().comment .. entry.text .. "'"
 					break
 				end	
@@ -244,11 +283,31 @@ function this.func(translation, env)
 						candidate:get_genuine().comment = candidate:get_genuine().comment .. entry.text .. "/"
 						break
 					end				
-				end			
+				end		
+				
 			end
 		end
-		--象码在sxsx时提示标点字
-		if core.xm(id) and core.sxsx(input) and not is_hidden then
+		--象单在sxx时提示无理四码字
+		if core.xd(id) and core.sxx(input) and not is_hidden then
+			local char
+			if core.sxb(input) then
+				for j = 1, 5 do
+					char = env.xd_chars[input .. hint_b[j]]
+					if char then
+						candidate:get_genuine().comment = candidate:get_genuine().comment .. char .. hint_b[j]
+					end
+				end
+			else
+				for j = 1, 5 do
+					char = env.xd_chars[input .. hint_p[j]]
+					if char then
+						candidate:get_genuine().comment = candidate:get_genuine().comment .. char .. hint_p[j]
+					end
+				end
+			end
+		end
+		--象码和象单在sxsx时提示标点字
+		if (core.xm(id) or core.xd(id)) and core.sxsx(input) and not is_hidden then
 			candidate:get_genuine().comment = ''
 			memory:dict_lookup(candidate.preedit:sub(3,4) .. ";", false, 1)
 			for entry in memory:iter_dict()
@@ -359,6 +418,42 @@ function this.func(translation, env)
 			end
 		end
 
+		-- 象单提示
+		if core.xd(id) then
+			if rime.match(input, "[bpmfdtnlgkhjqxzcsrywv][a-z]{2}") then
+				local forward
+				---@type { string: number }
+				local candidates = {}
+				if core.sxb(input) then
+					for j = 1, 5 do
+						memory:dict_lookup(candidate.preedit .. hint_b[j], false, 1)
+						for entry in memory:iter_dict() do
+							local cand = candidates[hint_b[j]] 
+							if cand and cand > 0  or entry.text == env.xd_chars[input .. hint_b[j]] then
+								break
+							end
+							candidates[hint_b[j]] = 1
+							forward = rime.Candidate("hint", candidate.start, candidate._end, entry.text, hint_b[j])
+							rime.yield(forward)
+						end
+					end		
+				else
+					for j = 1, 5 do
+						memory:dict_lookup(candidate.preedit .. hint_p[j], false, 1)
+						for entry in memory:iter_dict() do
+							local cand = candidates[hint_p[j]] 
+							if cand and cand > 0 or entry.text == env.xd_chars[input .. hint_p[j]] then
+								break
+							end
+							candidates[hint_p[j]] = 1
+							forward = rime.Candidate("hint", candidate.start, candidate._end, entry.text, hint_p[j])
+							rime.yield(forward)
+						end
+					end
+				end
+			end
+		end
+
 		-- 飞系在spb时用注释提示扩展标点字
 		if core.feixi(id) and core.ssb(input) then
 			for j = 1, #hint_p do
@@ -442,7 +537,7 @@ function this.func(translation, env)
 			end
 		end
 		-- 飞系方案、双拼方案和象码在 sx 码位上，进行后码提示
-		if core.sx(input) and (core.feixi(id) and not is_hidden or core.sp(id) or core.xm(id)) then
+		if core.sx(input) and (core.feixi(id) and not is_hidden or core.sp(id) or core.xm(id) or core.xd(id)) then
 			for _, bihua in ipairs(hint_b) do
 				local ssb = candidate.preedit .. bihua
 				memory:dict_lookup(ssb, false, 1)
@@ -459,8 +554,8 @@ function this.func(translation, env)
 				::continue::
 			end
 		end
-		--象码在sxsx上时的提示
-		if core.sxsx(input) and core.xm(id) and not is_hidden then
+		--象码和象单在sxsx上时的提示
+		if core.sxsx(input) and (core.xm(id) or core.xd(id)) and not is_hidden then
 			for _, bihua in ipairs(hint_b) do
 				local ssb = candidate.preedit:sub(3,4) .. bihua
 				memory:dict_lookup(ssb, false, 1)
