@@ -79,8 +79,9 @@ end
 local function f_comment(input, env)
     local context = env.engine.context
     local input_code = context.input
-
+    local count = 0
     for cand in input:iter() do
+        count = count + 1
         -- 移除临时飞码长词编码补全中的 ~ 符号
         -- if input_code:sub(0,1) == 'e' and cand.comment:find('~') then
         if cand.type == 'completion' and cand.comment:find('~') then
@@ -107,6 +108,15 @@ local function f_comment(input, env)
         -- local m_pinyin = code_table.multi[cand.text] and (' ' ..  code_table.multi[cand.text]) or ''
         -- mark = (code_table.multi[cand.text]) and 'ᵐ ' or ''
         -- cand:get_genuine().comment = mark .. cand.comment .. m_pinyin
+
+        -- 除首选外不显示词
+        -- if count == 1 then
+        --     yield(cand)
+        -- else
+        --     if (utf8.len(cand.text) == 1) then
+        --         yield(cand)
+        --     end
+        -- end
 
         yield(cand)
     end
