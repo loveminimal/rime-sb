@@ -77,7 +77,9 @@ end
 
 -- 注释那些事儿
 local function f_comment(input, env)
+    -- local is_sbxd = env.engine.schema.schema_id == 'sbxd'
     local context = env.engine.context
+	local is_show_word = context:get_option("is_show_word") or false
     local input_code = context.input
     local count = 0
     for cand in input:iter() do
@@ -110,15 +112,17 @@ local function f_comment(input, env)
         -- cand:get_genuine().comment = mark .. cand.comment .. m_pinyin
 
         -- 除首选外不显示词
-        -- if count == 1 then
-        --     yield(cand)
-        -- else
-        --     if (utf8.len(cand.text) == 1) then
-        --         yield(cand)
-        --     end
-        -- end
-
-        yield(cand)
+        if is_show_word then
+            yield(cand)
+        else
+            if count == 1 then
+                yield(cand)
+            else
+                if (utf8.len(cand.text) == 1) then
+                    yield(cand)
+                end
+            end
+        end
     end
 
 end

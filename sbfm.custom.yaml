@@ -6,3 +6,4 @@ patch:
   #     inline_preedit: false
   #     layout:
   #       __include: style.yaml:/layout_v
+  switches/@last/reset: 1

@@ -16,6 +16,9 @@ shared_patch:
     - name: is_show_more
       reset: 1
       states: [Ⓛ, Ⓜ]
+    - name: is_show_word
+      reset: 1
+      states: [单字, 词语]
   # 废弃 emoji 啦 ➭ 使用临时「 飞码长词 」替换
   # emoji 表情 —— sbyp ➭ sbfm
   # ——————
@@ -58,8 +61,9 @@ shared_patch:
       - { when: always, accept: Control+i, send: '-' }
       - { when: always, accept: Control+o, send: '=' }
       # - { when: always, accept: Control+apostrophe, send: '\' }
-      - { when: always, accept: Control+bracketleft, toggle: zh_trad }
-      - { when: always, accept: Control+backslash, toggle: is_show_more }
+      - { when: always, accept: Control+bracketleft, toggle: is_show_more }
+      - { when: always, accept: Control+bracketright, toggle: is_show_word }
+      - { when: always, accept: Control+backslash, toggle: zh_trad }
       - { when: always, accept: Control+apostrophe, send: Shift+Tab }
       - { when: composing, accept: Control+n, send: Shift+Tab }
       - { when: paging, accept: Control+comma, send: Page_Up }
