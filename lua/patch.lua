@@ -77,13 +77,10 @@ end
 
 -- 注释那些事儿
 local function f_comment(input, env)
-    -- local is_sbxd = env.engine.schema.schema_id == 'sbxd'
     local context = env.engine.context
-	local is_show_word = context:get_option("is_show_word") or true
     local input_code = context.input
-    local count = 0
+
     for cand in input:iter() do
-        count = count + 1
         -- 移除临时飞码长词编码补全中的 ~ 符号
         -- if input_code:sub(0,1) == 'e' and cand.comment:find('~') then
         if cand.type == 'completion' and cand.comment:find('~') then
@@ -111,7 +108,20 @@ local function f_comment(input, env)
         -- mark = (code_table.multi[cand.text]) and 'ᵐ ' or ''
         -- cand:get_genuine().comment = mark .. cand.comment .. m_pinyin
 
-        -- 除首选外不显示词
+        yield(cand)
+    end
+end
+
+-- 除首选外不显示词
+local function f_filter_non_first_word(input, env)
+    -- local is_sbxd = env.engine.schema.schema_id == 'sbxd'
+    local context = env.engine.context
+	local is_show_word = context:get_option("is_show_word") or true    
+    local count = 0
+    
+    for cand in input:iter() do
+        count = count + 1
+        
         if is_show_word then
             yield(cand)
         else
@@ -122,14 +132,14 @@ local function f_comment(input, env)
                     yield(cand)
                 end
             end
-        end
-    end
-
+        end    
+    end    
 end
 
 return {
-    p_lower_first_char = p_lower_first_char,
+    -- p_lower_first_char = p_lower_first_char,
     t_date = t_date,
     f_auto_select = f_auto_select,
-    f_comment = f_comment
+    f_comment = f_comment,
+    f_filter_non_first_word = f_filter_non_first_word
 }

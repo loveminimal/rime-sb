@@ -7,6 +7,7 @@ shared_patch:
   engine/translators/@after last: lua_translator@*patch*t_date
   engine/filters/@before 6: lua_filter@*patch*f_auto_select
   engine/filters/@before 7: lua_filter@*patch*f_comment
+  engine/filters/@before 8: lua_filter@*patch*f_filter_non_first_word
   recognizer/patterns/quick_symbol: "^;.*$"
   sbzdy/user_dict: patch
   punctuator/half_shape/+:

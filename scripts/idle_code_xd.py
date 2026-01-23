@@ -14,6 +14,7 @@ def get_all_codes():
     t = set(";'")
     y = set("'")
     
+    # 单字简码 21 + 21*26 + 21*26*5 + 21*26*2 = 4389
     # s
     for i in s:
         all_codes.add(i)
@@ -23,23 +24,29 @@ def get_all_codes():
         for j in x:
             all_codes.add(i + j)
 
-    # s x x|t
+    # s b b|t
     for i in s:
-        for j in x:
-            for k in x | t:
+        for j in b:
+            for k in b | t:
+                all_codes.add(i + j + k)
+    # s s b|t
+    for i in s:
+        for j in s:
+            for k in b | t:
                 all_codes.add(i + j + k)
 
+    # 单字全码 21*26*21*5 + 21*26*5*5 = 70980
     # s x s f
     for i in s:
         for j in x:
-            for k in x:
-                for l in b|y:
+            for k in s:
+                for l in f:
                     all_codes.add(i + j + k + l)
     # s x b b
     for i in s:
         for j in x:
-            for k in x:
-                for l in b|y:
+            for k in b:
+                for l in b:
                     all_codes.add(i + j + k + l)
         
     print(f'✅ ➭ 全部编码空间 {len(all_codes)} 个\n')
@@ -53,11 +60,11 @@ def get_used_codes(proj_dir):
     lines_sbx = []
 
     # 读取象单扩展词库中的词语
-    sbf_path = proj_dir / 'lua' / 'sbxlm' / 'xd_chars.txt'
-    with open(sbf_path, 'r', encoding='utf-8') as s:
-        print(f'☑️  已加载象单缩减码数据 » {sbf_path}')   
-        lines_total = s.readlines()
-        lines_sbx = [l for l in lines_total if is_chinese_char(l[0])]
+    # sbx_path = proj_dir / 'lua' / 'sbxlm' / 'xd_chars.txt'
+    # with open(sbx_path, 'r', encoding='utf-8') as s:
+    #     print(f'☑️  已加载象单缩减码数据 » {sbx_path}')   
+    #     lines_total = s.readlines()
+    #     lines_sbx = [l for l in lines_total if is_chinese_char(l[0])]
 
     sbxd_path = proj_dir / 'sbxd.dict.yaml'
     with open(sbxd_path, 'r', encoding='utf-8') as f:     
@@ -72,6 +79,7 @@ def get_used_codes(proj_dir):
             used_codes.add(code)
 
     print(f'☑️  已使用编码 {len(used_codes)} 个')
+    lines_sbx = [l for l in lines_total if is_chinese_char(l[0])]
     return (used_codes, lines_sbx)
     
 
@@ -86,7 +94,7 @@ def idle_code(proj_dir):
     print(f'☑️  未使用闲置编码 {len(idle_codes)} 个')
 
     for code in idle_codes:
-        lines_sbx.append(f'#\t{code}')
+        lines_sbx.append(f'#\t{code}\t0\t{code[:2]}\t# ')
 
     # 转换后的数据
     out_path = proj_dir / 'out' / 'idle_codes_xd.txt'
@@ -99,7 +107,7 @@ def idle_code(proj_dir):
 
     # is_start = False
     lines_sbx_sorted = []
-    out_path = proj_dir / 'sbx.dict.yaml'
+    out_path = proj_dir / 'sbxd.dict.yaml'
     with open(out_path, 'w', encoding='utf-8') as o:
         _lines_sbx = []
         for line in lines_sbx:
@@ -117,9 +125,8 @@ def idle_code(proj_dir):
 # encoding: utf-8
 #
 # 声笔象单
-
 ---
-name: sbx
+name: sbxd
 version: "11.0"
 sort: by_weight
 use_preset_vocabulary: false
