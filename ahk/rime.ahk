@@ -123,6 +123,11 @@ weaselSetupPath := GetWeaselPath('setup')
     Run "notepad.exe " RootPath "\sbf.dict.yaml"
     return
 }
++!i::
+{
+    Run "notepad.exe " RootPath "\sbx.dict.yaml"
+    return
+}
 ; +!b::
 ; {
 ;     Run "notepad.exe " RootPath "\sbzdy.txt"

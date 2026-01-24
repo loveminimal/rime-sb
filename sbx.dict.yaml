@@ -26,7 +26,7 @@ encoder:
 #	bau	
 #	bb'	
 #	bbo	
-笔	bbu	
+#	bbu	
 #	bc'	
 #	bca	
 #	bco	
@@ -111,7 +111,7 @@ encoder:
 #	dsa	
 #	du'	
 #	dua	
-都	duu	
+#	duu	
 #	dxa	
 #	dxo	
 #	dxu	
@@ -460,8 +460,8 @@ encoder:
 #	mdu	
 #	me'	
 #	me;	
-么	meo	
-码	meu	
+#	meo	
+#	meu	
 #	mh'	
 #	mho	
 #	mio	
@@ -637,7 +637,7 @@ encoder:
 #	pe'	
 #	pe;	
 #	pea	
-配	pee	
+#	pee	
 #	pei	
 #	peo	
 #	pfo	
@@ -881,7 +881,7 @@ encoder:
 #	sfa	
 #	sia	
 #	slo	
-什	soo	
+#	soo	
 #	sqo	
 #	svo	
 #	syo	
@@ -973,16 +973,16 @@ encoder:
 #	vh'	
 #	vh;	
 #	vha	
-这	vhe	
+#	vhe	
 #	vhi	
 #	vho	
-主	vhu	
+#	vhu	
 #	viu	
 #	vj'	
-怎	vje	
+#	vje	
 #	vji	
 #	vjo	
-择	vke	
+#	vke	
 #	vki	
 #	vku	
 #	vl'	
@@ -1040,7 +1040,7 @@ encoder:
 #	vx'	
 #	vx;	
 #	vxa	
-左	vxi	
+#	vxi	
 #	vxo	
 #	vy'	
 #	vy;	
@@ -1104,7 +1104,7 @@ encoder:
 #	wt'	
 #	wtu	
 #	wue	
-五	wuu	
+#	wuu	
 #	wx'	
 #	wxi	
 #	wxu	
@@ -1127,7 +1127,7 @@ encoder:
 #	xfe	
 #	xfo	
 #	xfu	
-选	xhe	
+#	xhe	
 #	xhu	
 #	xje	
 #	xna	
@@ -1147,7 +1147,7 @@ encoder:
 #	yae	
 #	yde	
 #	yfe	
-样	yye	
+#	yye	
 #	yzo	
 #	zaa	
 #	zb'	
