@@ -1,7 +1,7 @@
 patch:
   schema_list:
+    - schema: sbfd
     - schema: sbxd
-    # - schema: sbfd
     # - schema: sbmd
     # - schema: sbbd
     # - schema: sbfm

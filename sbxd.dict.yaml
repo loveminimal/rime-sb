@@ -601,7 +601,7 @@ encoder:
 陛	bbe	7762	bbai
 刨	bbi	538	bbua
 #	bbo	0	bb	#
-笔	bbu	0	bbue	##
+#	bbu	0	bbue	#
 #	bc'	0	bc	#
 匾	bc;	3114	bceo
 #	bca	0	bc	#
@@ -640,7 +640,7 @@ encoder:
 炳	bh'	4509	bhou
 爆	bh;	35536	bhou
 秉	bha	5680	bhue
-#	bhe	0	bh	#
+笔	bhe	0	bhue	##
 贝	bhi	81994	bhia
 贬	bho	6247	bhia
 秘	bhu	10944	bhue
@@ -2259,7 +2259,7 @@ encoder:
 幔	mea	2547	meia
 岷	mee	850	meia
 嵋	mei	5733	meia
-#	meo	0	me	#
+么	meo	0	meua	##
 #	meu	0	me	#
 玫	mf'	20602	mfee
 瞒	mf;	24644	mfia
@@ -2350,7 +2350,7 @@ encoder:
 么	mra	575392	mrua
 牡	mre	6269	mrue
 #	mri	0	mr	#
-么	mro	0	mrua	##
+#	mro	0	mrua	#
 牧	mru	34854	mrue
 殁	ms'	767	mseu
 迈	ms;	31613	msea
@@ -3239,7 +3239,7 @@ encoder:
 嗖	soa	3047	soia
 嗓	soe	18140	soia
 啥	soi	13563	soia
-#	soo	0	so	#
+什	soo	0	soui	##
 史	sou	156781	soia
 刷	sp'	20228	spae
 输	sp;	84190	spea
@@ -3552,7 +3552,7 @@ encoder:
 #	vh'	0	vh	#
 #	vh;	0	vh	#
 #	vha	0	vh	#
-#	vhe	0	vh	#
+择	vhe	0	vhei	##
 #	vhi	0	vh	#
 #	vho	0	vh	#
 #	vhu	0	vh	#
@@ -3566,7 +3566,7 @@ encoder:
 #	vj'	0	vj	#
 扼	vj;	3855	vjei
 拗	vja	4702	vjei
-什	vje	0	vjui	##
+#	vje	0	vjui	#
 #	vji	0	vj	#
 #	vjo	0	vj	#
 挨	vju	26504	vjei
@@ -3916,7 +3916,7 @@ encoder:
 熄	xh'	9440	xhou
 秀	xh;	122323	xhue
 县	xha	138415	xhia
-#	xhe	0	xh	#
+选	xhe	0	xhue	##
 稀	xhi	24257	xhue
 悬	xho	25663	xhia
 #	xhu	0	xh	#
