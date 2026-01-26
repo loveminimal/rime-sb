@@ -24,8 +24,8 @@ shared_patch:
   # emoji 表情 —— sbyp ➭ sbfm
   # ——————
   emoji/+:
-    dictionary: sbfm
-    prism: sbfm
+    dictionary: sbxm
+    prism: sbxm
     packs:
   # 使用 e 引导飞码长词，聊胜于无~
   # engine/segmentors/@after 2: affix_segmentor@sbfm_ext
@@ -37,11 +37,13 @@ shared_patch:
   #   prefix: e
   #   tips: "〔飞码长词〕"
   #   dictionary: sbfm.extended
+  #   # dictionary: sbxm.extended
   #   enable_completion: true
   #   enable_user_dict: false
   #   comment_format:
   #     # 默认显示 4 码，大于 4 码时才显示首字前两笔
   #     - xform/([a-z]{1,3})[a-z][a-z]/$1/
+  #     # - xform/([a-z]{1,3})[a-z][a-z][a-z][a-z][a-z][a-z][23789]/$1/
 
   # 拼写规则
   # speller/alphabet: "bpmfdtnlgkhjqxzcsrywvaeiou0123456789;'BPMFDTNLGKHJQXZCSRYWVAEUIO"
@@ -65,7 +67,7 @@ shared_patch:
       - { when: always, accept: Control+bracketleft, toggle: is_show_more }
       - { when: always, accept: Control+bracketright, toggle: is_show_word }
       - { when: always, accept: Control+backslash, toggle: zh_trad }
-      - { when: always, accept: Control+apostrophe, send: Shift+Tab }
+      - { when: always, accept: Control+apostrophe, send: Tab }
       - { when: composing, accept: Control+n, send: Shift+Tab }
       - { when: paging, accept: Control+comma, send: Page_Up }
       - { when: has_menu, accept: Control+period, send: Page_Down }

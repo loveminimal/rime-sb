@@ -1,0 +1,17 @@
+# Rime dict
+# encoding: utf-8
+#
+# 声笔象码动态词库
+# 本文件中的内容用于自动码长调整，请不要改动！
+
+---
+name: sbxm.extended
+version: "11.0"
+sort: by_weight
+columns:
+  - text
+  - code
+  - weight
+...
+十二门徒	svmteieeoi7	41
+新媒体宣传	xmtcoeauui7	30

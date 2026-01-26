@@ -68,7 +68,7 @@ def get_used_codes(proj_dir):
         lines_total = s.readlines()
         lines_sbx = [l for l in lines_total if is_chinese_char(l[0])]
 
-    sbxd_path = proj_dir / 'sbxd.dict.yaml'
+    sbxd_path = proj_dir / 'sbxm.dict.yaml'
     with open(sbxd_path, 'r', encoding='utf-8') as f:     
         print(f'☑️  已加载象单单字编码数据 » {sbxd_path}\n')  
         lines_total.extend(f.readlines())

@@ -23,6 +23,7 @@ function this.init(env)
 	end
 	-- 声笔飞单和声笔飞延采用了声笔飞码的词典，所以反查词典的名称与方案 ID 不相同，需要特殊判断
 	local dict_name = (id == "sbfd" or id == "sbmd" or id == "sbbd" or id == "sbfy") and "sbfm" or id
+	if id == "sbxd" then dict_name = "sbxm" end
 	-- 声笔简拼和声笔拼音用声笔简码的简码
 	if (id == 'sbjp' or id == 'sbpy') then dict_name = 'sbjm' end
 	-- 声笔自整用声笔自然的简码
@@ -374,7 +375,9 @@ function this.func(translation, env)
 							end
 							candidates[hint_p[j]] = 1
 							forward = rime.Candidate("hint", candidate.start, candidate._end, entry.text, hint_p[j])
-							rime.yield(forward)
+							if utf8.len(entry.text) == 1 then
+								rime.yield(forward)
+							end
 						end
 					end
 				end

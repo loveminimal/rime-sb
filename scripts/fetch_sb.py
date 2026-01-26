@@ -108,7 +108,7 @@ def main():
         "sbfx*.*",
         "sbfj*.*",
         "sbmm*.*",
-        "*xm*.*",
+        # "*xm*.*",
         "sbmd.*",
         "sbyp.*",
         "sbjp.*",
