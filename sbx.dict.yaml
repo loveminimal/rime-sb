@@ -24,7 +24,7 @@ encoder:
 #	baa	
 #	bai	
 #	bau	
-笔	bb'	
+#	bb'	
 #	bbo	
 #	bbu	
 #	bc'	
@@ -111,7 +111,7 @@ encoder:
 #	dsa	
 #	du'	
 #	dua	
-都	duu	
+#	duu	
 #	dxa	
 #	dxo	
 #	dxu	
@@ -326,7 +326,7 @@ encoder:
 #	jbo	
 #	jce	
 #	jio	
-辑	jpo	
+#	jpo	
 #	jsa	
 #	jte	
 #	jxe	
@@ -460,8 +460,8 @@ encoder:
 #	mdu	
 #	me'	
 #	me;	
-么	meo	
-码	meu	
+#	meo	
+#	meu	
 #	mh'	
 #	mho	
 #	mio	
@@ -957,7 +957,7 @@ encoder:
 #	vd;	
 #	vda	
 #	vde	
-待	vdi	
+#	vdi	
 #	vdo	
 #	vdu	
 #	ve'	
@@ -1040,12 +1040,12 @@ encoder:
 #	vx'	
 #	vx;	
 #	vxa	
-息	vxi	
+#	vxi	
 #	vxo	
 #	vy'	
 #	vy;	
 #	vye	
-易	vyi	
+#	vyi	
 #	vyo	
 #	vyu	
 #	vz'	
@@ -1147,7 +1147,7 @@ encoder:
 #	yae	
 #	yde	
 #	yfe	
-样	yye	
+#	yye	
 #	yzo	
 #	zaa	
 #	zb'	

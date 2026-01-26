@@ -116,7 +116,7 @@ end
 local function f_filter_non_first_word(input, env)
     -- local is_sbxd = env.engine.schema.schema_id == 'sbxd'
     local context = env.engine.context
-	local is_show_word = context:get_option("is_show_word") or true    
+	local is_show_word = context:get_option("is_show_word") or false    
     local count = 0
     
     for cand in input:iter() do
