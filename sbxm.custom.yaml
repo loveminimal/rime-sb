@@ -7,6 +7,6 @@ patch:
   #     layout:
   #       __include: style.yaml:/layout_v
   # style/color_scheme: prjk
-  # translator/enable_user_dict: false
+  translator/enable_user_dict: false
   # extended/enable_user_dict: false
   # switches/@last/reset: 0

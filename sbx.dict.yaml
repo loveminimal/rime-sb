@@ -11,7 +11,7 @@ use_preset_vocabulary: false
 #	baa	
 #	bai	
 #	bau	
-#	bb'	
+笔	bb'	
 #	bbo	
 #	bbu	
 #	bc'	
@@ -98,7 +98,7 @@ use_preset_vocabulary: false
 #	dsa	
 #	du'	
 #	dua	
-#	duu	
+都	duu	
 #	dxa	
 #	dxo	
 #	dxu	
@@ -186,7 +186,7 @@ use_preset_vocabulary: false
 #	fx'	
 #	fxa	
 #	fxe	
-#	fxi	
+息	fxi	
 #	fxo	
 #	fy'	
 #	fy;	
@@ -410,7 +410,7 @@ use_preset_vocabulary: false
 #	lce	
 #	lco	
 #	lcu	
-#	lee	
+乐	lee	
 #	lge	
 #	lgo	
 #	lia	
@@ -447,8 +447,8 @@ use_preset_vocabulary: false
 #	mdu	
 #	me'	
 #	me;	
-#	meo	
-#	meu	
+么	meo	
+码	meu	
 #	mh'	
 #	mho	
 #	mio	
@@ -868,9 +868,9 @@ use_preset_vocabulary: false
 #	sfa	
 #	sia	
 #	slo	
-#	soo	
+什	soo	
 #	sqo	
-#	svo	
+受	svo	
 #	syo	
 #	szo	
 #	tau	
@@ -20728,7 +20728,6 @@ use_preset_vocabulary: false
 #	jor'	
 #	jor,	
 #	jor/	
-#	jor;	
 #	jos'	
 #	jos,	
 #	jos.	
@@ -26705,7 +26704,6 @@ use_preset_vocabulary: false
 #	looa	
 #	looe	
 #	looi	
-#	looo	
 #	loou	
 #	lop'	
 #	lop,	
