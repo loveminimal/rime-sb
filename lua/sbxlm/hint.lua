@@ -56,8 +56,6 @@ end
 function this.func(translation, env)
 	local ctx = env.engine.context
 	local is_enhanced = ctx:get_option("is_enhanced")
-	-- 是否显示 ,./ 标点字（隐藏后标点字仍可使用）
-	local is_show_more = ctx:get_option("is_show_more") or false
 	--[[
 		0：隐藏，为不显示，即完全隐藏
 		1：有理，为显示23789有理组
@@ -226,42 +224,7 @@ function this.func(translation, env)
 				for entry in memory:iter_dict()	do
 					candidate:get_genuine().comment = candidate:get_genuine().comment .. entry.text .. "'"
 					break
-				end	
-			else
-				candidate:get_genuine().comment = ''
-				memory:dict_lookup(candidate.preedit .. ";", false, 1)
-				for entry in memory:iter_dict()
-				do
-					candidate:get_genuine().comment = ' ' .. entry.text .. ";"
-					break
-				end
-				memory:dict_lookup(candidate.preedit .. "'", false, 1)
-				for entry in memory:iter_dict()	do
-					candidate:get_genuine().comment = candidate:get_genuine().comment .. entry.text .. "'"
-					break
-				end	
-				-- 切换 ,./ 标点字显示
-				if is_show_more then					
-					memory:dict_lookup(candidate.preedit .. ",", false, 1)
-					for entry in memory:iter_dict()
-					do
-						candidate:get_genuine().comment = candidate:get_genuine().comment .. entry.text .. ","
-						break
-					end				
-					memory:dict_lookup(candidate.preedit .. ".", false, 1)
-					for entry in memory:iter_dict()
-					do
-						candidate:get_genuine().comment = candidate:get_genuine().comment .. entry.text .. "."
-						break
-					end				
-					memory:dict_lookup(candidate.preedit .. "/", false, 1)
-					for entry in memory:iter_dict()
-					do
-						candidate:get_genuine().comment = candidate:get_genuine().comment .. entry.text .. "/"
-						break
-					end				
-				end		
-				
+				end						
 			end
 		end
 		--象系在sxx时提示无理四码字
@@ -397,7 +360,7 @@ function this.func(translation, env)
 				memory:dict_lookup(candidate.preedit .. hint_p[j], false, 1)
 				for entry in memory:iter_dict()
 				do
-					candidate:get_genuine().comment = candidate:get_genuine().comment .. ' ' .. entry.text .. hint_p[j]
+					candidate:get_genuine().comment = candidate:get_genuine().comment .. entry.text .. hint_p[j]
 					break
 				end	
 			end
@@ -463,9 +426,9 @@ function this.func(translation, env)
 				memory:dict_lookup(shengmu .. hint_p[idx], false, 1)
 				for entry in memory:iter_dict() do
 					-- 飞码的sxs上不提示标点字
-					-- if not (core.fm(id) and core.sxs(input)) then
-					-- 	bihua = bihua .. entry.text .. hint_p[idx]
-					-- end
+					if not (core.fm(id) and core.sxs(input)) then
+						bihua = bihua .. entry.text .. hint_p[idx]
+					end
 					local forward = rime.Candidate("hint", candidate.start, candidate._end, text, bihua)
 					rime.yield(forward)
 					break

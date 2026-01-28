@@ -25,10 +25,10 @@ def get_header_sync(file_name):
 # Rime dictionary - {file_name}
 # encoding: utf-8
 #
-# 声笔飞码动态词库
+# 声笔象码动态词库
 # 本文件中的内容用于自动码长调整，请不要改动！
 # ——————
-# 这里我们重置为供飞单使用的 3+ 词条库
+# 这里我们重置为供象码使用的 3+ 词条库
 # 
 # 运行脚本：
 # - https://github.com/loveminimal/rime-sb/blob/master/scripts/sync_user_dict.py
@@ -198,8 +198,8 @@ if __name__ == '__main__':
     out_dir = Path('C:\\Users\\jack\\AppData\\Roaming\\Rime')
 
 
-    src_file = 'sbfm.userdb.txt'
-    out_file = 'sbfm.extended.dict.yaml'
+    src_file = 'sbxm.userdb.txt'
+    out_file = 'sbxm.extended.dict.yaml'
 
     # 如果存在输出文件，先删除
     current_out_file_temp = out_dir / f'{out_file + '.temp'}'

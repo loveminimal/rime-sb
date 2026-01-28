@@ -1,3 +1,4 @@
+from datetime import datetime
 from pathlib import Path
 import threading
 from is_chinese_char import is_chinese_char
@@ -31,8 +32,8 @@ def sync_user_dict():
     # 调用同步合并脚本，直接合并至扩展词库
     src_dir = Path('C:\\Users\\jack\\Nutstore\\1\\我的坚果云\\RimeSync\\sb-rime')
     out_dir = Path('C:\\Users\\jack\\AppData\\Roaming\\Rime')
-    src_file = 'sbfm.userdb.txt'
-    out_file = 'sbfm.extended.dict.yaml'
+    src_file = 'sbxm.userdb.txt'
+    out_file = 'sbxm.extended.dict.yaml'
 
     # 如果存在输出文件，先删除
     current_out_file_temp = out_dir / f'{out_file + '.temp'}'
@@ -56,7 +57,7 @@ def patch_extended(proj_dir):
     
     patch_lines = []
     patch_path = proj_dir / 'patch.dict.yaml'
-    extended_path = proj_dir / 'sbfm.extended.dict.yaml'
+    extended_path = proj_dir / 'sbxm.extended.dict.yaml'
     
     with open(patch_path, 'a+', encoding='utf-8') as p:
         p.seek(0)
@@ -68,7 +69,7 @@ def patch_extended(proj_dir):
 # encoding: utf-8
 ---
 name: patch
-version: 2025.12
+version: {datetime.now().date().strftime("%Y.%m")}
 sort: by_weight
 use_preset_vocabulary: false
 ...
@@ -79,7 +80,7 @@ use_preset_vocabulary: false
             if not line or not is_chinese_char(line[0]):
                 continue
             e.write(line)
-    print(f'✅  » 已追加至生成扩展词库 {proj_dir / "sbfm.extended.dict.yaml"}\n')
+    print(f'✅  » 已追加至生成扩展词库 {proj_dir / "sbxm.extended.dict.yaml"}\n')
     
     # 调用同步合并脚本，直接合并至扩展词库
     sync_user_dict()

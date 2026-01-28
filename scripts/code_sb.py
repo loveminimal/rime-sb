@@ -1,13 +1,15 @@
-# 转换生成用以临时调用的飞码补丁词库
+# 转换生成用以临时调用的象码补丁词库
 # - https://github.com/loveminimal/rime-sb
 # - Jack Liu <https://aituyaa.com>
 # 
+from datetime import datetime
 import json
 from pathlib import Path
 from is_chinese_char import is_chinese_char
-# from code_table import code_table
-# from meta_sb import meta_sb
 
+# 23789
+# ',/;.
+b_n = { 'a': '2', 'e': '3', 'u': '7', 'i': '8', 'o': '9' }
 
 def get_sb_code(word, meta_sb, ext='，。？'):
     code = []
@@ -26,26 +28,25 @@ def get_sb_code(word, meta_sb, ext='，。？'):
         f, s = word[0], word[1]
         for fc in meta_sb[f]:
             for sc in meta_sb[s]:
-                code.append(f'{fc[2][:2]}{sc[2][:2]}{fc[2][2:]}')
+                code.append(f'{fc[2][:2]}{sc[2][:2]}{fc[2][2:4]}{sc[2][2:]}{b_n[sc[2][2]]}')
     elif len(word) == 3:
         f, s, t = word[0], word[1], word[2]
         for fc in meta_sb[f]:
             for sc in meta_sb[s]:
                 for tc in meta_sb[t]:
-                    code.append(f'{fc[2][0]}{sc[2][0]}{tc[2][:2]}{fc[2][2:]}')
+                    code.append(f'{fc[2][0]}{sc[2][0]}{tc[2][:2]}{fc[2][2:4]}{sc[2][2:4]}{tc[2][2:4]}{b_n[tc[2][2]]}')
     elif len(word) >= 4:
         f, s, t, l = word[0], word[1], word[2], word[len(word) - 1]
         for fc in meta_sb[f]:
             for sc in meta_sb[s]:
                 for tc in meta_sb[t]:
                     for lc in meta_sb[l]:
-                        code.append(f'{fc[2][0]}{sc[2][0]}{tc[2][0]}{lc[2][0]}{fc[2][2:]}')       
+                        code.append(f'{fc[2][0]}{sc[2][0]}{tc[2][0]}{lc[2][0]}{fc[2][2:4]}{sc[2][2:4]}{tc[2][2:4]}{b_n[lc[2][2]]}')       
     return code
-
 
 def get_meta_sb(proj_dir):
     # meta_path = proj_dir / 'scripts' / 'meta.yaml'
-    meta_path = proj_dir / 'sbfd.dict.yaml'
+    meta_path = proj_dir / 'sbxm.dict.yaml'
     meta_dict = {}
     with open(meta_path, 'r', encoding='utf-8') as f:     
         print(f'☑️  已加载声笔源编码数据 » {meta_path}\n')   
@@ -87,7 +88,7 @@ def get_meta_sb(proj_dir):
         if need_update_meta_sb:
             meta_sb_path = proj_dir / 'scripts' / 'meta_sb.py'
             with open(meta_sb_path, 'w', encoding='utf-8') as m:
-                print(f'☑️  已更新声笔飞单元字典 » {meta_sb_path}\n')   
+                print(f'☑️  已更新声笔象码元字典 » {meta_sb_path}\n')   
                 m.write("meta_sb = ")
                 json.dump(meta_dict, m, ensure_ascii=False, indent=4)
     return meta_sb
@@ -97,13 +98,13 @@ def get_patch_dict(proj_dir):
     lines_total = []
     patch_dict = {}
 
-    # 读取飞码扩展词库中的词语
-    sbfm_extended_path = proj_dir / 'sbfm.extended.dict.yaml'
-    with open(sbfm_extended_path, 'r', encoding='utf-8') as s:
-        print(f'☑️  已加载飞码扩展数据 » {sbfm_extended_path}')   
+    # 读取象码扩展词库中的词语
+    sbxm_extended_path = proj_dir / 'sbxm.extended.dict.yaml'
+    with open(sbxm_extended_path, 'r', encoding='utf-8') as s:
+        print(f'☑️  已加载象码扩展数据 » {sbxm_extended_path}')   
         lines_total = s.readlines()
 
-    # 读取飞码补丁词库中的词语
+    # 读取象码补丁词库中的词语
     patch_path = proj_dir / 'patch.dict.yaml'
     with open(patch_path, 'r', encoding='utf-8') as p:     
         print(f'☑️  已加载既有PATCH数据 » {patch_path}\n')   
@@ -183,7 +184,7 @@ def code_sb(proj_dir):
 # encoding: utf-8
 ---
 name: patch
-version: 2025.12
+version: {datetime.now().date().strftime("%Y.%m")}
 sort: by_weight
 use_preset_vocabulary: false
 ...

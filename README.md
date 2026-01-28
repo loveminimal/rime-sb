@@ -18,8 +18,8 @@
 - 自定义文件修改为 patch.txt
 - 引入新的主题 style.yaml
 - 添加 AHK 支持
-- 新增声笔魔单方案 sbmd.schema.yaml（完全隐藏候选框的声笔飞单）
-- 新增声笔并单方案 sbbd.schema.yaml（使用空明码并击指法的声笔飞单）
+- 新增声笔魔单方案 sbmx.schema.yaml（完全隐藏候选框的声笔象码）
+- 新增声笔并单方案 sbbx.schema.yaml（使用空明码并击指法的声笔象码）「 新版废弃 」
 - 添加速录宝助手支持
 - ……
 ```

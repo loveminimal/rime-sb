@@ -1,25 +1,12 @@
 # Rime dict
 # encoding: utf-8
 #
-# 声笔象单
+# 声笔象码
 ---
 name: sbx
-version: "11.0"
+version: 2026.01
 sort: by_weight
 use_preset_vocabulary: false
-columns:
-  - text
-  - code
-  - weight
-  - stem
-encoder:
-  rules:
-    - length_equal: 2
-      formula: "AaAbBaBbAcAd"
-    - length_equal: 3
-      formula: "AaBaCaCbAcAd"
-    - length_in_range: [4, 12]
-      formula: "AaBaCaZaAcAd"
 ...
 #	baa	
 #	bai	
@@ -1308,7 +1295,6 @@ encoder:
 #	bbf.	
 #	bbf/	
 #	bbf;	
-#	bbg'	
 #	bbg.	
 #	bbg/	
 #	bbg;	
@@ -1437,7 +1423,6 @@ encoder:
 #	bcg'	
 #	bcg,	
 #	bcg.	
-#	bcg/	
 #	bcg;	
 #	bch'	
 #	bch,	
@@ -1796,7 +1781,6 @@ encoder:
 #	bfei	
 #	bfeo	
 #	bfeu	
-#	bff'	
 #	bff.	
 #	bff/	
 #	bfg,	
@@ -1860,7 +1844,6 @@ encoder:
 #	bfs/	
 #	bfs;	
 #	bft,	
-#	bft.	
 #	bft/	
 #	bft;	
 #	bfui	
@@ -1981,7 +1964,6 @@ encoder:
 #	bgue	
 #	bgui	
 #	bguo	
-#	bguu	
 #	bgv'	
 #	bgv,	
 #	bgv.	
@@ -2271,7 +2253,6 @@ encoder:
 #	bjg'	
 #	bjg,	
 #	bjg.	
-#	bjg/	
 #	bjg;	
 #	bjh,	
 #	bjh.	
@@ -2374,7 +2355,6 @@ encoder:
 #	bkeo	
 #	bkf'	
 #	bkf,	
-#	bkf.	
 #	bkf/	
 #	bkf;	
 #	bkg;	
@@ -2436,7 +2416,6 @@ encoder:
 #	bkx'	
 #	bkx,	
 #	bkx.	
-#	bkx;	
 #	bky'	
 #	bky,	
 #	bky.	
@@ -2467,7 +2446,6 @@ encoder:
 #	bld/	
 #	bld;	
 #	blea	
-#	blee	
 #	blei	
 #	bleo	
 #	bleu	
@@ -2567,7 +2545,6 @@ encoder:
 #	blz;	
 #	bmaa	
 #	bmae	
-#	bmai	
 #	bmao	
 #	bmau	
 #	bmb,	
@@ -2730,7 +2707,6 @@ encoder:
 #	bnm,	
 #	bnm.	
 #	bnm;	
-#	bnn'	
 #	bnn.	
 #	bnn/	
 #	bnn;	
@@ -2895,7 +2871,6 @@ encoder:
 #	box'	
 #	box,	
 #	box.	
-#	box;	
 #	boy'	
 #	boy,	
 #	boy.	
@@ -2910,7 +2885,6 @@ encoder:
 #	bpae	
 #	bpai	
 #	bpao	
-#	bpau	
 #	bpb'	
 #	bpb,	
 #	bpb.	
@@ -2958,7 +2932,6 @@ encoder:
 #	bpk'	
 #	bpk.	
 #	bpk/	
-#	bpk;	
 #	bpl'	
 #	bpl,	
 #	bpl.	
@@ -3205,7 +3178,6 @@ encoder:
 #	brl.	
 #	brl/	
 #	brm'	
-#	brm,	
 #	brm.	
 #	brm/	
 #	brm;	
@@ -3432,7 +3404,6 @@ encoder:
 #	btm/	
 #	btm;	
 #	btn'	
-#	btn,	
 #	btn.	
 #	btn;	
 #	btoa	
@@ -3449,7 +3420,6 @@ encoder:
 #	btq.	
 #	btq/	
 #	btq;	
-#	btr'	
 #	btr.	
 #	btr/	
 #	btr;	
@@ -3737,7 +3707,6 @@ encoder:
 #	bwc;	
 #	bwd'	
 #	bwd,	
-#	bwd.	
 #	bwd/	
 #	bwd;	
 #	bwea	
@@ -4064,7 +4033,6 @@ encoder:
 #	byw;	
 #	byx'	
 #	byx,	
-#	byx/	
 #	byy'	
 #	byy,	
 #	byy.	
@@ -4262,7 +4230,6 @@ encoder:
 #	caq'	
 #	caq,	
 #	caq.	
-#	caq/	
 #	caq;	
 #	car'	
 #	car.	
@@ -4635,7 +4602,6 @@ encoder:
 #	cdua	
 #	cdue	
 #	cdui	
-#	cdv'	
 #	cdv.	
 #	cdv/	
 #	cdw'	
@@ -4786,7 +4752,6 @@ encoder:
 #	cfd.	
 #	cfd/	
 #	cfd;	
-#	cfei	
 #	cfeu	
 #	cff'	
 #	cff,	
@@ -4806,7 +4771,6 @@ encoder:
 #	cfj'	
 #	cfj,	
 #	cfj.	
-#	cfj/	
 #	cfj;	
 #	cfk'	
 #	cfk,	
@@ -4874,7 +4838,6 @@ encoder:
 #	cfy,	
 #	cfy.	
 #	cfy/	
-#	cfy;	
 #	cfz'	
 #	cfz.	
 #	cfz/	
@@ -4942,7 +4905,6 @@ encoder:
 #	cgp/	
 #	cgp;	
 #	cgq'	
-#	cgq,	
 #	cgq.	
 #	cgq/	
 #	cgr'	
@@ -5020,7 +4982,6 @@ encoder:
 #	chg;	
 #	chh'	
 #	chh,	
-#	chh/	
 #	chh;	
 #	chie	
 #	chii	
@@ -5078,7 +5039,6 @@ encoder:
 #	chv.	
 #	chv/	
 #	chv;	
-#	chw'	
 #	chw,	
 #	chw.	
 #	chw/	
@@ -5216,7 +5176,6 @@ encoder:
 #	ciz.	
 #	ciz/	
 #	ciz;	
-#	cjaa	
 #	cjai	
 #	cjao	
 #	cjau	
@@ -5250,7 +5209,6 @@ encoder:
 #	cjj'	
 #	cjj,	
 #	cjj/	
-#	cjj;	
 #	cjk'	
 #	cjk.	
 #	cjk/	
@@ -5258,7 +5216,6 @@ encoder:
 #	cjl,	
 #	cjl.	
 #	cjl/	
-#	cjl;	
 #	cjm'	
 #	cjm,	
 #	cjm.	
@@ -5347,7 +5304,6 @@ encoder:
 #	ckh,	
 #	ckh.	
 #	ckh/	
-#	ckia	
 #	ckio	
 #	ckj'	
 #	ckj,	
@@ -5472,7 +5428,6 @@ encoder:
 #	cll'	
 #	cll.	
 #	cll/	
-#	cll;	
 #	clm'	
 #	clm.	
 #	clm/	
@@ -5563,7 +5518,6 @@ encoder:
 #	cmf.	
 #	cmf/	
 #	cmg'	
-#	cmg.	
 #	cmg/	
 #	cmg;	
 #	cmh'	
@@ -5582,7 +5536,6 @@ encoder:
 #	cml'	
 #	cml.	
 #	cml/	
-#	cml;	
 #	cmm.	
 #	cmm/	
 #	cmn'	
@@ -5594,11 +5547,9 @@ encoder:
 #	cmoe	
 #	cmoi	
 #	cmoo	
-#	cmou	
 #	cmp'	
 #	cmp,	
 #	cmp.	
-#	cmp/	
 #	cmp;	
 #	cmq'	
 #	cmq,	
@@ -5661,7 +5612,6 @@ encoder:
 #	cnf.	
 #	cnf/	
 #	cnf;	
-#	cng'	
 #	cng/	
 #	cnh'	
 #	cnh,	
@@ -5781,7 +5731,6 @@ encoder:
 #	coh.	
 #	coh/	
 #	coh;	
-#	coia	
 #	coie	
 #	coio	
 #	coiu	
@@ -5947,7 +5896,6 @@ encoder:
 #	cpt;	
 #	cpua	
 #	cpue	
-#	cpui	
 #	cpuo	
 #	cpv'	
 #	cpv,	
@@ -5956,7 +5904,6 @@ encoder:
 #	cpv;	
 #	cpw'	
 #	cpw,	
-#	cpw/	
 #	cpw;	
 #	cpx'	
 #	cpx,	
@@ -6110,7 +6057,6 @@ encoder:
 #	crd,	
 #	crd;	
 #	cree	
-#	crei	
 #	creu	
 #	crf/	
 #	crf;	
@@ -6168,7 +6114,6 @@ encoder:
 #	crs'	
 #	crs.	
 #	crs/	
-#	crt'	
 #	crt,	
 #	crt/	
 #	crt;	
@@ -6190,7 +6135,6 @@ encoder:
 #	cry,	
 #	cry.	
 #	cry/	
-#	cry;	
 #	crz'	
 #	crz,	
 #	crz.	
@@ -6284,7 +6228,6 @@ encoder:
 #	cst;	
 #	csua	
 #	csuo	
-#	csuu	
 #	csv'	
 #	csv,	
 #	csv.	
@@ -6331,7 +6274,6 @@ encoder:
 #	ctd;	
 #	ctea	
 #	ctee	
-#	ctei	
 #	cteo	
 #	cteu	
 #	ctf'	
@@ -6343,7 +6285,6 @@ encoder:
 #	ctg;	
 #	cth'	
 #	cth,	
-#	cth.	
 #	cth/	
 #	cth;	
 #	ctia	
@@ -6367,7 +6308,6 @@ encoder:
 #	ctm,	
 #	ctm.	
 #	ctm/	
-#	ctn'	
 #	ctn,	
 #	ctn.	
 #	ctoa	
@@ -6574,7 +6514,6 @@ encoder:
 #	cvg;	
 #	cvh'	
 #	cvh,	
-#	cvh.	
 #	cvh/	
 #	cvia	
 #	cvie	
@@ -6613,7 +6552,6 @@ encoder:
 #	cvq;	
 #	cvr'	
 #	cvr,	
-#	cvr.	
 #	cvr/	
 #	cvr;	
 #	cvs'	
@@ -6663,7 +6601,6 @@ encoder:
 #	cwc,	
 #	cwc.	
 #	cwc/	
-#	cwc;	
 #	cwd'	
 #	cwd,	
 #	cwd.	
@@ -6715,7 +6652,6 @@ encoder:
 #	cwn;	
 #	cwoa	
 #	cwoo	
-#	cwou	
 #	cwp'	
 #	cwp,	
 #	cwp.	
@@ -6754,7 +6690,6 @@ encoder:
 #	cww.	
 #	cww/	
 #	cww;	
-#	cwx'	
 #	cwx,	
 #	cwx.	
 #	cwx/	
@@ -6832,7 +6767,6 @@ encoder:
 #	cxp.	
 #	cxp;	
 #	cxq'	
-#	cxq,	
 #	cxq.	
 #	cxq/	
 #	cxr'	
@@ -6861,7 +6795,6 @@ encoder:
 #	cxw.	
 #	cxw/	
 #	cxw;	
-#	cxx'	
 #	cxx,	
 #	cxx/	
 #	cxx;	
@@ -7066,7 +6999,6 @@ encoder:
 #	czq;	
 #	czr'	
 #	czr,	
-#	czr.	
 #	czr/	
 #	czr;	
 #	czs'	
@@ -7322,7 +7254,6 @@ encoder:
 #	dbv/	
 #	dbv;	
 #	dbw'	
-#	dbw,	
 #	dbw.	
 #	dbw/	
 #	dbx'	
@@ -7658,7 +7589,6 @@ encoder:
 #	der/	
 #	der;	
 #	des'	
-#	des,	
 #	des.	
 #	des/	
 #	det'	
@@ -7770,7 +7700,6 @@ encoder:
 #	dfq/	
 #	dfq;	
 #	dfr'	
-#	dfr.	
 #	dfr/	
 #	dfr;	
 #	dfs,	
@@ -8034,7 +7963,6 @@ encoder:
 #	dhw,	
 #	dhw.	
 #	dhw/	
-#	dhw;	
 #	dhx'	
 #	dhx,	
 #	dhx.	
@@ -8198,7 +8126,6 @@ encoder:
 #	djg.	
 #	djg/	
 #	djh'	
-#	djh,	
 #	djh/	
 #	djh;	
 #	djia	
@@ -8350,7 +8277,6 @@ encoder:
 #	dkq;	
 #	dkr'	
 #	dkr,	
-#	dkr/	
 #	dks'	
 #	dks,	
 #	dks.	
@@ -8544,12 +8470,10 @@ encoder:
 #	dmg;	
 #	dmh,	
 #	dmh/	
-#	dmh;	
 #	dmia	
 #	dmie	
 #	dmii	
 #	dmio	
-#	dmiu	
 #	dmj'	
 #	dmj,	
 #	dmj.	
@@ -8819,7 +8743,6 @@ encoder:
 #	dor,	
 #	dor.	
 #	dor;	
-#	dos,	
 #	dos.	
 #	dos/	
 #	dos;	
@@ -9135,7 +9058,6 @@ encoder:
 #	drj'	
 #	drj.	
 #	drj/	
-#	drj;	
 #	drk'	
 #	drk,	
 #	drk.	
@@ -9230,7 +9152,6 @@ encoder:
 #	dseo	
 #	dsf'	
 #	dsf,	
-#	dsf.	
 #	dsf/	
 #	dsf;	
 #	dsg'	
@@ -9244,7 +9165,6 @@ encoder:
 #	dsh;	
 #	dsia	
 #	dsie	
-#	dsio	
 #	dsiu	
 #	dsj'	
 #	dsj,	
@@ -9302,7 +9222,6 @@ encoder:
 #	dsw,	
 #	dsw.	
 #	dsx'	
-#	dsx,	
 #	dsx.	
 #	dsx/	
 #	dsx;	
@@ -9360,7 +9279,6 @@ encoder:
 #	dtj;	
 #	dtk.	
 #	dtk/	
-#	dtk;	
 #	dtl'	
 #	dtl,	
 #	dtl.	
@@ -9391,7 +9309,6 @@ encoder:
 #	dtq;	
 #	dtr/	
 #	dtr;	
-#	dts'	
 #	dts.	
 #	dts/	
 #	dts;	
@@ -9572,7 +9489,6 @@ encoder:
 #	dvee	
 #	dvei	
 #	dveo	
-#	dveu	
 #	dvf'	
 #	dvf,	
 #	dvf.	
@@ -9935,13 +9851,11 @@ encoder:
 #	dyg;	
 #	dyh'	
 #	dyh,	
-#	dyh.	
 #	dyh/	
 #	dyh;	
 #	dyia	
 #	dyie	
 #	dyii	
-#	dyio	
 #	dyiu	
 #	dyj'	
 #	dyj,	
@@ -10889,7 +10803,6 @@ encoder:
 #	fgc.	
 #	fgc/	
 #	fgc;	
-#	fgd'	
 #	fgd,	
 #	fgd.	
 #	fgd/	
@@ -11450,10 +11363,8 @@ encoder:
 #	fkq.	
 #	fkq/	
 #	fkr/	
-#	fkr;	
 #	fks'	
 #	fks,	
-#	fks.	
 #	fks/	
 #	fkt'	
 #	fkt.	
@@ -11612,7 +11523,6 @@ encoder:
 #	fmai	
 #	fmao	
 #	fmau	
-#	fmb'	
 #	fmb,	
 #	fmb.	
 #	fmb/	
@@ -12040,7 +11950,6 @@ encoder:
 #	fpn/	
 #	fpn;	
 #	fpoa	
-#	fpoe	
 #	fpoi	
 #	fpoo	
 #	fpou	
@@ -12365,7 +12274,6 @@ encoder:
 #	fsia	
 #	fsie	
 #	fsii	
-#	fsio	
 #	fsiu	
 #	fsj'	
 #	fsj,	
@@ -12978,7 +12886,6 @@ encoder:
 #	fxk/	
 #	fxl'	
 #	fxl,	
-#	fxl.	
 #	fxl/	
 #	fxl;	
 #	fxm'	
@@ -13331,7 +13238,6 @@ encoder:
 #	gah/	
 #	gah;	
 #	gaia	
-#	gaie	
 #	gaio	
 #	gaiu	
 #	gaj'	
@@ -13596,8 +13502,6 @@ encoder:
 #	gcn/	
 #	gcn;	
 #	gcoe	
-#	gcoi	
-#	gcou	
 #	gcp'	
 #	gcp,	
 #	gcp.	
@@ -13728,7 +13632,6 @@ encoder:
 #	gds'	
 #	gds,	
 #	gds.	
-#	gds/	
 #	gds;	
 #	gdt'	
 #	gdt,	
@@ -13793,7 +13696,6 @@ encoder:
 #	gef;	
 #	geg'	
 #	geg,	
-#	geg.	
 #	geg/	
 #	geg;	
 #	geh'	
@@ -13838,7 +13740,6 @@ encoder:
 #	gep.	
 #	gep/	
 #	gep;	
-#	geq'	
 #	geq,	
 #	geq.	
 #	geq/	
@@ -13848,7 +13749,6 @@ encoder:
 #	ger.	
 #	ger/	
 #	ger;	
-#	ges,	
 #	ges.	
 #	ges/	
 #	ges;	
@@ -13954,7 +13854,6 @@ encoder:
 #	gfp'	
 #	gfp,	
 #	gfp.	
-#	gfp;	
 #	gfq'	
 #	gfq,	
 #	gfq.	
@@ -14059,7 +13958,6 @@ encoder:
 #	ggm.	
 #	ggm/	
 #	ggm;	
-#	ggn'	
 #	ggn,	
 #	ggn.	
 #	ggn/	
@@ -14132,7 +14030,6 @@ encoder:
 #	ghc'	
 #	ghc,	
 #	ghc.	
-#	ghc/	
 #	ghc;	
 #	ghd'	
 #	ghd,	
@@ -14208,7 +14105,6 @@ encoder:
 #	ghr;	
 #	ghs'	
 #	ghs,	
-#	ghs.	
 #	ghs/	
 #	ghs;	
 #	ght'	
@@ -14264,7 +14160,6 @@ encoder:
 #	gid;	
 #	giea	
 #	gieo	
-#	gieu	
 #	gif'	
 #	gif,	
 #	gif.	
@@ -14380,7 +14275,6 @@ encoder:
 #	gjd/	
 #	gjd;	
 #	gjea	
-#	gjee	
 #	gjeo	
 #	gjeu	
 #	gjf'	
@@ -14436,7 +14330,6 @@ encoder:
 #	gjq/	
 #	gjq;	
 #	gjr'	
-#	gjr,	
 #	gjr.	
 #	gjr/	
 #	gjr;	
@@ -14457,7 +14350,6 @@ encoder:
 #	gjv'	
 #	gjv,	
 #	gjv.	
-#	gjv/	
 #	gjv;	
 #	gjw'	
 #	gjw.	
@@ -14567,7 +14459,6 @@ encoder:
 #	gkv,	
 #	gkv.	
 #	gkv/	
-#	gkv;	
 #	gkw'	
 #	gkw.	
 #	gkw;	
@@ -14604,7 +14495,6 @@ encoder:
 #	gld/	
 #	gld;	
 #	glee	
-#	glei	
 #	gleo	
 #	gleu	
 #	glf'	
@@ -14658,7 +14548,6 @@ encoder:
 #	glp.	
 #	glp/	
 #	glp;	
-#	glq'	
 #	glq,	
 #	glq.	
 #	glq/	
@@ -14949,7 +14838,6 @@ encoder:
 #	god,	
 #	god.	
 #	god/	
-#	god;	
 #	goee	
 #	goeu	
 #	gof'	
@@ -14966,7 +14854,6 @@ encoder:
 #	goh/	
 #	goh;	
 #	goia	
-#	goii	
 #	goio	
 #	goiu	
 #	goj'	
@@ -15047,7 +14934,6 @@ encoder:
 #	goz.	
 #	goz/	
 #	goz;	
-#	gpaa	
 #	gpae	
 #	gpai	
 #	gpao	
@@ -15298,7 +15184,6 @@ encoder:
 #	gqz;	
 #	graa	
 #	grae	
-#	grau	
 #	grb'	
 #	grb,	
 #	grb.	
@@ -15321,7 +15206,6 @@ encoder:
 #	grf/	
 #	grf;	
 #	grg'	
-#	grg.	
 #	grg/	
 #	grh'	
 #	grh,	
@@ -15349,7 +15233,6 @@ encoder:
 #	grm.	
 #	grm/	
 #	grm;	
-#	grn'	
 #	grn,	
 #	grn.	
 #	grn/	
@@ -15472,7 +15355,6 @@ encoder:
 #	gsn.	
 #	gsn/	
 #	gsoa	
-#	gsoe	
 #	gsoo	
 #	gsou	
 #	gsp'	
@@ -15499,7 +15381,6 @@ encoder:
 #	gst.	
 #	gst/	
 #	gst;	
-#	gsua	
 #	gsue	
 #	gsuo	
 #	gsuu	
@@ -15672,7 +15553,6 @@ encoder:
 #	guh/	
 #	guh;	
 #	guio	
-#	guiu	
 #	guj'	
 #	guj,	
 #	guj.	
@@ -15700,7 +15580,6 @@ encoder:
 #	guoa	
 #	guoe	
 #	guoi	
-#	guou	
 #	gup'	
 #	gup,	
 #	gup.	
@@ -15734,7 +15613,6 @@ encoder:
 #	guw'	
 #	guw,	
 #	guw.	
-#	guw/	
 #	guw;	
 #	gux,	
 #	gux.	
@@ -15757,12 +15635,10 @@ encoder:
 #	gvb,	
 #	gvb.	
 #	gvb/	
-#	gvb;	
 #	gvc'	
 #	gvc,	
 #	gvc.	
 #	gvc/	
-#	gvc;	
 #	gvd'	
 #	gvd,	
 #	gvd.	
@@ -15787,7 +15663,6 @@ encoder:
 #	gvh;	
 #	gvie	
 #	gvio	
-#	gviu	
 #	gvj'	
 #	gvj,	
 #	gvj.	
@@ -15834,7 +15709,6 @@ encoder:
 #	gvt.	
 #	gvt/	
 #	gvt;	
-#	gvua	
 #	gvue	
 #	gvui	
 #	gvuu	
@@ -15845,7 +15719,6 @@ encoder:
 #	gvv;	
 #	gvw'	
 #	gvw,	
-#	gvw.	
 #	gvw;	
 #	gvx'	
 #	gvx,	
@@ -16144,7 +16017,6 @@ encoder:
 #	gyii	
 #	gyio	
 #	gyiu	
-#	gyj'	
 #	gyj,	
 #	gyj.	
 #	gyj/	
@@ -16563,7 +16435,6 @@ encoder:
 #	hbw/	
 #	hbw;	
 #	hbx'	
-#	hbx,	
 #	hbx.	
 #	hbx/	
 #	hby'	
@@ -16611,7 +16482,6 @@ encoder:
 #	hch,	
 #	hch.	
 #	hch/	
-#	hcia	
 #	hcie	
 #	hcii	
 #	hcio	
@@ -16656,7 +16526,6 @@ encoder:
 #	hcs'	
 #	hcs,	
 #	hcs/	
-#	hcs;	
 #	hct'	
 #	hct,	
 #	hct.	
@@ -16716,7 +16585,6 @@ encoder:
 #	hdf,	
 #	hdf.	
 #	hdf/	
-#	hdf;	
 #	hdg'	
 #	hdg,	
 #	hdg.	
@@ -16726,7 +16594,6 @@ encoder:
 #	hdh.	
 #	hdh/	
 #	hdh;	
-#	hdia	
 #	hdie	
 #	hdii	
 #	hdio	
@@ -17008,7 +16875,6 @@ encoder:
 #	hfq;	
 #	hfr'	
 #	hfr,	
-#	hfr.	
 #	hfr/	
 #	hfr;	
 #	hfs'	
@@ -17071,10 +16937,8 @@ encoder:
 #	hgea	
 #	hgee	
 #	hgei	
-#	hgeu	
 #	hgf'	
 #	hgf,	
-#	hgf.	
 #	hgf/	
 #	hgf;	
 #	hgg'	
@@ -17108,7 +16972,6 @@ encoder:
 #	hgm,	
 #	hgm.	
 #	hgm;	
-#	hgn'	
 #	hgn,	
 #	hgn.	
 #	hgn/	
@@ -17203,7 +17066,6 @@ encoder:
 #	hhh'	
 #	hhh,	
 #	hhh.	
-#	hhh/	
 #	hhh;	
 #	hhii	
 #	hhio	
@@ -17486,7 +17348,6 @@ encoder:
 #	hjv.	
 #	hjv/	
 #	hjv;	
-#	hjw,	
 #	hjw;	
 #	hjx'	
 #	hjx,	
@@ -17520,7 +17381,6 @@ encoder:
 #	hkd.	
 #	hkd/	
 #	hkd;	
-#	hkea	
 #	hkee	
 #	hkei	
 #	hkeo	
@@ -17864,7 +17724,6 @@ encoder:
 #	hneu	
 #	hnf'	
 #	hnf,	
-#	hnf/	
 #	hnf;	
 #	hng'	
 #	hng,	
@@ -17878,7 +17737,6 @@ encoder:
 #	hnia	
 #	hnii	
 #	hnio	
-#	hniu	
 #	hnj'	
 #	hnj,	
 #	hnj.	
@@ -18035,7 +17893,6 @@ encoder:
 #	hot'	
 #	hot,	
 #	hot/	
-#	hot;	
 #	houa	
 #	houe	
 #	houi	
@@ -18099,7 +17956,6 @@ encoder:
 #	hpie	
 #	hpii	
 #	hpio	
-#	hpiu	
 #	hpj'	
 #	hpj,	
 #	hpj.	
@@ -18306,7 +18162,6 @@ encoder:
 #	hrb,	
 #	hrb.	
 #	hrb/	
-#	hrb;	
 #	hrc'	
 #	hrc,	
 #	hrc.	
@@ -18466,14 +18321,12 @@ encoder:
 #	hsk'	
 #	hsk,	
 #	hsk.	
-#	hsk/	
 #	hsk;	
 #	hsl'	
 #	hsl,	
 #	hsl.	
 #	hsl/	
 #	hsl;	
-#	hsm'	
 #	hsm/	
 #	hsm;	
 #	hsn'	
@@ -18504,7 +18357,6 @@ encoder:
 #	hss.	
 #	hss/	
 #	hss;	
-#	hst,	
 #	hst.	
 #	hst/	
 #	hst;	
@@ -18556,7 +18408,6 @@ encoder:
 #	htd/	
 #	htd;	
 #	htea	
-#	htee	
 #	htei	
 #	hteo	
 #	hteu	
@@ -18577,7 +18428,6 @@ encoder:
 #	hth;	
 #	htii	
 #	htio	
-#	htiu	
 #	htj'	
 #	htj,	
 #	htj.	
@@ -18752,7 +18602,6 @@ encoder:
 #	hut/	
 #	hut;	
 #	huua	
-#	huui	
 #	huuo	
 #	huuu	
 #	huv'	
@@ -18842,7 +18691,6 @@ encoder:
 #	hvs'	
 #	hvs.	
 #	hvs/	
-#	hvs;	
 #	hvt'	
 #	hvt,	
 #	hvt/	
@@ -18921,7 +18769,6 @@ encoder:
 #	hwk;	
 #	hwl,	
 #	hwl.	
-#	hwl;	
 #	hwm'	
 #	hwm,	
 #	hwm.	
@@ -18953,7 +18800,6 @@ encoder:
 #	hwt.	
 #	hwt/	
 #	hwt;	
-#	hwua	
 #	hwue	
 #	hwui	
 #	hwuo	
@@ -19001,7 +18847,6 @@ encoder:
 #	hxd.	
 #	hxd/	
 #	hxd;	
-#	hxee	
 #	hxeu	
 #	hxf'	
 #	hxf,	
@@ -19131,7 +18976,6 @@ encoder:
 #	hyh,	
 #	hyh.	
 #	hyh/	
-#	hyie	
 #	hyii	
 #	hyio	
 #	hyj'	
@@ -19341,7 +19185,6 @@ encoder:
 #	hzz;	
 #	jaaa	
 #	jaae	
-#	jaai	
 #	jaao	
 #	jaau	
 #	jab'	
@@ -19416,7 +19259,6 @@ encoder:
 #	jar/	
 #	jar;	
 #	jas'	
-#	jas,	
 #	jas.	
 #	jat'	
 #	jat.	
@@ -19582,15 +19424,12 @@ encoder:
 #	jcc/	
 #	jcc;	
 #	jcd'	
-#	jcd,	
 #	jcd.	
 #	jcd/	
 #	jcd;	
-#	jcea	
 #	jcee	
 #	jceo	
 #	jceu	
-#	jcf'	
 #	jcf,	
 #	jcf.	
 #	jcf/	
@@ -19660,7 +19499,6 @@ encoder:
 #	jct;	
 #	jcue	
 #	jcui	
-#	jcuo	
 #	jcv'	
 #	jcv,	
 #	jcv.	
@@ -19926,7 +19764,6 @@ encoder:
 #	jfd;	
 #	jfeu	
 #	jff,	
-#	jff/	
 #	jfg'	
 #	jfg,	
 #	jfg.	
@@ -19935,7 +19772,6 @@ encoder:
 #	jfh.	
 #	jfh/	
 #	jfh;	
-#	jfia	
 #	jfie	
 #	jfio	
 #	jfiu	
@@ -19967,7 +19803,6 @@ encoder:
 #	jfou	
 #	jfp'	
 #	jfp.	
-#	jfp/	
 #	jfq'	
 #	jfq,	
 #	jfq.	
@@ -20054,7 +19889,6 @@ encoder:
 #	jgj.	
 #	jgj/	
 #	jgj;	
-#	jgk'	
 #	jgk.	
 #	jgl'	
 #	jgl,	
@@ -20085,7 +19919,6 @@ encoder:
 #	jgr,	
 #	jgr.	
 #	jgr;	
-#	jgs'	
 #	jgs,	
 #	jgs.	
 #	jgs/	
@@ -20130,7 +19963,6 @@ encoder:
 #	jhb;	
 #	jhc,	
 #	jhc.	
-#	jhc/	
 #	jhd'	
 #	jhd,	
 #	jhd.	
@@ -20155,7 +19987,6 @@ encoder:
 #	jhh.	
 #	jhh/	
 #	jhh;	
-#	jhia	
 #	jhii	
 #	jhio	
 #	jhiu	
@@ -20225,7 +20056,6 @@ encoder:
 #	jhx.	
 #	jhx/	
 #	jhy'	
-#	jhy,	
 #	jhy.	
 #	jhy;	
 #	jhz'	
@@ -20418,7 +20248,6 @@ encoder:
 #	jjs'	
 #	jjs,	
 #	jjs.	
-#	jjs/	
 #	jjt'	
 #	jjt,	
 #	jjt.	
@@ -20467,7 +20296,6 @@ encoder:
 #	jkg'	
 #	jkg,	
 #	jkg.	
-#	jkg;	
 #	jkh'	
 #	jkh,	
 #	jkh.	
@@ -20510,12 +20338,10 @@ encoder:
 #	jkv'	
 #	jkv.	
 #	jkv/	
-#	jkv;	
 #	jkw'	
 #	jkw,	
 #	jkw.	
 #	jkw;	
-#	jkx,	
 #	jkx.	
 #	jkx/	
 #	jkx;	
@@ -20535,7 +20361,6 @@ encoder:
 #	jlb,	
 #	jlb.	
 #	jlb/	
-#	jlb;	
 #	jlc,	
 #	jlc.	
 #	jlc/	
@@ -20672,7 +20497,6 @@ encoder:
 #	jmj.	
 #	jmj/	
 #	jmj;	
-#	jmk'	
 #	jmk.	
 #	jmk/	
 #	jmk;	
@@ -20795,7 +20619,6 @@ encoder:
 #	jnp'	
 #	jnp.	
 #	jnp/	
-#	jnp;	
 #	jnq'	
 #	jnq,	
 #	jnq.	
@@ -20847,7 +20670,6 @@ encoder:
 #	jod.	
 #	jod/	
 #	jod;	
-#	joee	
 #	joei	
 #	joeo	
 #	joeu	
@@ -20899,7 +20721,6 @@ encoder:
 #	jop.	
 #	jop/	
 #	jop;	
-#	joq'	
 #	joq,	
 #	joq.	
 #	joq/	
@@ -20958,7 +20779,6 @@ encoder:
 #	jpc'	
 #	jpc.	
 #	jpc/	
-#	jpc;	
 #	jpd'	
 #	jpd,	
 #	jpd.	
@@ -21125,7 +20945,6 @@ encoder:
 #	jqp,	
 #	jqp.	
 #	jqp/	
-#	jqp;	
 #	jqq'	
 #	jqq.	
 #	jqq/	
@@ -21180,7 +20999,6 @@ encoder:
 #	jrb;	
 #	jrc,	
 #	jrc.	
-#	jrc/	
 #	jrd'	
 #	jrd,	
 #	jrd.	
@@ -21193,9 +21011,7 @@ encoder:
 #	jrf/	
 #	jrf;	
 #	jrg'	
-#	jrg,	
 #	jrg.	
-#	jrg/	
 #	jrg;	
 #	jrh'	
 #	jrh,	
@@ -21291,7 +21107,6 @@ encoder:
 #	jseo	
 #	jsf'	
 #	jsf.	
-#	jsf/	
 #	jsf;	
 #	jsg'	
 #	jsg,	
@@ -21305,7 +21120,6 @@ encoder:
 #	jsie	
 #	jsii	
 #	jsio	
-#	jsiu	
 #	jsj'	
 #	jsj,	
 #	jsj.	
@@ -21616,7 +21430,6 @@ encoder:
 #	jveu	
 #	jvf'	
 #	jvf,	
-#	jvf.	
 #	jvf/	
 #	jvg'	
 #	jvg,	
@@ -21686,7 +21499,6 @@ encoder:
 #	jvx;	
 #	jvy'	
 #	jvy.	
-#	jvy;	
 #	jvz'	
 #	jvz,	
 #	jvz.	
@@ -21848,7 +21660,6 @@ encoder:
 #	jxj/	
 #	jxj;	
 #	jxk'	
-#	jxk,	
 #	jxk.	
 #	jxk/	
 #	jxk;	
@@ -21923,7 +21734,6 @@ encoder:
 #	jxz/	
 #	jxz;	
 #	jyae	
-#	jyai	
 #	jyao	
 #	jyau	
 #	jyb'	
@@ -21944,7 +21754,6 @@ encoder:
 #	jyg'	
 #	jyg,	
 #	jyg.	
-#	jyg/	
 #	jyh'	
 #	jyh,	
 #	jyh.	
@@ -22162,7 +21971,6 @@ encoder:
 #	kac;	
 #	kad.	
 #	kad/	
-#	kad;	
 #	kaee	
 #	kaei	
 #	kaeo	
@@ -22331,7 +22139,6 @@ encoder:
 #	kbm.	
 #	kbm/	
 #	kbm;	
-#	kbn'	
 #	kbn,	
 #	kbn.	
 #	kbn/	
@@ -22438,7 +22245,6 @@ encoder:
 #	kciu	
 #	kcj'	
 #	kcj.	
-#	kcj;	
 #	kck'	
 #	kck,	
 #	kck.	
@@ -22648,7 +22454,6 @@ encoder:
 #	keb.	
 #	keb/	
 #	keb;	
-#	kec'	
 #	kec,	
 #	kec.	
 #	ked,	
@@ -22685,7 +22490,6 @@ encoder:
 #	kej/	
 #	kek,	
 #	kek.	
-#	kek/	
 #	kek;	
 #	kel'	
 #	kel/	
@@ -23483,7 +23287,6 @@ encoder:
 #	klb,	
 #	klb.	
 #	klb/	
-#	klb;	
 #	klc'	
 #	klc,	
 #	klc.	
@@ -23600,7 +23403,6 @@ encoder:
 #	klz.	
 #	klz/	
 #	klz;	
-#	kmaa	
 #	kmae	
 #	kmai	
 #	kmao	
@@ -23679,7 +23481,6 @@ encoder:
 #	kmq/	
 #	kmq;	
 #	kmr'	
-#	kmr,	
 #	kmr.	
 #	kmr/	
 #	kmr;	
@@ -23725,8 +23526,6 @@ encoder:
 #	knaa	
 #	knae	
 #	knai	
-#	knao	
-#	knau	
 #	knb'	
 #	knb,	
 #	knb.	
@@ -23857,7 +23656,6 @@ encoder:
 #	kob;	
 #	koc'	
 #	koc.	
-#	koc/	
 #	koc;	
 #	kod'	
 #	kod,	
@@ -23869,7 +23667,6 @@ encoder:
 #	koeo	
 #	koeu	
 #	kof'	
-#	kof,	
 #	kof/	
 #	kof;	
 #	kog'	
@@ -23889,7 +23686,6 @@ encoder:
 #	koj,	
 #	koj.	
 #	koj/	
-#	koj;	
 #	kok'	
 #	kok,	
 #	kok.	
@@ -23950,7 +23746,6 @@ encoder:
 #	kow;	
 #	kox'	
 #	kox,	
-#	kox.	
 #	kox/	
 #	kox;	
 #	koy'	
@@ -24153,7 +23948,6 @@ encoder:
 #	kqn;	
 #	kqoa	
 #	kqoe	
-#	kqoi	
 #	kqoo	
 #	kqou	
 #	kqp'	
@@ -24218,7 +24012,6 @@ encoder:
 #	krb,	
 #	krb.	
 #	krb/	
-#	krb;	
 #	krc'	
 #	krc,	
 #	krc.	
@@ -24238,12 +24031,9 @@ encoder:
 #	krf,	
 #	krf.	
 #	krf/	
-#	krf;	
 #	krg'	
 #	krg,	
-#	krg.	
 #	krg/	
-#	krg;	
 #	krh'	
 #	krh,	
 #	krh.	
@@ -24355,7 +24145,6 @@ encoder:
 #	ksea	
 #	ksee	
 #	ksei	
-#	kseo	
 #	ksf'	
 #	ksf,	
 #	ksf.	
@@ -24426,7 +24215,6 @@ encoder:
 #	kst,	
 #	kst.	
 #	kst/	
-#	ksua	
 #	ksue	
 #	ksui	
 #	ksuo	
@@ -24695,7 +24483,6 @@ encoder:
 #	kuz.	
 #	kuz/	
 #	kuz;	
-#	kvaa	
 #	kvae	
 #	kvai	
 #	kvao	
@@ -24799,7 +24586,6 @@ encoder:
 #	kvv.	
 #	kvv/	
 #	kvv;	
-#	kvw'	
 #	kvw,	
 #	kvw.	
 #	kvw/	
@@ -25213,7 +24999,6 @@ encoder:
 #	kzf,	
 #	kzf.	
 #	kzf/	
-#	kzf;	
 #	kzg'	
 #	kzg,	
 #	kzg.	
@@ -25336,7 +25121,6 @@ encoder:
 #	lag,	
 #	lag.	
 #	lag/	
-#	lah'	
 #	lah,	
 #	lah.	
 #	lah/	
@@ -25720,7 +25504,6 @@ encoder:
 #	ldp,	
 #	ldp.	
 #	ldp/	
-#	ldp;	
 #	ldq'	
 #	ldq,	
 #	ldq.	
@@ -26433,7 +26216,6 @@ encoder:
 #	ljz.	
 #	ljz/	
 #	ljz;	
-#	lkae	
 #	lkai	
 #	lkao	
 #	lkb'	
@@ -26695,7 +26477,6 @@ encoder:
 #	lml;	
 #	lmm,	
 #	lmm.	
-#	lmm;	
 #	lmn'	
 #	lmn,	
 #	lmn.	
@@ -26883,7 +26664,6 @@ encoder:
 #	lod;	
 #	loea	
 #	loee	
-#	loei	
 #	loeo	
 #	loeu	
 #	lof'	
@@ -27297,7 +27077,6 @@ encoder:
 #	lrw'	
 #	lrw,	
 #	lrw/	
-#	lrw;	
 #	lrx'	
 #	lrx.	
 #	lrx/	
@@ -27357,7 +27136,6 @@ encoder:
 #	lsk,	
 #	lsk.	
 #	lsk/	
-#	lsk;	
 #	lsl'	
 #	lsl,	
 #	lsl.	
@@ -27619,7 +27397,6 @@ encoder:
 #	lut.	
 #	lut/	
 #	lut;	
-#	luua	
 #	luue	
 #	luuo	
 #	luuu	
@@ -27713,7 +27490,6 @@ encoder:
 #	lvs,	
 #	lvs/	
 #	lvt,	
-#	lvt.	
 #	lvt/	
 #	lvua	
 #	lvue	
@@ -27807,7 +27583,6 @@ encoder:
 #	lwq/	
 #	lwq;	
 #	lwr'	
-#	lwr,	
 #	lwr.	
 #	lwr/	
 #	lwr;	
@@ -27851,7 +27626,6 @@ encoder:
 #	lxae	
 #	lxai	
 #	lxao	
-#	lxau	
 #	lxb'	
 #	lxb,	
 #	lxb.	
@@ -27886,7 +27660,6 @@ encoder:
 #	lxh;	
 #	lxia	
 #	lxie	
-#	lxii	
 #	lxio	
 #	lxiu	
 #	lxj'	
@@ -27932,7 +27705,6 @@ encoder:
 #	lxr;	
 #	lxs'	
 #	lxs,	
-#	lxs.	
 #	lxs/	
 #	lxt'	
 #	lxt,	
@@ -27976,7 +27748,6 @@ encoder:
 #	lyc/	
 #	lyd,	
 #	lyd.	
-#	lyd/	
 #	lyee	
 #	lyeo	
 #	lyeu	
@@ -28048,7 +27819,6 @@ encoder:
 #	lyt;	
 #	lyua	
 #	lyue	
-#	lyui	
 #	lyuo	
 #	lyuu	
 #	lyv'	
@@ -28861,7 +28631,6 @@ encoder:
 #	mfn/	
 #	mfn;	
 #	mfoa	
-#	mfoe	
 #	mfoi	
 #	mfoo	
 #	mfp'	
@@ -29270,7 +29039,6 @@ encoder:
 #	miz/	
 #	miz;	
 #	mjae	
-#	mjai	
 #	mjao	
 #	mjau	
 #	mjb'	
@@ -29649,7 +29417,6 @@ encoder:
 #	mmh.	
 #	mmh/	
 #	mmh;	
-#	mmia	
 #	mmie	
 #	mmii	
 #	mmio	
@@ -29774,7 +29541,6 @@ encoder:
 #	mnj;	
 #	mnk'	
 #	mnk.	
-#	mnk/	
 #	mnk;	
 #	mnl'	
 #	mnl,	
@@ -29815,7 +29581,6 @@ encoder:
 #	mnt'	
 #	mnt,	
 #	mnt.	
-#	mnt/	
 #	mnt;	
 #	mnua	
 #	mnue	
@@ -29941,7 +29706,6 @@ encoder:
 #	mouu	
 #	mov'	
 #	mov,	
-#	mov.	
 #	mov/	
 #	mov;	
 #	mow'	
@@ -30091,7 +29855,6 @@ encoder:
 #	mqae	
 #	mqai	
 #	mqao	
-#	mqau	
 #	mqb'	
 #	mqb,	
 #	mqb.	
@@ -30182,7 +29945,6 @@ encoder:
 #	mqt;	
 #	mqua	
 #	mque	
-#	mqui	
 #	mquo	
 #	mquu	
 #	mqv'	
@@ -30367,7 +30129,6 @@ encoder:
 #	msh,	
 #	msh.	
 #	msh/	
-#	msh;	
 #	msia	
 #	msie	
 #	msii	
@@ -30757,7 +30518,6 @@ encoder:
 #	mvn.	
 #	mvn/	
 #	mvn;	
-#	mvoe	
 #	mvoi	
 #	mvoo	
 #	mvp'	
@@ -30841,7 +30601,6 @@ encoder:
 #	mwh,	
 #	mwh.	
 #	mwh/	
-#	mwh;	
 #	mwie	
 #	mwii	
 #	mwio	
@@ -31089,7 +30848,6 @@ encoder:
 #	myio	
 #	myiu	
 #	myj'	
-#	myj,	
 #	myj.	
 #	myk'	
 #	myk,	
@@ -31261,7 +31019,6 @@ encoder:
 #	mzt;	
 #	mzua	
 #	mzue	
-#	mzui	
 #	mzuo	
 #	mzuu	
 #	mzv'	
@@ -32560,7 +32317,6 @@ encoder:
 #	nkf/	
 #	nkf;	
 #	nkg'	
-#	nkg,	
 #	nkg.	
 #	nkg/	
 #	nkg;	
@@ -32832,7 +32588,6 @@ encoder:
 #	nml'	
 #	nml,	
 #	nml.	
-#	nml/	
 #	nml;	
 #	nmm'	
 #	nmm,	
@@ -32944,12 +32699,10 @@ encoder:
 #	nnie	
 #	nnii	
 #	nnio	
-#	nniu	
 #	nnj'	
 #	nnj,	
 #	nnj.	
 #	nnj/	
-#	nnk;	
 #	nnl'	
 #	nnl,	
 #	nnl.	
@@ -32985,7 +32738,6 @@ encoder:
 #	nnr/	
 #	nnr;	
 #	nns'	
-#	nns,	
 #	nns.	
 #	nns;	
 #	nnt'	
@@ -33122,7 +32874,6 @@ encoder:
 #	now,	
 #	now.	
 #	now/	
-#	now;	
 #	nox'	
 #	nox,	
 #	nox.	
@@ -33210,7 +32961,6 @@ encoder:
 #	npoi	
 #	npoo	
 #	npou	
-#	npp'	
 #	npp,	
 #	npp.	
 #	npp/	
@@ -33570,7 +33320,6 @@ encoder:
 #	nsn/	
 #	nsn;	
 #	nsoa	
-#	nsoe	
 #	nsoi	
 #	nsoo	
 #	nsp,	
@@ -34015,7 +33764,6 @@ encoder:
 #	nwd/	
 #	nwd;	
 #	nwea	
-#	nwee	
 #	nwei	
 #	nweo	
 #	nweu	
@@ -34344,7 +34092,6 @@ encoder:
 #	nyt;	
 #	nyua	
 #	nyue	
-#	nyui	
 #	nyuo	
 #	nyv'	
 #	nyv,	
@@ -34502,7 +34249,6 @@ encoder:
 #	nzz;	
 #	paaa	
 #	paae	
-#	paai	
 #	paao	
 #	paau	
 #	pab'	
@@ -34747,7 +34493,6 @@ encoder:
 #	pbz;	
 #	pcaa	
 #	pcae	
-#	pcai	
 #	pcao	
 #	pcau	
 #	pcb'	
@@ -34866,7 +34611,6 @@ encoder:
 #	pcz.	
 #	pcz/	
 #	pcz;	
-#	pdaa	
 #	pdae	
 #	pdai	
 #	pdao	
@@ -35054,7 +34798,6 @@ encoder:
 #	pem'	
 #	pem,	
 #	pem.	
-#	pem/	
 #	pem;	
 #	pen'	
 #	pen,	
@@ -35141,7 +34884,6 @@ encoder:
 #	pfd/	
 #	pfd;	
 #	pfea	
-#	pfee	
 #	pfei	
 #	pfeo	
 #	pfeu	
@@ -35206,7 +34948,6 @@ encoder:
 #	pfs.	
 #	pfs/	
 #	pfs;	
-#	pft'	
 #	pft,	
 #	pft/	
 #	pft;	
@@ -35332,7 +35073,6 @@ encoder:
 #	pgt.	
 #	pgt/	
 #	pgt;	
-#	pgua	
 #	pgue	
 #	pgui	
 #	pguo	
@@ -35447,7 +35187,6 @@ encoder:
 #	phr/	
 #	phr;	
 #	phs'	
-#	phs,	
 #	phs.	
 #	phs/	
 #	phs;	
@@ -35539,7 +35278,6 @@ encoder:
 #	pik,	
 #	pik.	
 #	pik/	
-#	pik;	
 #	pil'	
 #	pil,	
 #	pil.	
@@ -35645,7 +35383,6 @@ encoder:
 #	pjg,	
 #	pjg.	
 #	pjg;	
-#	pjh'	
 #	pjh,	
 #	pjh.	
 #	pjh/	
@@ -35718,7 +35455,6 @@ encoder:
 #	pjx,	
 #	pjx.	
 #	pjx/	
-#	pjx;	
 #	pjy'	
 #	pjy,	
 #	pjy.	
@@ -35759,8 +35495,6 @@ encoder:
 #	pkf;	
 #	pkg'	
 #	pkg,	
-#	pkg.	
-#	pkg/	
 #	pkg;	
 #	pkh'	
 #	pkh,	
@@ -35815,7 +35549,6 @@ encoder:
 #	pkt'	
 #	pkt,	
 #	pkt.	
-#	pkt/	
 #	pkt;	
 #	pkua	
 #	pkue	
@@ -35824,8 +35557,6 @@ encoder:
 #	pkv'	
 #	pkv/	
 #	pkw'	
-#	pkw,	
-#	pkw.	
 #	pkw/	
 #	pkw;	
 #	pkx,	
@@ -35836,7 +35567,6 @@ encoder:
 #	pky.	
 #	pky/	
 #	pky;	
-#	pkz'	
 #	pkz,	
 #	pkz.	
 #	pkz/	
@@ -35911,7 +35641,6 @@ encoder:
 #	pln;	
 #	ploa	
 #	ploe	
-#	ploo	
 #	plou	
 #	plp'	
 #	plp,	
@@ -35981,7 +35710,6 @@ encoder:
 #	pmc/	
 #	pmc;	
 #	pmd'	
-#	pmd,	
 #	pmd.	
 #	pmd/	
 #	pmd;	
@@ -36020,14 +35748,12 @@ encoder:
 #	pml,	
 #	pml.	
 #	pml/	
-#	pml;	
 #	pmm'	
 #	pmm,	
 #	pmm.	
 #	pmm/	
 #	pmm;	
 #	pmn'	
-#	pmn,	
 #	pmn.	
 #	pmn/	
 #	pmn;	
@@ -36070,7 +35796,6 @@ encoder:
 #	pmv;	
 #	pmw'	
 #	pmw,	
-#	pmw.	
 #	pmw/	
 #	pmw;	
 #	pmx'	
@@ -36087,7 +35812,6 @@ encoder:
 #	pmz.	
 #	pmz/	
 #	pmz;	
-#	pnaa	
 #	pnae	
 #	pnai	
 #	pnao	
@@ -36233,7 +35957,6 @@ encoder:
 #	pog'	
 #	pog,	
 #	pog.	
-#	pog/	
 #	pog;	
 #	poh'	
 #	poh,	
@@ -36248,7 +35971,6 @@ encoder:
 #	poj,	
 #	poj.	
 #	poj;	
-#	pok'	
 #	pok,	
 #	pok.	
 #	pok/	
@@ -36620,7 +36342,6 @@ encoder:
 #	prm/	
 #	prm;	
 #	prn'	
-#	prn,	
 #	prn.	
 #	prn/	
 #	proa	
@@ -36657,7 +36378,6 @@ encoder:
 #	prv.	
 #	prv/	
 #	prw'	
-#	prw.	
 #	prw/	
 #	prw;	
 #	prx'	
@@ -36730,7 +36450,6 @@ encoder:
 #	psl,	
 #	psl.	
 #	psl/	
-#	psl;	
 #	psm.	
 #	psm/	
 #	psn'	
@@ -36874,7 +36593,6 @@ encoder:
 #	ptr;	
 #	pts'	
 #	pts/	
-#	pts;	
 #	ptt'	
 #	ptt,	
 #	ptt.	
@@ -36902,7 +36620,6 @@ encoder:
 #	pty.	
 #	pty/	
 #	pty;	
-#	ptz'	
 #	ptz,	
 #	ptz.	
 #	ptz/	
@@ -36995,7 +36712,6 @@ encoder:
 #	pur;	
 #	pus'	
 #	pus/	
-#	pus;	
 #	put'	
 #	put,	
 #	put.	
@@ -37055,12 +36771,10 @@ encoder:
 #	pvf;	
 #	pvg,	
 #	pvg.	
-#	pvg/	
 #	pvg;	
 #	pvh'	
 #	pvh,	
 #	pvh/	
-#	pvh;	
 #	pvie	
 #	pvio	
 #	pviu	
@@ -37085,7 +36799,6 @@ encoder:
 #	pvn,	
 #	pvn.	
 #	pvn/	
-#	pvn;	
 #	pvoa	
 #	pvoe	
 #	pvoi	
@@ -37201,7 +36914,6 @@ encoder:
 #	pwn,	
 #	pwn.	
 #	pwn;	
-#	pwoa	
 #	pwoe	
 #	pwoi	
 #	pwou	
@@ -37313,7 +37025,6 @@ encoder:
 #	pxm'	
 #	pxm,	
 #	pxm.	
-#	pxm/	
 #	pxm;	
 #	pxn'	
 #	pxn,	
@@ -37439,7 +37150,6 @@ encoder:
 #	pym.	
 #	pym;	
 #	pyn'	
-#	pyn,	
 #	pyn.	
 #	pyn/	
 #	pyn;	
@@ -37562,7 +37272,6 @@ encoder:
 #	pzm.	
 #	pzm/	
 #	pzm;	
-#	pzn'	
 #	pzn.	
 #	pzn/	
 #	pzn;	
@@ -38227,7 +37936,6 @@ encoder:
 #	qfd/	
 #	qfd;	
 #	qfea	
-#	qfei	
 #	qfeo	
 #	qff,	
 #	qff;	
@@ -38269,7 +37977,6 @@ encoder:
 #	qfn/	
 #	qfoa	
 #	qfoe	
-#	qfoi	
 #	qfoo	
 #	qfou	
 #	qfp'	
@@ -38367,7 +38074,6 @@ encoder:
 #	qgj/	
 #	qgj;	
 #	qgk'	
-#	qgk,	
 #	qgk.	
 #	qgk/	
 #	qgk;	
@@ -38523,7 +38229,6 @@ encoder:
 #	qhq/	
 #	qhq;	
 #	qhr,	
-#	qhr.	
 #	qhr/	
 #	qhr;	
 #	qhs'	
@@ -38554,7 +38259,6 @@ encoder:
 #	qhx,	
 #	qhx.	
 #	qhx/	
-#	qhx;	
 #	qhy'	
 #	qhy,	
 #	qhy.	
@@ -38733,7 +38437,6 @@ encoder:
 #	qjj'	
 #	qjj,	
 #	qjj.	
-#	qjj/	
 #	qjj;	
 #	qjk'	
 #	qjk,	
@@ -38855,14 +38558,12 @@ encoder:
 #	qkn/	
 #	qkn;	
 #	qkoo	
-#	qkp,	
 #	qkp.	
 #	qkq'	
 #	qkq,	
 #	qkq.	
 #	qkq/	
 #	qkr'	
-#	qkr.	
 #	qks,	
 #	qks.	
 #	qks/	
@@ -38872,8 +38573,6 @@ encoder:
 #	qkt.	
 #	qkt/	
 #	qkt;	
-#	qkua	
-#	qkue	
 #	qkuo	
 #	qkv'	
 #	qkv.	
@@ -39157,7 +38856,6 @@ encoder:
 #	qnf'	
 #	qnf,	
 #	qnf.	
-#	qnf/	
 #	qnf;	
 #	qng'	
 #	qng,	
@@ -39301,7 +38999,6 @@ encoder:
 #	qok.	
 #	qok/	
 #	qok;	
-#	qol'	
 #	qol,	
 #	qol.	
 #	qol/	
@@ -39442,7 +39139,6 @@ encoder:
 #	qpp,	
 #	qpp.	
 #	qpp/	
-#	qpp;	
 #	qpq'	
 #	qpq,	
 #	qpq.	
@@ -39630,7 +39326,6 @@ encoder:
 #	qreo	
 #	qreu	
 #	qrf'	
-#	qrf,	
 #	qrf.	
 #	qrg'	
 #	qrg,	
@@ -39742,7 +39437,6 @@ encoder:
 #	qsd/	
 #	qsd;	
 #	qsee	
-#	qsei	
 #	qseo	
 #	qseu	
 #	qsf'	
@@ -39758,7 +39452,6 @@ encoder:
 #	qsh.	
 #	qsh/	
 #	qsh;	
-#	qsia	
 #	qsie	
 #	qsii	
 #	qsio	
@@ -39771,7 +39464,6 @@ encoder:
 #	qsk'	
 #	qsk,	
 #	qsk.	
-#	qsk/	
 #	qsl,	
 #	qsl.	
 #	qsl;	
@@ -39858,7 +39550,6 @@ encoder:
 #	qtd/	
 #	qtd;	
 #	qtea	
-#	qtee	
 #	qtei	
 #	qteo	
 #	qteu	
@@ -40090,7 +39781,6 @@ encoder:
 #	qvd'	
 #	qvd,	
 #	qvd.	
-#	qvd/	
 #	qvea	
 #	qvei	
 #	qveo	
@@ -40106,7 +39796,6 @@ encoder:
 #	qvh,	
 #	qvh/	
 #	qvh;	
-#	qvia	
 #	qvii	
 #	qvio	
 #	qviu	
@@ -40177,7 +39866,6 @@ encoder:
 #	qvy/	
 #	qvy;	
 #	qvz'	
-#	qvz,	
 #	qvz.	
 #	qvz/	
 #	qvz;	
@@ -40376,7 +40064,6 @@ encoder:
 #	qxq/	
 #	qxq;	
 #	qxr'	
-#	qxr,	
 #	qxr/	
 #	qxr;	
 #	qxs'	
@@ -40389,7 +40076,6 @@ encoder:
 #	qxt/	
 #	qxua	
 #	qxue	
-#	qxui	
 #	qxuo	
 #	qxuu	
 #	qxv'	
@@ -40453,7 +40139,6 @@ encoder:
 #	qyii	
 #	qyio	
 #	qyiu	
-#	qyj'	
 #	qyj,	
 #	qyj.	
 #	qyj/	
@@ -40587,7 +40272,6 @@ encoder:
 #	qzl,	
 #	qzl.	
 #	qzl/	
-#	qzl;	
 #	qzm'	
 #	qzm,	
 #	qzm.	
@@ -40965,7 +40649,6 @@ encoder:
 #	rcl'	
 #	rcl,	
 #	rcl.	
-#	rcl/	
 #	rcl;	
 #	rcm'	
 #	rcm,	
@@ -42288,7 +41971,6 @@ encoder:
 #	rnae	
 #	rnai	
 #	rnao	
-#	rnau	
 #	rnb'	
 #	rnb,	
 #	rnb.	
@@ -42461,7 +42143,6 @@ encoder:
 #	rok,	
 #	rok.	
 #	rok/	
-#	rok;	
 #	rol'	
 #	rol,	
 #	rol.	
@@ -42868,9 +42549,7 @@ encoder:
 #	rrq/	
 #	rrq;	
 #	rrr'	
-#	rrr.	
 #	rrr/	
-#	rrr;	
 #	rrs'	
 #	rrs,	
 #	rrs.	
@@ -43261,8 +42940,6 @@ encoder:
 #	rut,	
 #	rut.	
 #	rut/	
-#	rut;	
-#	ruua	
 #	ruue	
 #	ruui	
 #	ruuo	
@@ -43959,7 +43636,6 @@ encoder:
 #	saia	
 #	saie	
 #	saio	
-#	saiu	
 #	saj'	
 #	saj,	
 #	saj.	
@@ -44004,7 +43680,6 @@ encoder:
 #	sar;	
 #	sas,	
 #	sas.	
-#	sas;	
 #	sat'	
 #	sat,	
 #	sat/	
@@ -44172,7 +43847,6 @@ encoder:
 #	scd'	
 #	scd,	
 #	scd.	
-#	scd/	
 #	scea	
 #	sceo	
 #	sceu	
@@ -44195,7 +43869,6 @@ encoder:
 #	scie	
 #	scii	
 #	scio	
-#	scj'	
 #	scj,	
 #	scj/	
 #	scj;	
@@ -44352,7 +44025,6 @@ encoder:
 #	sdr'	
 #	sdr,	
 #	sdr.	
-#	sdr/	
 #	sdr;	
 #	sds'	
 #	sds,	
@@ -44466,7 +44138,6 @@ encoder:
 #	ser,	
 #	ser.	
 #	ser/	
-#	ser;	
 #	ses,	
 #	ses.	
 #	ses/	
@@ -44615,7 +44286,6 @@ encoder:
 #	sfz/	
 #	sgaa	
 #	sgae	
-#	sgai	
 #	sgao	
 #	sgau	
 #	sgb'	
@@ -44762,14 +44432,11 @@ encoder:
 #	shie	
 #	shii	
 #	shio	
-#	shiu	
 #	shj'	
 #	shj,	
 #	shj.	
 #	shj/	
 #	shj;	
-#	shk'	
-#	shk/	
 #	shl'	
 #	shl,	
 #	shl.	
@@ -44865,7 +44532,6 @@ encoder:
 #	sif/	
 #	sig'	
 #	sig,	
-#	sig.	
 #	sig/	
 #	sig;	
 #	sih'	
@@ -44964,8 +44630,6 @@ encoder:
 #	sjc.	
 #	sjc/	
 #	sjc;	
-#	sjd'	
-#	sjd,	
 #	sjd.	
 #	sjd;	
 #	sjea	
@@ -44983,12 +44647,10 @@ encoder:
 #	sjg;	
 #	sjh'	
 #	sjh,	
-#	sjh.	
 #	sjh/	
 #	sjh;	
 #	sjia	
 #	sjie	
-#	sjii	
 #	sjio	
 #	sjj,	
 #	sjj/	
@@ -45028,7 +44690,6 @@ encoder:
 #	sjs,	
 #	sjs.	
 #	sjs/	
-#	sjt'	
 #	sjt,	
 #	sjt.	
 #	sjt/	
@@ -45054,7 +44715,6 @@ encoder:
 #	sjy'	
 #	sjy,	
 #	sjy.	
-#	sjy/	
 #	sjz,	
 #	sjz.	
 #	sjz/	
@@ -45213,7 +44873,6 @@ encoder:
 #	sln,	
 #	sln.	
 #	sln;	
-#	sloe	
 #	sloi	
 #	sloo	
 #	slou	
@@ -45250,7 +44909,6 @@ encoder:
 #	slw'	
 #	slw,	
 #	slw.	
-#	slw/	
 #	slw;	
 #	slx'	
 #	slx,	
@@ -45270,7 +44928,6 @@ encoder:
 #	smau	
 #	smb'	
 #	smb,	
-#	smb.	
 #	smb/	
 #	smb;	
 #	smc'	
@@ -45345,7 +45002,6 @@ encoder:
 #	sms.	
 #	sms/	
 #	sms;	
-#	smt'	
 #	smt,	
 #	smt/	
 #	smt;	
@@ -45430,7 +45086,6 @@ encoder:
 #	snm/	
 #	snm;	
 #	snn,	
-#	snn.	
 #	snn/	
 #	snn;	
 #	snoa	
@@ -45486,7 +45141,6 @@ encoder:
 #	snz/	
 #	snz;	
 #	soaa	
-#	soae	
 #	soao	
 #	soau	
 #	sob'	
@@ -45749,7 +45403,6 @@ encoder:
 #	sqh;	
 #	sqii	
 #	sqio	
-#	sqiu	
 #	sqj'	
 #	sqj,	
 #	sqj.	
@@ -45877,7 +45530,6 @@ encoder:
 #	srn/	
 #	srn;	
 #	sroa	
-#	sroe	
 #	sroi	
 #	sroo	
 #	srou	
@@ -45898,7 +45550,6 @@ encoder:
 #	srs.	
 #	srs;	
 #	srt'	
-#	srt.	
 #	srt/	
 #	srt;	
 #	srua	
@@ -45992,7 +45643,6 @@ encoder:
 #	ssn.	
 #	ssn/	
 #	ssn;	
-#	ssoa	
 #	ssoe	
 #	ssou	
 #	ssp'	
@@ -46102,7 +45752,6 @@ encoder:
 #	stm.	
 #	stn'	
 #	stn,	
-#	stn.	
 #	stn/	
 #	stn;	
 #	stoe	
@@ -46307,7 +45956,6 @@ encoder:
 #	svj'	
 #	svj,	
 #	svj.	
-#	svj/	
 #	svj;	
 #	svk'	
 #	svk,	
@@ -46322,7 +45970,6 @@ encoder:
 #	svn,	
 #	svn.	
 #	svn;	
-#	svoa	
 #	svoe	
 #	svoi	
 #	svoo	
@@ -46654,7 +46301,6 @@ encoder:
 #	sym.	
 #	sym/	
 #	sym;	
-#	syn'	
 #	syn,	
 #	syn.	
 #	syn/	
@@ -46694,7 +46340,6 @@ encoder:
 #	syv/	
 #	syv;	
 #	syw'	
-#	syw,	
 #	syw.	
 #	syw/	
 #	syw;	
@@ -46702,7 +46347,6 @@ encoder:
 #	syx,	
 #	syx.	
 #	syx/	
-#	syx;	
 #	syy'	
 #	syy,	
 #	syy.	
@@ -46845,7 +46489,6 @@ encoder:
 #	tac.	
 #	tac/	
 #	tad'	
-#	tad,	
 #	tad.	
 #	tad;	
 #	taea	
@@ -46864,7 +46507,6 @@ encoder:
 #	tah,	
 #	tah/	
 #	tah;	
-#	taia	
 #	taii	
 #	taio	
 #	taj'	
@@ -46966,7 +46608,6 @@ encoder:
 #	tbd;	
 #	tbea	
 #	tbee	
-#	tbei	
 #	tbeo	
 #	tbeu	
 #	tbf'	
@@ -46984,7 +46625,6 @@ encoder:
 #	tbh.	
 #	tbh/	
 #	tbh;	
-#	tbia	
 #	tbie	
 #	tbii	
 #	tbio	
@@ -47260,7 +46900,6 @@ encoder:
 #	tdp,	
 #	tdp.	
 #	tdp/	
-#	tdp;	
 #	tdq'	
 #	tdq,	
 #	tdq.	
@@ -47701,7 +47340,6 @@ encoder:
 #	thg/	
 #	thg;	
 #	thh,	
-#	thh.	
 #	thh/	
 #	thh;	
 #	thia	
@@ -48038,7 +47676,6 @@ encoder:
 #	tkd/	
 #	tkd;	
 #	tkea	
-#	tkee	
 #	tkeo	
 #	tkeu	
 #	tkf'	
@@ -48082,9 +47719,7 @@ encoder:
 #	tkn.	
 #	tkn/	
 #	tkn;	
-#	tkoa	
 #	tkoe	
-#	tkoo	
 #	tkou	
 #	tkp'	
 #	tkp,	
@@ -48094,7 +47729,6 @@ encoder:
 #	tkq,	
 #	tkq.	
 #	tkq/	
-#	tkq;	
 #	tkr,	
 #	tkr.	
 #	tkr/	
@@ -48408,7 +48042,6 @@ encoder:
 #	tnh;	
 #	tnia	
 #	tnie	
-#	tnii	
 #	tnj'	
 #	tnj,	
 #	tnj/	
@@ -48427,7 +48060,6 @@ encoder:
 #	tnm.	
 #	tnm/	
 #	tnm;	
-#	tnn'	
 #	tnn,	
 #	tnn/	
 #	tnn;	
@@ -48438,7 +48070,6 @@ encoder:
 #	tnou	
 #	tnp'	
 #	tnp,	
-#	tnp.	
 #	tnp/	
 #	tnp;	
 #	tnq'	
@@ -48496,7 +48127,6 @@ encoder:
 #	toc.	
 #	toc/	
 #	tod'	
-#	tod,	
 #	tod.	
 #	tod/	
 #	tod;	
@@ -48553,7 +48183,6 @@ encoder:
 #	toou	
 #	top'	
 #	top,	
-#	top.	
 #	top/	
 #	top;	
 #	toq'	
@@ -48622,7 +48251,6 @@ encoder:
 #	tpea	
 #	tpee	
 #	tpeo	
-#	tpeu	
 #	tpf'	
 #	tpf,	
 #	tpf.	
@@ -48665,7 +48293,6 @@ encoder:
 #	tpn.	
 #	tpn/	
 #	tpn;	
-#	tpoa	
 #	tpoe	
 #	tpoi	
 #	tpou	
@@ -48860,14 +48487,12 @@ encoder:
 #	trd.	
 #	trd/	
 #	trd;	
-#	trea	
 #	tree	
 #	treo	
 #	trf'	
 #	trf,	
 #	trf.	
 #	trf/	
-#	trf;	
 #	trg'	
 #	trg.	
 #	trg/	
@@ -48875,7 +48500,6 @@ encoder:
 #	trh,	
 #	trh/	
 #	trh;	
-#	tria	
 #	trie	
 #	trii	
 #	trio	
@@ -48939,7 +48563,6 @@ encoder:
 #	trw'	
 #	trw.	
 #	trw/	
-#	trw;	
 #	trx'	
 #	trx,	
 #	trx.	
@@ -48967,7 +48590,6 @@ encoder:
 #	tsc,	
 #	tsc.	
 #	tsc/	
-#	tsc;	
 #	tsd'	
 #	tsd,	
 #	tsd.	
@@ -49109,7 +48731,6 @@ encoder:
 #	tth.	
 #	tth/	
 #	tth;	
-#	ttii	
 #	ttj'	
 #	ttj,	
 #	ttj.	
@@ -49227,7 +48848,6 @@ encoder:
 #	tuj'	
 #	tuj,	
 #	tuj.	
-#	tuj/	
 #	tuj;	
 #	tuk,	
 #	tuk.	
@@ -49263,7 +48883,6 @@ encoder:
 #	tur.	
 #	tur/	
 #	tur;	
-#	tus,	
 #	tus.	
 #	tus/	
 #	tus;	
@@ -49282,7 +48901,6 @@ encoder:
 #	tuv.	
 #	tuv;	
 #	tuw'	
-#	tuw,	
 #	tuw.	
 #	tuw/	
 #	tuw;	
@@ -49340,7 +48958,6 @@ encoder:
 #	tvk'	
 #	tvk,	
 #	tvk/	
-#	tvk;	
 #	tvl'	
 #	tvl,	
 #	tvl.	
@@ -49381,7 +48998,6 @@ encoder:
 #	tvt,	
 #	tvt.	
 #	tvt/	
-#	tvt;	
 #	tvua	
 #	tvue	
 #	tvui	
@@ -49424,7 +49040,6 @@ encoder:
 #	twd'	
 #	twd,	
 #	twd/	
-#	twd;	
 #	twea	
 #	twee	
 #	tweo	
@@ -49549,7 +49164,6 @@ encoder:
 #	txd;	
 #	txea	
 #	txee	
-#	txei	
 #	txeo	
 #	txeu	
 #	txf'	
@@ -49703,7 +49317,6 @@ encoder:
 #	tyl/	
 #	tyl;	
 #	tym'	
-#	tym,	
 #	tym.	
 #	tym/	
 #	tym;	
@@ -49821,7 +49434,6 @@ encoder:
 #	tzl,	
 #	tzl.	
 #	tzl/	
-#	tzl;	
 #	tzm'	
 #	tzm,	
 #	tzm.	
@@ -50140,7 +49752,6 @@ encoder:
 #	vbz;	
 #	vcaa	
 #	vcae	
-#	vcai	
 #	vcao	
 #	vcau	
 #	vcb'	
@@ -50220,7 +49831,6 @@ encoder:
 #	vcp;	
 #	vcq'	
 #	vcq,	
-#	vcq.	
 #	vcq/	
 #	vcq;	
 #	vcr'	
@@ -50540,7 +50150,6 @@ encoder:
 #	vff.	
 #	vff;	
 #	vfg'	
-#	vfg,	
 #	vfg.	
 #	vfg/	
 #	vfg;	
@@ -50659,7 +50268,6 @@ encoder:
 #	vgee	
 #	vgei	
 #	vgeo	
-#	vgeu	
 #	vgf'	
 #	vgf,	
 #	vgf.	
@@ -50682,7 +50290,6 @@ encoder:
 #	vgj,	
 #	vgj.	
 #	vgj/	
-#	vgj;	
 #	vgk'	
 #	vgk,	
 #	vgk.	
@@ -50704,7 +50311,6 @@ encoder:
 #	vgn/	
 #	vgn;	
 #	vgoa	
-#	vgoe	
 #	vgoo	
 #	vgou	
 #	vgp,	
@@ -51465,7 +51071,6 @@ encoder:
 #	vmp,	
 #	vmp.	
 #	vmp/	
-#	vmp;	
 #	vmq'	
 #	vmq,	
 #	vmq.	
@@ -51681,8 +51286,6 @@ encoder:
 #	voj,	
 #	voj.	
 #	voj/	
-#	voj;	
-#	vok'	
 #	vok,	
 #	vok.	
 #	vol'	
@@ -51700,9 +51303,7 @@ encoder:
 #	von.	
 #	von/	
 #	von;	
-#	vooo	
 #	voou	
-#	vop,	
 #	vop/	
 #	vop;	
 #	voq'	
@@ -51715,8 +51316,6 @@ encoder:
 #	vor/	
 #	vor;	
 #	vos'	
-#	vos,	
-#	vos/	
 #	vos;	
 #	vot'	
 #	vot,	
@@ -52026,7 +51625,6 @@ encoder:
 #	vrd;	
 #	vrea	
 #	vree	
-#	vrei	
 #	vreo	
 #	vreu	
 #	vrf'	
@@ -52123,7 +51721,6 @@ encoder:
 #	vry,	
 #	vry.	
 #	vry/	
-#	vry;	
 #	vrz'	
 #	vrz,	
 #	vrz.	
@@ -52219,14 +51816,12 @@ encoder:
 #	vst,	
 #	vst.	
 #	vst/	
-#	vsua	
 #	vsue	
 #	vsui	
 #	vsuo	
 #	vsuu	
 #	vsv'	
 #	vsv,	
-#	vsv.	
 #	vsv/	
 #	vsv;	
 #	vsw'	
@@ -52279,7 +51874,6 @@ encoder:
 #	vtf/	
 #	vtf;	
 #	vtg'	
-#	vtg,	
 #	vtg.	
 #	vtg/	
 #	vtg;	
@@ -52842,7 +52436,6 @@ encoder:
 #	vxua	
 #	vxue	
 #	vxui	
-#	vxuo	
 #	vxuu	
 #	vxv'	
 #	vxv,	
@@ -53213,7 +52806,6 @@ encoder:
 #	war;	
 #	was'	
 #	was,	
-#	was.	
 #	was/	
 #	was;	
 #	wat'	
@@ -53534,7 +53126,6 @@ encoder:
 #	wdh;	
 #	wdia	
 #	wdie	
-#	wdii	
 #	wdio	
 #	wdj'	
 #	wdj,	
@@ -53670,7 +53261,6 @@ encoder:
 #	wek/	
 #	wek;	
 #	wel'	
-#	wel,	
 #	wel.	
 #	wel/	
 #	wel;	
@@ -54022,7 +53612,6 @@ encoder:
 #	whh;	
 #	whia	
 #	whie	
-#	whii	
 #	whio	
 #	whj'	
 #	whj,	
@@ -54798,7 +54387,6 @@ encoder:
 #	wnue	
 #	wnui	
 #	wnuo	
-#	wnuu	
 #	wnv'	
 #	wnv,	
 #	wnv.	
@@ -54844,7 +54432,6 @@ encoder:
 #	woea	
 #	woee	
 #	woei	
-#	woeo	
 #	woeu	
 #	wof'	
 #	wof,	
@@ -54858,7 +54445,6 @@ encoder:
 #	wog;	
 #	woh'	
 #	woh,	
-#	woh.	
 #	woh/	
 #	woh;	
 #	woia	
@@ -55069,7 +54655,6 @@ encoder:
 #	wqaa	
 #	wqae	
 #	wqai	
-#	wqao	
 #	wqau	
 #	wqb'	
 #	wqb,	
@@ -55507,7 +55092,6 @@ encoder:
 #	wtr.	
 #	wtr/	
 #	wtr;	
-#	wts,	
 #	wts.	
 #	wts/	
 #	wts;	
@@ -55608,7 +55192,6 @@ encoder:
 #	wuoa	
 #	wuoi	
 #	wuoo	
-#	wuou	
 #	wup'	
 #	wup,	
 #	wup.	
@@ -55699,10 +55282,8 @@ encoder:
 #	wvh.	
 #	wvh/	
 #	wvh;	
-#	wvia	
 #	wvie	
 #	wvio	
-#	wviu	
 #	wvj'	
 #	wvj,	
 #	wvj.	
@@ -56053,7 +55634,6 @@ encoder:
 #	wyia	
 #	wyie	
 #	wyio	
-#	wyiu	
 #	wyj.	
 #	wyj/	
 #	wyj;	
@@ -56105,7 +55685,6 @@ encoder:
 #	wyt.	
 #	wyt/	
 #	wyt;	
-#	wyue	
 #	wyui	
 #	wyuo	
 #	wyuu	
@@ -56234,7 +55813,6 @@ encoder:
 #	wzt;	
 #	wzua	
 #	wzue	
-#	wzui	
 #	wzuo	
 #	wzuu	
 #	wzv'	
@@ -56295,7 +55873,6 @@ encoder:
 #	xag.	
 #	xag/	
 #	xag;	
-#	xah.	
 #	xah/	
 #	xah;	
 #	xaia	
@@ -56344,7 +55921,6 @@ encoder:
 #	xar.	
 #	xar;	
 #	xas'	
-#	xas/	
 #	xat'	
 #	xat,	
 #	xat.	
@@ -56363,7 +55939,6 @@ encoder:
 #	xaw.	
 #	xaw;	
 #	xax'	
-#	xax,	
 #	xax.	
 #	xax/	
 #	xax;	
@@ -56538,7 +56113,6 @@ encoder:
 #	xcj'	
 #	xcj,	
 #	xcj.	
-#	xcj/	
 #	xcj;	
 #	xck'	
 #	xck,	
@@ -56636,7 +56210,6 @@ encoder:
 #	xdeu	
 #	xdf'	
 #	xdf,	
-#	xdf;	
 #	xdg'	
 #	xdg,	
 #	xdg.	
@@ -56993,7 +56566,6 @@ encoder:
 #	xgh;	
 #	xgia	
 #	xgie	
-#	xgii	
 #	xgio	
 #	xgiu	
 #	xgj'	
@@ -57287,7 +56859,6 @@ encoder:
 #	xiy.	
 #	xiy/	
 #	xiy;	
-#	xiz'	
 #	xiz,	
 #	xiz.	
 #	xiz/	
@@ -57432,7 +57003,6 @@ encoder:
 #	xkf;	
 #	xkg'	
 #	xkg,	
-#	xkg.	
 #	xkg/	
 #	xkg;	
 #	xkh'	
@@ -57636,7 +57206,6 @@ encoder:
 #	xmd;	
 #	xmea	
 #	xmee	
-#	xmei	
 #	xmeo	
 #	xmeu	
 #	xmf'	
@@ -57661,7 +57230,6 @@ encoder:
 #	xmk,	
 #	xmk.	
 #	xmk/	
-#	xmk;	
 #	xml'	
 #	xml.	
 #	xml/	
@@ -57701,7 +57269,6 @@ encoder:
 #	xmt/	
 #	xmt;	
 #	xmua	
-#	xmue	
 #	xmui	
 #	xmuo	
 #	xmv'	
@@ -57773,7 +57340,6 @@ encoder:
 #	xnj.	
 #	xnj/	
 #	xnk'	
-#	xnk,	
 #	xnk.	
 #	xnk/	
 #	xnl'	
@@ -57841,7 +57407,6 @@ encoder:
 #	xnz;	
 #	xoaa	
 #	xoae	
-#	xoai	
 #	xoao	
 #	xoau	
 #	xob'	
@@ -57858,7 +57423,6 @@ encoder:
 #	xod.	
 #	xod/	
 #	xoea	
-#	xoeu	
 #	xof'	
 #	xof,	
 #	xof.	
@@ -57991,7 +57555,6 @@ encoder:
 #	xpj.	
 #	xpj/	
 #	xpj;	
-#	xpk'	
 #	xpk,	
 #	xpk.	
 #	xpk/	
@@ -58190,7 +57753,6 @@ encoder:
 #	xrc'	
 #	xrc,	
 #	xrc.	
-#	xrc/	
 #	xrd'	
 #	xrd,	
 #	xrd/	
@@ -58334,7 +57896,6 @@ encoder:
 #	xsl;	
 #	xsm'	
 #	xsm,	
-#	xsm.	
 #	xsm/	
 #	xsm;	
 #	xsn'	
@@ -58366,7 +57927,6 @@ encoder:
 #	xss,	
 #	xss.	
 #	xst'	
-#	xst,	
 #	xst.	
 #	xst/	
 #	xst;	
@@ -58482,7 +58042,6 @@ encoder:
 #	xts.	
 #	xts/	
 #	xtt'	
-#	xtt,	
 #	xtt.	
 #	xtt/	
 #	xtt;	
@@ -58565,7 +58124,6 @@ encoder:
 #	xuk,	
 #	xuk.	
 #	xuk/	
-#	xuk;	
 #	xul'	
 #	xul,	
 #	xul.	
@@ -58629,7 +58187,6 @@ encoder:
 #	xuz/	
 #	xuz;	
 #	xvae	
-#	xvai	
 #	xvao	
 #	xvau	
 #	xvb'	
@@ -58911,7 +58468,6 @@ encoder:
 #	xxs,	
 #	xxs.	
 #	xxs/	
-#	xxt'	
 #	xxt.	
 #	xxt/	
 #	xxt;	
@@ -58926,7 +58482,6 @@ encoder:
 #	xxw'	
 #	xxw,	
 #	xxw.	
-#	xxw/	
 #	xxx.	
 #	xxx/	
 #	xxy'	
@@ -59022,8 +58577,6 @@ encoder:
 #	xys.	
 #	xys/	
 #	xys;	
-#	xyt,	
-#	xyt.	
 #	xyt/	
 #	xyua	
 #	xyue	
@@ -59191,7 +58744,6 @@ encoder:
 #	yad,	
 #	yad.	
 #	yad/	
-#	yad;	
 #	yaei	
 #	yaeu	
 #	yaf'	
@@ -59240,14 +58792,12 @@ encoder:
 #	yaq'	
 #	yaq,	
 #	yaq.	
-#	yaq/	
 #	yaq;	
 #	yar'	
 #	yar,	
 #	yar.	
 #	yar/	
 #	yar;	
-#	yas'	
 #	yat'	
 #	yat,	
 #	yat.	
@@ -59265,7 +58815,6 @@ encoder:
 #	yaw'	
 #	yaw,	
 #	yaw.	
-#	yaw;	
 #	yax'	
 #	yax,	
 #	yax.	
@@ -59288,7 +58837,6 @@ encoder:
 #	ybb,	
 #	ybb.	
 #	ybb/	
-#	ybb;	
 #	ybc'	
 #	ybc,	
 #	ybc.	
@@ -59301,7 +58849,6 @@ encoder:
 #	ybd;	
 #	ybea	
 #	ybee	
-#	ybei	
 #	ybeo	
 #	ybf'	
 #	ybf,	
@@ -59359,7 +58906,6 @@ encoder:
 #	ybq/	
 #	ybq;	
 #	ybr'	
-#	ybr,	
 #	ybr.	
 #	ybr/	
 #	ybr;	
@@ -59414,7 +58960,6 @@ encoder:
 #	ycc;	
 #	ycd'	
 #	ycd.	
-#	ycea	
 #	ycf'	
 #	ycf,	
 #	ycf.	
@@ -59477,7 +59022,6 @@ encoder:
 #	ycuo	
 #	ycv'	
 #	ycv,	
-#	ycv.	
 #	ycv/	
 #	ycv;	
 #	ycw'	
@@ -59611,7 +59155,6 @@ encoder:
 #	ydz/	
 #	ydz;	
 #	yeaa	
-#	yeae	
 #	yeao	
 #	yeau	
 #	yeb'	
@@ -59701,11 +59244,9 @@ encoder:
 #	yew,	
 #	yew.	
 #	yew/	
-#	yew;	
 #	yex,	
 #	yex.	
 #	yex/	
-#	yex;	
 #	yey'	
 #	yey,	
 #	yey.	
@@ -59839,7 +59380,6 @@ encoder:
 #	ygc,	
 #	ygc.	
 #	ygc;	
-#	ygd,	
 #	ygd.	
 #	ygd/	
 #	ygee	
@@ -59876,7 +59416,6 @@ encoder:
 #	ygl,	
 #	ygl/	
 #	ygl;	
-#	ygm'	
 #	ygm,	
 #	ygm.	
 #	ygm/	
@@ -59884,7 +59423,6 @@ encoder:
 #	ygn,	
 #	ygoa	
 #	ygoe	
-#	ygoi	
 #	ygoo	
 #	ygou	
 #	ygq'	
@@ -59927,7 +59465,6 @@ encoder:
 #	ygz/	
 #	ygz;	
 #	yhaa	
-#	yhai	
 #	yhao	
 #	yhau	
 #	yhb'	
@@ -59995,7 +59532,6 @@ encoder:
 #	yhq.	
 #	yhq/	
 #	yhq;	
-#	yhr'	
 #	yhr.	
 #	yhr/	
 #	yhr;	
@@ -60057,7 +59593,6 @@ encoder:
 #	yif/	
 #	yif;	
 #	yig'	
-#	yig,	
 #	yig.	
 #	yig/	
 #	yig;	
@@ -60100,7 +59635,6 @@ encoder:
 #	yiq'	
 #	yiq,	
 #	yiq.	
-#	yiq/	
 #	yiq;	
 #	yir/	
 #	yis'	
@@ -60110,7 +59644,6 @@ encoder:
 #	yit,	
 #	yit.	
 #	yit/	
-#	yiua	
 #	yiue	
 #	yiui	
 #	yiuu	
@@ -60121,7 +59654,6 @@ encoder:
 #	yiw'	
 #	yiw,	
 #	yiw.	
-#	yiw;	
 #	yix'	
 #	yix,	
 #	yix.	
@@ -60171,7 +59703,6 @@ encoder:
 #	yjia	
 #	yjie	
 #	yjio	
-#	yjiu	
 #	yjj'	
 #	yjj,	
 #	yjj.	
@@ -60181,7 +59712,6 @@ encoder:
 #	yjk.	
 #	yjk/	
 #	yjk;	
-#	yjl'	
 #	yjl,	
 #	yjl.	
 #	yjl/	
@@ -60208,7 +59738,6 @@ encoder:
 #	yjq/	
 #	yjq;	
 #	yjr'	
-#	yjr,	
 #	yjr.	
 #	yjr/	
 #	yjr;	
@@ -60236,7 +59765,6 @@ encoder:
 #	yjw;	
 #	yjx'	
 #	yjx,	
-#	yjx.	
 #	yjx/	
 #	yjx;	
 #	yjy'	
@@ -60279,7 +59807,6 @@ encoder:
 #	ykh.	
 #	ykh/	
 #	ykh;	
-#	ykia	
 #	ykj'	
 #	ykj,	
 #	ykj.	
@@ -60312,7 +59839,6 @@ encoder:
 #	ykr'	
 #	ykr.	
 #	yks'	
-#	yks.	
 #	yks;	
 #	ykt'	
 #	ykt,	
@@ -60328,7 +59854,6 @@ encoder:
 #	ykv;	
 #	ykw'	
 #	ykw,	
-#	ykw.	
 #	ykw/	
 #	ykw;	
 #	ykx'	
@@ -60486,7 +60011,6 @@ encoder:
 #	ymj.	
 #	ymj;	
 #	ymk'	
-#	ymk,	
 #	ymk.	
 #	ymk/	
 #	ymk;	
@@ -60607,7 +60131,6 @@ encoder:
 #	ynm;	
 #	ynn'	
 #	ynn,	
-#	ynn/	
 #	ynn;	
 #	ynoa	
 #	ynoi	
@@ -60705,7 +60228,6 @@ encoder:
 #	yon'	
 #	yon,	
 #	yon.	
-#	yon/	
 #	yon;	
 #	yooa	
 #	yoou	
@@ -60720,7 +60242,6 @@ encoder:
 #	yoq/	
 #	yoq;	
 #	yor'	
-#	yor,	
 #	yor.	
 #	yor;	
 #	yos'	
@@ -60733,7 +60254,6 @@ encoder:
 #	youe	
 #	youi	
 #	youo	
-#	youu	
 #	yov'	
 #	yov,	
 #	yov.	
@@ -60797,7 +60317,6 @@ encoder:
 #	ypj'	
 #	ypj,	
 #	ypj.	
-#	ypj/	
 #	ypj;	
 #	ypk'	
 #	ypk,	
@@ -60816,7 +60335,6 @@ encoder:
 #	ypm;	
 #	ypn,	
 #	ypn.	
-#	ypn/	
 #	ypn;	
 #	ypoa	
 #	ypoe	
@@ -60889,7 +60407,6 @@ encoder:
 #	yqee	
 #	yqei	
 #	yqeo	
-#	yqeu	
 #	yqf'	
 #	yqf.	
 #	yqf/	
@@ -60979,13 +60496,10 @@ encoder:
 #	yqz,	
 #	yqz.	
 #	yqz/	
-#	yrai	
-#	yrao	
 #	yrb,	
 #	yrb.	
 #	yrb/	
 #	yrb;	
-#	yrc,	
 #	yrc.	
 #	yrc;	
 #	yrd'	
@@ -61040,7 +60554,6 @@ encoder:
 #	yrp,	
 #	yrp.	
 #	yrp/	
-#	yrq'	
 #	yrq,	
 #	yrq.	
 #	yrq;	
@@ -61259,13 +60772,10 @@ encoder:
 #	ytp.	
 #	ytp/	
 #	ytp;	
-#	ytq'	
 #	ytq,	
 #	ytq.	
 #	ytq/	
 #	ytq;	
-#	ytr'	
-#	ytr,	
 #	ytr.	
 #	ytr/	
 #	ytr;	
@@ -61280,7 +60790,6 @@ encoder:
 #	ytue	
 #	ytui	
 #	ytuo	
-#	ytuu	
 #	ytv'	
 #	ytv.	
 #	ytv/	
@@ -61303,7 +60812,6 @@ encoder:
 #	ytz;	
 #	yuaa	
 #	yuae	
-#	yuai	
 #	yuao	
 #	yuau	
 #	yub'	
@@ -61370,7 +60878,6 @@ encoder:
 #	yup.	
 #	yup/	
 #	yup;	
-#	yuq'	
 #	yuq,	
 #	yuq.	
 #	yuq/	
@@ -61388,7 +60895,6 @@ encoder:
 #	yut/	
 #	yuue	
 #	yuui	
-#	yuuo	
 #	yuv'	
 #	yuv,	
 #	yuv.	
@@ -61462,7 +60968,6 @@ encoder:
 #	yvm;	
 #	yvn'	
 #	yvn,	
-#	yvn.	
 #	yvn/	
 #	yvoo	
 #	yvou	
@@ -61493,7 +60998,6 @@ encoder:
 #	yvx'	
 #	yvx.	
 #	yvx/	
-#	yvx;	
 #	yvy'	
 #	yvy,	
 #	yvy.	
@@ -61516,7 +61020,6 @@ encoder:
 #	ywd'	
 #	ywd,	
 #	ywd.	
-#	ywd/	
 #	ywd;	
 #	ywea	
 #	ywee	
@@ -61545,7 +61048,6 @@ encoder:
 #	ywj;	
 #	ywk'	
 #	ywk/	
-#	ywk;	
 #	ywl'	
 #	ywm.	
 #	ywm/	
@@ -61627,7 +61129,6 @@ encoder:
 #	yxg/	
 #	yxh'	
 #	yxh,	
-#	yxh.	
 #	yxh/	
 #	yxh;	
 #	yxio	
@@ -61893,7 +61394,6 @@ encoder:
 #	yzq/	
 #	yzr,	
 #	yzr.	
-#	yzr/	
 #	yzr;	
 #	yzs,	
 #	yzs.	
@@ -62011,7 +61511,6 @@ encoder:
 #	zat/	
 #	zaua	
 #	zaue	
-#	zauo	
 #	zauu	
 #	zav'	
 #	zav,	
@@ -62206,7 +61705,6 @@ encoder:
 #	zck,	
 #	zck.	
 #	zck/	
-#	zck;	
 #	zcl'	
 #	zcl.	
 #	zcl/	
@@ -62468,7 +61966,6 @@ encoder:
 #	zet/	
 #	zet;	
 #	zeua	
-#	zeuo	
 #	zeuu	
 #	zev'	
 #	zev,	
@@ -62540,7 +62037,6 @@ encoder:
 #	zfk'	
 #	zfk,	
 #	zfk.	
-#	zfk/	
 #	zfl'	
 #	zfl.	
 #	zfl/	
@@ -62727,7 +62223,6 @@ encoder:
 #	zhd,	
 #	zhd.	
 #	zhd/	
-#	zhee	
 #	zheu	
 #	zhf'	
 #	zhf,	
@@ -62755,7 +62250,6 @@ encoder:
 #	zhl'	
 #	zhl.	
 #	zhl/	
-#	zhl;	
 #	zhm'	
 #	zhm,	
 #	zhm.	
@@ -62873,7 +62367,6 @@ encoder:
 #	zim/	
 #	zim;	
 #	zin'	
-#	zin.	
 #	zin/	
 #	zin;	
 #	zioa	
@@ -62933,7 +62426,6 @@ encoder:
 #	zjb;	
 #	zjc'	
 #	zjc,	
-#	zjc.	
 #	zjc/	
 #	zjd'	
 #	zjd/	
@@ -63002,8 +62494,6 @@ encoder:
 #	zjv/	
 #	zjv;	
 #	zjw'	
-#	zjw.	
-#	zjw/	
 #	zjw;	
 #	zjx'	
 #	zjx,	
@@ -63042,12 +62532,11 @@ encoder:
 #	zkf'	
 #	zkf.	
 #	zkf;	
-#	zkg'	
 #	zkg,	
 #	zkg/	
+#	zkg;	
 #	zkh'	
 #	zkh,	
-#	zkh.	
 #	zkh;	
 #	zkj'	
 #	zkj,	
@@ -63080,7 +62569,6 @@ encoder:
 #	zkq/	
 #	zkr'	
 #	zkr,	
-#	zkr.	
 #	zkr/	
 #	zks'	
 #	zks.	
@@ -63169,10 +62657,8 @@ encoder:
 #	zln'	
 #	zln,	
 #	zln.	
-#	zln/	
 #	zln;	
 #	zloa	
-#	zloe	
 #	zloi	
 #	zloo	
 #	zlp'	
@@ -63188,7 +62674,6 @@ encoder:
 #	zlr'	
 #	zlr,	
 #	zlr/	
-#	zls'	
 #	zls,	
 #	zls.	
 #	zls/	
@@ -63335,14 +62820,12 @@ encoder:
 #	znd.	
 #	znd/	
 #	znd;	
-#	znee	
 #	znei	
 #	zneo	
 #	znf'	
 #	znf,	
 #	znf.	
 #	znf/	
-#	zng'	
 #	zng,	
 #	zng.	
 #	zng/	
@@ -63410,7 +62893,6 @@ encoder:
 #	znv/	
 #	znv;	
 #	znw'	
-#	znw,	
 #	znw.	
 #	znw/	
 #	znw;	
@@ -63453,7 +62935,6 @@ encoder:
 #	zof/	
 #	zog'	
 #	zog,	
-#	zog.	
 #	zog/	
 #	zog;	
 #	zoh'	
@@ -63468,9 +62949,7 @@ encoder:
 #	zoj.	
 #	zoj;	
 #	zok.	
-#	zok/	
 #	zok;	
-#	zol'	
 #	zol,	
 #	zol.	
 #	zol/	
@@ -63491,7 +62970,6 @@ encoder:
 #	zop;	
 #	zoq'	
 #	zoq.	
-#	zoq/	
 #	zoq;	
 #	zor'	
 #	zor.	
@@ -63606,7 +63084,6 @@ encoder:
 #	zpq;	
 #	zpr'	
 #	zpr,	
-#	zpr.	
 #	zpr/	
 #	zpr;	
 #	zps'	
@@ -63775,7 +63252,6 @@ encoder:
 #	zreo	
 #	zreu	
 #	zrf'	
-#	zrf,	
 #	zrf.	
 #	zrf/	
 #	zrg'	
@@ -63786,7 +63262,6 @@ encoder:
 #	zrh,	
 #	zrh.	
 #	zrh/	
-#	zrh;	
 #	zriu	
 #	zrj'	
 #	zrj,	
@@ -63800,7 +63275,6 @@ encoder:
 #	zrl,	
 #	zrl.	
 #	zrl/	
-#	zrl;	
 #	zrm'	
 #	zrm,	
 #	zrm.	
@@ -63851,7 +63325,6 @@ encoder:
 #	zry'	
 #	zry,	
 #	zry.	
-#	zry/	
 #	zry;	
 #	zrz'	
 #	zrz,	
@@ -63868,7 +63341,6 @@ encoder:
 #	zsb.	
 #	zsb/	
 #	zsb;	
-#	zsc'	
 #	zsc,	
 #	zsc.	
 #	zsc/	
@@ -64162,7 +63634,6 @@ encoder:
 #	zut/	
 #	zut;	
 #	zuua	
-#	zuui	
 #	zuuo	
 #	zuuu	
 #	zuv'	
@@ -64212,7 +63683,6 @@ encoder:
 #	zvf'	
 #	zvf,	
 #	zvf.	
-#	zvf/	
 #	zvg'	
 #	zvg,	
 #	zvg.	
@@ -64356,7 +63826,6 @@ encoder:
 #	zwn/	
 #	zwn;	
 #	zwoa	
-#	zwoi	
 #	zwoo	
 #	zwp'	
 #	zwp.	
@@ -64406,7 +63875,6 @@ encoder:
 #	zxai	
 #	zxao	
 #	zxau	
-#	zxb'	
 #	zxb,	
 #	zxb/	
 #	zxb;	
@@ -64477,7 +63945,6 @@ encoder:
 #	zxq.	
 #	zxq/	
 #	zxq;	
-#	zxr'	
 #	zxr,	
 #	zxr/	
 #	zxr;	
@@ -64541,14 +64008,12 @@ encoder:
 #	zyf,	
 #	zyf.	
 #	zyf/	
-#	zyf;	
 #	zyg'	
 #	zyg,	
 #	zyg.	
 #	zyg/	
 #	zyg;	
 #	zyh'	
-#	zyh,	
 #	zyh/	
 #	zyio	
 #	zyiu	
@@ -64600,7 +64065,6 @@ encoder:
 #	zyt,	
 #	zyt.	
 #	zyt/	
-#	zyt;	
 #	zyua	
 #	zyue	
 #	zyui	
@@ -64700,7 +64164,6 @@ encoder:
 #	zzq'	
 #	zzq.	
 #	zzq/	
-#	zzq;	
 #	zzr'	
 #	zzr,	
 #	zzr;	

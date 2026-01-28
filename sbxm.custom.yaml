@@ -1,12 +1,12 @@
 patch:
   __include: patch.yaml:/shared_patch
-  schema/icon: "assets/ele_b.ico"
+  schema/icon: "assets/ele_x.ico"
   # style/+:
   #     preedit_type: composition
   #     inline_preedit: false
   #     layout:
   #       __include: style.yaml:/layout_v
   # style/color_scheme: prjk
-  translator/enable_user_dict: false
-  extended/enable_user_dict: false
+  # translator/enable_user_dict: false
+  # extended/enable_user_dict: false
   # switches/@last/reset: 0
