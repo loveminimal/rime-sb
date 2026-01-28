@@ -365,7 +365,7 @@ local function validate_phrase(entry, segment, type, input, env)
   -- 对其取子串，得到真正的编码补全内容
   local completion = entry.comment:sub(2)
   --象系的特殊处理
-  if core.xiangxi(schema_id) and rime.match(input, "[bpmfdtnlgkhjqxzcsrywv][a-z]{2}[23789][aeuio]*") then
+  if core.xiangxi(schema_id) and rime.match(input, "[bpmfdtnlgkhjqxzcsrywv][a-z]{2}[0-9][aeuio]*") then
     completion = completion:sub(-1,-1) .. completion:sub(2,-2)
   end
   local alt_completion = ""
@@ -571,6 +571,7 @@ function this.func(input, segment, env)
   env.is_enhanced = env.engine.context:get_option("is_enhanced") or false
   env.enhanced_char = env.engine.context:get_option("enhanced_char") or false
   local schema_id = env.engine.schema.schema_id
+  env.xx_flag = false 
 
   if env.engine.context:get_option("ascii_mode") then
     return
@@ -579,7 +580,7 @@ function this.func(input, segment, env)
   if static(input, env) then
     -- 清空候选缓存
     env.known_candidates = {}
-    env.xx_flag = false 
+    -- env.xx_flag = false 
     local input2 = input
     if core.jm(schema_id) and env.enhanced_char and not env.third_pop and core.ssb(input2) then
       input2 = input2 .. "'"

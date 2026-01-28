@@ -22,7 +22,7 @@ function this.init(env)
 	    env.memory = rime.Memory1(env.engine, env.engine.schema, "")
 	end
 	-- 声笔飞单和声笔飞延采用了声笔飞码的词典，所以反查词典的名称与方案 ID 不相同，需要特殊判断
-	local dict_name = (id == "sbfd" or id == "sbmd" or id == "sbbd" or id == "sbfy") and "sbfm" or id
+	local dict_name = (id == "sbfd" or id == "sbmd" or id == "sbfy") and "sbfm" or id
 	if id == "sbxd" then dict_name = "sbxm" end
 	-- 声笔简拼和声笔拼音用声笔简码的简码
 	if (id == 'sbjp' or id == 'sbpy') then dict_name = 'sbjm' end
@@ -378,6 +378,13 @@ function this.func(translation, env)
 							if utf8.len(entry.text) == 1 then
 								rime.yield(forward)
 							end
+						end
+					end
+					for j = 1, #hint_n2 do
+						memory:dict_lookup(candidate.preedit .. hint_n2[j], false, 1)
+						for entry in memory:iter_dict() do
+							forward = rime.Candidate("hint", candidate.start, candidate._end, entry.text, hint_n2[j])
+							rime.yield(forward)
 						end
 					end
 				end
