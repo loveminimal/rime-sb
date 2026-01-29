@@ -1,3 +1,4 @@
+from datetime import datetime
 from pathlib import Path
 import threading
 from is_chinese_char import is_chinese_char
@@ -68,7 +69,7 @@ def patch_extended(proj_dir):
 # encoding: utf-8
 ---
 name: patch
-version: 2025.12
+version: {datetime.now().date().strftime("%Y.%m")}
 sort: by_weight
 use_preset_vocabulary: false
 ...

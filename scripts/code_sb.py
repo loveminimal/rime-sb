@@ -2,11 +2,11 @@
 # - https://github.com/loveminimal/rime-sb
 # - Jack Liu <https://aituyaa.com>
 # 
+from datetime import datetime
 import json
 from pathlib import Path
 from is_chinese_char import is_chinese_char
 # from code_table import code_table
-# from meta_sb import meta_sb
 
 
 def get_sb_code(word, meta_sb, ext='，。？'):
@@ -183,7 +183,7 @@ def code_sb(proj_dir):
 # encoding: utf-8
 ---
 name: patch
-version: 2025.12
+version: {datetime.now().date().strftime("%Y.%m")}
 sort: by_weight
 use_preset_vocabulary: false
 ...

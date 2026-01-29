@@ -58,7 +58,7 @@ shared_patch:
       - { when: always, accept: Control+i, send: '-' }
       - { when: always, accept: Control+o, send: '=' }
       # - { when: always, accept: Control+apostrophe, send: '\' }
-      - { when: always, accept: Control+bracketleft, toggle: zh_trad }
+      - { when: always, accept: Control+bracketright, toggle: zh_trad }
       - { when: always, accept: Control+backslash, toggle: is_show_more }
       - { when: always, accept: Control+apostrophe, send: Shift+Tab }
       - { when: composing, accept: Control+n, send: Shift+Tab }
@@ -71,7 +71,6 @@ shared_patch:
     # alphabet: "qazwsxedcrfvtgbyhnujmik,ol.p;/'7890 "
     # alphabet: "qazwsxedcrfvtgbyhnujmik,ol.p;/' "
     # alphabet: "azfv"
-    # alphabet: "m,.;/' "
     # finish_chord_on_first_key_release: true
     # 并击过程中套用的式样
     prompt_format:
@@ -83,7 +82,6 @@ shared_patch:
       - "xform/^(.*)=(.*)=$/$1$2/"
     algebra:
       # __include: /algebra_map
-      # __include: /algebra_punc
       # __include: /algebra_magic
       # __include: /algebra_mirror
 
@@ -94,22 +92,6 @@ algebra_map:
   - xform/z/ⓩ/
   - xform/v/z/
   - xform/ⓩ/v/
-
-algebra_punc:
-  - xlit|,.;/'|DJFGY|
-  - xform|([A-Za-z])|$1-|
-  - xform/m-D-/!/
-  - xform/m-J-/?/
-  - xform/m-F-/:/
-  - xform/m-G-/^/
-  - xform/m-Y-/"/
-  - xform/D-J-/z/
-  - xform|[D]-|,|
-  - xform|[J]-|.|
-  - xform|[F]-|;|
-  - xform|[G]-|/|
-  - xform|[Y]-|'|
-  - xform|[m]-|m|
 
 algebra_magic:
   # - xform/(asdf)/0/

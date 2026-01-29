@@ -4,7 +4,6 @@ patch:
     # - schema: sbmd
     # - schema: sbbd
     # - schema: sbfm
-    # - schema: sbfy
     - schema: sben
   switcher:
     abbreviate_options: true

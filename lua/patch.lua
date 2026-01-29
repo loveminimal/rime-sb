@@ -110,12 +110,36 @@ local function f_comment(input, env)
 
         yield(cand)
     end
+end
 
+-- 除首选外不显示词
+local function f_filter_non_first_word(input, env)
+    -- local is_sbxd = env.engine.schema.schema_id == 'sbxd'
+    local context = env.engine.context
+	local is_show_word = context:get_option("is_show_word") or false    
+    local count = 0
+    
+    for cand in input:iter() do
+        count = count + 1
+        
+        if is_show_word then
+            yield(cand)
+        else
+            if count == 1 then
+                yield(cand)
+            else
+                if (utf8.len(cand.text) == 1) then
+                    yield(cand)
+                end
+            end
+        end    
+    end    
 end
 
 return {
-    p_lower_first_char = p_lower_first_char,
+    -- p_lower_first_char = p_lower_first_char,
     t_date = t_date,
     f_auto_select = f_auto_select,
-    f_comment = f_comment
+    f_comment = f_comment,
+    -- f_filter_non_first_word = f_filter_non_first_word,
 }

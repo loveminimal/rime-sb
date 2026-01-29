@@ -2,6 +2,7 @@
 # - https://github.com/loveminimal/rime-sb
 # - Jack Liu <https://aituyaa.com>
 # 
+from datetime import datetime
 from pathlib import Path
 from is_chinese_char import is_chinese_char
 
@@ -90,15 +91,19 @@ def idle_code(proj_dir):
     print(f'☑️  未使用闲置编码 {len(idle_codes)} 个')
     
     for code in idle_codes:
-        lines_sbf.append(f'#\t{code}')
+        # lines_sbf.append(f'#\t{code}')
+        lines_sbf.append(f'#\t{code}\t0\t## ')
 
     # print(len(lines_sbf))
     # 转换后的数据
     # out_path = proj_dir / 'out' / 'idle_codes.txt'
+    # if not out_path.exists():
+    #     out_path.parent.mkdir()
     # with open(out_path, 'w', encoding='utf-8') as o:   
     #     for i in sorted(idle_codes):     
     #         o.write(f'{i}\n')
     # print(f'\n✅ ➭ 已生成闲置编码条目 {out_path}')
+
 
     # is_start = False
     lines_sbf_sorted = []
@@ -121,9 +126,10 @@ def idle_code(proj_dir):
 #
 # 飞码自定义
 # 包含了声笔飞码、声笔飞单、声笔飞讯共用的数选字词、声声词、缩减码等
+# 其中以 ## 结尾的行为
 ---
 name: sbf
-version: "11.0"
+version: {datetime.now().date().strftime("%Y.%m")}
 sort: by_weight
 use_preset_vocabulary: false
 columns:
