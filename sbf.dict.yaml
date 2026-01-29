@@ -1535,8 +1535,8 @@ columns:
 #	s/u	0	##
 #	s;a	0	##
 #	s;e	0	##
-#	s;i	0	##
-#	s;o	0	##
+室	s;i	0	##
+骚	s;o	0	##
 #	s;u	0	##
 丝	sa'	0
 随	sa;	0
@@ -1745,7 +1745,7 @@ columns:
 案犯	vf'	0
 #	vfo	0	##
 #	vfu	0	##
-这个	vg'	0	# 而过
+而过	vg'	0
 #	vga	0	##
 #	vgi	0	##
 #	vgo	0	##
@@ -1807,9 +1807,9 @@ columns:
 #	vwo	0	##
 这些	vx'	0	# 恶心
 #	vxa	0	##
-#	vxo	0	##
-#	vxu	0	##
-这样	vy'	0	# 而已
+右	vxo	0	##
+左	vxu	0	##
+而已	vy'	0
 #	vya	0	##
 儿子	vz'	0
 #	vza	0	##
@@ -2056,7 +2056,7 @@ columns:
 奄	yeu	0
 衣服	yf'	0
 应该	yg'	0
-以后	yh'	0
+遗憾	yh'	0	# 以后
 曰	yi'	0
 园	yi;	0
 映	yia	0
