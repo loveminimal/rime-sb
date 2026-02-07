@@ -12,6 +12,9 @@ patch:
     - name: is_show_more
       reset: 1
       states: [Ⓛ, Ⓜ]
+    - name: is_show_word
+      reset: 1
+      states: [单字, 词语]
   translator/filter_strength: 3
   translator/enable_user_dict: false
   extended/enable_user_dict: false
