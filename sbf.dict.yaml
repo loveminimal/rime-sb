@@ -138,7 +138,7 @@ columns:
 #	b/i	0	##
 #	b/o	0	##
 #	b/u	0	##
-#	b;a	0	##
+爸	b;a	0	##
 #	b;e	0	##
 #	b;i	0	##
 #	b;o	0	##
@@ -234,8 +234,8 @@ columns:
 #	c/i	0	##
 #	c/o	0	##
 #	c/u	0	##
-#	c;a	0	##
-#	c;e	0	##
+超	c;a	0	##
+翅	c;e	0	##
 #	c;i	0	##
 #	c;o	0	##
 #	c;u	0	##
@@ -715,8 +715,8 @@ columns:
 #	j/i	0	##
 #	j/o	0	##
 #	j/u	0	##
-#	j;a	0	##
-#	j;e	0	##
+仅	j;a	0	##
+久	j;e	0	##
 #	j;i	0	##
 #	j;o	0	##
 #	j;u	0	##
@@ -907,7 +907,7 @@ columns:
 #	l/o	0	##
 #	l/u	0	##
 #	l;a	0	##
-#	l;e	0	##
+嘞	l;e	0	##
 #	l;i	0	##
 #	l;o	0	##
 #	l;u	0	##
@@ -1123,7 +1123,7 @@ columns:
 能否	nf'	0
 那个	ng'	0
 #	nge	0	##
-#	ngi	0	##
+影	ngi	0	##
 #	ngu	0	##
 女孩	nh'	0
 #	nha	0	##
@@ -1309,8 +1309,8 @@ columns:
 #	q/o	0	##
 #	q/u	0	##
 #	q;a	0	##
-#	q;e	0	##
-#	q;i	0	##
+怯	q;e	0	##
+岂	q;i	0	##
 #	q;o	0	##
 #	q;u	0	##
 绻	qa'	0
@@ -1436,7 +1436,7 @@ columns:
 蚺	ri'	0
 蚋	ri;	0
 蠕	ria	0
-#	rie	0	##
+健	rie	0	##
 #	rii	0	##
 #	rio	0	##
 #	riu	0	##
@@ -1489,7 +1489,7 @@ columns:
 铷	ru'	0
 穰	ru;	0
 争	rua	
-#	rue	0	##
+机	rue	0	##
 儒	rui	0
 仞	ruo	0
 偌	ruu	0
@@ -1714,8 +1714,8 @@ columns:
 #	v/i	0	##
 #	v/o	0	##
 #	v/u	0	##
-#	v;a	0	##
-#	v;e	0	##
+榨	v;a	0	##
+者	v;e	0	##
 #	v;i	0	##
 #	v;o	0	##
 #	v;u	0	##
@@ -1738,7 +1738,7 @@ columns:
 遨	ve'	0
 耦	ve;	0
 致	vea	
-#	vee	0	##
+至	vee	0	##
 拗	vei	0
 霭	veo	0
 殴	veu	0
@@ -1752,7 +1752,7 @@ columns:
 #	vgu	0	##
 而后	vh'	0
 #	vha	0	##
-#	vhe	0	##
+专	vhe	0	##
 嗄	vi'	0
 智	vi;	0	# 嗳
 呆	via	0
@@ -1776,8 +1776,8 @@ columns:
 袄	voa	0
 #	voe	0	##
 #	voi	0	##
-#	voo	0	##
-#	vou	0	##
+洲	voo	0	##
+州	vou	0	##
 安排	vp'	0
 #	vpa	0	##
 #	vpi	0	##
@@ -1943,7 +1943,7 @@ columns:
 #	x/o	0	##
 #	x/u	0	##
 #	x;a	0	##
-#	x;e	0	##
+嚣	x;e	0	##
 #	x;i	0	##
 #	x;o	0	##
 #	x;u	0	##
@@ -2032,8 +2032,8 @@ columns:
 #	y/i	0	##
 #	y/o	0	##
 #	y/u	0	##
-#	y;a	0	##
-#	y;e	0	##
+涯	y;a	0	##
+越	y;e	0	##
 #	y;i	0	##
 #	y;o	0	##
 #	y;u	0	##
@@ -2114,10 +2114,10 @@ columns:
 #	z/o	0	##
 #	z/u	0	##
 #	z;a	0	##
-#	z;e	0	##
-#	z;i	0	##
+择	z;e	0	##
+滋	z;i	0	##
 #	z;o	0	##
-#	z;u	0	##
+足	z;u	0	##
 障	za'	0
 阻	za;	0
 骤	zaa	0
