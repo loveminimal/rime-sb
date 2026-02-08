@@ -143,5 +143,5 @@ return {
     t_date = t_date,
     f_auto_select = f_auto_select,
     f_comment = f_comment,
-    f_filter_non_first_word = f_filter_non_first_word,
+    -- f_filter_non_first_word = f_filter_non_first_word,
 }

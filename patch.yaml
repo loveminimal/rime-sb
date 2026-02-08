@@ -7,7 +7,7 @@ shared_patch:
   engine/translators/@after last: lua_translator@*patch*t_date
   engine/filters/@before 6: lua_filter@*patch*f_auto_select
   engine/filters/@before 7: lua_filter@*patch*f_comment
-  engine/filters/@before 8: lua_filter@*patch*f_filter_non_first_word
+  # engine/filters/@before 8: lua_filter@*patch*f_filter_non_first_word
   recognizer/patterns/quick_symbol: "^;.*$"
   sbzdy/user_dict: patch
   punctuator/half_shape/+:
@@ -17,9 +17,9 @@ shared_patch:
     - name: is_show_more
       reset: 1
       states: [Ⓛ, Ⓜ]
-    - name: is_show_word
-      reset: 0
-      states: [单字, 词语]
+    # - name: is_show_word
+    #   reset: 0
+    #   states: [单字, 词语]
   # 废弃 emoji 啦 ➭ 使用临时「 飞码长词 」替换
   # emoji 表情 —— sbyp ➭ sbfm
   # ——————
@@ -62,8 +62,8 @@ shared_patch:
       - { when: always, accept: Control+i, send: '-' }
       - { when: always, accept: Control+o, send: '=' }
       # - { when: always, accept: Control+apostrophe, send: '\' }
-      - { when: always, accept: Control+bracketleft, toggle: is_show_more }
-      - { when: always, accept: Control+bracketright, toggle: is_show_word }
+      # - { when: always, accept: Control+bracketleft, toggle: is_show_word }
+      - { when: always, accept: Control+bracketright, toggle: is_show_more }
       - { when: always, accept: Control+backslash, toggle: zh_trad }
       - { when: always, accept: Control+apostrophe, send: Shift+Tab }
       - { when: composing, accept: Control+n, send: Shift+Tab }
