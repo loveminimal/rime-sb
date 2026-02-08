@@ -118,11 +118,13 @@ local function f_filter_non_first_word(input, env)
     local context = env.engine.context
 	local is_show_word = context:get_option("is_show_word") or false    
     local count = 0
+    local first_char = context.input:sub(1, 1)
     
     for cand in input:iter() do
         count = count + 1
         
-        if is_show_word then
+        -- if is_show_word then
+        if is_show_word or string.find('aeuio', first_char) then
             yield(cand)
         else
             if count == 1 then
