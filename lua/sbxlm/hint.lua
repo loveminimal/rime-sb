@@ -74,17 +74,7 @@ function this.func(translation, env)
 	local i = 1
 	local memory = env.memory
 	for candidate in translation:iter() do
-		-- 猛码提示
-		local input = candidate.preedit
-		if core.mm(id) and rime.match(input, "[a-z]{3}[;',./]") then
-			local codes = env.reverse:lookup(candidate.text)
-			candidate.comment = ""
-			for code in string.gmatch(codes, "[^ ]+") do
-				if input ~= code and input:len() >= code:len() then
-					candidate.comment = candidate.comment .. " " .. code
-				end
-			end
-		end		
+		local input = candidate.preedit	
 		-- 象码单字在全码时提示简码
 		if core.xm(id) and rime.match(input, "[bpmfdtnlgkhjqxzcsrywv][a-z]{2}[aeuio12345]") then
 			local codes = env.reverse:lookup(candidate.text)
@@ -281,30 +271,6 @@ function this.func(translation, env)
 				memory:dict_lookup(candidate.preedit .. hint_b[j], false, 1)
 				for entry in memory:iter_dict() do
 					forward = rime.Candidate("hint", candidate.start, candidate._end, entry.text, hint_b[j])
-					rime.yield(forward)
-				end
-			end
-		end
-
-		-- 猛码提示
-		if core.mm(id) and rime.match(input, "[a-z]{1,3}") then
-			local forward, x, y
-			---@type { string: number }
-			local candidates = {}
-			if rime.match(input, "[a-z]") then
-				x = hint_n3
-			else
-				x = hint_p
-			end
-			for j = 1, 5 do
-				memory:dict_lookup(candidate.preedit .. x[j], false, 1)
-				for entry in memory:iter_dict() do
-					local cand = candidates[x[j]] 
-					if cand and cand > 0 then
-						break
-					end
-					candidates[x[j]] = 1
-					forward = rime.Candidate("hint", candidate.start, candidate._end, entry.text, x[j])
 					rime.yield(forward)
 				end
 			end

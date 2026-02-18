@@ -102,10 +102,7 @@ local function dfs_encode(phrase, position, code, env)
   -- 对所有可能的构词码，逐个入栈，然后递归调用，从而实现各字的构词码之间的排列组合
   for stem in string.gmatch(translations, "[^ ]+") do
     -- 如果之前调用的是 reverse:lookup，那么除了单字全码之外，也可能查询到简码
-    -- 这里要把它们过滤掉，猛码除外
-    if not core.mm(env.engine.schema.schema_id) and stem:len() < 4 then
-      goto continue
-    end
+    -- 这里要把它们过滤掉
     table.insert(code, stem)
     local ok = dfs_encode(phrase, position + 1, code, env)
     success = success or ok
@@ -294,12 +291,6 @@ local function dynamic(input, env)
     end
   elseif core.fm(schema_id) or core.fy(schema_id) or core.fd(schema_id) or core.sp(schema_id) then
     return input:len() - 3
-  elseif core.mm(schema_id) then
-    if input:len() == 5 then
-      return dtypes.full
-    else
-      return dtypes.invalid
-    end
   elseif core.xm(schema_id) then
     if input:len() == 5 then
       return dtypes.base
@@ -377,7 +368,7 @@ local function validate_phrase(entry, segment, type, input, env)
   if entry.comment == "" then
     goto valid
   end
-  if (core.fm(schema_id) or core.fy(schema_id) or core.fd(schema_id) or core.mm(schema_id)) and input:len() < 4 then
+  if (core.fm(schema_id) or core.fy(schema_id) or core.fd(schema_id)) and input:len() < 4 then
     return nil
   end
   if core.xm(schema_id) and input:len() < 5 then
@@ -402,7 +393,7 @@ local function validate_phrase(entry, segment, type, input, env)
       end
     end
     if ((core.fm(schema_id) or core.fy(schema_id)) and (env.delayed_pop or env.pro_char)
-    or core.fd(schema_id) or core.fx(schema_id) or core.mm(schema_id) or core.xm(schema_id))
+    or core.fd(schema_id) or core.fx(schema_id) or core.xm(schema_id))
     and (utf8.len(entry.text) == 2 or utf8.len(entry.text) == 3) then
       local lens = env.char_lens
       if core.xm(schema_id) then lens = env.xm_lens end
@@ -597,10 +588,7 @@ function this.func(input, segment, env)
     -- 1. 编码为 sxs 格式时，只要不是简码的三顶模式，就要拆分成二简字 + 一简字翻译
     -- 2. 飞系方案，编码为 sbsb 格式时，拆分成声笔字 + 声笔字翻译
     -- 3. 飞讯，编码为 sxsb 格式时，拆分成二简字 + 声笔字翻译
-    if core.mm(schema_id) and (core.xxx(input) or core.xxxx(input)) 
-    or core.xm(schema_id) and core.sxsx(input) then
-      translate_by_split(input, segment, env)
-    elseif (core.sxs(input) and not env.third_pop)
+    if (core.sxs(input) and not env.third_pop)
         or (core.feixi(schema_id) and core.sbsb(input))
         or (core.fx(schema_id) and core.sxsb(input)) 
         or rime.match(input, "([bpmfdtnlgkhjqxzcsrywv][a-z]){2}[aeiou]{0,2}[AEUIO][aeiouAEUIO]?") then

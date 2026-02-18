@@ -112,11 +112,6 @@ function core.xm(id)
 end
 
 ---@param id string
-function core.mm(id)
-  return id == "sbmm"
-end
-
----@param id string
 function core.feixi(id)
   return id == "sbfd" or id == "sbmd" or id == "sbbd" or id == "sbfm" or id == "sbfx" or id == 'sbfj' or id == "sbfy"
 end
@@ -173,7 +168,7 @@ end
 
 ---@param id string
 function core.zici(id)
-  return core.feixi(id) or core.jm(id) or id == "sbzr" or id == "sbxh" or core.mm(id) or core.xm(id)
+  return core.feixi(id) or core.jm(id) or id == "sbzr" or id == "sbxh" or core.xm(id)
 end
 
 
@@ -203,7 +198,6 @@ function core.word_rules(code, id)
   local fm = core.fm(id) or core.fd(id) or core.fy(id)
   local sp = core.sp(id)
   local fx = core.fx(id) or core.fj(id)
-  local mm = core.mm(id)
   local xm = core.xm(id)
   if #code == 2 then
     if jm then           -- s1s2b2b2
@@ -212,8 +206,6 @@ function core.word_rules(code, id)
       base = code[1]:sub(1, 2) .. code[2]:sub(1, 2)
     elseif fx then       -- s1z1s2b2b2
       base = code[1]:sub(1, 2) .. code[2]:sub(1, 1) .. code[2]:sub(3, 4)
-    elseif mm or xm then       -- AaAbBaBbBc
-      base = code[1]:sub(1, 2) .. code[2]:sub(1, 3)
     end
   else
     base = code[1]:sub(1, 1) .. code[2]:sub(1, 1) .. code[3]:sub(1, 1)
@@ -222,8 +214,6 @@ function core.word_rules(code, id)
         base = base .. code[3]:sub(2, 2)
       elseif fx then         -- s1s2s3b3b3
         base = base .. code[3]:sub(3, 4)
-      elseif mm or xm then       -- AaBaCaCbCc
-        base = base .. code[3]:sub(2,3)
       end
     elseif #code >= 4 then
       if jm then           -- s1s2s3b0
@@ -232,8 +222,6 @@ function core.word_rules(code, id)
         base = base .. code[#code]:sub(1, 1)
       elseif fx then       -- s1s2s3b0b0
         base = base .. code[#code]:sub(3, 4)
-      elseif mm or xm then       -- AaBaCaZaZc
-        base = base .. code[#code]:sub(1,1) .. code[#code]:sub(3, 3)
       end
     else
       return nil
@@ -261,8 +249,8 @@ end
 function core.reverse(id)
   --相当于三目运算符a ? b : c
   local dict_name = (id == "sbfd" or id == "sbmd" or id == "sbbd" or id == "sbfy") and "sbfm" or id
-  --如果不是飞系方案或者猛码，单字构词码在扩展词库里
-  if not (core.feixi(id) or core.mm(id) or core.xm(id)) then
+  --如果不是飞系方案，单字构词码在扩展词库里
+  if not (core.feixi(id) or core.xm(id)) then
     dict_name = dict_name .. ".extended"
   end
   return rime.ReverseLookup(dict_name)
