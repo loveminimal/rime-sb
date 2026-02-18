@@ -107,11 +107,6 @@ end
 -- 例如：core.feixi(id) 判断当前方案是否为飞系方案
 
 ---@param id string
-function core.xm(id)
-  return id == "sbxm"
-end
-
----@param id string
 function core.feixi(id)
   return id == "sbfd" or id == "sbmd" or id == "sbbd" or id == "sbfm" or id == "sbfx" or id == 'sbfj' or id == "sbfy"
 end
@@ -168,7 +163,7 @@ end
 
 ---@param id string
 function core.zici(id)
-  return core.feixi(id) or core.jm(id) or id == "sbzr" or id == "sbxh" or core.xm(id)
+  return core.feixi(id) or core.jm(id) or id == "sbzr" or id == "sbxh"
 end
 
 
@@ -198,7 +193,6 @@ function core.word_rules(code, id)
   local fm = core.fm(id) or core.fd(id) or core.fy(id)
   local sp = core.sp(id)
   local fx = core.fx(id) or core.fj(id)
-  local xm = core.xm(id)
   if #code == 2 then
     if jm then           -- s1s2b2b2
       base = code[1]:sub(1, 1) .. code[2]:sub(1, 3)
@@ -233,8 +227,6 @@ function core.word_rules(code, id)
     extended = code[1]:sub(2, 3)
   elseif fm or fx or sp then
     extended = code[1]:sub(3, 4)
-  elseif xm then
-    extended = code[1]:sub(4,5)
   end
   -- 全部编码为基本编码加上扩展编码
   local full = base .. extended
@@ -250,7 +242,7 @@ function core.reverse(id)
   --相当于三目运算符a ? b : c
   local dict_name = (id == "sbfd" or id == "sbmd" or id == "sbbd" or id == "sbfy") and "sbfm" or id
   --如果不是飞系方案，单字构词码在扩展词库里
-  if not (core.feixi(id) or core.xm(id)) then
+  if not (core.feixi(id)) then
     dict_name = dict_name .. ".extended"
   end
   return rime.ReverseLookup(dict_name)
