@@ -45,33 +45,48 @@ local function f_auto_select(input, env)
     local context = env.engine.context
     local input_code = context.input
     local first_char = input_code:sub(1, 1)
-
-    -- 仅处理 e/u 开头的编码
-    -- if first_char == 'e' or first_char == 'u' then
-    if first_char == 'u' then
-        local candidates = {}
-        local count = 0
-        -- 收集候选并计数
+    local second_char = input_code:sub(2, 2)
+    
+    -- if input_code:sub(1, 1) ~= 'e' or #input_code <= 1 then
+    if not string.find('eu', first_char) or #input_code <= 1 then
         for cand in input:iter() do
-            count = count + 1
-            candidates[count] = cand
-        end
-        -- 自动上屏条件：唯一候选 + 编码长度>1
-        if count == 1 and #input_code > 1 then
-            env.engine:commit_text(candidates[1].text)
-            context:clear()
-            return
-        end
-        -- 正常输出候选
-        for _, cand in ipairs(candidates) do
             yield(cand)
         end
         return
     end
-
-    -- 非 e/u 开头，默认输出所有候选
+    
+    local first_cand = nil
+    local second_cand = nil
+    local has_output = false
+    
     for cand in input:iter() do
-        yield(cand)
+        if not first_cand then
+            first_cand = cand
+        elseif not second_cand then
+            second_cand = cand
+            -- 发现第二个候选，开始输出
+            yield(first_cand)
+            yield(second_cand)
+            has_output = true
+        else
+            -- 继续输出后续候选
+            yield(cand)
+        end
+
+        -- 修复 bihua 反查失效的问题
+        if #input_code == 2 and string.find('aeuio', second_char) then
+            yield(cand)
+        end
+        
+    end
+    
+    -- 循环结束后的处理
+    if not has_output then
+        -- 说明只有0或1个候选
+        if first_cand then
+            env.engine:commit_text(first_cand.text)
+            context:clear()
+        end
     end
 end
 
