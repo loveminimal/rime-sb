@@ -48,7 +48,7 @@ local function f_auto_select(input, env)
     local second_char = input_code:sub(2, 2)
     
     -- if input_code:sub(1, 1) ~= 'e' or #input_code <= 1 then
-    if not string.find('eu', first_char) or #input_code <= 1 then
+    if not string.find('u', first_char) or #input_code <= 1 then
         for cand in input:iter() do
             yield(cand)
         end
@@ -80,13 +80,10 @@ local function f_auto_select(input, env)
         
     end
     
-    -- 循环结束后的处理
-    if not has_output then
-        -- 说明只有0或1个候选
-        if first_cand then
-            env.engine:commit_text(first_cand.text)
-            context:clear()
-        end
+    -- 循环结束后的处理 -- 说明只有0或1个候选
+    if not has_output and first_cand then
+        env.engine:commit_text(first_cand.text)
+        context:clear()
     end
 end
 
