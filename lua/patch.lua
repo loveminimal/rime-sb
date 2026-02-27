@@ -47,8 +47,8 @@ local function f_auto_select(input, env)
     local first_char = input_code:sub(1, 1)
     local second_char = input_code:sub(2, 2)
     
-    -- if input_code:sub(1, 1) ~= 'e' or #input_code <= 1 then
-    if not string.find('u', first_char) or #input_code <= 1 then
+    if input_code:sub(1, 1) ~= 'u' or #input_code <= 1 then
+    -- if not string.find('u', first_char) or #input_code <= 1 then
         for cand in input:iter() do
             yield(cand)
         end
