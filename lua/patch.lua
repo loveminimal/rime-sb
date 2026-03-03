@@ -46,10 +46,10 @@ local function f_auto_select(input, env)
     local input_code = context.input
     local first_char = input_code:sub(1, 1)
     local second_char = input_code:sub(2, 2)
+    -- local sbfm_ext_prefix = env.engine.schema.config:get_string("sbfm_ext/prefix") or "'"	-- 获取飞码长词引导符
     
-    if first_char ~= 'u' and first_char ~= "'" or #input_code <= 1 then
-    -- if first_char ~= 'u' or #input_code <= 1 then
-    -- if not string.find('u', first_char) or #input_code <= 1 then
+    -- if first_char ~= 'u' and first_char ~= sbfm_ext_prefix or #input_code <= 1 then
+    if first_char ~= 'u' or #input_code <= 1 then
         for cand in input:iter() do
             yield(cand)
         end
