@@ -128,7 +128,13 @@ local function callback(commit, env)
       goto continue
     end
     -- 如果这个词之前标记为临时词，就消除这个标记，正式进入词库
-   if string.find(entry.custom_code, kEncodedPrefix) then
+    -- 
+    -- ⭐️ 这里会记录一些不必要的声声词（码长为4码，小于6码），影响统一观感，故取消此类进入用户词库
+    if #entry.custom_code < 6 then
+      goto continue
+    end
+
+    if string.find(entry.custom_code, kEncodedPrefix) then
       local new_entry = rime.DictEntry()
       new_entry.text = entry.text
       new_entry.custom_code = entry.custom_code:sub(kEncodedPrefix:len() + 1)
