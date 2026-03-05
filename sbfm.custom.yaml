@@ -8,5 +8,6 @@ patch:
   #       __include: style.yaml:/layout_v
   translator/filter_strength: 3
   # translator/enable_user_dict: false
+  # translator/stop_change: false
   # extended/enable_user_dict: false
   # switches/@last/reset: 0

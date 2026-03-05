@@ -111,18 +111,10 @@ shared_patch:
       - "xform/^(.*)=$/$1/"
       - "xform/^(.*)=(.*)=$/$1$2/"
     algebra:
-      # __include: /algebra_map
       # __include: /algebra_magic
       # __include: /algebra_mirror
 
-algebra_map:
-  - xform|([azfv])|$1|
-  # - xform/[a]-/f/
-  # - xform/[f]-/a/
-  - xform/z/ⓩ/
-  - xform/v/z/
-  - xform/ⓩ/v/
-
+# —— 并击的运算规则 ——
 algebra_magic:
   # - xform/(asdf)/0/
   # - xform/(jkl;)/@/

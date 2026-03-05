@@ -1,20 +1,11 @@
 patch:
+  # 飞码中已经引用，不再重复
   # __include: patch.yaml:/shared_patch
-  # 在飞码中已经继承过 patch.yaml，飞单中需要与除部分设置项
-  # 用以禁用重复的 chord_composer lua_processor@*quick_symbol
-  # engine/processors/@0: # chord_composer
-  # engine/processors/@1: # lua_processor@*quick_symbol
-  # engine/segmentors/@3: # "affix_segmentor@sbfm_ext"
-  # engine/translators/@2: # "table_translator@sbfm_ext"
-  # —— 其他设置 ——
   schema/icon: "assets/fly.ico"
   switches/+:
     - name: is_show_more
       reset: 1
       states: [Ⓛ, Ⓜ]
-    # - name: is_show_word
-    #   reset: 1
-    #   states: [单字, 词语]
   translator/filter_strength: 3
   # translator/enable_user_dict: false
   # extended/enable_user_dict: false
