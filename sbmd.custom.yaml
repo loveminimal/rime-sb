@@ -1,9 +1,0 @@
-patch:
-  # schema/icon: "assets/fly_y.ico"
-  style/+:
-      preedit_type: preview
-      # inline_preedit: false
-      layout:
-        __include: style.yaml:/layout_h
-        margin_y: -1
-        # min_width: 0
