@@ -1262,7 +1262,7 @@ columns:
 泡	poi	0
 沛	poo	0
 泼	pou	0
-偏偏	pp'	0
+批评	pp'	0	# 偏偏
 #	ppa	0	##
 脾气	pq'	0
 #	pqa	0	##
@@ -11217,7 +11217,7 @@ columns:
 梭	smaa	0	##
 #	smai	0	##
 #	sme'	0	##
-#	smea	0	##
+柿	smea	0	##
 #	smi'	0	##
 #	smie	0	##
 #	smii	0	##

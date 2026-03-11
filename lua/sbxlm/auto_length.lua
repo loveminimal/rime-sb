@@ -130,6 +130,7 @@ local function callback(commit, env)
     -- 如果这个词之前标记为临时词，就消除这个标记，正式进入词库
     -- 
     -- ⭐️ 这里会记录一些不必要的声声词（码长为4码，小于6码），影响统一观感，故取消此类进入用户词库
+    -- 副作用：已存在于词库中的词条不会写入用户词库
     if #entry.custom_code < 6 then
       goto continue
     end
