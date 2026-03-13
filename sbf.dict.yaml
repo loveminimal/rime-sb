@@ -317,11 +317,11 @@ columns:
 #	d/i	0	##
 #	d/o	0	##
 #	d/u	0	##
-#	d;a	0	##
+：	d;a	0	##
 的	d;e	0	##
-#	d;i	0	##
-#	d;o	0	##
-#	d;u	0	##
+：“	d;i	0	##
+”	d;o	0	##
+“	d;u	0	##
 怼	da'	0
 缔	da;	0
 缎	daa	0
@@ -414,9 +414,9 @@ columns:
 #	f/u	0	##
 发	f;a	0	##
 ；	f;e	0	##
-#	f;i	0	##
-#	f;o	0	##
-#	f;u	0	##
+……	f;i	0	##
+）	f;o	0	##
+（	f;u	0	##
 绂	fa'	0
 纺	fa;	0
 驸	faa	0
@@ -528,11 +528,11 @@ columns:
 #	g/i	0	##
 #	g/o	0	##
 #	g/u	0	##
-#	g;a	0	##
+「 	g;a	0	##
 个	g;e	0	##
-#	g;i	0	##
-#	g;o	0	##
-#	g;u	0	##
+——	g;i	0	##
+ ’	g;o	0	##
+‘	g;u	0	##
 缟	ga'	0
 媾	ga;	0
 纲	gaa	0
@@ -622,7 +622,7 @@ columns:
 #	h/i	0	##
 #	h/o	0	##
 #	h/u	0	##
-#	h;a	0	##
+ 」	h;a	0	##
 和	h;e	0	##
 #	h;i	0	##
 #	h;o	0	##
@@ -801,7 +801,7 @@ columns:
 #	k/i	0	##
 #	k/o	0	##
 #	k/u	0	##
-😄	k;a	0	##
+#	k;a	0	##
 可	k;e	0	##
 #	k;i	0	##
 #	k;o	0	##
@@ -1398,9 +1398,9 @@ columns:
 #	r/u	0	##
 #	r;a	0	##
 人	r;e	0	##
-#	r;i	0	##
-#	r;o	0	##
-#	r;u	0	##
+・	r;i	0	##
+》	r;o	0	##
+《	r;u	0	##
 缛	ra'	0
 妊	ra;	0
 #	raa	0	##
@@ -1617,7 +1617,7 @@ columns:
 #	t/o	0	##
 #	t/u	0	##
 他	t;a	0	##
-🤭	t;e	0	##
+！	t;e	0	##
 #	t;i	0	##
 #	t;o	0	##
 #	t;u	0	##
@@ -1715,10 +1715,10 @@ columns:
 #	v/o	0	##
 #	v/u	0	##
 榨	v;a	0	##
-者	v;e	0	##
+而	v;e	0	##
 殖	v;i	0	##
-而	v;o	0	##
-#	v;u	0	##
+#	v;o	0	##
+者	v;u	0	##
 角	va'	0	# 媕
 增	va;	0	# 娾
 #	vaa	0	##
@@ -1838,7 +1838,7 @@ columns:
 #	w/o	0	##
 #	w/u	0	##
 #	w;a	0	##
-#	w;e	0	##
+？	w;e	0	##
 #	w;i	0	##
 我	w;o	0	##
 #	w;u	0	##
@@ -1944,9 +1944,9 @@ columns:
 #	x/u	0	##
 下	x;a	0	##
 嚣	x;e	0	##
-#	x;i	0	##
-#	x;o	0	##
-🤣	x;u	0	##
+🤣	x;i	0	##
+🤭	x;o	0	##
+😄	x;u	0	##
 寻	xa'	0
 限	xa;	0
 绚	xaa	0
@@ -5296,7 +5296,7 @@ columns:
 #	hcao	0	##
 #	hce'	0	##
 荤	hcea	9999
-#	hcee	0	##
+葫	hcee	0	##
 蕙	hceu	9999
 #	hci'	0	##
 #	hcie	0	##
@@ -7674,7 +7674,7 @@ columns:
 #	mcau	0	##
 #	mce'	0	##
 #	mcea	0	##
-#	mceo	0	##
+莽	mceo	0	##
 #	mci'	0	##
 #	mcie	0	##
 #	mcii	0	##
@@ -14829,7 +14829,7 @@ columns:
 #	zle'	0	##
 #	zlea	0	##
 #	zlee	0	##
-#	zleo	0	##
+怔	zleo	0	##
 #	zli'	0	##
 #	zlii	0	##
 #	zlio	0	##
