@@ -1,8 +1,8 @@
 patch:
   # 飞码中已经引用，不再重复
   # __include: patch.yaml:/shared_patch
-  style/color_scheme: xnjk
-  schema/icon: "assets/fly_red.ico"
+  # style/color_scheme: rdjk
+  schema/icon: "assets/fly.ico"
   switches/+:
     - name: is_show_more
       reset: 1
