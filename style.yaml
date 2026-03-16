@@ -515,8 +515,8 @@ styles:
     author: Jack Liu                            # 配色作者名称
     color_format: rgba                          # 颜色格式：argb（0xaarrggbb）；rgba（0xrrggbbaa）；abgr（0xaabbggrr 默认）
     # ---〔背景设置〕---
-    border_color: 0xFEFFFF                      # 边框
-    back_color: 0xFEFFFF                        # 背景
+    border_color: 0xFFFEFE                      # 边框
+    back_color: 0xFFFEFE                        # 背景
     
     shadow_color: 0x666666b4                    # 阴影
     # ---〔内选区域·顶部〕---

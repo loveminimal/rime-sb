@@ -153,7 +153,8 @@ speller:
       - sbxlm.yaml:/basic_popping
 
 translator:
-  __include: sbpy.schema.yaml:/translator
+  dictionary: sbyp
+  # packs: 
   prism: sbyp
   strict_spelling: true
   fix_combination: true
@@ -181,7 +182,7 @@ key_binder:
 reverse_lookup:
   tags: [bihua, zhlf]
   overwrite_comment: true
-  dictionary: sbpy
+  dictionary: sbyp
 
 menu:
   page_size: 6

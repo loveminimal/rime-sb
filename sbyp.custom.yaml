@@ -1,0 +1,2 @@
+patch:
+  __include: patch.yaml:/shared_patch

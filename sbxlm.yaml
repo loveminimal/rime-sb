@@ -91,22 +91,22 @@ prelude:
 
   sbyp:
     tag: sbyp
-    dictionary: sbpy
+    dictionary: sbyp
     enable_user_dict: false
     enable_encoder: false
-    packs:
-      - sbpy.base
+    # packs:
+    #   - sbyp.base
     prism: sbyp
     prefix: a
     tips: "〔拼音反查〕"
 
   emoji:
     tag: emoji
-    dictionary: sbpy
+    dictionary: sbyp
     enable_user_dict: false
     enable_encoder: false
-    packs:
-      - sbpy.base
+    # packs:
+    #   - sbyp.base
     prism: sbyp
     prefix: e
 
