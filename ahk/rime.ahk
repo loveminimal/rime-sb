@@ -113,11 +113,11 @@ weaselSetupPath := GetWeaselPath('setup')
 ;     return
 ; }
 ; ; 插入定制词
-; +!p::
-; {
-;     Run "notepad.exe " RootPath "\custom_pinyin.txt"
-;     return
-; }
++!u::
+{
+    Run "notepad.exe " RootPath "\patch.txt"
+    return
+}
 +!o::
 {
     Run "notepad.exe " RootPath "\sbf.dict.yaml"
