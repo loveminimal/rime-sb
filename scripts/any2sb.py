@@ -136,7 +136,8 @@ def any2sb(proj_dir):
     # 待转换的源数据
     # src_dir = proj_dir / 'patches'
     # src_dir = Path('C:\\Users\\jack\\Nutstore\\1\\我的坚果云\\patches')
-    src_dir = (proj_dir / '..' / 'patches').resolve()
+    src_dir = Path('D:\\sourcecode\\sc_rime\\rime-wanxiang\\dicts')
+    # src_dir = (proj_dir / '..' / 'patches').resolve()
     if not src_dir.exists():
         print(f'☑️  不存在转换数据目录 » {src_dir}')   
         print(f'❎ ➭ 结束转换')
@@ -180,7 +181,7 @@ def any2sb(proj_dir):
                 
                 # words.append(word)
                 if word not in word_weight_dict or int(weight) > word_weight_dict[word]:
-                    word_weight_dict[word] = int(weight)
+                    word_weight_dict[word] = int(weight or 1)
                 
             #     word = line.split('\t')[0].strip()
             #     if len(word) > 1:
