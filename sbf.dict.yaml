@@ -234,10 +234,10 @@ columns:
 #	c/i	0	##
 #	c/o	0	##
 #	c/u	0	##
-超	c;a	0	##
+曹	c;a	0	##
 翅	c;e	0	##
 匙	c;i	0	##
-#	c;o	0	##
+超	c;o	0	##
 出	c;u	0	##
 巢	ca'	0
 驰	ca;	0
@@ -908,7 +908,7 @@ columns:
 #	l/u	0	##
 嘞	l;a	0	##
 了	l;e	0	##
-#	l;i	0	##
+沥	l;i	0	##
 #	l;o	0	##
 #	l;u	0	##
 骆	la'	0
@@ -2126,7 +2126,7 @@ columns:
 纸	zao	0
 纵	zau	0
 准备	zb'	0
-#	zba	0	##
+渚	zba	0	##
 支持	zc'	0
 知道	zd'	0
 转	ze'	0
@@ -3032,7 +3032,7 @@ columns:
 #	cma'	0	##
 #	cmau	0	##
 #	cme'	0	##
-#	cmea	0	##
+槽	cmea	0	##
 #	cmi'	0	##
 #	cmii	0	##
 #	cmiu	0	##
@@ -7120,7 +7120,7 @@ columns:
 #	ldaa	0	##
 #	ldau	0	##
 立	lde'	0
-#	ldee	0	##
+潦	ldee	0	##
 涝	ldeo	9999
 #	ldi'	0	##
 #	ldio	0	##
@@ -14354,7 +14354,7 @@ columns:
 #	yne'	0	##
 #	yneo	0	##
 #	yni'	0	##
-#	ynie	0	##
+鹦	ynie	0	##
 #	ynii	0	##
 #	ynio	0	##
 #	yniu	0	##
