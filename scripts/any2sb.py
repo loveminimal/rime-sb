@@ -136,7 +136,8 @@ def any2sb(proj_dir):
     # 待转换的源数据
     # src_dir = proj_dir / 'patches'
     # src_dir = Path('C:\\Users\\jack\\Nutstore\\1\\我的坚果云\\patches')
-    src_dir = Path('D:\\sourcecode\\sc_rime\\rime-wanxiang\\dicts')
+    # src_dir = Path('D:\\sourcecode\\sc_rime\\rime-wanxiang\\dicts')
+    src_dir = Path('D:\\sourcecode\\sc_rime\\rime-frost\\cn_dicts')
     # src_dir = (proj_dir / '..' / 'patches').resolve()
     if not src_dir.exists():
         print(f'☑️  不存在转换数据目录 » {src_dir}')   
@@ -190,7 +191,16 @@ def any2sb(proj_dir):
 
 
     # 转换后的数据
-    out_path = proj_dir / 'patch.dict.yaml'
+    out_dir = proj_dir / 'out'
+    if not out_dir.exists():
+        out_dir.mkdir()
+
+    out_path = proj_dir / 'out' / 'patch.dict.yaml'
+    if out_path.exists():
+        out_path.unlink()
+        
+    # out_path = proj_dir / 'patch.dict.yaml'
+    
     with open(out_path, 'a+', encoding='utf-8') as o:        
         # 读取第一行，判断是否已有表头
         o.seek(0)  # 将指针从末尾移动到文件开头

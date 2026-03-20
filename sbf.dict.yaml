@@ -3,9 +3,10 @@
 #
 # 飞码自定义
 # 包含了声笔飞码、声笔飞单、声笔飞讯共用的数选字词、声声词、缩减码等
+# 其中以 ## 结尾的行为
 ---
 name: sbf
-version: 2026.01
+version: 2026.03
 sort: by_weight
 use_preset_vocabulary: false
 columns:
@@ -83,6 +84,7 @@ columns:
 荣	r.	0
 融	r/	0
 忍	r;	0
+喏	rq	90	# rqia
 神	s'	0
 甚	s,	0	# 什
 三	s.	0
@@ -98,11 +100,13 @@ columns:
 值	v.	0	# 傲
 支	v/	0	# 哦
 恩	v;	0
+哎	vp	90	# vpia
 万	w'	0
 务	w,	0
 物	w.	0
 微	w/	0
 五	w;	0
+哇	wz	90	# wzia
 乡	x'	0	# 细
 像	x,	0
 习	x.	0	# 系
@@ -152,6 +156,7 @@ columns:
 绑	bau	0
 并不	bb'	0
 不错	bc'	0
+#	bci	0	##
 不断	bd'	0	# 不得
 杯	be'	0
 抱	be;	0
@@ -258,7 +263,9 @@ columns:
 醋	ceu	0
 充分	cf'	0
 成功	cg'	0
+#	cgu	0	##
 窗户	ch'	0
+#	cho	0	##
 吵	ci'	0
 崇	ci;	0
 喘	cia	0
@@ -317,11 +324,11 @@ columns:
 #	d/i	0	##
 #	d/o	0	##
 #	d/u	0	##
-：	d;a	0	##
+#	d;a	0	##
 的	d;e	0	##
-：“	d;i	0	##
-”	d;o	0	##
-“	d;u	0	##
+#	d;i	0	##
+#	d;o	0	##
+#	d;u	0	##
 怼	da'	0
 缔	da;	0
 缎	daa	0
@@ -413,10 +420,10 @@ columns:
 #	f/o	0	##
 #	f/u	0	##
 发	f;a	0	##
-；	f;e	0	##
-……	f;i	0	##
-）	f;o	0	##
-（	f;u	0	##
+#	f;e	0	##
+#	f;i	0	##
+#	f;o	0	##
+#	f;u	0	##
 绂	fa'	0
 纺	fa;	0
 驸	faa	0
@@ -530,9 +537,9 @@ columns:
 #	g/u	0	##
 「 	g;a	0	##
 个	g;e	0	##
-——	g;i	0	##
- ’	g;o	0	##
-‘	g;u	0	##
+#	g;i	0	##
+#	g;o	0	##
+#	g;u	0	##
 缟	ga'	0
 媾	ga;	0
 纲	gaa	0
@@ -551,6 +558,7 @@ columns:
 革	geo	0
 尴	geu	0
 功夫	gf'	0
+#	gfu	0	##
 改革	gg'	0
 #	ggo	0	##
 规划	gh'	0
@@ -563,6 +571,7 @@ columns:
 贵	giu	0
 感觉	gj'	0
 公开	gk'	0
+#	gki	0	##
 #	gko	0	##
 管理	gl'	0
 革命	gm'	0
@@ -602,6 +611,7 @@ columns:
 工作	gz'	0
 #	gza	0	##
 #	gzi	0	##
+#	gzo	0	##
 #	h'a	0	##
 #	h'e	0	##
 #	h'i	0	##
@@ -622,7 +632,6 @@ columns:
 #	h/i	0	##
 #	h/o	0	##
 #	h/u	0	##
- 」	h;a	0	##
 和	h;e	0	##
 #	h;i	0	##
 #	h;o	0	##
@@ -659,6 +668,7 @@ columns:
 很快	hk'	0
 回来	hl'	0
 后面	hm'	0
+#	hma	0	##
 #	hmi	0	##
 河南	hn'	0
 #	hna	0	##
@@ -678,6 +688,7 @@ columns:
 忽然	hr'	0
 还是	hs'	0
 回头	ht'	0
+#	hta	0	##
 #	hte	0	##
 #	hu'	0	##
 盒	hu;	0
@@ -816,6 +827,7 @@ columns:
 恐怖	kb'	0
 #	kba	0	##
 #	kbo	0	##
+#	kbu	0	##
 看出	kc'	0
 看到	kd'	0
 #	kda	0	##
@@ -1065,6 +1077,7 @@ columns:
 名额	mv'	0
 #	mva	0	##
 门外	mw'	0
+#	mwo	0	##
 模型	mx'	0
 #	mxi	0	##
 #	mxu	0	##
@@ -1224,6 +1237,7 @@ columns:
 旁边	pb'	0
 #	pbi	0	##
 平常	pc'	0
+#	pca	0	##
 判断	pd'	0
 捧	pe'	0
 抛	pe;	0
@@ -1239,6 +1253,7 @@ columns:
 #	pgo	0	##
 破坏	ph'	0
 #	pha	0	##
+#	phe	0	##
 #	pho	0	##
 毗	pi'	0
 曝	pi;	0
@@ -1270,6 +1285,7 @@ columns:
 #	pqo	0	##
 #	pqu	0	##
 平日	pr'	0
+#	pro	0	##
 平时	ps'	0
 #	psa	0	##
 普通	pt'	0
@@ -1347,6 +1363,7 @@ columns:
 起来	ql'	0
 前面	qm'	0
 去年	qn'	0
+#	qni	0	##
 潜	qo'	0
 启	qo;	0
 祺	qoa	0
@@ -1376,6 +1393,7 @@ columns:
 企业	qy'	0
 其中	qz'	0
 #	qza	0	##
+#	qzo	0	##
 #	r'a	0	##
 #	r'e	0	##
 #	r'i	0	##
@@ -1398,7 +1416,7 @@ columns:
 #	r/u	0	##
 #	r;a	0	##
 人	r;e	0	##
-・	r;i	0	##
+#	r;i	0	##
 》	r;o	0	##
 《	r;u	0	##
 缛	ra'	0
@@ -1413,6 +1431,7 @@ columns:
 #	rbe	0	##
 #	rbi	0	##
 #	rbo	0	##
+#	rbu	0	##
 如此	rc'	0
 人大	rd'	0
 #	rdu	0	##
@@ -1513,6 +1532,7 @@ columns:
 日子	rz'	0
 #	rzi	0	##
 #	rzo	0	##
+#	rzu	0	##
 #	s'a	0	##
 #	s'e	0	##
 #	s'i	0	##
@@ -1557,6 +1577,7 @@ columns:
 硕	seu	0
 十分	sf'	0
 送给	sg'	0
+#	sga	0	##
 #	sgo	0	##
 时候	sh'	0
 署	si'	0
@@ -1617,9 +1638,9 @@ columns:
 #	t/o	0	##
 #	t/u	0	##
 他	t;a	0	##
-！	t;e	0	##
+#	t;e	0	##
 #	t;i	0	##
-™️	t;o	0	##
+#	t;o	0	##
 #	t;u	0	##
 绦	ta'	0
 屉	ta;	0
@@ -1753,6 +1774,7 @@ columns:
 而后	vh'	0
 #	vha	0	##
 专	vhe	0	##
+厂	vhu	4	# vheu
 嗄	vi'	0
 智	vi;	0	# 嗳
 呆	via	0
@@ -1781,11 +1803,13 @@ columns:
 安排	vp'	0
 #	vpa	0	##
 #	vpi	0	##
+#	vpo	0	##
 #	vpu	0	##
 而且	vq'	0
 #	vqi	0	##
 #	vqu	0	##
 偶然	vr'	0
+#	vra	0	##
 #	vro	0	##
 #	vru	0	##
 昂首	vs'	0
@@ -1838,7 +1862,7 @@ columns:
 #	w/o	0	##
 #	w/u	0	##
 #	w;a	0	##
-？	w;e	0	##
+#	w;e	0	##
 #	w;i	0	##
 我	w;o	0	##
 #	w;u	0	##
@@ -1914,6 +1938,7 @@ columns:
 微微	ww'	0
 微笑	wx'	0
 #	wxo	0	##
+#	wxu	0	##
 唯一	wy'	0
 #	wya	0	##
 #	wyo	0	##
@@ -2081,6 +2106,7 @@ columns:
 依然	yr'	0
 意思	ys'	0	# 也是
 摇头	yt'	0
+#	ytu	0	##
 伊	yu'	0
 余	yu;	0
 印	yua	0
@@ -2139,6 +2165,7 @@ columns:
 政府	zf'	0
 这个	zg'	0
 之后	zh'	0
+#	zha	0	##
 桌	zi'	0
 助	zi;	0
 昨	zia	0
@@ -2253,6 +2280,7 @@ columns:
 #	bdae	0	##
 #	bdai	0	##
 #	bdao	0	##
+#	bdau	0	##
 #	bde'	0	##
 #	bdee	0	##
 #	bdeu	0	##
@@ -2336,6 +2364,7 @@ columns:
 #	bgoi	0	##
 #	bgoo	0	##
 #	bgu'	0	##
+#	bgua	0	##
 #	bgue	0	##
 #	bguo	0	##
 #	bguu	0	##
@@ -2456,6 +2485,7 @@ columns:
 #	bluo	0	##
 #	bluu	0	##
 #	bma'	0	##
+#	bmai	0	##
 #	bmao	0	##
 #	bmau	0	##
 #	bme'	0	##
@@ -2670,6 +2700,7 @@ columns:
 #	bva'	0	##
 #	bvaa	0	##
 #	bvae	0	##
+#	bvau	0	##
 #	bve'	0	##
 膊	bveo	0	##
 #	bvi'	0	##
@@ -2763,8 +2794,10 @@ columns:
 #	bzau	0	##
 #	bze'	0	##
 #	bzee	0	##
+#	bzei	0	##
 #	bzeo	0	##
 #	bzi'	0	##
+#	bzie	0	##
 #	bzii	0	##
 #	bzio	0	##
 #	bziu	0	##
@@ -2857,10 +2890,13 @@ columns:
 #	cdio	0	##
 #	cdiu	0	##
 #	cdo'	0	##
+#	cdoa	0	##
 淬	cdoi	9999
 #	cdou	0	##
 次	cdu'	0
+#	cdua	0	##
 #	cdue	0	##
+#	cdui	0	##
 #	cduo	0	##
 #	cduu	0	##
 #	cea'	0	##
@@ -3017,6 +3053,7 @@ columns:
 #	ckui	0	##
 #	ckuu	0	##
 #	cla'	0	##
+#	claa	0	##
 #	clae	0	##
 #	clai	0	##
 #	cle'	0	##
@@ -3049,6 +3086,7 @@ columns:
 #	cnea	0	##
 #	cnee	0	##
 #	cneo	0	##
+#	cneu	0	##
 #	cni'	0	##
 #	cnie	0	##
 #	cnii	0	##
@@ -3109,6 +3147,7 @@ columns:
 #	cpou	0	##
 #	cpu'	0	##
 #	cpua	0	##
+#	cpue	0	##
 #	cpuo	0	##
 #	cqa'	0	##
 #	cqaa	0	##
@@ -3133,6 +3172,7 @@ columns:
 #	cqoe	0	##
 #	cqoi	0	##
 #	cqoo	0	##
+#	cqou	0	##
 #	cqu'	0	##
 #	cqua	0	##
 #	cque	0	##
@@ -3142,6 +3182,7 @@ columns:
 #	cra'	0	##
 #	craa	0	##
 #	crai	0	##
+#	crao	0	##
 #	crau	0	##
 #	cre'	0	##
 #	cree	0	##
@@ -3174,6 +3215,7 @@ columns:
 #	csoi	0	##
 #	csu'	0	##
 #	csui	0	##
+#	csuu	0	##
 #	cta'	0	##
 #	ctaa	0	##
 #	ctae	0	##
@@ -3196,7 +3238,9 @@ columns:
 #	ctoi	0	##
 #	ctou	0	##
 #	ctu'	0	##
+#	ctua	0	##
 #	ctue	0	##
+#	ctui	0	##
 #	ctuo	0	##
 #	ctuu	0	##
 #	cua'	0	##
@@ -3249,6 +3293,7 @@ columns:
 #	cwae	0	##
 #	cwai	0	##
 #	cwao	0	##
+#	cwau	0	##
 #	cwe'	0	##
 #	cwea	0	##
 #	cwei	0	##
@@ -3281,6 +3326,7 @@ columns:
 #	cxio	0	##
 #	cxiu	0	##
 #	cxo'	0	##
+#	cxoe	0	##
 #	cxoi	0	##
 #	cxoo	0	##
 #	cxu'	0	##
@@ -3290,6 +3336,7 @@ columns:
 #	cya'	0	##
 #	cyaa	0	##
 #	cyae	0	##
+#	cyai	0	##
 #	cyao	0	##
 #	cyau	0	##
 #	cye'	0	##
@@ -3305,6 +3352,7 @@ columns:
 #	cyoa	0	##
 醇	cyoi	9999
 #	cyu'	0	##
+#	cyue	0	##
 #	cyui	0	##
 #	cyuu	0	##
 #	cza'	0	##
@@ -3413,7 +3461,9 @@ columns:
 沌	ddeo	9999
 #	ddeu	0	##
 #	ddi'	0	##
+#	ddia	0	##
 #	ddie	0	##
+#	ddii	0	##
 #	ddio	0	##
 #	ddiu	0	##
 #	ddo'	0	##
@@ -3518,6 +3568,7 @@ columns:
 #	dhiu	0	##
 #	dho'	0	##
 #	dhoa	0	##
+#	dhoe	0	##
 #	dhoi	0	##
 #	dhoo	0	##
 #	dhou	0	##
@@ -3579,6 +3630,7 @@ columns:
 #	dkee	0	##
 #	dkeo	0	##
 #	dki'	0	##
+#	dkie	0	##
 #	dkii	0	##
 #	dkio	0	##
 #	dkiu	0	##
@@ -3595,6 +3647,7 @@ columns:
 #	dlai	0	##
 #	dle'	0	##
 #	dlea	0	##
+#	dlee	0	##
 惰	dleo	0	##
 #	dli'	0	##
 #	dlii	0	##
@@ -3623,18 +3676,22 @@ columns:
 #	dmo'	0	##
 #	dmoe	0	##
 #	dmoi	0	##
+#	dmoo	0	##
 #	dmu'	0	##
 #	dmue	0	##
+#	dmuu	0	##
 #	dna'	0	##
 #	dnaa	0	##
 #	dnae	0	##
 #	dnai	0	##
+#	dnao	0	##
 #	dnau	0	##
 #	dne'	0	##
 #	dnee	0	##
 #	dneo	0	##
 #	dneu	0	##
 #	dni'	0	##
+#	dnia	0	##
 #	dnie	0	##
 #	dnii	0	##
 #	dniu	0	##
@@ -3679,6 +3736,7 @@ columns:
 #	douu	0	##
 #	dpa'	0	##
 #	dpai	0	##
+#	dpao	0	##
 #	dpau	0	##
 #	dpe'	0	##
 #	dpea	0	##
@@ -3754,6 +3812,7 @@ columns:
 #	dsaa	0	##
 #	dsae	0	##
 #	dse'	0	##
+#	dsee	0	##
 #	dseo	0	##
 #	dsi'	0	##
 #	dsie	0	##
@@ -4137,6 +4196,7 @@ columns:
 #	fhu'	0	##
 #	fhua	0	##
 #	fhue	0	##
+#	fhui	0	##
 #	fhuu	0	##
 #	fia'	0	##
 #	fiaa	0	##
@@ -4266,6 +4326,7 @@ columns:
 #	fmoo	0	##
 #	fmou	0	##
 #	fmu'	0	##
+#	fmua	0	##
 #	fmue	0	##
 #	fmuu	0	##
 #	fna'	0	##
@@ -4567,6 +4628,7 @@ columns:
 #	fyae	0	##
 #	fyai	0	##
 #	fyao	0	##
+#	fyau	0	##
 #	fye'	0	##
 #	fyea	0	##
 #	fyee	0	##
@@ -4671,6 +4733,7 @@ columns:
 #	gbui	0	##
 #	gbuo	0	##
 #	gca'	0	##
+#	gcaa	0	##
 #	gcao	0	##
 #	gcau	0	##
 #	gce'	0	##
@@ -4683,6 +4746,7 @@ columns:
 #	gciu	0	##
 #	gco'	0	##
 #	gcoi	0	##
+#	gcoo	0	##
 #	gcou	0	##
 #	gcu'	0	##
 #	gcui	0	##
@@ -4704,7 +4768,9 @@ columns:
 #	gdoa	0	##
 #	gdoe	0	##
 #	gdoi	0	##
+#	gdou	0	##
 #	gdu'	0	##
+#	gdua	0	##
 #	gdue	0	##
 #	gdui	0	##
 #	gduu	0	##
@@ -4746,6 +4812,7 @@ columns:
 #	gfau	0	##
 #	gfe'	0	##
 #	gfea	0	##
+#	gfee	0	##
 #	gfeo	0	##
 #	gfeu	0	##
 #	gfi'	0	##
@@ -4757,6 +4824,7 @@ columns:
 #	gfoa	0	##
 #	gfoe	0	##
 #	gfoi	0	##
+#	gfoo	0	##
 #	gfou	0	##
 #	gfu'	0	##
 #	gfua	0	##
@@ -4784,10 +4852,12 @@ columns:
 #	ggou	0	##
 #	ggu'	0	##
 #	ggue	0	##
+#	ggui	0	##
 #	gguo	0	##
 #	gguu	0	##
 #	gha'	0	##
 #	ghaa	0	##
+#	ghae	0	##
 #	ghai	0	##
 #	ghao	0	##
 #	ghau	0	##
@@ -4869,6 +4939,7 @@ columns:
 #	gkee	0	##
 #	gkeo	0	##
 #	gki'	0	##
+#	gkie	0	##
 #	gkii	0	##
 #	gkiu	0	##
 #	gko'	0	##
@@ -4902,7 +4973,9 @@ columns:
 #	glou	0	##
 #	glu'	0	##
 #	glua	0	##
+#	glue	0	##
 #	glui	0	##
+#	gluu	0	##
 #	gma'	0	##
 #	gmaa	0	##
 #	gmai	0	##
@@ -5054,6 +5127,8 @@ columns:
 #	grou	0	##
 #	gru'	0	##
 #	grua	0	##
+#	grui	0	##
+#	gruo	0	##
 #	gruu	0	##
 #	gsa'	0	##
 #	gsaa	0	##
@@ -5063,6 +5138,7 @@ columns:
 #	gse'	0	##
 #	gsea	0	##
 #	gseo	0	##
+#	gseu	0	##
 #	gsi'	0	##
 #	gsio	0	##
 #	gsiu	0	##
@@ -5072,15 +5148,18 @@ columns:
 #	gsoo	0	##
 #	gsou	0	##
 #	gsu'	0	##
+#	gsue	0	##
 #	gsui	0	##
 #	gsuo	0	##
 #	gsuu	0	##
 #	gta'	0	##
 #	gtaa	0	##
+#	gtae	0	##
 #	gtai	0	##
 #	gtao	0	##
 #	gtau	0	##
 #	gte'	0	##
+#	gtea	0	##
 #	gtee	0	##
 #	gteo	0	##
 #	gteu	0	##
@@ -5281,6 +5360,7 @@ columns:
 #	hbea	0	##
 #	hbeo	0	##
 #	hbi'	0	##
+#	hbia	0	##
 #	hbie	0	##
 #	hbii	0	##
 #	hbiu	0	##
@@ -5288,6 +5368,7 @@ columns:
 #	hboa	0	##
 #	hboe	0	##
 #	hboi	0	##
+#	hboo	0	##
 #	hbou	0	##
 #	hbu'	0	##
 #	hbuu	0	##
@@ -5315,6 +5396,7 @@ columns:
 #	hdeu	0	##
 #	hdi'	0	##
 #	hdii	0	##
+#	hdio	0	##
 #	hdiu	0	##
 #	hdo'	0	##
 沆	hdoi	0	##
@@ -5380,6 +5462,7 @@ columns:
 #	hgaa	0	##
 #	hgae	0	##
 #	hgai	0	##
+#	hgao	0	##
 #	hgau	0	##
 #	hge'	0	##
 #	hgea	0	##
@@ -5419,6 +5502,7 @@ columns:
 #	hhou	0	##
 #	hhu'	0	##
 #	hhue	0	##
+#	hhuu	0	##
 #	hia'	0	##
 #	hiaa	0	##
 哄	hiae	0
@@ -5465,6 +5549,7 @@ columns:
 #	hjiu	0	##
 #	hjo'	0	##
 #	hjoa	0	##
+#	hjoe	0	##
 #	hjoi	0	##
 #	hju'	0	##
 #	hka'	0	##
@@ -5539,6 +5624,7 @@ columns:
 #	hnio	0	##
 #	hniu	0	##
 #	hno'	0	##
+#	hnoa	0	##
 #	hnoe	0	##
 #	hnoi	0	##
 #	hnoo	0	##
@@ -5625,6 +5711,7 @@ columns:
 #	hqoe	0	##
 #	hqoi	0	##
 #	hqoo	0	##
+#	hqou	0	##
 #	hqu'	0	##
 #	hqua	0	##
 #	hque	0	##
@@ -5653,17 +5740,18 @@ columns:
 #	hroo	0	##
 #	hrou	0	##
 #	hru'	0	##
+#	hrua	0	##
 #	hrui	0	##
 #	hruo	0	##
 #	hruu	0	##
 #	hsa'	0	##
 #	hsaa	0	##
+#	hsae	0	##
 #	hsao	0	##
 #	hsau	0	##
 #	hse'	0	##
 #	hsea	0	##
 #	hseo	0	##
-#	hseu	0	##
 #	hsi'	0	##
 #	hsie	0	##
 #	hsii	0	##
@@ -5676,7 +5764,6 @@ columns:
 #	hsoo	0	##
 #	hsou	0	##
 #	hsu'	0	##
-#	hsua	0	##
 #	hsue	0	##
 #	hsui	0	##
 #	hsuu	0	##
@@ -5698,7 +5785,9 @@ columns:
 #	htio	0	##
 #	htiu	0	##
 #	hto'	0	##
+#	htoa	0	##
 #	htoi	0	##
+#	htoo	0	##
 #	htou	0	##
 #	htu'	0	##
 #	htue	0	##
@@ -5744,6 +5833,7 @@ columns:
 #	hvea	0	##
 #	hvi'	0	##
 #	hvie	0	##
+#	hvii	0	##
 #	hvio	0	##
 #	hviu	0	##
 #	hvo'	0	##
@@ -5772,6 +5862,7 @@ columns:
 #	hwoo	0	##
 #	hwou	0	##
 #	hwu'	0	##
+#	hwua	0	##
 #	hwue	0	##
 #	hwuu	0	##
 #	hxa'	0	##
@@ -5804,8 +5895,10 @@ columns:
 #	hyao	0	##
 #	hyau	0	##
 #	hye'	0	##
+#	hyea	0	##
 #	hyeo	0	##
 #	hyi'	0	##
+#	hyia	0	##
 #	hyie	0	##
 #	hyii	0	##
 #	hyio	0	##
@@ -5957,6 +6050,7 @@ columns:
 #	jfau	0	##
 #	jfe'	0	##
 拣	jfee	9999
+#	jfeo	0	##
 #	jfi'	0	##
 #	jfie	0	##
 #	jfii	0	##
@@ -5998,10 +6092,12 @@ columns:
 #	jhee	0	##
 #	jheo	0	##
 #	jhi'	0	##
+#	jhii	0	##
 棘	jhio	9999
 #	jhiu	0	##
 #	jho'	0	##
 #	jhoa	0	##
+#	jhoe	0	##
 #	jhoi	0	##
 #	jhou	0	##
 #	jhu'	0	##
@@ -6061,6 +6157,7 @@ columns:
 #	jkeo	0	##
 #	jki'	0	##
 #	jkia	0	##
+#	jkie	0	##
 #	jkii	0	##
 #	jkio	0	##
 #	jkiu	0	##
@@ -6200,6 +6297,7 @@ columns:
 #	jre'	0	##
 #	jree	0	##
 #	jreo	0	##
+#	jreu	0	##
 #	jri'	0	##
 #	jrie	0	##
 #	jrii	0	##
@@ -6288,6 +6386,7 @@ columns:
 #	jvau	0	##
 #	jve'	0	##
 #	jvea	0	##
+#	jveu	0	##
 #	jvi'	0	##
 #	jvie	0	##
 #	jvio	0	##
@@ -6308,6 +6407,7 @@ columns:
 #	jwe'	0	##
 #	jwea	0	##
 #	jweo	0	##
+#	jweu	0	##
 就	jwi'	0
 #	jwie	0	##
 #	jwii	0	##
@@ -6441,6 +6541,7 @@ columns:
 #	kbuu	0	##
 #	kca'	0	##
 #	kcaa	0	##
+#	kcae	0	##
 #	kcao	0	##
 #	kcau	0	##
 #	kce'	0	##
@@ -6461,6 +6562,7 @@ columns:
 #	kcua	0	##
 #	kcui	0	##
 #	kcuo	0	##
+#	kcuu	0	##
 #	kda'	0	##
 #	kdaa	0	##
 #	kdae	0	##
@@ -6478,6 +6580,7 @@ columns:
 #	kdiu	0	##
 #	kdo'	0	##
 #	kdoa	0	##
+#	kdoe	0	##
 #	kdoi	0	##
 #	kdoo	0	##
 #	kdou	0	##
@@ -6485,6 +6588,7 @@ columns:
 #	kdua	0	##
 #	kdue	0	##
 #	kdui	0	##
+#	kduo	0	##
 #	kduu	0	##
 #	kea'	0	##
 #	keaa	0	##
@@ -6686,6 +6790,7 @@ columns:
 #	klou	0	##
 #	klu'	0	##
 #	klui	0	##
+#	kluo	0	##
 #	kluu	0	##
 #	kma'	0	##
 #	kmaa	0	##
@@ -6704,6 +6809,7 @@ columns:
 #	kmou	0	##
 看	kmu'	0
 #	kmua	0	##
+#	kmue	0	##
 #	kmuu	0	##
 #	kna'	0	##
 #	knaa	0	##
@@ -6768,6 +6874,7 @@ columns:
 #	kpau	0	##
 #	kpe'	0	##
 #	kpea	0	##
+#	kpee	0	##
 #	kpeo	0	##
 #	kpeu	0	##
 #	kpi'	0	##
@@ -6839,6 +6946,7 @@ columns:
 #	kroi	0	##
 #	krou	0	##
 #	kru'	0	##
+#	krua	0	##
 #	krue	0	##
 #	krui	0	##
 #	kruu	0	##
@@ -6855,6 +6963,7 @@ columns:
 #	ksi'	0	##
 #	ksia	0	##
 #	ksie	0	##
+#	ksii	0	##
 #	ksio	0	##
 #	kso'	0	##
 #	ksoa	0	##
@@ -6941,6 +7050,7 @@ columns:
 开	kvu'	0
 #	kvua	0	##
 #	kvue	0	##
+#	kvui	0	##
 #	kvuu	0	##
 #	kwa'	0	##
 #	kwaa	0	##
@@ -7280,6 +7390,7 @@ columns:
 #	lkea	0	##
 唠	lkeo	9999
 #	lki'	0	##
+#	lkie	0	##
 #	lkii	0	##
 #	lkio	0	##
 #	lkiu	0	##
@@ -7294,8 +7405,10 @@ columns:
 #	lkuu	0	##
 #	lla'	0	##
 #	llai	0	##
+#	llau	0	##
 #	lle'	0	##
 麓	llea	9999
+#	llee	0	##
 #	lleo	0	##
 #	lli'	0	##
 #	llie	0	##
@@ -7336,6 +7449,7 @@ columns:
 #	lnoa	0	##
 #	lnoo	0	##
 #	lnu'	0	##
+#	lnue	0	##
 #	lnui	0	##
 #	lnuu	0	##
 #	loa'	0	##
@@ -7372,6 +7486,7 @@ columns:
 #	lpaa	0	##
 #	lpai	0	##
 #	lpao	0	##
+#	lpau	0	##
 #	lpe'	0	##
 #	lpea	0	##
 #	lpee	0	##
@@ -7432,6 +7547,7 @@ columns:
 #	lrio	0	##
 #	lriu	0	##
 #	lro'	0	##
+#	lroe	0	##
 #	lroi	0	##
 #	lroo	0	##
 #	lrou	0	##
@@ -7442,6 +7558,7 @@ columns:
 #	lsaa	0	##
 #	lsae	0	##
 #	lsai	0	##
+#	lsao	0	##
 #	lsau	0	##
 #	lse'	0	##
 #	lsea	0	##
@@ -7573,6 +7690,7 @@ columns:
 #	lyau	0	##
 #	lye'	0	##
 #	lyea	0	##
+#	lyei	0	##
 #	lyeo	0	##
 #	lyeu	0	##
 #	lyi'	0	##
@@ -7585,6 +7703,7 @@ columns:
 #	lyoo	0	##
 #	lyou	0	##
 #	lyu'	0	##
+#	lyue	0	##
 #	lyui	0	##
 #	lza'	0	##
 #	lzaa	0	##
@@ -7698,6 +7817,7 @@ columns:
 #	mdio	0	##
 #	mdiu	0	##
 #	mdo'	0	##
+#	mdoe	0	##
 #	mdoi	0	##
 #	mdoo	0	##
 没	mdu'	0
@@ -7877,6 +7997,7 @@ columns:
 #	mkeo	0	##
 #	mkeu	0	##
 #	mki'	0	##
+#	mkia	0	##
 #	mkie	0	##
 #	mkii	0	##
 #	mkio	0	##
@@ -7930,6 +8051,7 @@ columns:
 #	mmuo	0	##
 #	mmuu	0	##
 #	mna'	0	##
+#	mnao	0	##
 #	mnau	0	##
 #	mne'	0	##
 #	mnea	0	##
@@ -8011,6 +8133,7 @@ columns:
 #	mqae	0	##
 #	mqai	0	##
 #	mqao	0	##
+#	mqau	0	##
 #	mqe'	0	##
 #	mqea	0	##
 #	mqee	0	##
@@ -8029,6 +8152,7 @@ columns:
 #	mqoo	0	##
 #	mqou	0	##
 #	mqu'	0	##
+#	mqua	0	##
 #	mque	0	##
 #	mqui	0	##
 #	mquo	0	##
@@ -8084,10 +8208,12 @@ columns:
 #	msuu	0	##
 #	mta'	0	##
 #	mtaa	0	##
+#	mtae	0	##
 #	mtai	0	##
 #	mtao	0	##
 #	mtau	0	##
 #	mte'	0	##
+#	mtea	0	##
 #	mtee	0	##
 #	mtei	0	##
 #	mteo	0	##
@@ -8105,6 +8231,7 @@ columns:
 #	mtoo	0	##
 #	mtou	0	##
 #	mtu'	0	##
+#	mtua	0	##
 #	mtue	0	##
 #	mtui	0	##
 #	mtuo	0	##
@@ -8178,6 +8305,7 @@ columns:
 #	mwu'	0	##
 #	mwua	0	##
 #	mwue	0	##
+#	mwui	0	##
 #	mwuo	0	##
 #	mwuu	0	##
 #	mxa'	0	##
@@ -8254,6 +8382,7 @@ columns:
 #	mzoo	0	##
 #	mzou	0	##
 #	mzu'	0	##
+#	mzua	0	##
 #	mzue	0	##
 #	mzui	0	##
 #	mzuo	0	##
@@ -8331,6 +8460,7 @@ columns:
 #	nciu	0	##
 #	nco'	0	##
 #	ncoa	0	##
+#	ncoe	0	##
 #	ncoi	0	##
 #	ncou	0	##
 #	ncu'	0	##
@@ -8587,6 +8717,7 @@ columns:
 #	nmao	0	##
 #	nmau	0	##
 #	nme'	0	##
+#	nmea	0	##
 #	nmeu	0	##
 #	nmi'	0	##
 #	nmia	0	##
@@ -8622,7 +8753,9 @@ columns:
 #	nnoe	0	##
 #	nnoi	0	##
 #	nnoo	0	##
+#	nnou	0	##
 #	nnu'	0	##
+#	nnua	0	##
 #	nnue	0	##
 #	nnui	0	##
 #	nnuo	0	##
@@ -8658,6 +8791,7 @@ columns:
 #	nouo	0	##
 #	nouu	0	##
 #	npa'	0	##
+#	npaa	0	##
 #	npae	0	##
 #	npai	0	##
 #	npao	0	##
@@ -8883,6 +9017,7 @@ columns:
 #	nxaa	0	##
 #	nxae	0	##
 #	nxao	0	##
+#	nxau	0	##
 #	nxe'	0	##
 #	nxea	0	##
 #	nxee	0	##
@@ -8919,6 +9054,7 @@ columns:
 #	nyeu	0	##
 #	nyi'	0	##
 #	nyia	0	##
+#	nyie	0	##
 #	nyii	0	##
 #	nyio	0	##
 #	nyiu	0	##
@@ -9027,16 +9163,20 @@ columns:
 #	pcio	0	##
 #	pciu	0	##
 #	pco'	0	##
+#	pcoa	0	##
 #	pcoi	0	##
 #	pcu'	0	##
 #	pcue	0	##
 #	pcuu	0	##
 #	pda'	0	##
+#	pdaa	0	##
 #	pdai	0	##
 #	pdao	0	##
 #	pde'	0	##
+#	pdea	0	##
 #	pdeu	0	##
 #	pdi'	0	##
+#	pdie	0	##
 #	pdii	0	##
 #	pdio	0	##
 #	pdiu	0	##
@@ -9097,6 +9237,7 @@ columns:
 #	pfoo	0	##
 #	pfu'	0	##
 #	pfui	0	##
+#	pfuu	0	##
 #	pga'	0	##
 #	pgaa	0	##
 #	pgae	0	##
@@ -9131,6 +9272,7 @@ columns:
 #	phae	0	##
 #	phai	0	##
 #	phao	0	##
+#	phau	0	##
 #	phe'	0	##
 #	phea	0	##
 #	phee	0	##
@@ -9144,6 +9286,7 @@ columns:
 #	phiu	0	##
 平	pho'	0
 #	phoa	0	##
+#	phoe	0	##
 #	phoi	0	##
 #	phoo	0	##
 #	phou	0	##
@@ -9186,6 +9329,7 @@ columns:
 #	pja'	0	##
 #	pjaa	0	##
 #	pjae	0	##
+#	pjai	0	##
 #	pjao	0	##
 #	pje'	0	##
 #	pjee	0	##
@@ -9213,6 +9357,7 @@ columns:
 #	pkao	0	##
 #	pkau	0	##
 #	pke'	0	##
+#	pkea	0	##
 #	pkee	0	##
 #	pkeo	0	##
 品	pki'	0
@@ -9248,6 +9393,7 @@ columns:
 #	plio	0	##
 #	pliu	0	##
 #	plo'	0	##
+#	ploa	0	##
 #	ploi	0	##
 #	ploo	0	##
 #	plou	0	##
@@ -9255,6 +9401,7 @@ columns:
 #	plue	0	##
 #	plui	0	##
 #	pluo	0	##
+#	pluu	0	##
 #	pma'	0	##
 #	pmaa	0	##
 #	pmae	0	##
@@ -9271,6 +9418,7 @@ columns:
 #	pmiu	0	##
 #	pmo'	0	##
 #	pmoa	0	##
+#	pmoe	0	##
 #	pmoi	0	##
 #	pmoo	0	##
 #	pmu'	0	##
@@ -9279,6 +9427,7 @@ columns:
 #	pnaa	0	##
 #	pnai	0	##
 #	pnao	0	##
+#	pnau	0	##
 #	pne'	0	##
 #	pnea	0	##
 #	pnee	0	##
@@ -9407,6 +9556,7 @@ columns:
 #	pru'	0	##
 #	prua	0	##
 #	prue	0	##
+#	prui	0	##
 #	pruo	0	##
 #	pruu	0	##
 破	psa'	0
@@ -9452,6 +9602,7 @@ columns:
 #	ptou	0	##
 #	ptu'	0	##
 #	ptue	0	##
+#	ptuo	0	##
 #	ptuu	0	##
 #	pua'	0	##
 #	puaa	0	##
@@ -9513,11 +9664,13 @@ columns:
 #	pwei	0	##
 #	pweu	0	##
 #	pwi'	0	##
+#	pwie	0	##
 #	pwii	0	##
 #	pwio	0	##
 #	pwiu	0	##
 #	pwo'	0	##
 #	pwoa	0	##
+#	pwoe	0	##
 #	pwoi	0	##
 #	pwoo	0	##
 #	pwou	0	##
@@ -9602,6 +9755,7 @@ columns:
 #	pzoo	0	##
 #	pzou	0	##
 皮	pzu'	0
+#	pzua	0	##
 #	pzue	0	##
 #	pzuo	0	##
 #	pzuu	0	##
@@ -9642,6 +9796,7 @@ columns:
 #	qbau	0	##
 前	qbe'	0
 #	qbea	0	##
+#	qbee	0	##
 #	qbeo	0	##
 #	qbeu	0	##
 #	qbi'	0	##
@@ -9728,6 +9883,7 @@ columns:
 #	qeuu	0	##
 #	qfa'	0	##
 #	qfaa	0	##
+#	qfae	0	##
 #	qfai	0	##
 #	qfao	0	##
 #	qfau	0	##
@@ -9758,6 +9914,7 @@ columns:
 #	qgai	0	##
 #	qgau	0	##
 #	qge'	0	##
+#	qgei	0	##
 #	qgeo	0	##
 强	qgi'	0
 #	qgia	0	##
@@ -9782,6 +9939,7 @@ columns:
 #	qhea	0	##
 #	qhei	0	##
 #	qheo	0	##
+#	qheu	0	##
 #	qhi'	0	##
 #	qhie	0	##
 #	qhii	0	##
@@ -9791,9 +9949,11 @@ columns:
 #	qhoa	0	##
 #	qhoi	0	##
 #	qhoo	0	##
+#	qhou	0	##
 #	qhu'	0	##
 #	qhua	0	##
 #	qhue	0	##
+#	qhui	0	##
 #	qhuu	0	##
 #	qia'	0	##
 #	qiaa	0	##
@@ -9864,6 +10024,7 @@ columns:
 #	qkio	0	##
 #	qkiu	0	##
 #	qko'	0	##
+#	qkoe	0	##
 #	qkoi	0	##
 #	qkoo	0	##
 #	qkou	0	##
@@ -9901,6 +10062,7 @@ columns:
 #	qmi'	0	##
 #	qmie	0	##
 #	qmii	0	##
+#	qmio	0	##
 #	qmiu	0	##
 #	qmo'	0	##
 #	qmoe	0	##
@@ -10117,6 +10279,7 @@ columns:
 #	qveu	0	##
 #	qvi'	0	##
 #	qvie	0	##
+#	qvii	0	##
 #	qvio	0	##
 #	qviu	0	##
 #	qvo'	0	##
@@ -10134,6 +10297,7 @@ columns:
 #	qwea	0	##
 #	qweo	0	##
 #	qwi'	0	##
+#	qwia	0	##
 #	qwie	0	##
 #	qwii	0	##
 #	qwio	0	##
@@ -10196,6 +10360,7 @@ columns:
 #	qyue	0	##
 #	qyuu	0	##
 起	qza'	0
+#	qzaa	0	##
 #	qzae	0	##
 #	qzai	0	##
 #	qzao	0	##
@@ -10205,6 +10370,7 @@ columns:
 #	qzeo	0	##
 #	qzeu	0	##
 #	qzi'	0	##
+#	qzie	0	##
 #	qzio	0	##
 #	qziu	0	##
 #	qzo'	0	##
@@ -10214,6 +10380,7 @@ columns:
 #	qzoo	0	##
 #	qzou	0	##
 #	qzu'	0	##
+#	qzua	0	##
 #	qzue	0	##
 #	qzui	0	##
 #	qzuu	0	##
@@ -10507,6 +10674,7 @@ columns:
 #	rke'	0	##
 #	rkea	0	##
 #	rkee	0	##
+#	rkei	0	##
 #	rkeo	0	##
 #	rkeu	0	##
 #	rki'	0	##
@@ -10642,6 +10810,7 @@ columns:
 #	rouu	0	##
 #	rpa'	0	##
 #	rpaa	0	##
+#	rpae	0	##
 #	rpai	0	##
 #	rpao	0	##
 #	rpau	0	##
@@ -10823,6 +10992,7 @@ columns:
 #	rve'	0	##
 #	rvea	0	##
 #	rvee	0	##
+#	rveo	0	##
 #	rveu	0	##
 #	rvi'	0	##
 #	rvia	0	##
@@ -10898,6 +11068,7 @@ columns:
 #	rxu'	0	##
 #	rxua	0	##
 #	rxue	0	##
+#	rxui	0	##
 #	rxuo	0	##
 #	rxuu	0	##
 #	rya'	0	##
@@ -11042,6 +11213,7 @@ columns:
 #	sdoi	0	##
 #	sdoo	0	##
 #	sdu'	0	##
+#	sdua	0	##
 #	sduo	0	##
 #	sduu	0	##
 #	sea'	0	##
@@ -11081,6 +11253,7 @@ columns:
 抒	sfau	9999
 #	sfe'	0	##
 #	sfea	0	##
+#	sfeo	0	##
 撕	sfeu	9999
 #	sfi'	0	##
 #	sfii	0	##
@@ -11176,6 +11349,7 @@ columns:
 #	sjo'	0	##
 #	sjoa	0	##
 #	sjoi	0	##
+#	sjoo	0	##
 #	sju'	0	##
 #	ska'	0	##
 #	skai	0	##
@@ -11326,11 +11500,13 @@ columns:
 #	sreo	0	##
 #	sreu	0	##
 #	sri'	0	##
+#	sria	0	##
 #	srie	0	##
 #	srii	0	##
 #	srio	0	##
 #	sro'	0	##
 #	sroa	0	##
+#	sroe	0	##
 #	sroi	0	##
 #	sroo	0	##
 #	sru'	0	##
@@ -11373,7 +11549,9 @@ columns:
 #	stoa	0	##
 #	stoi	0	##
 #	stu'	0	##
+#	stua	0	##
 #	stue	0	##
+#	stuo	0	##
 #	stuu	0	##
 #	sua'	0	##
 馊	suaa	0
@@ -11554,6 +11732,7 @@ columns:
 #	tbeo	0	##
 #	tbeu	0	##
 #	tbi'	0	##
+#	tbia	0	##
 #	tbie	0	##
 #	tbii	0	##
 #	tbio	0	##
@@ -11563,15 +11742,19 @@ columns:
 #	tboe	0	##
 #	tboi	0	##
 #	tboo	0	##
+#	tbou	0	##
 #	tbu'	0	##
 #	tbua	0	##
 #	tbue	0	##
+#	tbui	0	##
 #	tbuu	0	##
 #	tca'	0	##
 #	tcaa	0	##
+#	tcae	0	##
 #	tcai	0	##
 #	tcao	0	##
 #	tce'	0	##
+#	tcee	0	##
 #	tceo	0	##
 #	tceu	0	##
 #	tci'	0	##
@@ -11661,6 +11844,7 @@ columns:
 #	tgaa	0	##
 #	tgae	0	##
 #	tgao	0	##
+#	tgau	0	##
 #	tge'	0	##
 #	tgea	0	##
 #	tgee	0	##
@@ -11763,14 +11947,17 @@ columns:
 #	tkai	0	##
 同	tke'	0
 #	tkeo	0	##
+#	tkeu	0	##
 #	tki'	0	##
 #	tkie	0	##
 #	tkii	0	##
 #	tkiu	0	##
 #	tko'	0	##
 #	tkoa	0	##
+#	tkoe	0	##
 #	tkoi	0	##
 #	tkoo	0	##
+#	tkou	0	##
 #	tku'	0	##
 #	tkui	0	##
 #	tkuo	0	##
@@ -11783,6 +11970,7 @@ columns:
 #	tle'	0	##
 #	tlei	0	##
 #	tleo	0	##
+#	tleu	0	##
 #	tli'	0	##
 #	tlie	0	##
 #	tlii	0	##
@@ -11811,6 +11999,7 @@ columns:
 #	tmu'	0	##
 #	tmui	0	##
 她	tna'	0
+#	tnaa	0	##
 #	tnae	0	##
 #	tnai	0	##
 #	tnau	0	##
@@ -11931,10 +12120,12 @@ columns:
 #	trau	0	##
 体	tre'	0
 #	trea	0	##
+#	tree	0	##
 #	trei	0	##
 #	treo	0	##
 #	treu	0	##
 #	tri'	0	##
+#	trie	0	##
 #	trii	0	##
 #	triu	0	##
 #	tro'	0	##
@@ -11949,6 +12140,7 @@ columns:
 #	tsae	0	##
 #	tsai	0	##
 #	tsao	0	##
+#	tsau	0	##
 #	tse'	0	##
 #	tseo	0	##
 #	tsi'	0	##
@@ -11965,6 +12157,7 @@ columns:
 #	tsu'	0	##
 #	tsue	0	##
 #	tsui	0	##
+#	tsuo	0	##
 #	tsuu	0	##
 #	tta'	0	##
 #	ttaa	0	##
@@ -12023,6 +12216,7 @@ columns:
 #	tvai	0	##
 #	tvau	0	##
 #	tve'	0	##
+#	tvei	0	##
 #	tveo	0	##
 #	tvi'	0	##
 #	tvie	0	##
@@ -12117,12 +12311,14 @@ columns:
 #	tzee	0	##
 #	tzei	0	##
 #	tzeo	0	##
+#	tzeu	0	##
 #	tzi'	0	##
 #	tzie	0	##
 #	tzii	0	##
 #	tziu	0	##
 #	tzo'	0	##
 #	tzoa	0	##
+#	tzoe	0	##
 #	tzoi	0	##
 #	tzou	0	##
 #	tzu'	0	##
@@ -12169,6 +12365,7 @@ columns:
 #	vbe'	0	##
 #	vbea	0	##
 #	vbee	0	##
+#	vbei	0	##
 #	vbeo	0	##
 #	vbeu	0	##
 #	vbi'	0	##
@@ -12206,6 +12403,7 @@ columns:
 #	vciu	0	##
 #	vco'	0	##
 #	vcoa	0	##
+#	vcoe	0	##
 #	vcoi	0	##
 #	vcoo	0	##
 #	vcou	0	##
@@ -12354,6 +12552,7 @@ columns:
 #	vhoo	0	##
 #	vhou	0	##
 而	vhu'	0
+#	vhua	0	##
 #	vhue	0	##
 #	vhuo	0	##
 #	vhuu	0	##
@@ -12434,6 +12633,7 @@ columns:
 #	vkoo	0	##
 #	vku'	0	##
 #	vkua	0	##
+#	vkue	0	##
 #	vkuu	0	##
 #	vla'	0	##
 #	vlaa	0	##
@@ -12471,6 +12671,7 @@ columns:
 #	vmee	0	##
 #	vmei	0	##
 #	vmeo	0	##
+#	vmeu	0	##
 #	vmi'	0	##
 #	vmia	0	##
 #	vmie	0	##
@@ -12479,6 +12680,7 @@ columns:
 #	vmiu	0	##
 #	vmo'	0	##
 #	vmoa	0	##
+#	vmoe	0	##
 #	vmoi	0	##
 #	vmoo	0	##
 #	vmou	0	##
@@ -12611,6 +12813,7 @@ columns:
 #	vre'	0	##
 #	vrea	0	##
 #	vree	0	##
+#	vrei	0	##
 #	vreo	0	##
 #	vri'	0	##
 #	vria	0	##
@@ -13004,6 +13207,7 @@ columns:
 #	wfua	0	##
 #	wfue	0	##
 #	wfui	0	##
+#	wfuo	0	##
 #	wfuu	0	##
 #	wga'	0	##
 #	wgaa	0	##
@@ -13028,6 +13232,7 @@ columns:
 #	wgoo	0	##
 #	wgou	0	##
 我	wgu'	0
+#	wgua	0	##
 #	wguo	0	##
 #	wguu	0	##
 #	wha'	0	##
@@ -13131,6 +13336,7 @@ columns:
 #	wkou	0	##
 #	wku'	0	##
 #	wkue	0	##
+#	wkuu	0	##
 #	wla'	0	##
 #	wlaa	0	##
 #	wlae	0	##
@@ -13143,6 +13349,7 @@ columns:
 #	wleo	0	##
 #	wleu	0	##
 #	wli'	0	##
+#	wlia	0	##
 #	wlie	0	##
 #	wlii	0	##
 #	wlio	0	##
@@ -13197,6 +13404,7 @@ columns:
 #	wnoi	0	##
 #	wnou	0	##
 #	wnu'	0	##
+#	wnua	0	##
 #	wnue	0	##
 #	wnui	0	##
 #	wnuu	0	##
@@ -13324,6 +13532,7 @@ columns:
 #	wsau	0	##
 #	wse'	0	##
 #	wsea	0	##
+#	wsee	0	##
 #	wseo	0	##
 #	wsi'	0	##
 #	wsie	0	##
@@ -13347,6 +13556,7 @@ columns:
 #	wtau	0	##
 #	wte'	0	##
 #	wtea	0	##
+#	wtei	0	##
 #	wteo	0	##
 #	wteu	0	##
 #	wti'	0	##
@@ -13521,6 +13731,7 @@ columns:
 #	wzou	0	##
 #	wzu'	0	##
 #	wzua	0	##
+#	wzui	0	##
 #	wzuo	0	##
 #	wzuu	0	##
 #	xaa'	0	##
@@ -13599,6 +13810,7 @@ columns:
 #	xdau	0	##
 #	xde'	0	##
 #	xdea	0	##
+#	xdee	0	##
 #	xdi'	0	##
 #	xdii	0	##
 #	xdio	0	##
@@ -13683,6 +13895,7 @@ columns:
 #	xgoi	0	##
 #	xgoo	0	##
 #	xgu'	0	##
+#	xguo	0	##
 #	xguu	0	##
 #	xha'	0	##
 #	xhaa	0	##
@@ -13752,6 +13965,7 @@ columns:
 #	xjoa	0	##
 #	xjoi	0	##
 #	xjoo	0	##
+#	xjou	0	##
 #	xju'	0	##
 #	xka'	0	##
 #	xkaa	0	##
@@ -13778,12 +13992,14 @@ columns:
 #	xle'	0	##
 #	xlea	0	##
 #	xleo	0	##
+#	xleu	0	##
 #	xli'	0	##
 #	xlie	0	##
 #	xlii	0	##
 #	xliu	0	##
 #	xlo'	0	##
 #	xloa	0	##
+#	xloe	0	##
 #	xloi	0	##
 #	xlou	0	##
 #	xlu'	0	##
@@ -13812,6 +14028,7 @@ columns:
 #	xnau	0	##
 #	xne'	0	##
 #	xnea	0	##
+#	xneo	0	##
 #	xneu	0	##
 #	xni'	0	##
 #	xnie	0	##
@@ -13822,6 +14039,7 @@ columns:
 #	xnoa	0	##
 #	xnoe	0	##
 #	xnu'	0	##
+#	xnua	0	##
 #	xnue	0	##
 #	xoa'	0	##
 #	xoaa	0	##
@@ -13929,6 +14147,7 @@ columns:
 #	xsae	0	##
 #	xsai	0	##
 #	xse'	0	##
+#	xsea	0	##
 #	xseu	0	##
 #	xsi'	0	##
 #	xsii	0	##
@@ -13946,6 +14165,7 @@ columns:
 #	xtau	0	##
 #	xte'	0	##
 #	xtea	0	##
+#	xtei	0	##
 #	xteo	0	##
 #	xteu	0	##
 #	xti'	0	##
@@ -14202,6 +14422,7 @@ columns:
 #	yfea	0	##
 #	yfee	0	##
 #	yfeo	0	##
+#	yfeu	0	##
 #	yfi'	0	##
 #	yfie	0	##
 #	yfii	0	##
@@ -14288,6 +14509,7 @@ columns:
 #	yiuo	0	##
 胰	yiuu	9999
 #	yja'	0	##
+#	yjae	0	##
 #	yje'	0	##
 #	yjeo	0	##
 #	yji'	0	##
@@ -14299,6 +14521,7 @@ columns:
 #	yjoa	0	##
 #	yjoi	0	##
 #	yju'	0	##
+#	yjue	0	##
 #	yjuu	0	##
 #	yka'	0	##
 #	ykao	0	##
@@ -14306,6 +14529,7 @@ columns:
 #	yke'	0	##
 咦	ykeo	9999
 #	yki'	0	##
+#	ykie	0	##
 #	ykii	0	##
 #	ykio	0	##
 #	ykiu	0	##
@@ -14315,6 +14539,7 @@ columns:
 #	yku'	0	##
 喻	ykua	9999
 #	ykue	0	##
+#	ykuu	0	##
 #	yla'	0	##
 #	ylae	0	##
 #	ylai	0	##
@@ -14329,6 +14554,7 @@ columns:
 #	ylo'	0	##
 #	yloi	0	##
 #	yloo	0	##
+#	ylou	0	##
 #	ylu'	0	##
 #	yluu	0	##
 眼	yma'	0
@@ -14413,6 +14639,7 @@ columns:
 #	ypoe	0	##
 #	ypoi	0	##
 #	ypu'	0	##
+#	ypua	0	##
 #	ypui	0	##
 #	ypuu	0	##
 #	yqa'	0	##
@@ -14424,6 +14651,7 @@ columns:
 #	yqe'	0	##
 #	yqeo	0	##
 #	yqi'	0	##
+#	yqie	0	##
 #	yqii	0	##
 #	yqio	0	##
 #	yqiu	0	##
@@ -14488,6 +14716,7 @@ columns:
 #	ytoi	0	##
 #	ytu'	0	##
 #	ytua	0	##
+#	ytui	0	##
 #	ytuu	0	##
 #	yua'	0	##
 #	yuaa	0	##
@@ -14525,11 +14754,13 @@ columns:
 有	yve'	0
 #	yveo	0	##
 #	yvi'	0	##
+#	yvie	0	##
 邮	yvio	9999
 陨	yviu	9999
 #	yvo'	0	##
 翌	yvoi	9999
 #	yvu'	0	##
+#	yvue	0	##
 #	yvuu	0	##
 #	ywa'	0	##
 #	ywai	0	##
@@ -14753,9 +14984,12 @@ columns:
 #	zheo	0	##
 #	zheu	0	##
 #	zhi'	0	##
+#	zhie	0	##
+#	zhii	0	##
 燥	zhio	9999
 #	zho'	0	##
 #	zhoa	0	##
+#	zhoe	0	##
 #	zhoi	0	##
 #	zhoo	0	##
 #	zhou	0	##
@@ -14814,10 +15048,12 @@ columns:
 吱	zkea	9999
 哉	zkeo	9999
 中	zki'	0
+#	zkie	0	##
 匝	zkio	9999
 #	zkiu	0	##
 #	zko'	0	##
 #	zkoa	0	##
+#	zkoe	0	##
 #	zkoi	0	##
 #	zku'	0	##
 #	zkuu	0	##
@@ -14839,6 +15075,7 @@ columns:
 #	zloi	0	##
 #	zloo	0	##
 #	zlu'	0	##
+#	zluo	0	##
 #	zluu	0	##
 #	zma'	0	##
 #	zmaa	0	##
@@ -14862,6 +15099,7 @@ columns:
 #	znea	0	##
 #	znee	0	##
 #	zneo	0	##
+#	zneu	0	##
 #	zni'	0	##
 #	znii	0	##
 #	znio	0	##
@@ -14952,15 +15190,18 @@ columns:
 #	zra'	0	##
 #	zraa	0	##
 #	zrai	0	##
+#	zrao	0	##
 #	zrau	0	##
 #	zre'	0	##
 #	zreo	0	##
 #	zri'	0	##
+#	zria	0	##
 #	zrii	0	##
 #	zrio	0	##
 #	zriu	0	##
 #	zro'	0	##
 #	zroa	0	##
+#	zroe	0	##
 #	zroi	0	##
 #	zru'	0	##
 #	zrui	0	##
@@ -15070,6 +15311,7 @@ columns:
 #	zwoo	0	##
 #	zwu'	0	##
 #	zwua	0	##
+#	zwui	0	##
 卒	zwuu	9999
 #	zxa'	0	##
 #	zxaa	0	##
@@ -15094,6 +15336,7 @@ columns:
 #	zxua	0	##
 #	zxue	0	##
 #	zxui	0	##
+#	zxuo	0	##
 #	zxuu	0	##
 #	zya'	0	##
 #	zyaa	0	##
