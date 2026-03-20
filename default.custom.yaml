@@ -1,10 +1,10 @@
 patch:
   schema_list:
     # - schema: sbyp
-    # - schema: sbmd
-    # - schema: sbfd
+    - schema: sbmd
+    - schema: sbfd
     # - schema: sbbd
-    - schema: sbfm
+    # - schema: sbfm
     - schema: sben
   switcher:
     abbreviate_options: true
