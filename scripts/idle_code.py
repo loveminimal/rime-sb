@@ -4,6 +4,7 @@
 # 
 from datetime import datetime
 from pathlib import Path
+import re
 from is_chinese_char import is_chinese_char
 
 def get_all_codes():
@@ -57,12 +58,14 @@ def get_used_codes(proj_dir):
     lines_total = []
     lines_sbf = []
 
+    # 常见中文标点的Unicode范围（编码中加入常用中文符号及表情符）
+    chinese_punct_pattern = r'[\u3000-\u303F\uFF00-\uFFEF\u2010-\u201F\u2026\u2056-\u205E・😄🤣🤭]'
     # 读取飞码扩展词库中的词语
     sbf_path = proj_dir / 'sbf.dict.yaml'
     with open(sbf_path, 'r', encoding='utf-8') as s:
         print(f'☑️  已加载飞单缩减码数据 » {sbf_path}')   
         lines_total = s.readlines()
-        lines_sbf = [l for l in lines_total if is_chinese_char(l[0])]
+        lines_sbf = [l for l in lines_total if is_chinese_char(l[0]) or re.search(chinese_punct_pattern, l[0])]
 
     sbfd_path = proj_dir / 'sbfd.dict.yaml'
     with open(sbfd_path, 'r', encoding='utf-8') as f:     
