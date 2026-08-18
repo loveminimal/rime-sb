@@ -6,6 +6,7 @@ local XK_semicolon = 0x003b
 local XK_Tab = 0xff09
 local XK_apostrophe = 0x0027
 local XK_space = 0x0020
+local XK_comma = 0x002c
 local XK_period = 0x002e
 local XK_Return = 0xff0d
 local XK_Shift_R = 0xffe2
@@ -79,6 +80,18 @@ end
 ---@param env KeyBinderEnv
 function this.func(key_event, env)
   local context = env.engine.context
+
+  -- 恢复方案切换后待恢复的输入
+  -- 在 Control+, press 中保存输入到 property，apply_schema 切换方案后，
+  -- 新 schema 的 key_binder 在 Control+, release（或下一个按键）时读取并恢复。
+  -- 此时 ApplySchema 已完全完成（InitializeOptions、message_sink 都已执行），
+  -- UI 已更新到新方案，push_input 触发的 Compose 会用新 schema 正确生成候选。
+  local pending = context:get_property("lua_pending_input")
+  if pending and pending ~= "" then
+    context:set_property("lua_pending_input", "")
+    context:push_input(pending)
+  end
+
   local segment = env.engine.context.composition:back()
   local schema_id = env.engine.schema.schema_id
   local ascii_mode = context:get_option("ascii_mode")
@@ -166,6 +179,28 @@ function this.func(key_event, env)
       env.engine:process_key(rime.KeyEvent(input:sub(4,4)))
       env.engine:process_key(rime.KeyEvent("'"))
       env.engine:process_key(rime.KeyEvent("space"))
+    else
+      env.redirecting = false
+      goto continue
+    end
+    env.redirecting = false
+    return rime.process_results.kAccepted
+  end
+
+  -- 飞单与魔单快捷切换，core.fd可以是sbfd或sbmd
+  -- 在有输入时按 Control+, 切换到对方方案。
+  -- 必须忽略 release 事件：press 切换方案后，release 会以新方案身份到来，
+  -- 此时 func 开头的 pending 恢复逻辑会先恢复输入，release 再跳过此分支。
+  -- apply_schema 前先把输入存入 context property，
+  -- 新 schema 的 func 在下一个按键事件中读取并恢复。
+  if not ascii_mode and not key_event:shift() and key_event:ctrl() and not key_event:release()
+  and key_event.keycode == XK_comma and core.fd(schema_id) then
+    env.redirecting = true
+    if rime.match(input, "[bpmfdtnlgkhjqxzcsrywv].*") then
+      local target_schema_id = (schema_id == 'sbfd') and 'sbmd' or 'sbfd'
+      -- 保存输入，供新 schema 在下一个按键事件中恢复
+      env.engine.context:set_property("lua_pending_input", input)
+      env.engine:apply_schema(rime.Schema(target_schema_id))
     else
       env.redirecting = false
       goto continue
