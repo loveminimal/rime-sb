@@ -20,12 +20,15 @@ local rime = require "lib"
 local core = require "sbxlm.core"
 
 local this = {}
+local pending_input_property = "lua_pending_input"
+local return_schema_property = "lua_return_schema"
 
 ---@class KeyBinderEnv: Env
 ---@field redirecting boolean
 ---@field bindings Binding[]
 ---@field space_word boolean
 ---@field tab_word boolean
+---@field return_schema_connection Connection
 
 ---@class Binding
 ---element
@@ -56,8 +59,26 @@ local function is_upper(ch)
 end
 
 ---@param env KeyBinderEnv
+---@param context Context
+local function restore_return_schema(env, context)
+  local return_schema_id = context:get_property(return_schema_property)
+  if not return_schema_id or return_schema_id == "" then
+    return
+  end
+
+  context:set_property(return_schema_property, "")
+  context:set_property(pending_input_property, "")
+  if env.engine.schema.schema_id ~= return_schema_id then
+    env.engine:apply_schema(rime.Schema(return_schema_id))
+  end
+end
+
+---@param env KeyBinderEnv
 function this.init(env)
   env.redirecting = false
+  env.return_schema_connection = env.engine.context.commit_notifier:connect(function(context)
+    restore_return_schema(env, context)
+  end)
   ---@type Binding[]
   env.bindings = {}
   local bindings = env.engine.schema.config:get_list("key_binder/bindings")
@@ -76,6 +97,13 @@ function this.init(env)
   end
 end
 
+---@param env KeyBinderEnv
+function this.fini(env)
+  if env.return_schema_connection then
+    env.return_schema_connection:disconnect()
+  end
+end
+
 ---@param key_event KeyEvent
 ---@param env KeyBinderEnv
 function this.func(key_event, env)
@@ -86,9 +114,9 @@ function this.func(key_event, env)
   -- 新 schema 的 key_binder 在 Control+, release（或下一个按键）时读取并恢复。
   -- 此时 ApplySchema 已完全完成（InitializeOptions、message_sink 都已执行），
   -- UI 已更新到新方案，push_input 触发的 Compose 会用新 schema 正确生成候选。
-  local pending = context:get_property("lua_pending_input")
+  local pending = context:get_property(pending_input_property)
   if pending and pending ~= "" then
-    context:set_property("lua_pending_input", "")
+    context:set_property(pending_input_property, "")
     context:push_input(pending)
   end
 
@@ -187,19 +215,21 @@ function this.func(key_event, env)
     return rime.process_results.kAccepted
   end
 
-  -- 飞单与魔单快捷切换，core.fd可以是sbfd或sbmd
+  -- 飞单与魔单快捷切换，core.fd可以是sbfd、sbmd或sbbd。
   -- 在有输入时按 Control+, 切换到对方方案。
   -- 必须忽略 release 事件：press 切换方案后，release 会以新方案身份到来，
   -- 此时 func 开头的 pending 恢复逻辑会先恢复输入，release 再跳过此分支。
   -- apply_schema 前先把输入存入 context property，
-  -- 新 schema 的 func 在下一个按键事件中读取并恢复。
+  -- 新 schema 的 func 在下一个按键事件中读取并恢复；
+  -- 新 schema 提交上屏后，commit_notifier 会切回原 schema。
   if not ascii_mode and not key_event:shift() and key_event:ctrl() and not key_event:release()
   and key_event.keycode == XK_comma and core.fd(schema_id) then
     env.redirecting = true
     if rime.match(input, "[bpmfdtnlgkhjqxzcsrywv].*") then
       local target_schema_id = (schema_id == 'sbfd') and 'sbmd' or 'sbfd'
-      -- 保存输入，供新 schema 在下一个按键事件中恢复
-      env.engine.context:set_property("lua_pending_input", input)
+      -- 保存输入和原方案，供新 schema 恢复编码并在提交后切回。
+      context:set_property(pending_input_property, input)
+      context:set_property(return_schema_property, schema_id)
       env.engine:apply_schema(rime.Schema(target_schema_id))
     else
       env.redirecting = false
