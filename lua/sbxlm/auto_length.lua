@@ -387,7 +387,7 @@ local function validate_phrase(entry, segment, type, input, env)
   if entry.comment == "" then
     goto valid
   end
-  if (core.fm(schema_id) or core.fy(schema_id) or core.fd(schema_id) or core.mm(schema_id) or core.xmft(schema_id) or core.sp(schema_id)) and input:len() < 4 then
+  if (core.fm(schema_id) or core.fy(schema_id) or core.fd(schema_id) or core.mm(schema_id) or (core.xmft(schema_id) and schema_id ~= "sbmf") or core.sp(schema_id)) and input:len() < 4 then
     return nil
   end
   -- 处理一些特殊的过滤条件
@@ -782,7 +782,9 @@ function this.func(input, segment, env)
         or rime.match(input, "([bpmfdtnlgkhjqxzcsrywv][a-z]){2}[aeiou]{0,2}[AEUIO][aeiouAEUIO]?") then
       translate_by_split(input, segment, env)
     end
-    return
+    if not (schema_id == "sbmf" and input:len() == 3) then
+      return
+    end
   end
 
   local memory = env.dynamic_memory
