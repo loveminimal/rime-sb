@@ -11,13 +11,13 @@ shared_patch:
   # engine/filters/@before 8: lua_filter@*patch*f_filter_non_first_word
   recognizer/patterns/quick_symbol: "^;.*$"
   sbzdy/user_dict: patch
-  switches/+:
-    - name: is_show_more
-      reset: 1
-      states: [Ⓛ, Ⓜ]
-    # - name: is_show_word
-    #   reset: 0
-    #   states: [单字, 词语]
+  # switches/+:
+  #   - name: is_show_more
+  #     reset: 1
+  #     states: [Ⓛ, Ⓜ]
+  #   # - name: is_show_word
+  #   #   reset: 0
+  #   #   states: [单字, 词语]
   punctuator/half_shape/+:
     '`' : '`'
     ';' : [；]
@@ -44,8 +44,8 @@ shared_patch:
   # emoji 表情 —— sbyp ➭ sbfm
   # ——————
   emoji/+:
-    dictionary: sbfm
-    prism: sbfm
+    dictionary: sbft
+    prism: sbft
     packs:
   # 使用 e 引导飞码长词，聊胜于无~
   # speller/initials: bpmfdtnlgkhjqxzcsrywv'

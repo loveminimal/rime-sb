@@ -105,18 +105,20 @@ function this.func(key_event, env)
       return rime.process_results.kNoop
     end
   end
-  if (core.fm(schema_id) and incoming == ';'
+  if ((core.fm(schema_id) or core.ft(schema_id)) and incoming == ';'
   and rime.match(input, "([bpmfdtnlgkhjqxzcsrywv][a-z]){2}[aeiou]{0,2}[AEUIO][aeiouAEUIO]?")) then
     local start =  string.find(input, "%u")
-    local part1 = input:sub(1, 2) .. input:sub(start):lower()
-    local part2 = input:sub(3, start - 1)
-    context:clear()
-    context:push_input(part1)
-    env.engine:process_key(rime.KeyEvent("space"))
-    context:clear()
-    context:push_input(part2)
-    env.engine:process_key(rime.KeyEvent("space"))
-    return rime.process_results.kAccepted
+    if start then
+      local part1 = input:sub(1, 2) .. input:sub(start):lower()
+      local part2 = input:sub(3, start - 1)
+      context:clear()
+      context:push_input(part1)
+      env.engine:process_key(rime.KeyEvent("space"))
+      context:clear()
+      context:push_input(part2)
+      env.engine:process_key(rime.KeyEvent("space"))
+      return rime.process_results.kAccepted
+    end
   end
   
   if core.fm(schema_id) and rime.match(incoming, "[0-9]")
@@ -144,6 +146,32 @@ function this.func(key_event, env)
     env.engine:process_key(rime.KeyEvent(stroke))
     return rime.process_results.kAccepted
   end
+
+  if core.mm(schema_id) and rime.match(input, "[a-z]{3}") and (rime.match(incoming, "[0-9]") 
+  or rime.match(incoming, "[a-z]") and not context:get_option("is_enhanced")) then
+    local part1 = input:sub(1, 2)
+    local part2 = input:sub(3, 3)
+    context:clear()
+    context:push_input(part1)
+    env.engine:process_key(rime.KeyEvent("space"))
+    context:clear()
+    context:push_input(part2)
+    env.engine:process_key(rime.KeyEvent(incoming))
+    return rime.process_results.kAccepted
+  end  
+
+  if core.mm(schema_id) and rime.match(input, "[a-z]{4}") 
+  and rime.match(incoming, "[a-z;',./]") and context:get_option("is_enhanced") then
+    local part1 = input:sub(1, 2)
+    local part2 = input:sub(3, 4)
+    context:clear()
+    context:push_input(part1)
+    env.engine:process_key(rime.KeyEvent("space"))
+    context:clear()
+    context:push_input(part2)
+    env.engine:process_key(rime.KeyEvent(incoming))
+    return rime.process_results.kAccepted
+  end 
 
   for _, rule in ipairs(env.popping) do
     local when = rule.when
@@ -212,6 +240,11 @@ function this.func(key_event, env)
     key_event = rime.KeyEvent(utf8.char(key_event.keycode + 32))
   end
   return env.speller:process_key_event(key_event)
+end
+
+function this.fini(env)
+  env.speller = nil
+  env.popping = nil
 end
 
 return this

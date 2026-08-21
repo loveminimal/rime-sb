@@ -91,22 +91,22 @@ prelude:
 
   sbyp:
     tag: sbyp
-    dictionary: sbyp
+    dictionary: sbpy
     enable_user_dict: false
     enable_encoder: false
-    # packs:
-    #   - sbyp.base
+    packs:
+      - sbpy.base
     prism: sbyp
     prefix: a
     tips: "〔拼音反查〕"
 
   emoji:
     tag: emoji
-    dictionary: sbyp
+    dictionary: sbpy
     enable_user_dict: false
     enable_encoder: false
-    # packs:
-    #   - sbyp.base
+    packs:
+      - sbpy.base
     prism: sbyp
     prefix: e
 
@@ -131,7 +131,7 @@ prelude:
   reverse_lookup:
     tags: [bihua, sbyp, zhlf, sbfc]
     overwrite_comment: true
-    dictionary: sbjm.extended
+    dictionary: sbft.extended
 
   es_conversion:
     tags: [emoji]

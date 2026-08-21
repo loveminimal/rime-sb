@@ -1,9 +1,0 @@
-# Rime dictionary - patch.dict.yaml
-# encoding: utf-8
----
-name: patch
-version: 2026.01
-sort: by_weight
-use_preset_vocabulary: false
-...
-凡人修仙传	frxzua	1

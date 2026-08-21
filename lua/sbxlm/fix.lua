@@ -55,7 +55,7 @@ function this.func(translation, env)
     return rime.process_results.kNoop
   end
   local fixed_phrases = env.fixed[input]
-  if has_fixed and fix_combination and core.sss(input) then
+  if has_fixed and fix_combination and core.sxs(input) then
     local ss = (env.fixed[input:sub(1, 2)] or {})[1]
     local s = (env.fixed[input:sub(3, 3)] or {})[1]
     if ss and s then
@@ -114,7 +114,14 @@ function this.func(translation, env)
           end
         end
       end
-      cand.type = "fixed"
+
+      if segment.start > 0 or context.input:len() > segment._end or context:get_option("temp_buffered") then
+        -- 在造词的时候允许固定字词调频
+        cand.type = "fixed"
+      else
+        -- 固定字词一般情况下不调频
+        cand = rime.Candidate("fixed", segment.start, segment._end, fixed_phrases[i], cand.comment)
+      end        
       rime.yield(cand)
       i = i + 1
     end
@@ -151,6 +158,10 @@ function this.func(translation, env)
   for _, candidate in ipairs(unknown_candidates) do
     rime.yield(candidate)
   end
+end
+
+function this.fini(env)
+  env.fixed = nil
 end
 
 return this

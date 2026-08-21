@@ -1,11 +1,12 @@
 patch:
   schema_list:
+    - schema: sbft
     # - schema: sbyp
-    - schema: sbmd
-    - schema: sbfd
+    # - schema: sbmd
+    # - schema: sbfd
     # - schema: sbbd
     # - schema: sbfm
-    - schema: sben
+    # - schema: sben
   switcher:
     abbreviate_options: true
     caption: "〔方案选单〕"

@@ -1,0 +1,253 @@
+# Rime schema
+# encoding: utf-8
+
+__include: sbxlm.yaml:/prelude
+
+schema:
+  schema_id: sbft
+  name: "声笔飞天"
+  version: "11.0"
+  icon: "sbxlm.ico"
+  author:
+    - 戴石麟 <https://sbxlm.github.io>
+  dependencies:
+    - sbfc
+    - sbyp
+    - bihua
+    - zhlf
+    - sbft2
+
+switches:
+  - name: ascii_mode
+    reset: 0
+    states: [中文, 西文]
+  - name: ascii_punct
+    reset: 0
+    states: [。，, ．，]
+  - name: zh_trad
+    reset: 0
+    states: [简体, 繁体]
+  - options: [pro_word, pro_char]
+    reset: 1
+    states: [词组, 单字]
+  - options: [hide, rational, irrational, both, neither]
+    reset: 4
+    states: [隐藏, 有理, 无理, 两者, 都不]
+  # 为了避免拥挤，不显示下面的状态
+  - name: is_enhanced
+    reset: 1
+    # states: [常规, 增强]
+  - name: auto_inline
+    reset: 1
+  - name: is_buffered
+    reset: 0
+  - name: single_display
+    reset: 0
+  - name: show_es
+    reset: 1
+  # 不要改变下面的状态，以免穿帮
+  - name: third_pop
+    reset: 0
+  - name: fast_pop
+    reset: 0
+
+engine:
+  processors:
+    - lua_processor@*sbxlm.ascii_composer
+    - ascii_composer
+    - recognizer
+    - lua_processor@*sbxlm.key_binder
+    - key_binder
+    - lua_processor@*sbxlm.selector
+    - lua_processor@*sbxlm.popping
+    - speller
+    - punctuator
+    - selector
+    - navigator
+    - express_editor
+  segmentors:
+    - ascii_segmentor
+    - matcher
+    - abc_segmentor
+    - affix_segmentor@sbzdy
+    - affix_segmentor@sbfc
+    - affix_segmentor@bihua
+    - affix_segmentor@sbyp
+    - affix_segmentor@emoji
+    - affix_segmentor@zhlf
+    - punct_segmentor
+    - fallback_segmentor
+  translators:
+    - punct_translator
+    - lua_translator@*sbxlm.auto_length
+    - table_translator@sbfc
+    - table_translator@bihua
+    - script_translator@sbyp
+    - script_translator@emoji
+    - script_translator@zhlf
+    - lua_translator@*sbxlm.utils.datetime
+    - lua_translator@*sbxlm.utils.number
+    - lua_translator@*sbxlm.utils.calculator
+    - table_translator@sbzdy
+    - history_translator
+  filters:
+    - simplifier@es_conversion
+    - reverse_lookup_filter@reverse_lookup
+    - reverse_lookup_filter@reverse_lookup2
+    - lua_filter@*sbxlm.hint
+    - lua_filter@*sbxlm.radicals
+    - lua_filter@*sbxlm.select_key_to_comment
+    - simplifier
+    - uniquifier
+
+popping:
+  __append:
+    - match: "[^a-z]"
+      accept: "[^ ]"
+    - when: pro_char
+      match: "[bpmfdtnlgkhjqxzcsrywv][a-z][bpmfdtnlgkhjqxzcsrywv]"
+      accept: "[a-z]"
+      prefix: 2
+    - when: pro_word
+      match: "[bpmfdtnlgkhjqxzcsrywv][a-z][bpmfdtnlgkhjqxzcsrywv]"
+      accept: "[a-z]"
+      strategy: append
+    - when: pro_word
+      match: "[bpmfdtnlgkhjqxzcsrywv]{2}[a-z]"
+      accept: "[;]"
+      prefix: 1
+      strategy: ignore
+    - when: pro_word
+      match: "[bpmfdtnlgkhjqxzcsrywv][a-z][bpmfdtnlgkhjqxzcsrywv]"
+      accept: "[,./]"
+    - match: "[bpmfdtnlgkhjqxzcsrywv][a-z][bpmfdtnlgkhjqxzcsrywv][a-z]"
+      accept: "[BPMFDTNLGKHJQXZCSRYWV]"
+      prefix: 2
+    - match: "([bpmfdtnlgkhjqxzcsrywv][a-z]){2}[aeiou]{0,2}"
+      accept: "[AEUIO]"
+      strategy: append
+    - match: "([bpmfdtnlgkhjqxzcsrywv][a-z]){2}[aeiou]{0,2}[AEUIO][aeiouAEUIO]?"
+      accept: "[;]"
+      prefix: 0
+      strategy: ignore
+    - match: "[bpmfdtnlgkhjqxzcsrywv][a-z][bpmfdtnlgkhjqxzcsrywv]?"
+      accept: "[A-Z]"
+      strategy: append
+    - match: "[bpmfdtnlgkhjqxzcsrywv][a-z][bpmfdtnlgkhjqxzcsrywv][a-z]?"
+      accept: "[0-9]"
+      prefix: 2
+    - match: "[bpmfdtnlgkhjqxzcsrywv][a-z]"
+      accept: "[;']"
+      strategy: append
+    - match: "[bpmfdtnlgkhjqxzcsrywv][a-z][aeuio]"
+      accept: "[']"
+      strategy: append
+    - match: "[bpmfdtnlgkhjqxzcsrywv][0-9][aeuio]*"
+      accept: "[^ aeuio]"
+    - match: "[bpmfdtnlgkhjqxzcsrywv][a-z]?"
+      accept: "[^ a-z0-9]"
+    - match: "[bpmfdtnlgkhjqxzcsrywv][a-z][aeuio0-9]+"
+      accept: "[^ aeuio]"
+    - match: "[bpmfdtnlgkhjqxzcsrywv][a-z][bpmfdtnlgkhjqxzcsrywv]"
+      accept: "[^ aeuio;',./0-9]"
+    - match: "[bpmfdtnlgkhjqxzcsrywv][a-z][a-zA-Z][;',./0-9a-zA-Z][aeuioAEUIO]*"
+      accept: "[^ aeuio]"
+
+speller:
+  alphabet: "bpmfdtnlgkhjqxzcsrywvaeiouBPMFDTNLGKHJQXZCSRYWVAEUIO;',./1234567890"
+  initials: "bpmfdtnlgkhjqxzcsrywv"
+  auto_clear: none
+  max_code_length: 8
+  popping:
+    __patch:
+      - /popping
+
+translator:
+  dictionary: sbft
+  enable_user_dict: true
+  enable_filtering: true
+  filter_strength: 3 #可以为3,4,5,6
+  forced_selection: false
+  single_selection: true
+  enable_encoder: true
+  stop_change: false
+  delete_threshold: 2000
+  max_phrase_length: 5
+  disable_user_dict_for_patterns:
+    - "[bpmfdtnlgkhjqxzcsrywv][a-z]?[0-9aeuio;',./]*"
+    - "[bpmfdtnlgkhjqxzcsrywv][a-z][bpmfdtnlgkhjqxzcsrywv]"
+    - "([bpmfdtnlgkhjqxzcsrywv][aeiou]){2}"
+    - "([bpmfdtnlgkhjqxzcsrywv][a-z]){2}[aeiou]{0,2}[AEUIO][aeiouAEUIO]?"
+
+extended:
+  dictionary: sbft.extended
+  user_dictionary: "sbft"
+  enable_user_dict: true
+
+punctuator:
+  import_preset: sbxlm
+
+recognizer:
+  import_preset: sbxlm
+
+sbft_bindings:
+  __append:
+    - match: "[bpmfdtnlgkhjqxzcsrywv]{3}"
+      accept: Tab
+      send_sequence: "{Home}{Right}{Right}{apostrophe}{space}{space}"
+    - match: "[bpmfdtnlgkhjqxzcsrywv]{2}"
+      accept: ";"
+      send_sequence: "{Home}{Right}{space}{space}"
+    - match: "[bpmfdtnlgkhjqxzcsrywv][aeuio]"
+      accept: ";"
+      send_sequence: ";{space}"
+    - match: "[bpmfdtnlgkhjqxzcsrywv]{2}"
+      accept: Tab
+      send_sequence: "{apostrophe}{space}"
+    - match: "[bpmfdtnlgkhjqxzcsrywv][a-z]"
+      accept: "'"
+      send_sequence: "{apostrophe}{space}"
+    - match: "([bpmfdtnlgkhjqxzcsrywv][a-z]){2}[aeuio]{0,2}"
+      accept: ";"
+      send_sequence: "{Home}{Right}{Right}{space}{space}"
+    - match: "[bpmfdtnlgkhjqxzcsrywv][a-z][bpmfdtnlgkhjqxzcsrywv]{2}"
+      accept: "'"
+      send_sequence: "{Home}{Right}{Right}{space}{apostrophe}{space}"
+    - match: "[bpmfdtnlgkhjqxzcsrywv]{3}"
+      accept: "Shift+space"
+      send_sequence: "{Home}{Right}{space}{Home}{Right}{space}{space}"
+    - match: "[bpmfdtnlgkhjqxzcsrywv][a-z][bpmfdtnlgkhjqxzcsrywv]{2}"
+      accept: "Shift+space"
+      send_sequence: "{Home}{Right}{Right}{space}{Home}{Right}{space}{space}"
+
+key_binder:
+  bindings:
+    __patch:
+      - sbxlm.yaml:/rime_key_bindings
+      - /sbft_bindings
+
+reverse_lookup:
+  __include: sbxlm.yaml:/prelude/reverse_lookup
+  tags: [bihua, sbyp, zhlf]
+  dictionary: sbft.extended
+  comment_format:
+    - "xform/([a-z]{3}.).*/$1/"
+
+reverse_lookup2:
+  __include: sbxlm.yaml:/prelude/reverse_lookup
+  tags: [bihua, sbyp, zhlf]
+  overwrite_comment: true
+  dictionary: sbft
+
+menu:
+  page_size: 6
+  alternative_select_keys: "_23789"
+  alternative_select_labels: ["", "", "", "", "", ""]
+  alternative_select_patterns:
+    - "[a-z]{3}[;',./0-9][aeuio]*"
+    - "[a-z]{2}[aeuio]{6}"
+    - "[a-z]{4}[aeuio]{2}"
+    - "[bpmfdtnlgkhjqxzcsrywv][a-z][BPMFDTNLGKHJQXZCSRYWV][a-z][aeuio]*"
+    - "[bpmfdtnlgkhjqxzcsrywv][a-z]{2}[a-zA-Z][aeuio]+"
+    - "[bpmfdtnlgkhjqxzcsrywv][a-z]{2}[A-Z]"
+  select_comment_pattern: "^[a-z]{3}[;',./0-9][aeuio]*|[a-z]{2}[aeuio]{2}|[a-z]{4}[aeuio]*|[bpmfdtnlgkhjqxzcsrywv][a-z][BPMFDTNLGKHJQXZCSRYWV][a-z][aeuio]*|[bpmfdtnlgkhjqxzcsrywv]{3}[a-zA-Z][aeuio]*$"

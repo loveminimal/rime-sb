@@ -38,6 +38,11 @@ local kUnitySymbol   = " \xe2\x98\xaf "
 ---@field is_enhanced boolean
 ---@field enhanced_char boolean
 ---@field char_lens { string : number }
+---@field xm_lens { string : number }
+---@field xx_flag boolean
+---@field pure_char boolean
+---@field cand string
+---@field strokes { string : string }
 
 ---判断输入的编码是否为静态编码
 ---@param input string
@@ -91,7 +96,7 @@ local function dfs_encode(phrase, position, code, env)
   for _, char in utf8.codes(phrase) do
     table.insert(characters, utf8.char(char))
   end
-  -- 对于飞系方案，构词用的编码不一定出现在单字全面中，所以需要单独的构词码
+  -- 对于飞系方案，构词用的编码不一定出现在单字全码中，所以需要单独的构词码
   -- 对于其他方案，调用单字全码即可，可以减少词库的大小
   local translations = env.reverse:lookup_stems(characters[position])
   if translations == "" then
@@ -101,7 +106,10 @@ local function dfs_encode(phrase, position, code, env)
   -- 对所有可能的构词码，逐个入栈，然后递归调用，从而实现各字的构词码之间的排列组合
   for stem in string.gmatch(translations, "[^ ]+") do
     -- 如果之前调用的是 reverse:lookup，那么除了单字全码之外，也可能查询到简码
-    -- 这里要把它们过滤掉
+    -- 这里要把它们过滤掉，猛码和象码除外
+    if not (core.mm(env.engine.schema.schema_id) or core.xm(env.engine.schema.schema_id)) and stem:len() < 4 then
+      goto continue
+    end
     table.insert(code, stem)
     local ok = dfs_encode(phrase, position + 1, code, env)
     success = success or ok
@@ -124,18 +132,12 @@ local function callback(commit, env)
     if static(entry.preedit, env) then
       goto continue
     end
+    --如果是组合上屏则不记忆
     if entry.comment == kTopSymbol then
       goto continue
     end
     -- 如果这个词之前标记为临时词，就消除这个标记，正式进入词库
-    -- 
-    -- ⭐️ 这里会记录一些不必要的声声词（码长为4码，小于6码），影响统一观感，故取消此类进入用户词库
-    -- 副作用：已存在于词库中的词条不会写入用户词库
-    if #entry.custom_code < 6 then
-      goto continue
-    end
-
-    if string.find(entry.custom_code, kEncodedPrefix) then
+   if string.find(entry.custom_code, kEncodedPrefix) then
       local new_entry = rime.DictEntry()
       new_entry.text = entry.text
       new_entry.custom_code = entry.custom_code:sub(kEncodedPrefix:len() + 1)
@@ -220,8 +222,8 @@ function this.init(env)
   env.dynamic_memory:memorize(function(commit) callback(commit, env) end)
   ---@type { string: number }
   env.known_candidates = {}
-  env.is_buffered = env.engine.context:get_option("is_buffered") or false
-  env.single_display = env.engine.context:get_option("single_display") or false
+  env.xx_flag = false
+  env.pure_char = false
 
   env.char_lens = {}
   local path = rime.api.get_user_data_dir() .. "/lua/sbxlm/char_lens.txt"
@@ -235,6 +237,34 @@ function this.init(env)
     env.char_lens[char] = tonumber(len)
   end
   file:close()
+
+  env.xm_lens = {}
+  path = rime.api.get_user_data_dir() .. "/lua/sbxlm/xm_lens.txt"
+  file = io.open(path, "r")
+  if not file then
+    return
+  end
+  for line in file:lines() do
+    ---@type string, string
+    local char, len = line:match("([^\t]+)\t([^\t]+)")
+    env.xm_lens[char] = tonumber(len)
+  end
+  file:close()
+
+  -- 读取笔画编码文件
+  env.strokes = {}
+  path = rime.api.get_user_data_dir() .. "/lua/sbxlm/strokes.txt"
+  file = io.open(path, "r")
+  if file then
+    for line in file:lines() do
+      ---@type string, string
+      local char, stroke = line:match("([^\t]+)\t([^\t]+)")
+      if char and stroke then
+        env.strokes[char] = stroke
+      end
+    end
+    file:close()
+  end
 end
 
 ---涉及到自动码长翻译时，指定对特定类型的输入应该用何种策略翻译
@@ -282,8 +312,14 @@ local function dynamic(input, env)
     else
       return input:len() - 3
     end
-  elseif core.fm(schema_id) or core.fy(schema_id) or core.fd(schema_id) or core.sp(schema_id) then
+  elseif core.fm(schema_id) or core.fy(schema_id) or core.fd(schema_id) then
     return input:len() - 3
+  elseif core.mm(schema_id) then
+    if input:len() == 5 then
+      return dtypes.full
+    else
+      return dtypes.invalid
+    end
   end 
   -- 对于飞讯来说，一般情况下基本编码的长度是 5，扩展编码是 7，在 6 码时选重。
   -- 因此，将编码的长度减去 4 就分别对应了上述的 short, base, select, full 四种情况。
@@ -351,7 +387,7 @@ local function validate_phrase(entry, segment, type, input, env)
   if entry.comment == "" then
     goto valid
   end
-  if (core.fm(schema_id) or core.fy(schema_id) or core.fd(schema_id)) and input:len() < 4 then
+  if (core.fm(schema_id) or core.fy(schema_id) or core.fd(schema_id) or core.mm(schema_id) or core.xmft(schema_id) or core.sp(schema_id)) and input:len() < 4 then
     return nil
   end
   -- 处理一些特殊的过滤条件
@@ -372,10 +408,18 @@ local function validate_phrase(entry, segment, type, input, env)
         return nil
       end
     end
+    -- 象系sgsf型词在5码及以上时过滤掉四码简词
+    if core.xm(schema_id) and env.cand == entry.text
+    and rime.match(input, "[bpmfdtnlgkhjqxzcsrywv][a-z]{2}[;',./][aeuio]+") then
+      return nil
+    end
+
     if ((core.fm(schema_id) or core.fy(schema_id)) and (env.delayed_pop or env.pro_char)
-    or core.fd(schema_id) or core.fx(schema_id))
+    or core.fd(schema_id) or core.fx(schema_id) or core.mm(schema_id) 
+    or core.xmft(schema_id) and env.pro_char)
     and (utf8.len(entry.text) == 2 or utf8.len(entry.text) == 3) then
       local lens = env.char_lens
+      if core.xm(schema_id) then lens = env.xm_lens end
       if (utf8.len(entry.text) == 2) then
         local offset = utf8.offset(entry.text, 2)
         local char1 = entry.text:sub(1, offset - 1)
@@ -400,7 +444,7 @@ local function validate_phrase(entry, segment, type, input, env)
             if char1_len + char2_len + char3_len <= env.filter_strength then
               return nil
             end
-          end        
+          end
       end
     end
   end
@@ -423,13 +467,132 @@ local function validate_phrase(entry, segment, type, input, env)
   else
     to_match = input:sub(4)
   end
-  -- 如果第 4 码是 23789，那么需要把它换成 aeiou
-  if fx_exchange[to_match:sub(1, 1)] then
+  -- 如果飞讯的第 4 码是 23789，那么需要把它换成 aeiou
+  if core.fx(schema_id) and fx_exchange[to_match:sub(1, 1)] then
     to_match = fx_exchange[to_match:sub(1, 1)] .. to_match:sub(2)
+  else
+    to_match = to_match:lower()
   end
-  to_match = to_match:lower()
+  
+  -- 象码天码笔画补码：如果输入超过4码，使用后续笔画编码过滤候选词
+  if (core.xmft(schema_id) or core.sp(schema_id)) and input:len() >= 4 and env.strokes then
+    -- 第一步：检查第四码是否匹配
+    local fourth_char = input:sub(4, 4)
+    if fourth_char ~= "" then
+      -- 检查是否是sgsf型编码
+      if rime.match(fourth_char, "[;',./]") then
+        -- 获取候选词的末字
+        local phrase_text = entry.text
+        local last_char = ""
+        for _, char in utf8.codes(phrase_text) do
+          last_char = utf8.char(char)
+        end
+        
+        -- 查找末字的首笔
+        local last_char_stroke = env.strokes[last_char]
+        if last_char_stroke then
+          -- 获取末字首笔（第一笔）
+          local first_stroke = last_char_stroke:sub(1, 1)
+          
+          -- 首笔到[;',./]的映射
+          local stroke_map = {["a"]="'", ["e"]=",", ["u"]="/", ["i"]=";", ["o"]="."}
+          local expected_fourth_char = stroke_map[first_stroke]
+          
+          -- 检查第四码是否匹配
+          if expected_fourth_char and expected_fourth_char ~= fourth_char then
+            return nil
+          end
+        end
+      -- 检查是否是sgsn型编码（第四码是[23789]）
+      elseif rime.match(fourth_char, "[23789]") then
+        -- 获取候选词的末字
+        local phrase_text = entry.text
+        local last_char = ""
+        for _, char in utf8.codes(phrase_text) do
+          last_char = utf8.char(char)
+        end
+        
+        -- 查找末字的首笔
+        local last_char_stroke = env.strokes[last_char]
+        if last_char_stroke then
+          -- 获取末字首笔（第一笔）
+          local first_stroke = last_char_stroke:sub(1, 1)
+          
+          -- 首笔到[23789]的映射
+          local stroke_map = {["a"]="2", ["e"]="3", ["u"]="7", ["i"]="8", ["o"]="9"}
+          local expected_fourth_char = stroke_map[first_stroke]
+          
+          -- 检查第四码是否匹配
+          if expected_fourth_char and expected_fourth_char ~= fourth_char then
+            return nil
+          end
+        end
+      elseif fourth_char:lower() ~= completion:sub(1, 1) then
+        return nil
+      end
+    end
+    
+    -- 第二步：检查第五码及以后的笔画补码
+    if input:len() > 4 then
+      -- 提取笔画输入：从第5码开始
+      local stroke_input = input:sub(5)
+      
+      if stroke_input ~= "" then
+        local phrase_length = utf8.len(entry.text)
+        local phrase_strokes = ""
+        local chars = {}
+        for _, char in utf8.codes(entry.text) do
+          table.insert(chars, utf8.char(char))
+        end
+        -- 首字前两笔
+        local char1_stroke = env.strokes[chars[1]]
+        if char1_stroke then
+          phrase_strokes = phrase_strokes .. char1_stroke:sub(1, 2)
+        end
+
+        -- 根据双拼的单字也进行笔画过滤
+        if core.sp(schema_id) and phrase_length == 1 then
+          -- stroke_input是从第三笔开始的，所以要调整phrase_strokes
+          phrase_strokes = char1_stroke:sub(3)
+        -- 二字词：补充首字的前两笔和末字的前四笔 
+        elseif phrase_length == 2 then                
+          -- 末字前四笔
+          local char2_stroke = env.strokes[chars[2]]
+          if char2_stroke then
+            phrase_strokes = phrase_strokes .. char2_stroke:sub(1, 4)
+          end
+        -- 多字词：补充前三字的前两笔     
+        elseif phrase_length >= 3 then        
+          -- 第二字前两笔
+          local char2_stroke = env.strokes[chars[2]]
+          if char2_stroke then
+            phrase_strokes = phrase_strokes .. char2_stroke:sub(1, 2)
+          end
+          
+          -- 第三字前两笔
+          local char3_stroke = env.strokes[chars[3]]
+          if char3_stroke then
+            phrase_strokes = phrase_strokes .. char3_stroke:sub(1, 2)
+          end
+        end
+        
+        -- 检查笔画编码是否匹配
+        if phrase_strokes ~= "" then
+          -- 检查笔画编码是否匹配
+          if phrase_strokes:sub(1, stroke_input:len()) ~= stroke_input then
+            return nil
+          end
+        end
+      end
+    end
+  end
+  
   -- 如果 completion 和 alt_completion 有一个匹配上了，就认为这是一个有效的候选
-  if completion:sub(1, to_match:len()) == to_match then
+    -- 但对于象码和飞天，全码为四码，completion只有一个字符（如"w"），需要特殊处理
+    -- 只要前三码匹配，就认为是有效的候选，因为已经在前面进行了笔画筛选
+  if (core.xmft(schema_id) or core.sp(schema_id)) then
+    goto valid
+  elseif completion:sub(1, to_match:len()) == to_match then
     goto valid
   elseif alt_completion:sub(1, to_match:len()) == to_match then
     completion = alt_completion
@@ -442,7 +605,7 @@ local function validate_phrase(entry, segment, type, input, env)
   local phrase = rime.Phrase(env.dynamic_memory, type, segment.start, segment._end, entry)
   phrase.preedit = input
   -- 单次选择模式下，显示编码补全内容；否则清空
-  if env.single_selection then
+  if env.single_selection and not (core.xmft(schema_id) or core.sp(schema_id)) then
     if input:len() == 3 and utf8.len(phrase.text) >= 4 and core.jm(schema_id) then
       if not env.lower_case then
         phrase.comment = phrase.comment:sub(-1, -1)
@@ -460,7 +623,7 @@ local function validate_phrase(entry, segment, type, input, env)
   if entry.custom_code:find(kEncodedPrefix) then
     phrase.comment = phrase.comment .. kUnitySymbol
   elseif entry.custom_code:len() > 0 and entry.custom_code:len() < 6 then
-    phrase.comment = phrase.comment .. kTopSymbol
+    -- phrase.comment = phrase.comment .. kTopSymbol
   end
   return phrase
 end
@@ -475,8 +638,10 @@ local function translate_by_split(input, segment, env)
   local part2 = input:sub(3)
   if rime.match(input, "([bpmfdtnlgkhjqxzcsrywv][a-z]){2}[aeiou]{0,2}[AEUIO][aeiouAEUIO]?") then
     local start =  string.find(input, "%u")
-    part1 = part1 .. input:sub(start):lower()
-    part2 = input:sub(3, start - 1)
+    if start then
+      part1 = part1 .. input:sub(start):lower()
+      part2 = input:sub(3, start - 1)
+    end
   end
   memory:dict_lookup(part1, false, 1)
   local text = ""
@@ -511,19 +676,44 @@ local function filter(phrase, schema_id, input, phrases, known_words, env)
         table.insert(phrases, phrase)
         known_words[phrase.text] = true
       end
-    elseif (core.fm(schema_id) or core.fd(schema_id) or core.sp(schema_id))
+    elseif (core.fm(schema_id) or core.fd(schema_id))
     and utf8.len(phrase.text) >= 4 and env.enable_filtering
     and rime.match(input, "[bpmfdtnlgkhjqxzcsrywv]{2}[BPMFDTNLGKHJQXZCSRYWV].*") then
       ;
-    elseif (core.fm(schema_id) or core.fd(schema_id) or core.sp(schema_id))
+    elseif (core.fm(schema_id) or core.fd(schema_id))
     and utf8.len(phrase.text) < 4
     and rime.match(input, "[bpmfdtnlgkhjqxzcsrywv][BPMFDTNLGKHJQXZCSRYWV].*") then
+      ;
+    -- 编码类型处理
+    -- sssS型：四字词专用，第四码大写
+    elseif core.xmft(schema_id) and utf8.len(phrase.text) ~= 4
+    and rime.match(input, "[bpmfdtnlgkhjqxzcsrywv]{3}[BPMFDTNLGKHJQXZCSRYWV].*") then
+      ;
+    -- ssSg型：多字词专用，第三码大写
+    elseif core.xmft(schema_id) and utf8.len(phrase.text) < 5
+    and rime.match(input, "[bpmfdtnlgkhjqxzcsrywv]{2}[BPMFDTNLGKHJQXZCSRYWV][a-z].*") then
+      ;
+    -- 是否过滤掉多字词
+    elseif core.ft(schema_id) and utf8.len(phrase.text) >= 4 and env.forced_selection
+    and rime.match(input, "[bpmfdtnlgkhjqxzcsrywv][a-z][bpmfdtnlgkhjqxzcsrywv][a-z;',./].*") then
+      ;
+  -- sgsn型：二、三字词用，第四码为数字
+    elseif core.xm(schema_id) and utf8.len(phrase.text) >= 4
+    and rime.match(input, "[bpmfdtnlgkhjqxzcsrywv][a-z][bpmfdtnlgkhjqxzcsrywv][23789].*") then
       ;
     elseif not known_words[phrase.text] then
       table.insert(phrases, phrase)
       known_words[phrase.text] = true
     end
   end
+end
+
+local function table_count(t)
+  local n = 0
+  for _ in pairs(t) do
+      n = n + 1
+  end
+  return n
 end
 
 ---@param input string
@@ -545,29 +735,48 @@ function this.func(input, segment, env)
   env.is_enhanced = env.engine.context:get_option("is_enhanced") or false
   env.enhanced_char = env.engine.context:get_option("enhanced_char") or false
   local schema_id = env.engine.schema.schema_id
+  env.xx_flag = false
+  env.pure_char = env.engine.context:get_option("pure_char") or false
 
   if env.engine.context:get_option("ascii_mode") then
     return
   end
+  
   -- 如果当前编码是静态编码，就只进行精确匹配，并依原样返回结果
   if static(input, env) then
     -- 清空候选缓存
     env.known_candidates = {}
+    -- env.xx_flag = false 
     local input2 = input
     if core.jm(schema_id) and env.enhanced_char and not env.third_pop and core.ssb(input2) then
       input2 = input2 .. "'"
     end
     env.static_memory:dict_lookup(input2, false, 0)
     for entry in env.static_memory:iter_dict() do
-      local phrase = rime.Phrase(env.static_memory, "table", segment.start, segment._end, entry)
-      phrase.preedit = input
-      rime.yield(phrase:toCandidate())
-    end
+        local phrase = rime.Phrase(env.static_memory, "table", segment.start, segment._end, entry)
+        phrase.preedit = input
+        if core.xm(schema_id) and not env.xx_flag and not env.pure_char then 
+          env.xx_flag = true 
+          if rime.match(input, "[bpmfdtnlgkhjqxzcsrywv][a-z]{2}[;',./]") then 
+            env.cand = entry.text
+          end
+        end
+        if core.xm(schema_id) and env.pure_char and utf8.len(entry.text) > 1
+        and rime.match(input, "[bpmfdtnlgkhjqxzcsrywv][a-z]{2}[;',./]") then
+          ; --设置纯单选项时在四码时忽略标点词
+        else
+          rime.yield(phrase:toCandidate())
+        end
+    end  
+
     -- 在一些情况下，需要把三码或者四码的编码拆分成两段分别翻译，这也算是一种静态编码
     -- 1. 编码为 sxs 格式时，只要不是简码的三顶模式，就要拆分成二简字 + 一简字翻译
     -- 2. 飞系方案，编码为 sbsb 格式时，拆分成声笔字 + 声笔字翻译
     -- 3. 飞讯，编码为 sxsb 格式时，拆分成二简字 + 声笔字翻译
-    if (core.sxs(input) and not env.third_pop)
+    if core.mm(schema_id) and (core.xxx(input) or core.xxxx(input)) then
+      translate_by_split(input, segment, env)
+    elseif (core.sxs(input) and not env.third_pop)
+        or (core.ft(schema_id) and core.sbsb(input))
         or (core.feixi(schema_id) and core.sbsb(input))
         or (core.fx(schema_id) and core.sxsb(input)) 
         or rime.match(input, "([bpmfdtnlgkhjqxzcsrywv][a-z]){2}[aeiou]{0,2}[AEUIO][aeiouAEUIO]?") then
@@ -579,7 +788,7 @@ function this.func(input, segment, env)
   local memory = env.dynamic_memory
   -- 静态编码都处理完了，现在进入自动码长的动态编码部分
   -- 首先，根据输入的前三码来模糊匹配，依次查询固态词典和用户词典，并且结果都存放到一个列表中
-  local lookup_code = input:sub(0, 3):lower()
+  local lookup_code = input:sub(1, 3):lower()
   ---@type Phrase[]
   local phrases = {}
   ---@type Phrase[]
@@ -618,17 +827,7 @@ function this.func(input, segment, env)
       filter(phrase, schema_id, input, phrases, known_words, env)
     end
   end
-  -- 如果在快调时声笔自然或声笔小鹤用sxb没检索到单字，则查找静态词组
-  if #phrases == 0 and core.sp(schema_id) and core.sxb(input) then
-    env.static_memory:dict_lookup(input, false, 0)
-    for entry in env.static_memory:iter_dict() do
-      local phrase = rime.Phrase(env.static_memory, "table", segment.start, segment._end, entry)
-      phrase.preedit = input
-      rime.yield(phrase:toCandidate())
-    end
-    return
-  end
-  
+ 
   -- 飞简ssss时的特殊处理
   if dynamic(input, env) == dtypes.fj4s then
     local entry = rime.DictEntry()
@@ -667,6 +866,7 @@ function this.func(input, segment, env)
   if core.fm(schema_id) and env.single_selection and env.forced_selection
   and rime.match(input, "([bpmfdtnlgkhjqxzcsrywv][a-z]){2}[aeuio]{1}") then
     translate_by_split(input, segment, env)
+    return
   end
 
   -- 以下分 4 种情况实现自动码长的翻译策略
@@ -676,6 +876,7 @@ function this.func(input, segment, env)
   -- 4. 如果输入的编码是扩展编码的全码，那么返回所有的候选
   -- 在情况 1 和 2 下，还要把已经见到的候选放到缓存中，以便在更长码时不重复出现这个候选
   -- 例如，对于声笔简码来说，3 码出现过的字词就不会再出现在 4 码的候选中，4 码出现过的字词就不会再出现在 6 码的候选中
+
   if dynamic(input, env) == dtypes.short then
     --飞简需要特殊处理
     if core.fj(schema_id) then
@@ -777,7 +978,11 @@ function this.func(input, segment, env)
         goto continue
       end
       if count == 1 then
-        env.known_candidates[cand.text] = input:len()
+        if env.xx_flag then
+          env.xx_flag = false
+        else
+          env.known_candidates[cand.text] = input:len()
+        end
         cand.comment = ""
       elseif cand.comment ~= "" then
         cand.type = "completion"
@@ -790,12 +995,22 @@ function this.func(input, segment, env)
         elseif (input:len() < 6) then
           break
         end
+        if input:len() < 7 then
+          break
+        end
       end
       count = count + 1
       ::continue::
     end
-  end
   
+    local cnt = table_count(env.known_candidates)
+    if core.ft(schema_id) and input:len() >= 4 + cnt
+    and rime.match(input, "([bpmfdtnlgkhjqxzcsrywv][a-z]){2}[aeuio]{0,2}") then
+      translate_by_split(input, segment, env)
+      return
+    end 
+  end
+ 
   if not env.single_selection and core.fm(schema_id) 
   and rime.match(input, "([bpmfdtnlgkhjqxzcsrywv][a-z]){2}[aeuio]{1}") then
     local n, _ = string.find('aeuio', input:sub(-1))
@@ -837,7 +1052,7 @@ function this.fini(env)
   if env.static_memory.disconnect then
     env.static_memory:disconnect()
   else
-    env.memory = nil
+    env.static_memory = nil
   end
 
   if (env.dynamic_memory.disconnect) then
@@ -845,6 +1060,12 @@ function this.fini(env)
   else
     env.dynamic_memory = nil
   end
+
+  env.reverse = nil
+  env.known_candidates = nil
+  env.char_lens = nil
+  env.xm_lens = nil
+  env.strokes = nil
 end
 
 return this
