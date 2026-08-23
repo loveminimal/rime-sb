@@ -972,18 +972,21 @@ function this.func(input, segment, env)
     if env.single_selection and core.fm(schema_id) and env.forced_selection
     and rime.match(input, "([bpmfdtnlgkhjqxzcsrywv][a-z]){2}[aeuio]{1}") then
       return
-    end    
+    end
+    local use_known_candidates = not (schema_id == "sbmf" and input:len() >= 4)
     local count = 1
     for _, phrase in ipairs(phrases) do
       local cand = phrase:toCandidate()
-      if (env.known_candidates[cand.text] or inf) < input:len() then
+      if use_known_candidates and (env.known_candidates[cand.text] or inf) < input:len() then
         goto continue
       end
       if count == 1 then
         if env.xx_flag then
           env.xx_flag = false
         else
-          env.known_candidates[cand.text] = input:len()
+          if use_known_candidates then
+            env.known_candidates[cand.text] = input:len()
+          end
         end
         cand.comment = ""
       elseif cand.comment ~= "" then
