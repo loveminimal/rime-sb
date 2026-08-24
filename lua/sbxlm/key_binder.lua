@@ -15,6 +15,7 @@ local XK_4 = 0x0034
 local XK_5 = 0x0035
 local XK_6 = 0x0036
 local XK_j = 0x006a
+local XK_l = 0x006c
 
 local rime = require "lib"
 local core = require "sbxlm.core"
@@ -209,13 +210,13 @@ function this.func(key_event, env)
   end
 
   -- 飞天与魔飞快捷切换，core.ft可以是sbft或sbmf
-  -- 在有输入时按 Control+j 切换到对方方案。
+  -- 在有输入时按 Control+l 切换到对方方案。
   -- 必须忽略 release 事件：press 切换方案后，release 会以新方案身份到来，
   -- 此时 func 开头的 pending 恢复逻辑会先恢复输入，release 再跳过此分支。
   -- apply_schema 前先把输入存入 context property，
   -- 新 schema 的 func 在下一个按键事件中读取并恢复。
   if not ascii_mode and not key_event:shift() and key_event:ctrl() and not key_event:release()
-  and key_event.keycode == XK_j and core.ft(schema_id) then
+  and key_event.keycode == XK_l and core.ft(schema_id) then
     env.redirecting = true
     if rime.match(input, "[bpmfdtnlgkhjqxzcsrywv].*") then
       local target_schema_id = (schema_id == 'sbft') and 'sbmf' or 'sbft'
