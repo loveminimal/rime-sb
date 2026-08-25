@@ -6,7 +6,7 @@ shared_patch:
   engine/processors/@before 1: lua_processor@*quick_symbol
   engine/translators/@after last: lua_translator@*patch*t_date
   engine/translators/@next: lua_translator@*patch*t_force_gc
-  engine/filters/@before 6: lua_filter@*patch*f_auto_select
+  # engine/filters/@before 6: lua_filter@*patch*f_auto_select
   engine/filters/@before 7: lua_filter@*patch*f_comment
   # engine/filters/@before 8: lua_filter@*patch*f_filter_non_first_word
   recognizer/patterns/quick_symbol: "^;.*$"

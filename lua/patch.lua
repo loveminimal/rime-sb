@@ -50,7 +50,9 @@ local function f_auto_select(input, env)
     
     -- if first_char ~= 'u' and first_char ~= sbfm_ext_prefix or #input_code <= 1 then
     -- if first_char ~= 'u' and first_char ~= 'e' or #input_code <= 1 then
-    if first_char ~= 'u' or #input_code <= 1 then
+    -- if input_code:match("^u[bpmfdtnlgkhjqxzcsrywv][a-z]*$") == nil then
+    -- 笔画类的直接放行 
+    if input_code:match("^u[aeuio]*$") ~= nil then
         for cand in input:iter() do
             yield(cand)
         end
@@ -72,11 +74,6 @@ local function f_auto_select(input, env)
             has_output = true
         else
             -- 继续输出后续候选
-            yield(cand)
-        end
-
-        -- 修复 bihua 反查失效的问题
-        if #input_code == 2 and string.find('aeuio', second_char) then
             yield(cand)
         end
         
