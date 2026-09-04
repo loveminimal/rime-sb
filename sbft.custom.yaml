@@ -23,3 +23,5 @@ patch:
   # translator/stop_change: false
   # extended/enable_user_dict: false
   # switches/@last/reset: 0
+  # switches/@3/reset: 0	# 默认为词组模式
+  switches/@4/reset: 3		# 同时显示有理、无理

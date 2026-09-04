@@ -155,7 +155,7 @@ end
 -- collectgarbage("step")：执行垃圾回收的一小步。这个函数会返回一个布尔值，表示这一步是否完成了整个收集周期。
 -- 这样也不会导致卡顿，那就每次都调用一下吧，内存稳稳的
 local function t_force_gc()
-    -- collectgarbage()
+    collectgarbage()
     collectgarbage("step")
 end
 
