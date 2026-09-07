@@ -218,13 +218,13 @@ function this.func(translation, env)
 					break
 				end	
 			end
-			for _, item in ipairs(env.xm_char_list) do
-				if item.code:sub(1,1) == input:sub(x,x) and item.code:len() == 2 and core.s(input) then
-					candidate:get_genuine().comment = candidate:get_genuine().comment .. item.char .. item.code:sub(2,2)
-				elseif item.code:sub(1,2) == input and item.code:len() == 3 and core.sx(input) then
-					candidate:get_genuine().comment = candidate:get_genuine().comment .. item.char .. item.code:sub(3,3)
-				end
-			end
+			-- for _, item in ipairs(env.xm_char_list) do
+			-- 	if item.code:sub(1,1) == input:sub(x,x) and item.code:len() == 2 and core.s(input) then
+			-- 		candidate:get_genuine().comment = candidate:get_genuine().comment .. item.char .. item.code:sub(2,2)
+			-- 	elseif item.code:sub(1,2) == input and item.code:len() == 3 and core.sx(input) then
+			-- 		candidate:get_genuine().comment = candidate:get_genuine().comment .. item.char .. item.code:sub(3,3)
+			-- 	end
+			-- end
 		end
 		if core.xmft(id) and core.sx(input) and not is_hidden then
 			memory:dict_lookup(input .. ";", false, 1)
@@ -549,22 +549,16 @@ function this.func(translation, env)
 				::continue::
 			end
 		end
-		-- 飞天 在sxbb+ 码位上，提示后码
-		if core.ft(id) and not is_hidden and rime.match(input, "[bpmfdtnlgkhjqxzcsrywv][a-z][aeuio]{2,5}") then
-			for _, b in ipairs(hint_b) do
-				local code = candidate.preedit .. b
-				memory:dict_lookup(code, false, 1)
-				local entry1 = nil
-				for entry in memory:iter_dict() do
-					entry1 = entry
-					break
-				end
-				if not entry1 then
-					goto continue
-				end
-				local forward = rime.Candidate("hint", candidate.start, candidate._end, entry1.text, b)
-				rime.yield(forward)
-				::continue::
+		-- 飞天 在sxbb+ 码位上，提示重码
+		if core.ft(id) and not is_hidden and rime.match(input, "[bpmfdtnlgkhjqxzcsrywv][a-z][aeuio]{2,}") then
+			memory:dict_lookup(candidate.preedit, true, 200)
+			for entry in memory:iter_dict() do
+				if candidate.text == entry.text then
+					;
+				else
+					local forward = rime.Candidate("hint", candidate.start, candidate._end, entry.text, '')
+					rime.yield(forward)	
+				end		
 			end
 		end
 		::continue::
