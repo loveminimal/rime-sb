@@ -15,7 +15,7 @@ __patch:
   style/+:
       # composition
       preedit_type: preview
-      # inline_preedit: false
+      inline_preedit: true
       layout:
         __include: style.yaml:/layout_h
         margin_y: -1

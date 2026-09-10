@@ -1,7 +1,7 @@
 patch:
   __include: patch.yaml:/shared_patch
   # style/color_scheme: xnjk
-  schema/icon: "assets/fly_b.ico"
+  schema/icon: "assets/fly.ico"
   # style/+:
   #     preedit_type: composition
   #     inline_preedit: false
@@ -23,5 +23,5 @@ patch:
   # translator/stop_change: false
   # extended/enable_user_dict: false
   # switches/@last/reset: 0
-  # switches/@3/reset: 0	# 默认为词组模式
-  switches/@4/reset: 3		# 同时显示有理、无理
+  # switches/@3/reset: 0	# 1 默认为词组模式 -- [词组, 单字]
+  switches/@4/reset: 3		# 4 --  [隐藏, 有理, 无理, 两者, 都不]
