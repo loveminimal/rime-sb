@@ -32,9 +32,6 @@ function this.init(env)
 	if id == 'sbhz' then dict_name = 'sbxh' end
 	env.reverse = rime.ReverseLookup(dict_name)
 	env.xm_chars = {}
-	-- 新增数组存放有序编码
-	env.xm_char_list = {}
-	
 	local path = rime.api.get_user_data_dir() .. "/lua/sbxlm/xm_chars.txt"
 	local file = io.open(path, "r")
 	if not file then
@@ -45,15 +42,9 @@ function this.init(env)
 		local char, code = line:match("([^\t]+)\t([^\t]+)")
 		if char and code then
 			env.xm_chars[code] = char
-			table.insert(env.xm_char_list, { code = code, char = char })
 		end
 	end
 	file:close()
-	
-	-- 对编码做字典序升序排序（原位排序数组）
-	table.sort(env.xm_char_list, function(a, b)
-		return a.code < b.code
-	end)
 end
 
 ---@param segment Segment
@@ -68,12 +59,7 @@ function this.func(translation, env)
 	local ctx = env.engine.context
 	local is_enhanced = ctx:get_option("is_enhanced") or false
 	local pure_char = ctx:get_option("pure_char") or false
-	--[[
-		0：隐藏，为不显示，即完全隐藏
-		1：有理，为显示23789有理组
-		2：无理，为显示14560无理组
-		3：显示，为显示所有数选字词
-	]]
+	local punct = ctx:get_option("punct") or false
 	local id = env.engine.schema.schema_id
 	local is_hidden = ctx:get_option("hide")
 	if core.xm(id) then is_hidden = ctx:get_option("is_hidden") end
@@ -218,13 +204,6 @@ function this.func(translation, env)
 					break
 				end	
 			end
-			-- for _, item in ipairs(env.xm_char_list) do
-			-- 	if item.code:sub(1,1) == input:sub(x,x) and item.code:len() == 2 and core.s(input) then
-			-- 		candidate:get_genuine().comment = candidate:get_genuine().comment .. item.char .. item.code:sub(2,2)
-			-- 	elseif item.code:sub(1,2) == input and item.code:len() == 3 and core.sx(input) then
-			-- 		candidate:get_genuine().comment = candidate:get_genuine().comment .. item.char .. item.code:sub(3,3)
-			-- 	end
-			-- end
 		end
 		if core.xmft(id) and core.sx(input) and not is_hidden then
 			memory:dict_lookup(input .. ";", false, 1)
@@ -502,8 +481,8 @@ function this.func(translation, env)
 				end
 				memory:dict_lookup(shengmu .. hint_p[idx], false, 1)
 				for entry in memory:iter_dict() do
-					-- 飞码的sxs上不提示标点字
-					if not core.feixi(id) then
+					-- 标点字
+					if punct and not (core.fm(id) and core.sxs(input)) then
 						bihua = bihua .. entry.text .. hint_p[idx]
 					end
 					break
