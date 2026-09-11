@@ -15,19 +15,26 @@ def get_all_codes():
     f = set(";',./")
     t = set(";'")
     y = set("'")
+    n = set('0123456789')
     
     # s
     for i in s:
         all_codes.add(i)
         
-    # s x|f
+    # s x|n
     for i in s:
-        for j in x | f:
+        for j in x | n:
             all_codes.add(i + j)
 
-    # s x|f b
+    # sxn
     for i in s:
-        for j in x | f:
+        for j in x:
+            for k in n:
+                all_codes.add(i + j + k)
+                
+    # s x|n b
+    for i in s:
+        for j in x | n:
             for k in b:
                 all_codes.add(i + j + k)
     # ss'
@@ -47,6 +54,20 @@ def get_all_codes():
             for k in b:
                 for l in b|y:
                     all_codes.add(i + j + k + l)
+
+    # snbb
+    for i in s:
+        for j in n:
+            for k in b:
+                for l in b:
+                    all_codes.add(i + j + k + l)
+    # sxnb
+    for i in s:
+        for j in x:
+            for k in n:
+                for l in b:
+                    all_codes.add(i + j + k + l)
+
         
     print(f'✅ ➭ 全部编码空间 {len(all_codes)} 个\n')
     # print(all_codes, len(all_codes))
@@ -67,7 +88,7 @@ def get_used_codes(proj_dir):
         lines_total = s.readlines()
         lines_sbf = [l for l in lines_total if is_chinese_char(l[0]) or re.search(chinese_punct_pattern, l[0])]
 
-    sbfd_path = proj_dir / 'sbfd.dict.yaml'
+    sbfd_path = proj_dir / 'sbft.dict.yaml'
     with open(sbfd_path, 'r', encoding='utf-8') as f:     
         print(f'☑️  已加载飞单单字编码数据 » {sbfd_path}\n')  
         lines_total.extend(f.readlines())
@@ -92,7 +113,7 @@ def idle_code(proj_dir):
     # 计算闲置编码集合
     idle_codes = all_codes - used_codes
     print(f'☑️  未使用闲置编码 {len(idle_codes)} 个')
-    
+    # return
     for code in idle_codes:
         # lines_sbf.append(f'#\t{code}')
         lines_sbf.append(f'#\t{code}\t0\t## ')
@@ -128,7 +149,7 @@ def idle_code(proj_dir):
 # encoding: utf-8
 #
 # 飞码自定义
-# 包含了声笔飞码、声笔飞单、声笔飞讯共用的数选字词、声声词、缩减码等
+# 包含了声笔飞系「 飞天 」共用的数选字词、声声词、缩减码等
 # 其中以 ## 结尾的行为
 ---
 name: sbf

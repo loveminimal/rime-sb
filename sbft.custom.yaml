@@ -16,7 +16,8 @@ patch:
   #     margin_y: -1
         # min_width: 0
   # 使得符合 s;b 规则的编码唯一时自动上屏 
-  # speller/auto_select: true
+  speller/auto_select: true
+  speller/auto_select_pattern: "^[bpmfdtnlgkhjqxzcsrywv][2398][aeuio]$"
   # speller/auto_select_pattern: "^[bpmfdtnlgkhjqxzcsrywvaeiou];[aeuio]$"
   # translator/filter_strength: 3
   # translator/enable_user_dict: false

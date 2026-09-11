@@ -28,7 +28,7 @@ def get_header_sync(file_name):
 # 声笔飞码动态词库
 # 本文件中的内容用于自动码长调整，请不要改动！
 # ——————
-# 这里我们重置为供飞单使用的 3+ 词条库
+# 这里我们重置为供飞天使用的 3+ 词条库
 # 
 # 运行脚本：
 # - https://github.com/loveminimal/rime-sb/blob/master/scripts/sync_user_dict.py
@@ -38,8 +38,8 @@ def get_header_sync(file_name):
 name: {'.'.join(file_name.split('.')[:-2])}
 version: {datetime.now().date().strftime("%Y.%m")}
 sort: by_weight
-import_tables:
-  - patch
+# import_tables:
+#   - patch
 use_preset_vocabulary: false
 ...
 '''
@@ -111,7 +111,8 @@ def convert(src_dir, out_dir, src_file, out_file):
 
 
                 # 删除 ¹权重为负数的字词（废词）²或单字 ³或声笔中编码小于 6 的标点字词
-                if int(weight) <= 0 or len(word) < 2 or len(code) < 6:
+                # if int(weight) <= 0 or len(word) < 2 or len(code) < 6:
+                if int(weight) <= 0 or len(word) < 2: # sbft.extended.dict.yaml 字典中现在成 4 码了
                     continue
 
                 # 处理特殊编码
@@ -198,8 +199,8 @@ if __name__ == '__main__':
     out_dir = Path('C:\\Users\\jack\\AppData\\Roaming\\Rime')
 
 
-    src_file = 'sbfm.userdb.txt'
-    out_file = 'sbfm.extended.dict.yaml'
+    src_file = 'sbft.userdb.txt'
+    out_file = 'sbft.extended.dict.yaml'
 
     # 如果存在输出文件，先删除
     current_out_file_temp = out_dir / f'{out_file + '.temp'}'
