@@ -40,19 +40,17 @@ function t_date.func(input, seg)
     end
 end
 
--- 以 u、e 引导的候选唯一时上屏
+-- 以 u 引导的候选唯一时上屏「 该函数更新飞天存在偶尔卡顿的情况，待优化 」
 local function f_auto_select(input, env)
     local context = env.engine.context
     local input_code = context.input
-    local first_char = input_code:sub(1, 1)
-    local second_char = input_code:sub(2, 2)
     -- local sbfm_ext_prefix = env.engine.schema.config:get_string("sbfm_ext/prefix") or "'"	-- 获取飞码长词引导符
     
     -- if first_char ~= 'u' and first_char ~= sbfm_ext_prefix or #input_code <= 1 then
     -- if first_char ~= 'u' and first_char ~= 'e' or #input_code <= 1 then
     -- if input_code:match("^u[bpmfdtnlgkhjqxzcsrywv][a-z]*$") == nil then
     -- 笔画类的直接放行 
-    if input_code:match("^u[aeuio]*$") ~= nil then
+    if input_code:match("^u[bpmfdtnlgkhjqxzcsrywv][a-z]*$") == nil then
         for cand in input:iter() do
             yield(cand)
         end

@@ -2,6 +2,7 @@ patch:
   __include: patch.yaml:/shared_patch
   # style/color_scheme: xnjk
   schema/icon: "assets/fly.ico"
+  engine/filters/@last: 
   # style/+:
   #     preedit_type: composition
   #     inline_preedit: false
