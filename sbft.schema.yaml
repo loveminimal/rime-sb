@@ -164,7 +164,7 @@ speller:
 
 translator:
   dictionary: sbft
-  enable_user_dict: true
+  enable_user_dict: false	## true
   enable_filtering: true
   filter_strength: 4 #可以为3,4,5,6
   forced_selection: false
