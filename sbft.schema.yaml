@@ -91,13 +91,14 @@ engine:
     - table_translator@sbzdy
     - history_translator
   filters:
+    - simplifier@es_conversion
     - reverse_lookup_filter@reverse_lookup
     - reverse_lookup_filter@reverse_lookup2
     - lua_filter@*sbxlm.hint
     - lua_filter@*sbxlm.radicals
+    - lua_filter@*sbxlm.select_key_to_comment
     - simplifier
     - uniquifier
-    - lua_filter@*sbxlm.emoji_key
 
 popping:
   __append:
@@ -163,7 +164,7 @@ speller:
 
 translator:
   dictionary: sbft
-  enable_user_dict: false ## true
+  enable_user_dict: true
   enable_filtering: true
   filter_strength: 4 #可以为3,4,5,6
   forced_selection: false
