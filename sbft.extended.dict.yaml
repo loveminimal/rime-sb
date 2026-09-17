@@ -18,20 +18,24 @@ sort: by_weight
 #   - patch
 use_preset_vocabulary: false
 ...
+标准	bmzd	1
 过程	gech	4
 记忆	jyyl	7
 搜索	sfss	3
-熟悉	slxx	9
+熟悉	slxx	10
 声笔	stbp	26
 蜘蛛	zczc	6
 折腾	zftv	3
 状态	zztx	4
+编辑器	bjqk	1
+标准版	bzbp	1
 沧元图	cytk	9
 基本上	jbsi	10
 浏览器	llqk	5
 手机上	sjsi	3
 输入法	srfd	6
 为什么	wsms	3
+专业版	zybp	1
 蜘蛛侠	zzxr	3
 魑魅魍魉	cmwl	9
 神印王座	sywz	2
@@ -42,4 +46,4 @@ use_preset_vocabulary: false
 江湖夜雨十年灯	jhyd	3
 桃李春风一杯酒	tlcj	3
 中华人民共和国	zhrg	1
-实践是检验真理的唯一标准	sjsz	2
+实践是检验真理的唯一标准	sjsz	3
