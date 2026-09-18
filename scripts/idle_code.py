@@ -80,7 +80,7 @@ def get_used_codes(proj_dir):
     lines_sbf = []
 
     # 常见中文标点的Unicode范围（编码中加入常用中文符号及表情符）
-    chinese_punct_pattern = r'[\u3000-\u303F\uFF00-\uFFEF\u2010-\u201F\u2026\u2056-\u205E・😄🤣🤭]'
+    chinese_punct_pattern = r'[\u3000-\u303F\uFF00-\uFFEF\u2010-\u201F\u2026\u2056-\u205E・😄🤣🤭/~]'
     # 读取飞码扩展词库中的词语
     sbf_path = proj_dir / 'sbf.dict.yaml'
     with open(sbf_path, 'r', encoding='utf-8') as s:
