@@ -50,27 +50,26 @@ local function f_auto_select(input, env)
     -- if first_char ~= 'u' and first_char ~= 'e' or #input_code <= 1 then
     -- if input_code:match("^u[bpmfdtnlgkhjqxzcsrywv][a-z]*$") == nil then
     -- 笔画类的直接放行 
-    if input_code:match("^u[bpmfdtnlgkhjqxzcsrywv][a-z]*$") == nil then
+    if not input_code:find("^u[bpmfdtnlgkhjqxzcsrywv][a-z]*$") then
         for cand in input:iter() do
             yield(cand)
         end
         return
     end
     
-    local first_cand = nil
-    local second_cand = nil
-    local has_output = false
+    local first_cand
+    local cand_count = 0
     
     for cand in input:iter() do
-        if not first_cand then
+        cand_count = cand_count + 1
+
+        if cand_count == 1 then
             first_cand = cand
-        elseif not second_cand then
-            second_cand = cand
-            -- 发现第二个候选，开始输出
-            yield(first_cand)
-            yield(second_cand)
-            has_output = true
         else
+            -- 发现第二个候选，开始输出
+            if cand_count == 2 then
+                yield(first_cand)
+            end
             -- 继续输出后续候选
             yield(cand)
         end
@@ -78,7 +77,7 @@ local function f_auto_select(input, env)
     end
     
     -- 循环结束后的处理 -- 说明只有0或1个候选
-    if not has_output and first_cand then
+    if cand_count == 1 then
         env.engine:commit_text(first_cand.text)
         context:clear()
     end
