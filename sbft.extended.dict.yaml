@@ -12,7 +12,7 @@
 # 
 ---
 name: sbft.extended
-version: 2026.09
+version: 2026.10
 sort: by_weight
 # import_tables:
 #   - patch
@@ -22,29 +22,30 @@ use_preset_vocabulary: false
 分支	fuzs	2
 过程	gech	4
 价值	jrzr	3
-记忆	jyyl	8
+记忆	jyyl	10
+垃圾	ltjt	2
 魔怔	mgzl	3
 疲惫	pbbw	1
 搜索	sfss	3
-熟悉	slxx	13
+熟悉	slxx	14
 梭哈	smhk	2
-声笔	stbp	56
-五笔	whbp	10
-英雄	ycxz	1
-蜘蛛	zczc	8
-折腾	zftv	7
+声笔	stbp	66
+五笔	whbp	16
+英雄	ycxz	2
+蜘蛛	zczc	10
+折腾	zftv	9
 直接	zsjf	4
 状态	zztx	4
 编辑器	bjqk	1
 标准版	bzbp	1
-差不多	cbdx	4
+差不多	cbdx	6
 沧元图	cytk	9
 服务器	fwqk	1
-候选框	hxkm	2
-基本上	jbsi	15
+候选框	hxkm	3
+基本上	jbsi	23
 价值观	jzgy	5
 客户端	khdl	1
-浏览器	llqk	6
+浏览器	llqk	7
 魔怔人	mzrp	1
 手机上	sjsi	4
 输入法	srfd	16
@@ -61,14 +62,17 @@ use_preset_vocabulary: false
 声笔飞天	sbft	5
 神印王座	sywz	2
 吞噬星空	tsxk	2
+天下无双	txws	1
 一般来说	ybls	2
 也就是说	yjss	1
-原来如此	ylrc	2
+一见钟情	yjzq	2
+原来如此	ylrc	3
+一脉相承	ymxc	2
 一丘之貉	yqzh	2
 一无所知	ywsz	1
 勇往直前	ywzq	1
-凡人修仙传	frxz	11
-江湖夜雨十年灯	jhyd	5
-桃李春风一杯酒	tlcj	4
-中华人民共和国	zhrg	1
+凡人修仙传	frxz	14
+江湖夜雨十年灯	jhyd	7
+桃李春风一杯酒	tlcj	5
+中华人民共和国	zhrg	2
 实践是检验真理的唯一标准	sjsz	6
