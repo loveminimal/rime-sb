@@ -16,7 +16,7 @@ patch:
   # switches/@3/reset: 0	# 1 默认为词组模式 -- [词组, 单字]
   switches/@4/reset: 3		# 4 --  [隐藏, 有理, 无理, 两者, 都不]
   speller/auto_select: true
-  speller/auto_select_pattern: "^[bpmfdtnlgkhjqxzcsrywv][0-9]$"
+  speller/auto_select_pattern: "^[bpmfdtnlgkhjqxzcsrywv][a-z]?[0-9]$"
   # speller/auto_select_pattern: "^[bpmfdtnlgkhjqxzcsrywvaeiou];[aeuio]$"
   # translator/filter_strength: 3
   # translator/enable_user_dict: false
