@@ -115,8 +115,11 @@ local function f_comment(input, env)
         -- local m_pinyin = code_table.multi[cand.text] and (' ' ..  code_table.multi[cand.text]) or ''
         -- mark = (code_table.multi[cand.text]) and 'ᵐ ' or ''
         -- cand:get_genuine().comment = mark .. cand.comment .. m_pinyin
-
-        yield(cand)
+        
+        -- 过滤掉首字符为数字的注释选项
+        if cand.comment == '' or not string.find('1234567890', cand.comment:sub(1, 1)) then
+            yield(cand)
+        end
     end
 end
 
