@@ -540,8 +540,8 @@ function this.func(translation, env)
 					if comment == bihua then
 						goto continue
 					end
-					-- 后码候选缺位时，用词典约定的空格候选承载声声词注释。
-					text = " "
+					-- 用不同长度的空格承载各槽注释，避免被 uniquifier 合并。
+					text = string.rep(" ", idx)
 				end
 				local forward = rime.Candidate("hint", candidate.start, candidate._end, text, comment)
 				rime.yield(forward)
