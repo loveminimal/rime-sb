@@ -50,7 +50,6 @@ patch:
       # 
       # ​inline_preedit  单行布局 ← true  false → 双行布局
       # ----------------------------------------------------------
-      inline_preedit: false
       inline_preedit: true
       # preedit_type: preview
       # --- 鼠标操作 ---------------------------------------------

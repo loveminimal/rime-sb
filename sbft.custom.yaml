@@ -5,12 +5,12 @@ patch:
   # 暂时费弃 e-emoji 的 filter
   # engine/filters/@last: 
   # 定制飞天所需候选显示
-  # style/color_scheme: flypy_jk
-  # style/layout: 
-  #   __include: style.yaml:/layout_v
-  # style/vertical_auto_reverse: true
-  # style/inline_preedit: true
-  # style/preedit_type: preview
+  style/color_scheme: flypy_jk
+  style/layout: 
+    __include: style.yaml:/layout_v
+  style/vertical_auto_reverse: true
+  style/inline_preedit: true
+  style/preedit_type: preview
   # 使得符合 s;b 规则的编码唯一时自动上屏 
   # switches/@last/reset: 0
   # switches/@3/reset: 0	# 1 默认为词组模式 -- [词组, 单字]
