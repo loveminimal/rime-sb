@@ -7,11 +7,44 @@ local core = require "sbxlm.core"
 
 local this = {}
 
+local function load_number_hints()
+	local hints = {}
+	local data_dirs = {
+		rime.api.get_user_data_dir(),
+		rime.api.get_shared_data_dir(),
+	}
+	for _, dir in ipairs(data_dirs) do
+		local file = io.open(dir .. "/sbf.dict.yaml", "r")
+		if file then
+			for line in file:lines() do
+				if line:sub(1, 1) ~= "#" then
+					local text, code = line:match("^([^\t]+)\t([bpmfdtnlgkhjqxzcsrywv][a-z]?[0-9])\t")
+					if text and code and not hints[code] then
+						hints[code] = text
+					end
+				end
+			end
+			file:close()
+			break
+		end
+	end
+	return hints
+end
+
+local function append_number_hint(comment, hints, prefix, number)
+	local text = hints[prefix .. number]
+	if text and text ~= " " then
+		return comment .. " " .. text .. number
+	end
+	return comment
+end
+
 ---@class HintEnv: Env
 ---@field enable_ssp boolean
 ---@field memory Memory
 ---@field reverse ReverseLookup
 ---@field xm_chars { string : string }
+---@field number_hints { string : string }
 
 ---@param env HintEnv
 function this.init(env) 
@@ -31,6 +64,7 @@ function this.init(env)
 	-- 声笔鹤整用声笔小鹤的简码
 	if id == 'sbhz' then dict_name = 'sbxh' end
 	env.reverse = rime.ReverseLookup(dict_name)
+	env.number_hints = core.ft(id) and load_number_hints() or {}
 	env.xm_chars = {}
 	local path = rime.api.get_user_data_dir() .. "/lua/sbxlm/xm_chars.txt"
 	local file = io.open(path, "r")
@@ -373,7 +407,8 @@ function this.func(translation, env)
 				local n1 = hint_n1[j]
 				local n2 = hint_n2[j]
 				local b = hint_b[j]
-				memory:dict_lookup(candidate.preedit:sub(-1) .. b, false, 1)
+				local prefix = candidate.preedit:sub(-1)
+				memory:dict_lookup(prefix .. b, false, 1)
 				local entry_b = nil
 				for entry in memory:iter_dict() do
 					entry_b = entry
@@ -381,32 +416,17 @@ function this.func(translation, env)
 				end
 				if not entry_b then
 					goto continue
-				end					
-				memory:dict_lookup(candidate.preedit:sub(-1) .. n1, false, 1)
-				local entry_n1 = nil
-				for entry in memory:iter_dict() do
-					entry_n1 = entry
-					break
 				end
-				if not entry_n1 then
-					goto continue
-				end
-				memory:dict_lookup(candidate.preedit:sub(-1) .. n2, false, 1)
-				local entry_n2 = nil
-				for entry in memory:iter_dict() do
-					entry_n2 = entry
-					break
-				end
-				local text = entry_b.text
 				local comment = b
 				if ctx:get_option("rational") then
-					comment = comment .. (entry_n1.text == ' ' and '' or (' '  .. entry_n1.text .. n1))
+					comment = append_number_hint(comment, env.number_hints, prefix, n1)
 				elseif ctx:get_option("irrational") then
-					comment = b .. (entry_n1.text == ' ' and '' or (' '  .. entry_n1.text .. n2))
-				elseif entry_n2 and ctx:get_option("both") then
-					comment = comment .. (entry_n1.text == ' ' and '' or (' '  .. entry_n1.text .. n1)) .. (entry_n2.text == ' ' and '' or (' '  .. entry_n2.text .. n2))
+					comment = append_number_hint(comment, env.number_hints, prefix, n2)
+				elseif ctx:get_option("both") then
+					comment = append_number_hint(comment, env.number_hints, prefix, n1)
+					comment = append_number_hint(comment, env.number_hints, prefix, n2)
 				end
-				local forward = rime.Candidate("hint", candidate.start, candidate._end, text, comment)
+				local forward = rime.Candidate("hint", candidate.start, candidate._end, entry_b.text, comment)
 				rime.yield(forward)
 				::continue::
 			end
@@ -494,18 +514,36 @@ function this.func(translation, env)
 		end
 		-- 飞系方案、双拼方案和象码在 sx 码位上，进行后码提示
 		if core.sx(input) and (core.feixi(id) or core.sp(id) or core.xmft(id)) and not is_hidden then
-			for _, bihua in ipairs(hint_b) do
+			for idx, bihua in ipairs(hint_b) do
+				-- 🔥飞天方案在 sx 码位上，提示声笔字和数选字词
+				local comment = bihua
+				if core.ft(id) and is_enhanced then
+					local n1 = hint_n1[idx]
+					local n2 = hint_n2[idx]
+					if ctx:get_option("rational") then
+						comment = append_number_hint(comment, env.number_hints, candidate.preedit, n1)
+					elseif ctx:get_option("irrational") then
+						comment = append_number_hint(comment, env.number_hints, candidate.preedit, n2)
+					elseif ctx:get_option("both") then
+						comment = append_number_hint(comment, env.number_hints, candidate.preedit, n1)
+						comment = append_number_hint(comment, env.number_hints, candidate.preedit, n2)
+					end
+				end
 				local ssb = candidate.preedit .. bihua
 				memory:dict_lookup(ssb, false, 1)
-				local entry1 = nil
+				local text = nil
 				for entry in memory:iter_dict() do
-					entry1 = entry
+					text = entry.text
 					break
 				end
-				if not entry1 then
-					goto continue
+				if not text then
+					if comment == bihua then
+						goto continue
+					end
+					-- 后码候选缺位时，用词典约定的空格候选承载声声词注释。
+					text = " "
 				end
-				local forward = rime.Candidate("hint", candidate.start, candidate._end, entry1.text, bihua)
+				local forward = rime.Candidate("hint", candidate.start, candidate._end, text, comment)
 				rime.yield(forward)
 				::continue::
 			end
@@ -553,6 +591,7 @@ function this.fini(env)
 	end
 	env.reverse = nil
 	env.xm_chars = nil
+	env.number_hints = nil
 end
 
 return this
