@@ -24,6 +24,12 @@ function this.init(env)
   local config = env.engine.schema.config
   env.single_selection = config:get_bool("translator/single_selection") or false
   env.delayed_pop = env.engine.context:get_option("delayed_pop") or false
+  -- 重置跨组件共享状态，防止切方案时残留
+  core.state.not_single_display = false
+  core.state.pure_char = false
+  core.state.is_buffered = false
+  core.state.temp_buffered = false
+  env.engine.context:set_option("_auto_commit", true)
 end
 
 ---@param ch number
@@ -79,15 +85,18 @@ function this.func(key_event, env)
   if (not ascii_mode and segment and not segment:has_tag("punct") and not key_event:release()) then
     if input:len() == 1 and key_event.keycode == XK_Tab then
       if key_event:shift() then
-        if not context:get_option("is_buffered") then
-          context:set_option("is_buffered", true)
+        if not core.state.is_buffered then
+          core.state.is_buffered = true
+          context:set_option("_auto_commit", false)
         end
-        context:set_option("temp_buffered", true)
+        if not core.state.temp_buffered then
+          core.state.temp_buffered = true
+        end
       else
         switch_inline(context, env)
       end
       return rime.process_results.kAccepted
-    elseif segment._end > segment._start and key_event.keycode == XK_Return and context:get_option("is_buffered") then
+    elseif segment._end > segment._start and key_event.keycode == XK_Return and core.state.is_buffered then
       context:commit()
       return rime.process_results.kAccepted
     end
@@ -97,8 +106,8 @@ function this.func(key_event, env)
         and key_event.keycode == XK_Tab and not key_event:release()
         and not (core.feixi(schema_id) and rime.match(input, "[bpmfdtnlgkhjqxzcsrywv][a-z][aeuio]{2}"))) then
     if env.single_selection and context:get_option("single_display")
-        and not context:get_option("not_single_display") then
-      context:set_option("not_single_display", true)
+        and not core.state.not_single_display then
+      core.state.not_single_display = true
       if not ((core.fm(schema_id) or core.fy(schema_id)) and context:get_option("delayed_pop")
             and rime.match(input, "([bpmfdtnlgkhjqxzcsrywv][a-z]){2}[aeuio]*"))
           and key_event.modifier ~= rime.modifier_masks.kShift then
@@ -140,14 +149,14 @@ function this.func(key_event, env)
   -- 在码长为1时，取消临时重码和纯单模式提示
   if not ascii_mode and segment and segment:has_tag("abc") and core.zici(schema_id)
       and not key_event:release() and input:len() == 1 then
-    context:set_option("not_single_display", false)
-    context:set_option("_pure_char", false)
+    core.state.not_single_display = false
+    core.state.pure_char = false
   end
 
   -- 象码码长为3且按Shift+Tab时
   if not ascii_mode and segment and segment:has_tag("abc") and core.xm(schema_id)
   and not key_event:release() and input:len() == 3 and key_event:shift() and key_event.keycode == XK_Tab then
-    context:set_option("_pure_char", true)
+    core.state.pure_char = true
     local str = input:sub(segment._start, segment._end)
     env.engine:process_key(rime.KeyEvent("BackSpace"))
     context:push_input(str:sub(3))
@@ -171,7 +180,13 @@ function this.func(key_event, env)
       and not key_event:release() then
     local str = input:sub(segment._start, segment._end)
     if key_event.keycode == string.byte(";") then
-      if rime.match(str, "[bpmfdtnlgkhjqxzcsrywv]{2}[a-z]?") then
+      -- 声笔简拼两码输入时，分号选择第十三个固顶字词（对应码表中的 ; 编码）
+      if schema_id == "sbjp" and rime.match(str, "[bpmfdtnlgkhjqxzcsrywv][a-z]") then
+        env.engine:process_key(rime.KeyEvent("Page_Down"))
+        env.engine:process_key(rime.KeyEvent("Page_Down"))
+        env.engine:process_key(rime.KeyEvent("space"))
+        return rime.process_results.kAccepted
+      elseif rime.match(str, "[bpmfdtnlgkhjqxzcsrywv]{2}[a-z]?") then
         context.caret_pos = segment.start + 1
         context:commit()
         context:push_input(str:sub(2))
@@ -221,6 +236,8 @@ function this.func(key_event, env)
 
   if input:len() == 0 then
     return rime.process_results.kNoop
+  elseif ascii_mode and key_event.keycode == XK_Tab then
+    return rime.process_results.kAccepted
   end
 
   -- 用 Shift+Return 或者 Control+Return 反转大小写
@@ -250,6 +267,11 @@ end
 function this.fini(env)
   env.ascii_composer = nil
   env.selector = nil
+  -- 清理跨组件共享状态
+  core.state.not_single_display = false
+  core.state.pure_char = false
+  core.state.is_buffered = false
+  core.state.temp_buffered = false
   if env.connection then
     env.connection:disconnect()
     env.connection = nil
