@@ -16,8 +16,13 @@ local function load_number_hints()
 	for _, dir in ipairs(data_dirs) do
 		local file = io.open(dir .. "/sbf.dict.yaml", "r")
 		if file then
+			local enable_comment = true
 			for line in file:lines() do
-				if line:sub(1, 1) ~= "#" then
+				if enable_comment and line:sub(1, 1) == "#" then
+					if line == "# no comment" then
+						enable_comment = false
+					end
+				else
 					local text, code = line:match("^([^\t]+)\t([bpmfdtnlgkhjqxzcsrywv][a-z]?[0-9])\t")
 					if text and code and not hints[code] then
 						hints[code] = text
