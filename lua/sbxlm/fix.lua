@@ -107,15 +107,15 @@ function this.func(translation, env)
             cand.comment = cand.comment .. comment2 .. select2:sub(i - 1, i - 1)
           end
         elseif i == 1 then
-          if rime.match(input, "[bpmfdtnlgkhjqxzcsrywv][aeuio]?") and id == 'sbjp' then
-            cand.comment = fixed_phrases[i + 12] .. ";" .. fixed_phrases[i + 11] .. "'"
+          if rime.match(input, "[bpmfdtnlgkhjqxzcsrywv][a-z]?") and id == 'sbjp' then
+          cand.comment = (fixed_phrases[i + 12] or "") .. ";" .. (fixed_phrases[i + 11] or "") .. "'"
           elseif rime.match(input, "[bpmfdtnlgkhjqxzcsrywv]") and id == 'sbpy' then
             cand.comment = fixed_phrases[i + 12] .. ";" .. fixed_phrases[i + 11] .. "'"
           end
         end
       end
 
-      if segment.start > 0 or context.input:len() > segment._end or context:get_option("temp_buffered") then
+      if segment.start > 0 or context.input:len() > segment._end or core.state.temp_buffered then
         -- 在造词的时候允许固定字词调频
         cand.type = "fixed"
       else
@@ -144,8 +144,8 @@ function this.func(translation, env)
           cand.comment = cand.comment .. comment2 .. select2:sub(i - 1, i - 1)
         end
       elseif i == 1 then
-        if rime.match(input, "[bpmfdtnlgkhjqxzcsrywv][aeuio]?") and id == 'sbjp' then
-          cand.comment = fixed_phrases[i + 11] .. "'" .. fixed_phrases[i + 12] .. ";"
+        if rime.match(input, "[bpmfdtnlgkhjqxzcsrywv][a-z]?") and id == 'sbjp' then
+          cand.comment = (fixed_phrases[i + 11] or "") .. "'" .. (fixed_phrases[i + 12] or "") .. ";"
         elseif rime.match(input, "[bpmfdtnlgkhjqxzcsrywv]") and id == 'sbpy' then
           cand.comment = fixed_phrases[i + 11] .. ";" .. fixed_phrases[i + 12] .. "'"
       end

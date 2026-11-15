@@ -5,6 +5,15 @@ local rime = require "lib"
 local match = rime.match
 local core = {}
 
+-- 跨组件共享状态表（纯内存，不触发任何 notifier，不导致界面刷新）
+-- 用于替代被误用为内部信号的 option/property
+core.state = {
+  not_single_display = false,
+  pure_char = false,
+  is_buffered = false,
+  temp_buffered = false,
+}
+
 -- 大键盘的所有按键
 local s = "[bpmfdtnlgkhjqxzcsrywv]";
 -- 小键盘的所有按键
@@ -113,7 +122,7 @@ end
 
 ---@param id string
 function core.xm(id)
-  return id == "sbxm"
+  return id == "sbxm" or id == "sbmx"
 end
 
 ---@param id string
@@ -123,7 +132,7 @@ end
 
 ---@param id string
 function core.xmft(id)
-  return id == "sbxm" or id == "sbft" or id == "sbmf"
+  return id == "sbxm" or id == "sbmx" or id == "sbft" or id == "sbmf"
 end
 
 ---@param id string
@@ -276,6 +285,7 @@ function core.reverse(id)
   --相当于三目运算符a ? b : c
   local dict_name = (id == "sbfd" or id == "sbfy") and "sbfm" or id
   if id == "sbmf" then dict_name = "sbft" end
+  if id == "sbmx" then dict_name = "sbxm" end
 
   --如果不是飞系方案或者猛码或者象系方案，单字构词码在扩展词库里
   if not (core.feixi(id) or core.mm(id) or core.xmft(id)) then
