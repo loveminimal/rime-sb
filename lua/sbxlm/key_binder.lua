@@ -220,6 +220,11 @@ function this.func(key_event, env)
     env.redirecting = true
     if rime.match(input, "[bpmfdtnlgkhjqxzcsrywv].*") then
       local target_schema_id = (schema_id == 'sbft') and 'sbmf' or 'sbft'
+      if schema_id == 'sbxm' then
+       target_schema_id = 'sbmx'
+      elseif schema_id == 'sbmx' then
+        target_schema_id = 'sbxm'
+      end
       -- 保存输入，供新 schema 在下一个按键事件中恢复
       env.engine.context:set_property("lua_pending_input", input)
       env.engine:apply_schema(rime.Schema(target_schema_id))
