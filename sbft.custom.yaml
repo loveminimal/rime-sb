@@ -5,7 +5,19 @@ patch:
   # 暂时费弃 e-emoji 的 filter
   # engine/filters/@last: 
   # 定制飞天所需候选显示
-  style/color_scheme: flypy_jk
+  # ---- 主题汇总 -------------------------------------------------------
+  #〔 制作 13 〕
+  # pujk skjk prjk emjk orjk otjk sljk tkjk aqjk mljk mdjk rdjk xnjk
+  #〔 魔改 12 〕
+  # google_jk dark_temple_jk flypy_jk kuon_jk lost_temple_jk metroblue_jk
+  # modern_warfare_jk skype_jk so_young_jk starcraft_ii_jk steam_jk ink_jk
+  #〔 内置 26 〕
+  # android aqua azure brasil brisk cool_breeze dark_temple doraemon 
+  # dota_2 espagna flypy gholabok google google_plus ink kuma_shuzboz 
+  # kuon lost_temple luna macau metroblue nba ps4 psionics skype smurfs 
+  # so_young starcraft starcraft_ii steam tintin wii xbox_silver youtube       
+  # ---------------------------------------------------------------------
+  style/color_scheme: mdjk
   style/vertical_auto_reverse: true
   style/layout: 
     __include: style.yaml:/layout_v
