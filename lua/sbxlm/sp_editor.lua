@@ -25,6 +25,10 @@ end
 function this.func(key_event, env)
   local context = env.engine.context
   local input = rime.current(env.engine.context)
+  if not input or input:len() == 0 then
+    env.engine.context:set_property("stroke_input", "")
+    return rime.process_results.kNoop
+  end
   -- 只对无修饰按键生效
   if key_event.modifier > 0 then
     return rime.process_results.kNoop

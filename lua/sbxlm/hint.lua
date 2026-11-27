@@ -50,6 +50,7 @@ end
 ---@field reverse ReverseLookup
 ---@field xm_chars { string : string }
 ---@field number_hints { string : string }
+---@field jm_words { string : string }
 
 ---@param env HintEnv
 function this.init(env) 
@@ -62,6 +63,7 @@ function this.init(env)
 	-- 声笔飞单和声笔飞延采用了声笔飞码的词典，所以反查词典的名称与方案 ID 不相同，需要特殊判断
 	local dict_name = (id == "sbfd" or id == "sbmd" or id == "sbfy") and "sbfm" or id
 	if id == 'sbmf' then dict_name = 'sbft' end
+	if id == 'sbmx' then dict_name = 'sbxm' end
 	-- 声笔简拼和声笔拼音用声笔简码的简码
 	if (id == 'sbjp' or id == 'sbpy') then dict_name = 'sbjm' end
 	-- 声笔自整用声笔自然的简码
@@ -71,6 +73,23 @@ function this.init(env)
 	env.reverse = rime.ReverseLookup(dict_name)
 	env.number_hints = core.ft(id) and load_number_hints() or {}
 	env.xm_chars = {}
+	-- 声笔简拼加载简码表中的三码字词，用于长码无候选时提示三码固定字词
+	if id == 'sbjp' then
+		env.jm_words = {}
+		local jm_file = io.open(rime.api.get_user_data_dir() .. "/sbjm.dict.yaml", "r")
+		if jm_file then
+			for line in jm_file:lines() do
+				local text, code = line:match("^([^\t]+)\t([bpmfdtnlgkhjqxzcsrywv][a-z][a-z])\r?$")
+				if not text then
+					text, code = line:match("^([^\t]+)\t([bpmfdtnlgkhjqxzcsrywv][a-z][a-z])%s")
+				end
+				if text and not env.jm_words[code] then
+					env.jm_words[code] = text
+				end
+			end
+			jm_file:close()
+		end
+	end
 	local path = rime.api.get_user_data_dir() .. "/lua/sbxlm/xm_chars.txt"
 	local file = io.open(path, "r")
 	if not file then
@@ -110,6 +129,18 @@ function this.func(translation, env)
 	local i = 1
 	local j = 1
 	local memory = env.memory
+	-- 声笔简拼输入完整三码后继续输入笔画时，提示该三码的固定字词
+	-- 注意：超过3码后，ctx.input 停留在3码，多余笔画存入 stroke_input 属性
+	-- 如输入 jei+e 时 ctx.input=jei, stroke_input=e，提示「接 jei」
+	if id == 'sbjp' and not ctx:get_option("free")
+	and rime.match(ctx.input, "[bpmfdtnlgkhjqxzcsrywv][a-z][a-z]")
+	and (ctx:get_property("stroke_input") or ""):len() > 0 then
+		local hint_seg = ctx.composition:toSegmentation():back()
+		local hint_text = hint_seg and env.jm_words and env.jm_words[ctx.input]
+		if hint_text and hint_seg then
+			rime.yield(rime.Candidate("hint", hint_seg.start, hint_seg._end, hint_text, ctx.input))
+		end
+	end
 	for candidate in translation:iter() do
 		-- 猛码提示
 		local input = candidate.preedit
@@ -188,7 +219,13 @@ function this.func(translation, env)
 					elseif rime.match(code, "[bpmfdtnlgkhjqxzcsrywv][a-z0-9;']?") then
 						candidate.comment = candidate.comment .. " " .. code
 					elseif id == 'sbjp' and rime.match(code, "[bpmfdtnlgkhjqxzcsrywv][aeuio][0-9;']") then
-						candidate.comment = candidate.comment .. " " .. code					
+						candidate.comment = candidate.comment .. " " .. code
+					-- 声笔简拼二字词长码时，提示声母{2}[;'] 格式的声声分号/单引号简码
+					elseif id == 'sbjp' and rime.match(code, "[bpmfdtnlgkhjqxzcsrywv]{2}[;']") then
+						candidate.comment = candidate.comment .. " " .. code
+					-- 声笔简拼长码时，提示三码固定字词（如 jeie 提示 接 jei，jsei 提示 技术 jse）
+					elseif id == 'sbjp' and rime.match(code, "[bpmfdtnlgkhjqxzcsrywv][a-z]{2}") then
+						candidate.comment = candidate.comment .. " " .. code
 					end
 				end
 			end
@@ -344,6 +381,26 @@ function this.func(translation, env)
 				end
 			end
 		end
+		--象系在s时提示sb;和sb'简词
+		if core.xm(id) and core.s(input) and not is_hidden then
+			local forward
+			local text = ''
+			for j = 1, 5 do
+				memory:dict_lookup(input:sub(1,1) .. hint_b[j] .. ";", false, 1)
+				for entry in memory:iter_dict()
+				do
+					text = entry.text
+					break
+				end
+				memory:dict_lookup(input:sub(1,1) .. hint_b[j] .. "'", false, 1)
+				for entry in memory:iter_dict()
+				do
+					forward = rime.Candidate("hint", candidate.start, candidate._end, text, entry.text .. hint_b[j])
+					rime.yield(forward)
+					break
+				end
+			end
+		end
 		-- 象系提示
 		if core.xmft(id) and not is_hidden then
 			if rime.match(input, "[bpmfdtnlgkhjqxzcsrywv][a-z]{2}") then
@@ -421,7 +478,8 @@ function this.func(translation, env)
 				end
 				if not entry_b then
 					goto continue
-				end
+				end					
+				
 				local comment = b
 				if ctx:get_option("rational") then
 					comment = append_number_hint(comment, env.number_hints, prefix, n1)
